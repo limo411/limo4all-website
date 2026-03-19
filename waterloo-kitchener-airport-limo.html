@@ -379,13 +379,18 @@
   .btn-outline-dark:hover{border-color:var(--blue);color:var(--blue)}
 
   /* ── INTERNAL LINKS ─────────────────────────────────────────────── */
-  .cs-interlink{background:var(--white);padding:52px 0;border-top:1px solid var(--border)}
-  .cs-interlink-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-  .cs-interlink-col h3{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-  .cs-interlink-link{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text);padding:9px 0;border-bottom:1px solid var(--border);transition:color 0.15s,padding-left 0.15s;font-weight:500;text-decoration:none}
-  .cs-interlink-link:last-child{border-bottom:none}
-  .cs-interlink-link:hover{color:var(--blue);padding-left:6px}
-  .cs-interlink-link::before{content:'→';color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
+  .cs-interlink{background:var(--off-white);padding:56px 0;border-top:1px solid var(--border)}
+  .cs-interlink-eyebrow{text-align:center;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);margin-bottom:28px}
+  .cs-interlink-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .cs-interlink-panel{background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow)}
+  .cs-interlink-panel-bar{height:3px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.3))}
+  .cs-interlink-panel-body{padding:26px 28px}
+  .cs-interlink-panel-label{font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:16px}
+  .cs-interlink-link{display:flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:13px;color:var(--text);font-weight:500;padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color 0.15s,gap 0.15s}
+  .cs-interlink-link:last-child{border-bottom:none;padding-bottom:4px}
+  .cs-interlink-link:hover{color:var(--blue);gap:13px}
+  .cs-interlink-link-arrow{color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
+  @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
   .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
@@ -701,15 +706,15 @@
             </div>
           </div>
           <div class="cs-svc-card-aside">
-            <span class="sub-label">Coverage Across the GTA</span>
+            <span class="sub-label">Waterloo-Kitchener Neighborhoods We Serve</span>
             <ul class="cs-svc-card-bullets">
-              <li class="cs-svc-card-bullet">All Toronto neighborhoods &amp; downtown core</li>
-              <li class="cs-svc-card-bullet">Mississauga, Brampton, Vaughan, Markham</li>
-              <li class="cs-svc-card-bullet">Oakville, Burlington, Hamilton</li>
-              <li class="cs-svc-card-bullet">Pickering, Ajax, Whitby, Oshawa</li>
+                            <li class="cs-svc-card-bullet">Waterloo-Kitchener Downtown</li>
+              <li class="cs-svc-card-bullet">Waterloo-Kitchener Central</li>
+              <li class="cs-svc-card-bullet">Waterloo-Kitchener East</li>
+              <li class="cs-svc-card-bullet">Waterloo-Kitchener West</li>
+              <li class="cs-svc-card-bullet">Waterloo-Kitchener North</li>
               <li class="cs-svc-card-bullet">Real-time flight tracking for every booking</li>
-              <li class="cs-svc-card-bullet">Consistent flat rates regardless of origin</li>
-              <li class="cs-svc-card-bullet">Luggage assistance &amp; meet-and-greet included</li>
+              <li class="cs-svc-card-bullet">Flat rates &mdash; no surge pricing</li>
             </ul>
             <div class="cs-svc-aside-callouts">
               <div class="cs-svc-aside-callout">
@@ -718,7 +723,7 @@
               </div>
               <div class="cs-svc-aside-callout">
                 <span class="cs-svc-callout-num">$75</span>
-                <span class="cs-svc-callout-label">Starting flat rate from Toronto</span>
+                <span class="cs-svc-callout-label">Starting flat rate from Waterloo-Kitchener</span>
               </div>
             </div>
             <div class="cs-svc-aside-foot">
@@ -1237,25 +1242,32 @@
 <!-- ZONE: internal-links -->
 <section class="cs-interlink">
   <div class="wrap">
+    <p class="cs-interlink-eyebrow">Explore More</p>
     <div class="cs-interlink-grid">
-      <div class="cs-interlink-col">
-        <h3>Airport Limo Services in Nearby Cities</h3>
-        <a href="guelph-airport-limo.html" class="cs-interlink-link">Guelph Airport Limo</a>
-        <a href="london-airport-limo.html" class="cs-interlink-link">London Airport Limo</a>
-        <a href="hamilton-airport-limo.html" class="cs-interlink-link">Hamilton Airport Limo</a>
-        <a href="toronto-airport-limo.html" class="cs-interlink-link">Toronto Airport Limo</a>
-        <a href="mississauga-airport-limo.html" class="cs-interlink-link">Mississauga Airport Limo</a>
+      <div class="cs-interlink-panel">
+        <div class="cs-interlink-panel-bar"></div>
+        <div class="cs-interlink-panel-body">
+          <span class="cs-interlink-panel-label">Airport Limo Services Near Waterloo-Kitchener</span>
+          <a href="guelph-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Guelph Airport Limo</a>
+          <a href="london-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>London Airport Limo</a>
+          <a href="hamilton-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Hamilton Airport Limo</a>
+          <a href="toronto-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Toronto Airport Limo</a>
+          <a href="mississauga-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Mississauga Airport Limo</a>
+        </div>
       </div>
-      <div class="cs-interlink-col">
-        <h3>Other Limo Services in Waterloo-Kitchener</h3>
-        <a href="waterloo-kitchener-wedding-limo.html" class="cs-interlink-link">Wedding Limo Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-corporate-limo.html" class="cs-interlink-link">Corporate Limo Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-prom-limo.html" class="cs-interlink-link">Prom Limo Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-events-limo.html" class="cs-interlink-link">Events &amp; Concert Limo Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-hourly-limo.html" class="cs-interlink-link">Hourly Limo Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-niagara-tours.html" class="cs-interlink-link">Niagara Falls Tours Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-sprinter-van.html" class="cs-interlink-link">Sprinter Van Service Waterloo-Kitchener</a>
-        <a href="waterloo-kitchener-city-transfers.html" class="cs-interlink-link">City-to-City Transfers Waterloo-Kitchener</a>
+      <div class="cs-interlink-panel">
+        <div class="cs-interlink-panel-bar"></div>
+        <div class="cs-interlink-panel-body">
+          <span class="cs-interlink-panel-label">Other Limo Services in Waterloo-Kitchener</span>
+          <a href="waterloo-kitchener-wedding-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Wedding Limo Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-corporate-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Corporate Limo Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-prom-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Prom Limo Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-events-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Events &amp; Concert Limo Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-hourly-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Hourly Limo Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-niagara-tours.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Niagara Falls Tours Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-sprinter-van.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Sprinter Van Service Waterloo-Kitchener</a>
+          <a href="waterloo-kitchener-city-transfers.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>City-to-City Transfers Waterloo-Kitchener</a>
+        </div>
       </div>
     </div>
   </div>
