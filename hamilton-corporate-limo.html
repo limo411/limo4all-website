@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <!-- ZONE: page-title -->
   <title>Corporate Car Service Hamilton &ndash; Executive Chauffeur | Limo4All</title>
-  <meta name="description" content="Premium corporate car service in Hamilton and Hamilton. Executive sedans, SUVs, and Sprinters for meetings, airport transfers, and client entertainment. Monthly billing available.">
+  <!-- /ZONE: page-title -->
+  <!-- ZONE: meta-description -->
+  <meta name="description" content="Toronto's #1 airport limo service. Professional chauffeurs, flat rates, 24/7 availability. Serving YYZ, YTZ, YHM and BUF airports across the GTA. Book online or call 416 451 3106.">
+  <!-- /ZONE: meta-description -->
+  <link rel="canonical" href="https://www.limo4all.ca/hamilton-corporate-limo.html">
 
+  <!-- ZONE: schema-json-ld -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"TaxiService","name":"Corporate Car Service Hamilton","provider":{"@type":"LocalBusiness","name":"Limo4All","telephone":"1-800-XXX-XXXX","areaServed":"Hamilton"},"serviceType":"Corporate Chauffeur Service","priceRange":"$75-$380"}
+  {"@context":"https://schema.org","@type":"Service","name":"Corporate Car Service Hamilton","description":"Professional corporate car service in Hamilton and Hamilton. Executive vehicles, flat rates, 24/7 availability, corporate account billing.","provider":{"@type":"LocalBusiness","name":"Limo4All","telephone":"416 451 3106","url":"https://www.limo4all.ca","areaServed":{"@type":"City","name":"Hamilton"},"areaServed":{"@type":"City","name":"Hamilton"},"serviceType":"Corporate Car Service","offers":{"@type":"Offer","priceCurrency":"CAD","description":"Corporate car service with flat rates and monthly billing available"}}
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.limo4all.ca/"},{"@type":"ListItem","position":2,"name":"Corporate Car Service","item":"https://www.limo4all.ca/corporate.html"},{"@type":"ListItem","position":3,"name":"Hamilton Corporate Car Service","item":"https://www.limo4all.ca/hamilton-corporate-limo.html"}]}
+  </script>
+  <!-- /ZONE: schema-json-ld -->
 
   <style>
   /* ── FONTS ──────────────────────────────────────────────────────── */
   @font-face{font-family:'Euclid Circular B';font-weight:300;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Light.woff2') format('woff2')}
   @font-face{font-family:'Euclid Circular B';font-weight:400;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Regular.woff2') format('woff2')}
-  @font-face{font-family:'Euclid Circular B';font-weight:400;font-style:italic;font-display:swap;src:url('./fonts/Euclid-Circular-B-Italic.woff2') format('woff2')}
   @font-face{font-family:'Euclid Circular B';font-weight:500;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Medium.woff2') format('woff2')}
   @font-face{font-family:'Euclid Circular B';font-weight:600;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-SemiBold.woff2') format('woff2')}
   @font-face{font-family:'Euclid Circular B';font-weight:700;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Bold.woff2') format('woff2')}
@@ -24,24 +33,13 @@
 
   /* ── VARIABLES ──────────────────────────────────────────────────── */
   :root{
-    --blue:#14b7f4;
-    --blue-dark:#0d9dd4;
-    --blue-hover:#0aaae0;
-    --blue-bg:#e6f7fd;
-    --dark:#1c1c20;
-    --dark2:#2a2a2e;
-    --white:#ffffff;
-    --off-white:#f7f8fa;
-    --gray:#f2f3f5;
-    --text:#22232a;
-    --text-light:#5c6270;
-    --border:#e3e5eb;
+    --blue:#14b7f4;--blue-dark:#0d9dd4;--blue-hover:#0aaae0;--blue-bg:#e6f7fd;
+    --dark:#1c1c20;--dark2:#2a2a2e;--white:#ffffff;--off-white:#f7f8fa;
+    --gray:#f2f3f5;--text:#22232a;--text-light:#5c6270;--border:#e3e5eb;
     --font-serif:'Libre Baskerville',Georgia,serif;
     --font-sans:'Euclid Circular B',system-ui,sans-serif;
-    --radius:1.25rem;
-    --max-w:1170px;
-    --shadow:0 4px 20px rgba(0,0,0,0.07);
-    --shadow-lg:0 12px 40px rgba(0,0,0,0.11);
+    --radius:1.25rem;--max-w:1170px;
+    --shadow:0 4px 20px rgba(0,0,0,0.07);--shadow-lg:0 12px 40px rgba(0,0,0,0.11);
   }
 
   /* ── RESET ──────────────────────────────────────────────────────── */
@@ -54,15 +52,22 @@
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
 
   /* ── PROMO BAR ──────────────────────────────────────────────────── */
-  .promo-bar{background:var(--dark);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
-  .promo-bar a{color:var(--blue);text-decoration:underline}
+  .promo-bar{background:var(--blue);color:#fff;padding:7px 0}
+  .promo-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
+  .pb-stars{letter-spacing:1.5px;font-size:10.5px}
+  .pb-sep{opacity:0.4}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1;white-space:nowrap}
+  .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .pb-right a{color:#fff;opacity:0.95}
+  .pb-right a:hover{opacity:1;text-decoration:underline}
+  .pb-pill{background:rgba(255,255,255,0.2);border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
 
   /* ── HEADER ─────────────────────────────────────────────────────── */
   .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
   .header-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;min-height:66px;gap:16px}
   .logo{font-family:var(--font-sans);font-size:1.4rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--dark)}
   .logo span{color:var(--blue)}
-  .logo img{max-height:44px;width:auto}
   .nav{display:flex;align-items:center;gap:2px}
   .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:8px 11px;border-radius:6px;transition:all 0.15s}
   .nav a:hover,.nav a.active{color:var(--blue);background:var(--blue-bg)}
@@ -83,351 +88,309 @@
   .ticker-wrap{background:var(--dark);overflow:hidden;padding:8px 0}
   .ticker-track{display:flex;width:max-content;animation:ticker 40s linear infinite}
   .ticker-wrap:hover .ticker-track{animation-play-state:paused}
-  .ticker-track span{color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
-  .ticker-track span::after{content:'·';color:var(--blue);margin-left:28px}
+  .ticker-track span{color:var(--blue);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
+  .ticker-track span::after{content:'·';color:rgba(20,183,244,0.4);margin-left:28px}
   @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* ── HERO ───────────────────────────────────────────────────────── */
-  .hero{background:linear-gradient(135deg,#f7f9ff 0%,#eaf7fd 60%,#fff 100%);padding:72px 0 80px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(20,183,244,0.1) 0%,transparent 70%);pointer-events:none}
-  .hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:350px;height:350px;background:radial-gradient(circle,rgba(20,183,244,0.05) 0%,transparent 70%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1fr 480px;gap:48px;align-items:center;position:relative;z-index:1}
-  .hero-breadcrumb{display:flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);margin-bottom:18px}
-  .hero-breadcrumb a{color:var(--text-light);transition:color 0.15s}
-  .hero-breadcrumb a:hover{color:var(--blue)}
-  .hero-breadcrumb .sep{color:var(--border)}
-  .hero-tags{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
-  .hero-tags span{background:var(--dark);color:#fff;font-family:var(--font-sans);font-size:11px;font-weight:700;letter-spacing:0.08em;padding:4px 12px;border-radius:50px}
-  .hero h1{font-family:var(--font-serif);font-size:clamp(2.1rem,4.5vw,3.1rem);font-weight:400;font-style:italic;color:var(--dark);line-height:1.15;margin-bottom:16px}
-  .hero h1 strong{color:var(--blue);font-style:normal;font-weight:700;display:block}
-  .hero-sub{font-family:var(--font-sans);font-size:15px;color:var(--text-light);line-height:1.7;max-width:480px;margin-bottom:28px;font-weight:300}
-  .hero-trust{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--font-sans);font-size:12px;color:var(--text-light);font-weight:600;margin-bottom:28px}
-  .hero-trust .sep{color:var(--border)}
-  .hero-trust .stars{color:#f59e0b;font-size:13px;letter-spacing:1px}
-  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
-  .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:13px 30px;border-radius:50px;border-bottom:3px solid var(--blue-dark);transition:background 0.15s}
-  .btn-primary:hover{background:var(--blue-hover)}
-  .btn-outline-dark{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--dark);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 28px;border-radius:50px;border:2px solid var(--border);transition:all 0.15s}
-  .btn-outline-dark:hover{border-color:var(--blue);color:var(--blue)}
-  .btn-outline-blue{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--blue);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 28px;border-radius:50px;border:2px solid var(--blue);transition:all 0.15s}
-  .btn-outline-blue:hover{background:var(--blue);color:#fff}
-  /* Hero image */
-  .hero-img-wrap{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg)}
-  .hero-img-wrap img{width:100%;height:460px;object-fit:cover;object-position:center top}
-  .hero-img-badge{position:absolute;bottom:18px;left:18px;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 4px 16px rgba(0,0,0,0.15)}
-  .hero-img-badge .badge-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center}
-  .hero-img-badge .badge-icon svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .hero-img-badge .badge-text strong{display:block;font-family:var(--font-sans);font-size:13px;font-weight:700;color:var(--dark)}
-  .hero-img-badge .badge-text span{font-family:var(--font-sans);font-size:11px;color:var(--text-light)}
-  /* Account badge top-right */
-  .hero-acct-badge{position:absolute;top:16px;right:16px;background:var(--dark);color:#fff;font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:7px 14px;border-radius:50px;display:flex;align-items:center;gap:6px}
-  .hero-acct-badge::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
+  /* ── BREADCRUMB ─────────────────────────────────────────────────── */
+  .breadcrumb{background:var(--off-white);border-bottom:1px solid var(--border);padding:11px 0}
+  .bc-inner{display:flex;align-items:center;justify-content:space-between;gap:7px;font-size:12px;color:var(--text-light);font-weight:500}
+  .bc-left{display:flex;align-items:center;gap:7px}
+  .bc-inner a{color:var(--text-light);transition:color 0.15s}
+  .bc-inner a:hover{color:var(--blue)}
+  .bc-sep{opacity:0.4;font-size:10px}
+  .bc-current{color:var(--text);font-weight:600}
+  .bc-right{display:flex;align-items:center;gap:14px;font-size:11.5px;color:var(--text-light);font-weight:500}
+  .bc-center{flex:1;text-align:center;font-size:11px;font-weight:600;color:var(--text-light);letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap}
+  .bc-center-sep{opacity:0.35;font-size:9px}
+  .bc-right-item{display:flex;align-items:center;gap:5px}
+  .bc-right-item::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--blue);opacity:0.5}
+  .bc-phone{color:var(--blue);font-weight:700;font-size:12px;transition:color 0.15s}
+  .bc-phone:hover{color:var(--blue-dark)}
+  @media(max-width:768px){.bc-right,.bc-center{display:none}}
 
-  /* ── BOOKING STRIP ──────────────────────────────────────────────── */
-  .booking-strip{background:var(--blue);padding:22px 0}
-  .booking-strip-inner{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .booking-tabs{display:flex;background:rgba(255,255,255,0.18);border-radius:50px;padding:3px;flex-shrink:0}
-  .booking-tabs .bt{padding:7px 16px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.75);border-radius:50px;cursor:pointer;transition:all 0.15s}
-  .booking-tabs .bt.active,.booking-tabs .bt:hover{background:#fff;color:var(--blue)}
-  .booking-form-row{display:flex;flex:1;gap:8px;flex-wrap:wrap}
-  .bf-input{flex:1;min-width:120px;height:42px;padding:0 16px;font-family:var(--font-sans);font-size:13px;color:var(--dark);border:none;border-radius:50px;outline:none;background:#fff}
-  .bf-input::placeholder{color:#aaa}
-  select.bf-input{appearance:none;cursor:pointer}
-  .btn-checkprice{height:42px;padding:0 24px;background:var(--dark);color:#fff;border:none;border-radius:50px;font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;cursor:pointer;white-space:nowrap;transition:background 0.15s;flex-shrink:0}
-  .btn-checkprice:hover{background:#111}
+  /* ── HERO ───────────────────────────────────────────────────────── */
+  .cs-hero{background:linear-gradient(140deg,var(--dark) 0%,#1a2535 60%,#0d1c2e 100%);padding:72px 0 80px;position:relative;overflow:hidden}
+  .cs-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 30%,rgba(20,183,244,0.13) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 0% 80%,rgba(20,183,244,0.07) 0%,transparent 55%);pointer-events:none}
+  .cs-hero-grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center;position:relative;z-index:1}
+  .cs-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(20,183,244,0.1);border:1px solid rgba(20,183,244,0.22);border-radius:50px;padding:6px 14px;font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--blue);margin-bottom:20px}
+  .cs-eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.2)}}
+  .cs-h1{font-family:var(--font-serif);font-size:clamp(2.1rem,4.2vw,3.1rem);font-weight:400;font-style:italic;color:#fff;line-height:1.1;margin-bottom:18px}
+  .cs-h1 strong{color:var(--blue);font-style:normal;font-weight:700;display:block}
+  .cs-sub{font-family:var(--font-sans);font-size:14.5px;color:rgba(255,255,255,0.5);line-height:1.8;max-width:480px;margin-bottom:24px;font-weight:300}
+  .cs-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:28px}
+  .cs-pill{display:inline-flex;align-items:center;padding:5px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:50px;font-family:var(--font-sans);font-size:11px;font-weight:600;color:rgba(255,255,255,0.7)}
+  .cs-hero-ctas{display:flex;gap:10px;flex-wrap:wrap}
+  .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:14px 32px;border-radius:50px;border-bottom:3px solid var(--blue-dark);transition:background 0.15s}
+  .btn-primary:hover{background:var(--blue-hover)}
+  .btn-outline-light{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,0.7);font-family:var(--font-sans);font-size:13px;font-weight:600;padding:13px 24px;border-radius:50px;border:1.5px solid rgba(255,255,255,0.2);transition:all 0.15s}
+  .btn-outline-light:hover{border-color:var(--blue);color:var(--blue)}
+
+  /* ── BOOKING CARD ───────────────────────────────────────────────── */
+  .cs-book-card{background:var(--white);border-radius:20px;padding:30px 26px;box-shadow:0 16px 48px rgba(0,0,0,0.28)}
+  .cs-book-title{font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--dark);margin-bottom:4px}
+  .cs-book-sub{font-size:11.5px;color:var(--text-light);margin-bottom:18px;font-weight:300}
+  .cs-field-wrap{position:relative;margin-bottom:10px}
+  .cs-field-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+  .cs-field{width:100%;height:46px;padding:0 14px 0 38px;font-family:var(--font-sans);font-size:13px;color:var(--dark);background:var(--off-white);border:1.5px solid var(--border);border-radius:10px;outline:none;transition:border-color 0.2s,box-shadow 0.2s}
+  .cs-field:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,183,244,0.1);background:#fff}
+  .cs-field::placeholder{color:#bbb}
+  .cs-field-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+  .cs-btn-submit{width:100%;height:50px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;border:none;border-radius:50px;border-bottom:3px solid var(--blue-dark);cursor:pointer;transition:background 0.15s;margin-top:4px}
+  .cs-btn-submit:hover{background:var(--blue-hover)}
+  .cs-book-trust{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:12px;flex-wrap:wrap}
+  .cs-book-trust span{font-size:10px;color:var(--text-light);display:flex;align-items:center;gap:4px}
+  .cs-book-trust span::before{content:'✓';color:var(--blue);font-size:9px;font-weight:700}
 
   /* ── SECTION SHARED ─────────────────────────────────────────────── */
-  .sec-label{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:10px}
-  .sec-h2{font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.4rem);font-weight:400;font-style:italic;color:var(--dark);line-height:1.2;margin-bottom:10px}
-  .sec-h2 em{color:var(--blue);font-style:normal}
-  .sec-sub{font-family:var(--font-sans);font-size:14px;color:var(--text-light);line-height:1.65;font-weight:300}
-  .center{text-align:center}
-  .center .sec-sub{max-width:560px;margin:0 auto}
+  .section-eyebrow{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);display:block;margin-bottom:12px}
+  .section-h2{font-family:var(--font-serif);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:400;font-style:italic;color:var(--dark);line-height:1.2;margin-bottom:6px}
+  .section-h2 strong{font-style:normal;color:var(--blue)}
+  .section-rule{width:40px;height:2px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.2));margin:18px 0 22px;border:none}
+  .sub-label{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:14px}
+  .section-cta-row{display:flex;justify-content:center;margin-top:40px}
 
-  /* ── WHY CHOOSE ─────────────────────────────────────────────────── */
-  .why-section{background:var(--off-white);padding:90px 0;position:relative;overflow:hidden}
-  .why-section::before{content:'';position:absolute;top:-120px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(20,183,244,0.07) 0%,transparent 70%);pointer-events:none}
-  .why-section .wrap{position:relative;z-index:1}
-  .why-heading{text-align:center;margin-bottom:56px}
-  .why-heading .wh-pre{font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:var(--blue);display:block;margin-bottom:8px}
-  .why-heading h2{font-family:var(--font-serif);font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:400;line-height:1.2;margin-top:0}
-  .why-heading h2 em{font-style:italic;color:var(--dark)}
-  /* 2-col interactive layout */
-  .why-interactive{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,0.09)}
-  .why-tabs-col{background:var(--blue-bg);border-right:1px solid var(--border)}
-  .why-tab-item{padding:26px 28px;border-bottom:1px solid rgba(20,183,244,0.12);cursor:pointer;display:flex;gap:18px;align-items:flex-start;border-left:4px solid transparent;transition:transform 0.2s ease,background 0.2s ease,border-color 0.2s ease,box-shadow 0.2s ease;background:var(--blue-bg);position:relative;overflow:hidden}
-  .why-tab-item:last-child{border-bottom:none}
-  .why-tab-item.active{background:rgba(20,183,244,0.13);border-left-color:var(--blue);box-shadow:inset 4px 0 14px rgba(20,183,244,0.08)}
-  .why-tab-item:not(.active):hover{background:rgba(20,183,244,0.1);transform:translateX(5px);box-shadow:inset 0 0 0 1px rgba(20,183,244,0.18)}
-  /* click ripple */
-  .why-tab-item::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--rx,50%) var(--ry,50%),rgba(20,183,244,0.22) 0%,transparent 65%);opacity:0;transition:opacity 0.4s ease;pointer-events:none}
-  .why-tab-item.ripple::after{opacity:1;transition:opacity 0s}
-  .why-tab-num{font-family:var(--font-serif);font-size:1.8rem;font-weight:700;font-style:italic;color:rgba(20,183,244,0.3);flex-shrink:0;width:38px;line-height:1.1;transition:color 0.2s,transform 0.2s}
-  .why-tab-item.active .why-tab-num{color:var(--blue);transform:scale(1.08)}
-  .why-tab-info h4{font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-light);margin-bottom:5px;transition:color 0.2s}
-  .why-tab-item.active .why-tab-info h4{color:var(--dark)}
-  .why-tab-info p{font-family:var(--font-sans);font-size:12px;color:var(--text-light);line-height:1.6;font-weight:300}
-  /* Right detail panel */
-  .why-panels-col{background:var(--off-white);position:relative}
-  @keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-  .why-panel-item{display:none;padding:52px 44px;flex-direction:column;justify-content:center;position:relative;overflow:hidden;min-height:100%}
-  .why-panel-item.active{display:flex;animation:panelIn 0.32s ease both}
-  .why-panel-bg{font-family:var(--font-serif);font-size:11rem;font-weight:700;font-style:italic;color:rgba(20,183,244,0.05);position:absolute;right:-8px;bottom:-28px;line-height:1;pointer-events:none;user-select:none}
-  .why-panel-icon{width:60px;height:60px;background:var(--blue);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 8px 24px rgba(20,183,244,0.3);position:relative;z-index:1}
-  .why-panel-icon svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .why-panel-item h3{font-family:var(--font-serif);font-size:1.7rem;font-style:italic;color:var(--dark);margin-bottom:14px;line-height:1.25;position:relative;z-index:1}
-  .why-panel-item p{font-family:var(--font-sans);font-size:14px;color:var(--text-light);line-height:1.85;font-weight:300;margin-bottom:24px;position:relative;z-index:1}
-  .why-panel-proof{display:inline-flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:10px 20px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--dark);position:relative;z-index:1;width:fit-content;box-shadow:var(--shadow)}
-  .proof-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0}
-  /* Section CTAs */
-  .sec-cta-row{text-align:center;margin-top:44px}
-  .btn-sec-more{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--blue);color:var(--blue);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 36px;border-radius:50px;transition:all 0.2s}
-  .btn-sec-more:hover{background:var(--blue);color:#fff}
+  /* ── INTRO ──────────────────────────────────────────────────────── */
+  .cs-intro{padding:72px 0 64px}
+  .cs-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:stretch}
+  .cs-intro-right{display:flex;flex-direction:column}
+  .cs-intro-body p{font-size:14.5px;color:var(--text-light);line-height:1.85;margin-bottom:16px;font-weight:300}
+  .cs-intro-body p:last-child{margin-bottom:0}
+  .cs-stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+  .cs-stat-card{background:var(--off-white);border:1px solid var(--border);border-radius:14px;padding:20px 18px}
+  .cs-stat-num{font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--blue);line-height:1;margin-bottom:4px}
+  .cs-stat-label{font-size:12px;color:var(--text-light);line-height:1.4;font-weight:500}
+  .cs-airport-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+  .cs-airport-tag{display:inline-flex;align-items:center;gap:6px;background:var(--blue-bg);border:1px solid rgba(20,183,244,0.2);border-radius:8px;padding:7px 12px;font-size:11.5px;font-weight:600;color:var(--blue)}
+  .cs-airport-tag-code{font-weight:700;font-size:12px}
+  /* includes checklist — flex:1 stretches to fill remaining height in right column */
+  .cs-includes-box{background:var(--off-white);border:1px solid var(--border);border-radius:14px;padding:20px 22px;flex:1}
+  .cs-includes-box .sub-label{margin-bottom:12px}
+  .cs-includes-list{display:flex;flex-direction:column;gap:9px}
+  .cs-includes-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text);font-weight:500;list-style:none}
+  .cs-includes-list li::before{content:'✓';color:var(--blue);font-weight:800;font-size:10px;width:18px;height:18px;border-radius:50%;background:var(--blue-bg);border:1px solid rgba(20,183,244,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;text-align:center;line-height:18px}
 
-  /* ── ACCOUNT CTA BAND ───────────────────────────────────────────── */
-  .acct-band{background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 100%);padding:52px 0}
-  .acct-band-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-  .acct-band h3{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;color:#fff;margin-bottom:8px}
-  .acct-band p{font-family:var(--font-sans);font-size:13.5px;color:rgba(255,255,255,0.55);line-height:1.6;font-weight:300;max-width:560px}
-  .acct-band-ctas{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
-  .btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--dark);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:13px 28px;border-radius:50px;transition:all 0.15s;white-space:nowrap}
-  .btn-white:hover{background:var(--blue);color:#fff}
-  .btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,0.75);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 28px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:all 0.15s;white-space:nowrap}
-  .btn-ghost-white:hover{border-color:#fff;color:#fff}
+  /* ── SERVICES CARDS ─────────────────────────────────────────────── */
+  .cs-services{background:var(--off-white);padding:72px 0}
+  .cs-services-head{text-align:center;margin-bottom:48px}
+  .cs-svc-cards{display:flex;flex-direction:column;gap:10px}
+  .cs-svc-card{background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+  .cs-svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue) 0%,rgba(20,183,244,0.25) 60%,transparent 100%);z-index:2;pointer-events:none}
+  /* Always-visible 2-column layout */
+  .cs-svc-card-inner{display:grid;grid-template-columns:1fr 400px}
+  .cs-svc-card-body{display:flex;flex-direction:column;padding:32px 36px 36px 30px}
+  .cs-svc-service-tag{display:inline-block;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue);background:var(--blue-bg);border:1px solid rgba(20,183,244,0.2);padding:4px 11px;border-radius:6px;margin-bottom:10px}
+  .cs-svc-card-title{font-family:var(--font-serif);font-size:1.4rem;font-style:italic;color:var(--dark);line-height:1.2;margin:0 0 18px}
+  .cs-svc-card-text{font-size:14px;color:var(--text-light);line-height:1.88;font-weight:300;margin-bottom:14px}
+  .cs-svc-card-text:last-of-type{margin-bottom:0}
+  .cs-svc-card-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 26px;border-radius:50px;border-bottom:3px solid var(--blue-dark);transition:background 0.15s;margin-top:24px;align-self:flex-start}
+  .cs-svc-card-cta:hover{background:var(--blue-hover)}
+  /* Bottom strip — flex:1 fills remaining height, items at bottom */
+  .cs-svc-card-bottom-strip{flex:1;display:flex;align-items:flex-end;gap:18px;padding-top:16px}
+  .cs-svc-card-bottom-item{font-family:var(--font-sans);font-size:10.5px;color:var(--text-light);display:flex;align-items:center;gap:4px;font-weight:500;white-space:nowrap}
+  .cs-svc-card-bottom-item::before{content:'✓';color:var(--blue);font-weight:800;font-size:9px;line-height:1}
+  /* Aside — always visible */
+  .cs-svc-card-aside{background:var(--off-white);border-left:1px solid var(--border);padding:34px 30px;display:flex;flex-direction:column}
+  .cs-svc-card-aside .sub-label{margin-bottom:14px}
+  .cs-svc-card-bullets{display:flex;flex-direction:column;gap:10px}
+  .cs-svc-card-bullet{display:flex;align-items:flex-start;gap:12px;font-size:13.5px;color:var(--text);line-height:1.55;font-weight:400}
+  .cs-svc-card-bullet::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px}
+  .cs-svc-aside-callouts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+  .cs-svc-aside-callout{background:var(--blue-bg);border:1px solid rgba(20,183,244,0.15);border-radius:10px;padding:12px 13px}
+  .cs-svc-callout-num{font-family:var(--font-serif);font-size:1.25rem;font-style:italic;color:var(--blue);display:block;line-height:1;margin-bottom:5px}
+  .cs-svc-callout-label{font-family:var(--font-sans);font-size:10.5px;color:var(--text-light);font-weight:400;line-height:1.4;display:block}
+  .cs-svc-aside-foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--border)}
+  .cs-svc-aside-trust{display:flex;flex-wrap:wrap;gap:6px}
+  .cs-svc-aside-trust span{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-sans);font-size:10.5px;font-weight:600;color:var(--blue);background:var(--blue-bg);border:1px solid rgba(20,183,244,0.18);border-radius:50px;padding:4px 10px}
+  .cs-svc-aside-trust span::before{content:'✓';font-size:9px;font-weight:800}
 
-  /* ── HOW IT WORKS (interactive tabs) ───────────────────────────── */
-  .seamless{background:var(--white);padding:90px 0}
-  .seamless-head{text-align:center;margin-bottom:56px}
-  .seamless-body{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)}
-  .s-tabs{border-right:1px solid var(--border);background:var(--blue-bg)}
-  .s-tab{padding:26px 30px;border-bottom:1px solid rgba(20,183,244,0.12);cursor:pointer;transition:transform 0.2s ease,background 0.2s ease,border-color 0.2s ease,box-shadow 0.2s ease;display:flex;gap:18px;align-items:flex-start;border-left:4px solid transparent;background:var(--blue-bg);position:relative;overflow:hidden}
-  .s-tab:last-child{border-bottom:none}
-  .s-tab.active{background:rgba(20,183,244,0.13);border-left-color:var(--blue);box-shadow:inset 4px 0 14px rgba(20,183,244,0.08)}
-  .s-tab:not(.active):hover{background:rgba(20,183,244,0.1);transform:translateX(5px);box-shadow:inset 0 0 0 1px rgba(20,183,244,0.18)}
-  /* click ripple */
-  .s-tab::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--rx,50%) var(--ry,50%),rgba(20,183,244,0.22) 0%,transparent 65%);opacity:0;transition:opacity 0.4s ease;pointer-events:none}
-  .s-tab.ripple::after{opacity:1;transition:opacity 0s}
-  .s-num{width:44px;height:44px;background:rgba(20,183,244,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.1rem;font-style:italic;font-weight:700;color:var(--blue);flex-shrink:0;transition:all 0.25s}
-  .s-tab.active .s-num{background:var(--blue);color:#fff;box-shadow:0 4px 12px rgba(20,183,244,0.35);transform:scale(1.08)}
-  .s-tab-text h4{font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-light);margin-bottom:0;transition:color 0.2s;margin-top:10px}
-  .s-tab.active .s-tab-text h4{color:var(--dark);margin-top:0}
-  .s-tab-text p{font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);line-height:1.65;font-weight:300;margin-top:6px;display:none}
-  .s-tab.active .s-tab-text p{display:block}
-  .s-panels{background:var(--off-white);position:relative}
-  .s-panel{display:none;flex-direction:column;padding:48px 44px;position:relative;overflow:hidden;justify-content:center;min-height:480px}
-  .s-panel.active{display:flex;animation:panelIn 0.32s ease both}
-  .s-panel-bg-num{font-family:var(--font-serif);font-size:11rem;font-weight:700;font-style:italic;color:rgba(20,183,244,0.05);position:absolute;right:-8px;bottom:-28px;line-height:1;pointer-events:none;user-select:none}
-  .s-panel-tag{display:inline-block;background:var(--blue-bg);color:var(--blue);font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;padding:5px 14px;border-radius:50px;margin-bottom:16px;width:fit-content;position:relative;z-index:1}
-  .s-panel-icon{width:52px;height:52px;background:var(--blue);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 6px 20px rgba(20,183,244,0.3);flex-shrink:0;position:relative;z-index:1}
-  .s-panel-icon svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .s-panel h5{font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);margin-bottom:12px;line-height:1.25;position:relative;z-index:1}
-  .s-panel p{font-family:var(--font-sans);font-size:13.5px;color:var(--text-light);line-height:1.85;font-weight:300;margin-bottom:16px;position:relative;z-index:1}
-  .s-panel-bullets{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;position:relative;z-index:1}
-  .s-panel-bullet{display:flex;align-items:flex-start;gap:10px;font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);line-height:1.6;font-weight:300}
-  .s-panel-bullet::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:6px}
-  .s-panel-link{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:10px 22px;border-radius:50px;transition:background 0.15s;width:fit-content;position:relative;z-index:1}
-  .s-panel-link:hover{background:var(--blue-hover)}
-
-  /* ── STATS STRIP ────────────────────────────────────────────────── */
-  .stats-strip{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%);padding:60px 0}
-  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);max-width:var(--max-w);margin:0 auto;padding:0 28px}
-  .stat-block{text-align:center;padding:0 24px;border-right:1px solid rgba(255,255,255,0.2)}
-  .stat-block:last-child{border-right:none}
-  .stat-num{font-family:var(--font-serif);font-size:3.5rem;font-weight:700;font-style:italic;color:#fff;line-height:1;display:block}
-  .stat-label{font-family:var(--font-sans);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.75);margin-top:8px;display:block}
-
-  /* ── TRUST LOGOS ────────────────────────────────────────────────── */
-  .trust-logos{background:var(--dark);padding:22px 0}
-  .trust-logos-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;max-width:var(--max-w);margin:0 auto;padding:0 28px}
-  .trust-badge{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);display:flex;align-items:center;gap:8px}
-  .trust-badge svg{width:20px;height:20px;fill:none;stroke:rgba(255,255,255,0.3);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  /* ── BENEFITS ───────────────────────────────────────────────────── */
+  .cs-benefits{padding:72px 0}
+  .cs-benefits-head{text-align:center;margin-bottom:44px}
+  .cs-benefits-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .cs-benefit-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px 22px 24px;position:relative;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;border-top:3px solid var(--blue)}
+  .cs-benefit-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+  .cs-benefit-badge{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;background:var(--blue-bg);border:1px solid rgba(20,183,244,0.25);border-radius:10px;color:var(--blue);margin-bottom:16px}
+  .cs-benefit-badge svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .cs-benefit-title{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:10px}
+  .cs-benefit-body{font-size:12.5px;color:var(--text-light);line-height:1.78;font-weight:300}
 
   /* ── FLEET ──────────────────────────────────────────────────────── */
-  .fleet{background:var(--gray);padding:80px 0}
-  .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px}
-  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:var(--white);border:1px solid var(--border);color:var(--text-light);cursor:pointer;transition:all 0.15s}
-  .ff.active,.ff:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
-  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .fleet-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.25s;display:flex;flex-direction:column}
-  .fleet-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
-  .fleet-img{height:200px;overflow:hidden;position:relative}
-  .fleet-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease}
-  .fleet-card:hover .fleet-img img{transform:scale(1.05)}
-  .fleet-badge{position:absolute;top:12px;left:12px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:4px 12px;border-radius:50px}
-  .fleet-body{padding:22px 24px;flex:1;display:flex;flex-direction:column}
-  .fleet-body h3{font-family:var(--font-serif);font-size:1.25rem;font-style:italic;font-weight:400;color:var(--dark);margin-bottom:4px}
-  .fleet-model{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:12px;display:block}
-  .fleet-specs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-  .fleet-spec{font-family:var(--font-sans);font-size:11.5px;color:var(--text-light);display:flex;align-items:center;gap:5px;font-weight:500}
-  .fleet-spec::before{content:'';width:5px;height:5px;background:var(--blue);border-radius:50%;display:inline-block;flex-shrink:0}
-  .fleet-body p{font-size:13px;color:var(--text-light);line-height:1.65;margin-bottom:18px;font-weight:300;flex:1}
-  .fleet-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px}
-  .fleet-price{font-family:var(--font-serif);font-size:1.6rem;font-style:italic;color:var(--blue)}
-  .fleet-price span{font-family:var(--font-sans);font-size:11px;color:var(--text-light);font-style:normal;font-weight:400}
-  .btn-fleet-book{background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:9px 20px;border-radius:50px;border-bottom:2px solid var(--blue-dark);transition:background 0.15s}
-  .btn-fleet-book:hover{background:var(--blue-hover)}
+  .cs-fleet{background:var(--dark);padding:80px 0;position:relative;overflow:hidden}
+  .cs-fleet::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 100% 0%,rgba(20,183,244,0.09) 0%,transparent 55%);pointer-events:none}
+  .cs-fleet-head{text-align:center;margin-bottom:44px;position:relative;z-index:1}
+  .cs-fleet-pre{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);display:block;margin-bottom:12px}
+  .cs-fleet-h2{font-family:var(--font-serif);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:400;font-style:italic;color:#fff;line-height:1.2;margin-bottom:0}
+  .cs-fleet-h2 strong{font-style:normal;color:var(--blue)}
+  .cs-fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1}
+  .cs-fleet-img{height:170px;overflow:hidden;border-radius:12px;margin-bottom:20px;background:rgba(255,255,255,0.04);position:relative}
+  .cs-fleet-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;filter:brightness(0.9)}
+  .cs-fleet-card:hover .cs-fleet-img img{transform:scale(1.05)}
+  .cs-fleet-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(20,183,244,0.06);border:1px solid rgba(20,183,244,0.12);border-radius:12px}
+  .cs-fleet-img-placeholder svg{width:40px;height:40px;stroke:rgba(20,183,244,0.3);fill:none;stroke-width:1.5}
+  .cs-fleet-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:24px 22px 22px;position:relative;overflow:hidden;transition:background 0.2s,border-color 0.2s}
+  .cs-fleet-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.2),transparent);opacity:0;transition:opacity 0.2s}
+  .cs-fleet-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(20,183,244,0.2)}
+  .cs-fleet-card:hover::before{opacity:1}
+  .cs-fleet-type{font-family:var(--font-sans);font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue);margin-bottom:10px;display:block}
+  .cs-fleet-name{font-family:var(--font-serif);font-size:1.3rem;font-style:italic;color:#fff;margin-bottom:6px;line-height:1.2}
+  .cs-fleet-model{font-size:11.5px;color:rgba(255,255,255,0.35);margin-bottom:16px;font-weight:300}
+  .cs-fleet-specs{display:flex;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+  .cs-fleet-spec{font-size:11px;color:rgba(255,255,255,0.55);display:flex;align-items:center;gap:5px;font-weight:500}
+  .cs-fleet-spec::before{content:'·';color:var(--blue);font-size:14px;line-height:1}
+  .cs-fleet-spec:first-child::before{display:none}
+  .cs-fleet-features{display:flex;flex-direction:column;gap:7px;margin-bottom:22px}
+  .cs-fleet-feature{font-size:12.5px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:8px;font-weight:300}
+  .cs-fleet-feature::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);flex-shrink:0}
+  .cs-fleet-btn{display:inline-flex;align-items:center;justify-content:center;width:100%;height:42px;background:transparent;color:rgba(255,255,255,0.65);font-family:var(--font-sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;border:1px solid rgba(255,255,255,0.15);border-radius:50px;transition:all 0.15s}
+  .cs-fleet-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .cs-fleet-cta{text-align:center;margin-top:32px;position:relative;z-index:1}
+  .cs-fleet-cta p{color:rgba(255,255,255,0.35);font-size:12.5px;margin-top:14px;font-weight:300}
 
-  /* ── COMPARISON ─────────────────────────────────────────────────── */
-  .compare{background:var(--white);padding:80px 0}
-  .compare-wrap{display:grid;grid-template-columns:1fr 80px 1fr;margin-top:48px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg)}
-  .compare-us{background:linear-gradient(145deg,var(--blue) 0%,var(--blue-dark) 100%);padding:44px 36px}
-  .compare-vs{background:var(--dark);display:flex;align-items:center;justify-content:center}
-  .vs-badge{width:52px;height:52px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:13px;font-weight:800;color:var(--dark);letter-spacing:0.05em;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
-  .compare-them{background:var(--gray);padding:44px 36px}
-  .compare-us h3,.compare-them h3{font-family:var(--font-sans);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px}
-  .compare-us h3{color:#fff}
-  .compare-them h3{color:var(--dark)}
-  .compare-img{width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:22px}
-  .compare-list{display:flex;flex-direction:column;gap:10px}
-  .compare-list li{font-family:var(--font-sans);font-size:13px;display:flex;align-items:flex-start;gap:9px;line-height:1.45}
-  .compare-us .compare-list li{color:rgba(255,255,255,0.9)}
-  .compare-us .compare-list li::before{content:'✓';background:rgba(255,255,255,0.25);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;line-height:20px;text-align:center}
-  .compare-them .compare-list li{color:var(--text-light)}
-  .compare-them .compare-list li::before{content:'✗';background:rgba(239,68,68,0.1);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#ef4444;flex-shrink:0;line-height:20px;text-align:center}
-  .compare-ctas{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  /* ── SERVICE AREAS ──────────────────────────────────────────────── */
+  .cs-areas{background:var(--off-white);padding:72px 0}
+  .cs-areas-head{text-align:center;margin-bottom:44px}
+  .cs-nbhd-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:32px}
+  .cs-nbhd-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px 16px 14px;position:relative;overflow:hidden;transition:box-shadow 0.2s;display:block;text-decoration:none;color:inherit}
+  .cs-nbhd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 0.22s ease}
+  .cs-nbhd-card:hover{box-shadow:var(--shadow)}
+  .cs-nbhd-card:hover::before{transform:scaleX(1)}
+  .cs-nbhd-card:hover .cs-nbhd-name{color:var(--blue)}
+  .cs-nbhd-name{font-family:var(--font-sans);font-size:13px;font-weight:700;color:var(--dark);margin-bottom:2px}
+  .cs-nbhd-type{font-size:11px;color:var(--text-light);font-weight:400}
+  .cs-airports-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .cs-airport-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px;transition:box-shadow 0.2s,border-color 0.2s}
+  .cs-airport-card:hover{box-shadow:var(--shadow);border-color:rgba(20,183,244,0.3)}
+  .cs-airport-iata{font-family:var(--font-sans);font-size:1.25rem;font-weight:800;color:var(--blue);letter-spacing:0.04em;line-height:1;margin-bottom:5px}
+  .cs-airport-full{font-size:12.5px;color:var(--dark);font-weight:600;line-height:1.3;margin-bottom:4px}
+  .cs-airport-note{font-size:11px;color:var(--text-light);font-weight:300;line-height:1.5}
 
-  /* ── USE CASES ──────────────────────────────────────────────────── */
-  .usecases{background:var(--gray);padding:90px 0}
-  .usecase-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
-  .usecase-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column}
-  .usecase-card:hover{border-color:var(--blue);box-shadow:0 10px 40px rgba(20,183,244,0.15);transform:translateY(-3px)}
-  .usecase-card-head{padding:28px 28px 20px;display:flex;align-items:flex-start;gap:18px;border-bottom:1px solid var(--border)}
-  .usecase-icon{width:52px;height:52px;background:var(--blue-bg);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.25s}
-  .usecase-card:hover .usecase-icon{background:var(--blue)}
-  .usecase-icon svg{width:24px;height:24px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.25s}
-  .usecase-card:hover .usecase-icon svg{stroke:#fff}
-  .usecase-head-info{flex:1;padding-top:4px}
-  .usecase-name{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
-  .usecase-sub{font-family:var(--font-sans);font-size:12px;color:var(--text-light)}
-  .usecase-card-body{padding:18px 28px 22px}
-  .usecase-body-text{font-family:var(--font-sans);font-size:13px;color:var(--text-light);line-height:1.7;font-weight:300;margin-bottom:16px}
-  .usecase-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
-  .usecase-tag{font-family:var(--font-sans);font-size:10.5px;font-weight:700;color:var(--blue);background:var(--blue-bg);padding:3px 10px;border-radius:50px;letter-spacing:0.06em}
-  .btn-usecase{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--blue);border-bottom:1px solid rgba(20,183,244,0.3);transition:border-color 0.15s;padding-bottom:1px}
-  .btn-usecase:hover{border-color:var(--blue)}
+  /* ── WHY LIMO4ALL ───────────────────────────────────────────────── */
+  .cs-why{background:var(--white);padding:80px 0;border-top:1px solid var(--border)}
+  .cs-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .cs-why-pre{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);display:block;margin-bottom:14px}
+  .cs-why-h2{font-family:var(--font-serif);font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:400;font-style:italic;color:var(--dark);line-height:1.1;margin-bottom:6px}
+  .cs-why-h2 strong{font-style:normal;color:var(--blue);display:block}
+  .cs-why-rule{width:44px;height:2px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.2));margin:20px 0 22px;border:none}
+  .cs-why-body{font-size:14px;color:var(--text-light);line-height:1.8;font-weight:300;max-width:430px;margin-bottom:28px}
+  .cs-why-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:13px 28px;border-radius:50px;border-bottom:3px solid var(--blue-dark);transition:background 0.15s}
+  .cs-why-cta:hover{background:var(--blue-hover)}
+  .cs-why-list{display:flex;flex-direction:column}
+  .cs-why-item{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-top:1px solid var(--border);position:relative;transition:padding-left 0.2s}
+  .cs-why-list .cs-why-item:last-child{border-bottom:1px solid var(--border)}
+  .cs-why-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--blue);transform:scaleY(0);transform-origin:center;transition:transform 0.2s}
+  .cs-why-item:hover{padding-left:12px}
+  .cs-why-item:hover::before{transform:scaleY(1)}
+  .cs-why-num{font-family:var(--font-serif);font-size:1.1rem;font-weight:700;font-style:italic;color:rgba(20,183,244,0.3);flex-shrink:0;width:28px;padding-top:2px;line-height:1}
+  .cs-why-item-text{font-size:13.5px;color:var(--text-light);line-height:1.6;font-weight:300;padding-top:2px}
+  .cs-why-item-text strong{color:var(--dark);font-weight:700;display:block;font-size:13px;margin-bottom:3px}
 
-  /* ── FAQ ────────────────────────────────────────────────────────── */
-  .faq{background:var(--white);padding:80px 0}
-  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:44px}
-  .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.2s}
-  .faq-item.open{border-color:var(--blue)}
-  .faq-q{padding:16px 20px;font-family:var(--font-sans);font-size:13.5px;font-weight:600;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:color 0.15s}
-  .faq-q:hover,.faq-item.open .faq-q{color:var(--blue)}
-  .faq-q svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s}
-  .faq-item.open .faq-q svg{transform:rotate(180deg)}
-  .faq-a{display:none;padding:14px 20px 16px;font-family:var(--font-sans);font-size:13px;color:var(--text-light);line-height:1.75;border-top:1px solid var(--border);font-weight:300}
-  .faq-item.open .faq-a{display:block}
-  .faq-cta{text-align:center;margin-top:36px}
-  .btn-faq-more{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--blue);color:var(--blue);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 32px;border-radius:50px;transition:all 0.2s}
-  .btn-faq-more:hover{background:var(--blue);color:#fff}
-
-  /* ── REVIEWS ────────────────────────────────────────────────────── */
-  .reviews{background:#fff;padding:0 0 90px}
-  /* dark trust bar */
-  .rev-trust-bar{background:linear-gradient(135deg,#0d1f35 0%,#162c47 100%);padding:20px 0}
-  .rev-trust-inner{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;max-width:var(--max-w);margin:0 auto;padding:0 28px}
-  .g-agg-pill{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:14px;padding:10px 18px;margin-right:28px;flex-shrink:0}
-  .g-agg-logo{width:26px;height:26px;flex-shrink:0}
-  .g-agg-score{font-family:var(--font-serif);font-size:1.8rem;font-weight:700;font-style:italic;color:#fff;line-height:1;flex-shrink:0}
-  .g-agg-meta strong{font-family:var(--font-sans);font-size:12px;font-weight:700;color:#fff;display:block;line-height:1.2}
-  .g-agg-meta .g-stars-sm{color:#f59e0b;font-size:11px;letter-spacing:1px}
-  .g-agg-meta em{font-family:var(--font-sans);font-size:10px;font-style:normal;color:rgba(255,255,255,0.4);display:block}
-  .rev-trust-item{display:flex;align-items:center;gap:11px;padding:0 28px;border-right:1px solid rgba(255,255,255,0.09)}
-  .rev-trust-item:last-child{border-right:none}
-  .rev-trust-icon{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .rev-trust-icon svg{width:18px;height:18px;fill:none;stroke:rgba(255,255,255,0.75);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .rev-trust-text strong{display:block;font-family:var(--font-sans);font-size:13px;font-weight:700;color:#fff;line-height:1.2}
-  .rev-trust-text span{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em}
-  /* reviews body */
-  .reviews-body{padding:60px 0 0}
-  .reviews-top-row{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:44px}
-  .rev-rating-badge{display:flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:10px 22px;box-shadow:var(--shadow);flex-shrink:0}
-  .rev-rating-badge .rb-score{font-family:var(--font-serif);font-size:1.7rem;font-weight:700;font-style:italic;color:var(--blue);line-height:1}
-  .rb-right strong{font-family:var(--font-sans);font-size:12px;font-weight:700;color:var(--dark);display:block;line-height:1.3}
-  .rb-right .rb-stars{color:#f59e0b;font-size:12px;letter-spacing:1px;display:block}
-  .rb-right em{font-family:var(--font-sans);font-size:10px;font-style:normal;color:var(--text-light)}
-  /* spotlight card */
-  .rev-spotlight{background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:24px;padding:56px 60px 48px;box-shadow:0 8px 48px rgba(0,0,0,0.08),0 2px 8px rgba(0,0,0,0.04);position:relative;overflow:hidden}
-  .rev-spotlight::before{content:'\201C';font-family:Georgia,serif;font-size:18rem;line-height:1;color:rgba(20,183,244,0.045);position:absolute;top:-36px;left:16px;pointer-events:none;user-select:none}
-  /* animated fade-swap wrapper */
-  .rev-quote-wrap{position:relative;z-index:1;transition:opacity 0.22s ease,transform 0.22s ease}
-  .rev-spotlight.fading .rev-quote-wrap{opacity:0;transform:translateY(10px)}
-  .rev-quote{font-family:var(--font-serif);font-size:1.22rem;font-style:italic;color:#1a2535;line-height:2.05;margin-bottom:40px}
-  .rev-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(0,0,0,0.07)}
-  .rev-author-left{display:flex;align-items:center;gap:14px}
-  .rev-avatar-lg{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:13px;font-weight:800;color:#fff;flex-shrink:0;letter-spacing:0.03em;transition:background 0.3s}
-  .rev-author-name{font-family:var(--font-sans);font-size:15px;font-weight:700;color:var(--dark);line-height:1.2}
-  .rev-author-role{font-family:var(--font-sans);font-size:12px;color:var(--text-light);line-height:1.5;margin-top:3px}
-  .rev-meta-right{display:flex;align-items:center;gap:14px}
-  .rev-stars-lg{color:#f59e0b;font-size:17px;letter-spacing:2px}
-  .rev-verified-lg{display:inline-flex;align-items:center;gap:7px;background:rgba(20,183,244,0.07);border:1px solid rgba(20,183,244,0.2);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:11px;font-weight:700;color:var(--blue)}
-  .rev-vdot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
-  /* selector row */
-  .rev-spotlight-nav{display:flex;align-items:center;gap:10px;margin-top:20px;justify-content:flex-end}
-  .rev-arrow-btn{width:40px;height:40px;border-radius:50%;background:var(--white);border:1px solid var(--border);color:var(--text-light);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;padding:0;box-shadow:var(--shadow)}
-  .rev-arrow-btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-  .rev-arrow-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .rev-progress-dots{display:flex;gap:5px;align-items:center}
-  .rev-progress-dot{width:6px;height:6px;border-radius:50%;background:rgba(20,183,244,0.2);transition:all 0.3s;border:none;padding:0;cursor:pointer}
-  .rev-progress-dot.active{background:var(--blue);width:18px;border-radius:3px}
-  .rev-agg-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 24px;border-radius:50px;transition:all 0.2s;margin-left:12px;flex-shrink:0;box-shadow:0 4px 16px rgba(20,183,244,0.35)}
-  .rev-agg-cta:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 8px 24px rgba(20,183,244,0.4)}
-  /* aggregate bottom strip */
-  .reviews-aggregate{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-top:36px;padding:28px 32px;background:linear-gradient(135deg,var(--blue-bg) 0%,#e5f6fd 100%);border-radius:20px;border:1px solid rgba(20,183,244,0.14)}
-  .rev-agg-item{text-align:center;padding:0 32px}
-  .rev-agg-num{font-family:var(--font-serif);font-size:2rem;font-weight:700;font-style:italic;color:var(--blue);line-height:1;display:block}
-  .rev-agg-label{font-family:var(--font-sans);font-size:10.5px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light);font-weight:600;margin-top:4px;display:block}
-  .rev-agg-divider{width:1px;height:44px;background:rgba(20,183,244,0.18);flex-shrink:0}
-  .rev-google-link{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(0,0,0,0.1);border-radius:50px;padding:11px 22px;font-family:var(--font-sans);font-size:12px;font-weight:700;color:var(--dark);box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;margin-left:28px;flex-shrink:0}
-  .rev-google-link:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 6px 20px rgba(20,183,244,0.15);transform:translateY(-1px)}
-
-  /* ── RELATED SERVICES ───────────────────────────────────────────── */
-  .related{background:var(--gray);padding:64px 0}
-  .related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
-  .rel-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all 0.2s;display:block}
-  .rel-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-2px)}
-  .rel-img{height:120px;overflow:hidden}
-  .rel-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
-  .rel-card:hover .rel-img img{transform:scale(1.05)}
-  .rel-body{padding:18px 18px 20px}
-  .rel-body h4{font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--dark);margin-bottom:6px}
-  .rel-body p{font-size:12px;color:var(--text-light);line-height:1.55;margin-bottom:10px}
-  .rel-arrow{font-family:var(--font-sans);font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.1em}
-
-  /* ── SPEAK WITH US ──────────────────────────────────────────────── */
-  .speak{background:var(--dark);padding:80px 0;position:relative;overflow:hidden}
-  .speak::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 0% 50%,rgba(20,183,244,0.12) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 100% 50%,rgba(20,183,244,0.07) 0%,transparent 60%);pointer-events:none}
-  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;position:relative;z-index:1}
-  .speak-pre{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:10px}
-  .speak-h2{font-family:var(--font-serif);font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:400;font-style:italic;color:#fff;line-height:1.15;margin-bottom:12px}
-  .speak-h2 strong{font-style:normal;color:var(--blue)}
-  .speak-sub{font-family:var(--font-sans);font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;max-width:440px;margin-bottom:32px}
-  .speak-channels{display:flex;flex-direction:column;gap:12px}
-  .speak-channel{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px 20px;transition:all 0.2s;text-decoration:none;color:inherit}
-  .speak-channel:hover{background:rgba(20,183,244,0.1);border-color:rgba(20,183,244,0.3);transform:translateY(-2px)}
-  .speak-ch-icon{width:44px;height:44px;border-radius:12px;background:rgba(20,183,244,0.12);border:1px solid rgba(20,183,244,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
-  .speak-channel:hover .speak-ch-icon{background:var(--blue)}
-  .speak-ch-icon svg{width:20px;height:20px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s}
-  .speak-channel:hover .speak-ch-icon svg{stroke:#fff}
-  .speak-ch-label{font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);margin-bottom:3px}
-  .speak-ch-value{font-family:var(--font-sans);font-size:15px;font-weight:700;color:#fff;line-height:1.2}
-  .speak-ch-note{font-family:var(--font-sans);font-size:10.5px;color:rgba(255,255,255,0.3);margin-top:2px;font-weight:300}
-  .speak-form-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:36px 32px}
-  .speak-form-card h4{font-family:var(--font-serif);font-size:1.35rem;font-style:italic;color:#fff;margin-bottom:20px;line-height:1.25}
+  /* ── SPEAK ──────────────────────────────────────────────────────── */
+  .speak{background:var(--dark);padding:90px 0;position:relative;overflow:hidden}
+  .speak::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 80% at 0% 60%,rgba(20,183,244,0.1) 0%,transparent 55%),radial-gradient(ellipse 40% 50% at 100% 10%,rgba(20,183,244,0.06) 0%,transparent 55%);pointer-events:none}
+  .speak-deco{position:absolute;right:48%;top:50%;transform:translateY(-50%);font-family:var(--font-serif);font-size:22rem;font-weight:700;font-style:italic;color:rgba(20,183,244,0.035);line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
+  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:1}
+  .speak-trust-row{display:flex;gap:0;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.07)}
+  .speak-trust-item{flex:1;text-align:center;padding:0 12px}
+  .speak-trust-item:not(:last-child){border-right:1px solid rgba(255,255,255,0.07)}
+  .speak-trust-num{font-family:var(--font-serif);font-size:1.7rem;font-style:italic;color:var(--blue);display:block;line-height:1;margin-bottom:5px}
+  .speak-trust-lbl{font-family:var(--font-sans);font-size:10.5px;color:rgba(255,255,255,0.35);font-weight:500;display:block;letter-spacing:0.04em}
+  .speak-pre{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);display:block;margin-bottom:14px}
+  .speak-h2{font-family:var(--font-serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;font-style:italic;color:#fff;line-height:1.08;margin-bottom:0}
+  .speak-h2 strong{font-style:normal;color:var(--blue);display:block}
+  .speak-rule{width:44px;height:2px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.2));margin:20px 0 22px;border:none}
+  .speak-sub{font-family:var(--font-sans);font-size:13.5px;color:rgba(255,255,255,0.38);line-height:1.8;font-weight:300;max-width:400px;margin-bottom:36px}
+  .speak-contacts{display:flex;flex-direction:column}
+  .speak-contact{display:flex;align-items:center;gap:16px;padding:15px 0;border-top:1px solid rgba(255,255,255,0.06);text-decoration:none;color:inherit;transition:padding-left 0.2s ease;position:relative}
+  .speak-contacts .speak-contact:last-child{border-bottom:1px solid rgba(255,255,255,0.06)}
+  .speak-contact::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--blue);transform:scaleY(0);transform-origin:center;transition:transform 0.2s ease}
+  .speak-contact:hover{padding-left:14px}
+  .speak-contact:hover::before{transform:scaleY(1)}
+  .speak-ct-icon{width:34px;height:34px;border-radius:8px;background:rgba(20,183,244,0.08);border:1px solid rgba(20,183,244,0.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s,border-color 0.2s}
+  .speak-contact:hover .speak-ct-icon{background:rgba(20,183,244,0.2);border-color:rgba(20,183,244,0.35)}
+  .speak-ct-icon svg{width:14px;height:14px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .speak-ct-label{font-family:var(--font-sans);font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.3);margin-bottom:2px}
+  .speak-ct-value{font-family:var(--font-sans);font-size:14px;font-weight:700;color:#fff;line-height:1.2}
+  .speak-ct-note{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.22);margin-top:1px;font-weight:300}
+  .speak-form-wrap{background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.09);border-radius:22px;padding:38px 34px;position:relative;overflow:hidden}
+  .speak-form-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue) 0%,rgba(20,183,244,0.25) 60%,transparent 100%)}
+  .speak-form-title{font-family:var(--font-serif);font-size:1.45rem;font-style:italic;color:#fff;margin-bottom:5px;line-height:1.25}
+  .speak-form-sub{font-family:var(--font-sans);font-size:11.5px;color:rgba(255,255,255,0.3);margin-bottom:24px;font-weight:300}
   .sf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
   .sf-field{width:100%;height:46px;padding:0 16px;font-family:var(--font-sans);font-size:13px;color:var(--dark);background:#fff;border:1.5px solid var(--border);border-radius:10px;outline:none;transition:border-color 0.2s,box-shadow 0.2s}
   .sf-field:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,183,244,0.1)}
   .sf-field::placeholder{color:#bbb}
-  .sf-textarea{width:100%;min-height:100px;padding:14px 16px;font-family:var(--font-sans);font-size:13px;color:var(--dark);background:#fff;border:1.5px solid var(--border);border-radius:10px;outline:none;resize:vertical;transition:border-color 0.2s,box-shadow 0.2s;margin:10px 0;display:block}
+  .sf-textarea{width:100%;min-height:90px;padding:14px 16px;font-family:var(--font-sans);font-size:13px;color:var(--dark);background:#fff;border:1.5px solid var(--border);border-radius:10px;outline:none;resize:vertical;transition:border-color 0.2s,box-shadow 0.2s;margin:10px 0;display:block}
   .sf-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,183,244,0.1)}
   .sf-textarea::placeholder{color:#bbb}
-  .sf-btns{display:flex;gap:10px;margin-top:10px}
-  .btn-speak-submit{flex:1;height:48px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border:none;border-radius:50px;border-bottom:3px solid var(--blue-dark);cursor:pointer;transition:background 0.15s}
+  .sf-btns{display:flex;gap:10px;margin-top:4px}
+  .btn-speak-submit{flex:1;height:48px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;border:none;border-radius:50px;border-bottom:3px solid var(--blue-dark);cursor:pointer;transition:background 0.15s}
   .btn-speak-submit:hover{background:var(--blue-hover)}
-  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.7);font-family:var(--font-sans);font-size:13px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);text-decoration:none;transition:all 0.15s;white-space:nowrap}
+  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:12.5px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.14);text-decoration:none;transition:all 0.15s;white-space:nowrap}
   .btn-speak-call:hover{border-color:var(--blue);color:var(--blue)}
-  .sf-note{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.25);text-align:center;margin-top:12px;line-height:1.5}
-  @media(max-width:1024px){.speak-grid{grid-template-columns:1fr;gap:40px}}
+  .sf-note{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.18);text-align:center;margin-top:14px;line-height:1.6}
+
+  /* ── FIFA BANNER ────────────────────────────────────────────────── */
+  .cs-fifa-banner{background:var(--blue);padding:56px 0;text-align:center;position:relative;overflow:hidden}
+  .cs-fifa-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 100% at 50% 50%,rgba(255,255,255,0.07) 0%,transparent 70%);pointer-events:none}
+  .cs-fifa-inner{max-width:680px;margin:0 auto;position:relative;z-index:1}
+  .cs-fifa-eyebrow{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:rgba(255,255,255,0.7);display:block;margin-bottom:14px}
+  .cs-fifa-heading{font-family:var(--font-serif);font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:400;font-style:italic;color:#fff;line-height:1.2;margin-bottom:28px}
+  .cs-fifa-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--blue);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:14px 38px;border-radius:4px;border:2px solid rgba(255,255,255,0.9);transition:all 0.2s}
+  .cs-fifa-btn:hover{background:transparent;color:#fff}
+
+  /* ── FAQ ────────────────────────────────────────────────────────── */
+  .cs-faq{padding:88px 0;background:var(--white)}
+  .cs-faq-head{text-align:center;margin-bottom:44px}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.2s}
+  .faq-item.open{border-color:var(--blue)}
+  .faq-q{padding:16px 20px;font-family:var(--font-sans);font-size:13.5px;font-weight:600;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:color 0.15s;line-height:1.4}
+  .faq-q:hover,.faq-item.open .faq-q{color:var(--blue)}
+  .faq-q svg{width:18px;height:18px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s}
+  .faq-item.open .faq-q svg{transform:rotate(180deg)}
+  .faq-a{display:none;padding:14px 20px 18px;font-family:var(--font-sans);font-size:13px;color:var(--text-light);line-height:1.78;border-top:1px solid var(--border);font-weight:300}
+  .faq-item.open .faq-a{display:block}
+  .faq-cta{text-align:center;margin-top:32px}
+  .btn-faq-more{display:inline-flex;align-items:center;gap:8px;border:2px solid var(--blue);color:var(--blue);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:12px 32px;border-radius:50px;transition:all 0.2s}
+  .btn-faq-more:hover{background:var(--blue);color:#fff}
+
+  /* ── COMPARE ─────────────────────────────────────────────────────── */
+  .cs-compare{background:var(--white);padding:80px 0;border-top:1px solid var(--border)}
+  .cs-compare-head{text-align:center;margin-bottom:48px}
+  .cs-compare-wrap{display:grid;grid-template-columns:1fr 80px 1fr;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg)}
+  .cs-compare-us{background:linear-gradient(145deg,var(--blue) 0%,var(--blue-dark) 100%);padding:44px 36px}
+  .cs-compare-vs{background:var(--dark);display:flex;align-items:center;justify-content:center}
+  .cs-vs-badge{width:52px;height:52px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-size:13px;font-weight:800;color:var(--dark);letter-spacing:0.05em;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+  .cs-compare-them{background:var(--gray);padding:44px 36px}
+  .cs-compare-us h3,.cs-compare-them h3{font-family:var(--font-sans);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px}
+  .cs-compare-us h3{color:#fff}
+  .cs-compare-them h3{color:var(--dark)}
+  .cs-compare-img{width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:22px}
+  .cs-compare-list{display:flex;flex-direction:column;gap:10px}
+  .cs-compare-list li{font-family:var(--font-sans);font-size:13px;display:flex;align-items:flex-start;gap:9px;line-height:1.45;list-style:none}
+  .cs-compare-us .cs-compare-list li{color:rgba(255,255,255,0.9)}
+  .cs-compare-us .cs-compare-list li::before{content:'✓';background:rgba(255,255,255,0.25);width:20px;height:20px;min-width:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;line-height:20px;text-align:center}
+  .cs-compare-them .cs-compare-list li{color:var(--text-light)}
+  .cs-compare-them .cs-compare-list li::before{content:'✗';background:rgba(239,68,68,0.1);width:20px;height:20px;min-width:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#ef4444;flex-shrink:0;line-height:20px;text-align:center}
+  .cs-compare-ctas{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+  .btn-outline-dark{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--dark);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:13px 28px;border-radius:50px;border:2px solid var(--border);transition:all 0.15s}
+  .btn-outline-dark:hover{border-color:var(--blue);color:var(--blue)}
+
+  /* ── INTERNAL LINKS ─────────────────────────────────────────────── */
+  .cs-interlink{background:var(--off-white);padding:56px 0;border-top:1px solid var(--border)}
+  .cs-interlink-eyebrow{text-align:center;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);margin-bottom:28px}
+  .cs-interlink-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .cs-interlink-panel{background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow)}
+  .cs-interlink-panel-bar{height:3px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.3))}
+  .cs-interlink-panel-body{padding:26px 28px}
+  .cs-interlink-panel-label{font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:16px}
+  .cs-interlink-link{display:flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:13px;color:var(--text);font-weight:500;padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color 0.15s,gap 0.15s}
+  .cs-interlink-link:last-child{border-bottom:none;padding-bottom:4px}
+  .cs-interlink-link:hover{color:var(--blue);gap:13px}
+  .cs-interlink-link-arrow{color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
+  @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
   .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
@@ -443,98 +406,95 @@
   .footer-col a:hover{color:var(--blue)}
   .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.25);flex-wrap:wrap;gap:8px}
 
+  /* ── FLOAT CTA ──────────────────────────────────────────────────── */
+  .float-cta{position:fixed;bottom:28px;right:24px;z-index:9999;width:270px;background:#fff;border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,0.18),0 2px 12px rgba(20,183,244,0.12);border:1px solid rgba(20,183,244,0.15);padding:18px 18px 16px;transform:translateY(120%);opacity:0;transition:transform 0.42s cubic-bezier(0.34,1.56,0.64,1),opacity 0.35s ease;pointer-events:none}
+  .float-cta.visible{transform:translateY(0);opacity:1;pointer-events:auto}
+  .float-cta-close{position:absolute;top:10px;right:10px;width:22px;height:22px;background:var(--dark);border-radius:4px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+  .float-cta-close svg{width:10px;height:10px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round}
+  .float-cta-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(20,183,244,0.1);color:var(--blue);font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;padding:4px 10px;border-radius:50px;margin-bottom:8px}
+  .float-cta-title{font-family:var(--font-sans);font-size:15px;font-weight:700;color:var(--dark);margin-bottom:4px;line-height:1.3;padding-right:16px}
+  .float-cta-sub{font-family:var(--font-sans);font-size:11.5px;color:var(--text-light);line-height:1.5;margin-bottom:14px}
+  .float-cta-row{display:flex;gap:8px}
+  .btn-float-book{flex:1;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:10px 14px;border-radius:8px;border-bottom:2px solid var(--blue-dark);text-align:center;transition:background 0.15s;display:flex;align-items:center;justify-content:center}
+  .btn-float-book:hover{background:var(--blue-hover)}
+  .btn-float-quote{flex:1;background:var(--off-white);color:var(--dark);font-family:var(--font-sans);font-size:12px;font-weight:600;padding:10px 14px;border-radius:8px;border:1px solid var(--border);text-align:center;transition:all 0.15s}
+  .btn-float-quote:hover{border-color:var(--blue);color:var(--blue)}
+  .float-cta-trust{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;flex-wrap:wrap}
+  .float-cta-trust span{font-family:var(--font-sans);font-size:9.5px;color:var(--text-light);display:flex;align-items:center;gap:4px}
+  .float-cta-trust span::before{content:'✓';color:var(--blue);font-size:9px;font-weight:700}
+
   /* ── RESPONSIVE ─────────────────────────────────────────────────── */
   @media(max-width:1024px){
-    .hero-grid{grid-template-columns:1fr;gap:40px}
-    .hero-img-wrap img{height:300px;object-position:center center}
-    .why-interactive{grid-template-columns:1fr}
-    .why-tabs-col{border-right:none;border-bottom:1px solid var(--border)}
-    .why-panel-item{min-height:auto;padding:36px 28px}
-    .stats-inner{grid-template-columns:repeat(2,1fr);gap:32px}
-    .stat-block{border-right:none;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,0.15)}
-    .stat-block:nth-child(odd){border-right:1px solid rgba(255,255,255,0.2)}
-    .stat-block:nth-last-child(-n+2){border-bottom:none}
-    .fleet-grid{grid-template-columns:repeat(2,1fr)}
-    .compare-wrap{grid-template-columns:1fr;border-radius:var(--radius)}
-    .compare-vs{display:none}
-    .usecase-cards{grid-template-columns:1fr}
-    .related-grid{grid-template-columns:repeat(2,1fr)}
-    .footer-grid{grid-template-columns:1fr 1fr}
-    .rev-spotlight{padding:40px 36px 36px}
-    .rev-quote{font-size:1.05rem}
-    .rev-meta{flex-direction:column;align-items:flex-start}
-    .rev-agg-cta{margin-left:0;margin-top:12px}
+    .cs-hero-grid,.cs-intro-grid,.cs-why-grid{grid-template-columns:1fr;gap:40px}
+    .cs-benefits-grid{grid-template-columns:repeat(3,1fr)}
+    .cs-fleet-grid{grid-template-columns:repeat(2,1fr)}
+    .cs-fleet-grid{grid-template-columns:repeat(2,1fr)}
+    .cs-nbhd-grid{grid-template-columns:repeat(3,1fr)}
+    .cs-airports-grid{grid-template-columns:repeat(2,1fr)}
+    .speak-grid{grid-template-columns:1fr;gap:48px}
+    .speak-deco{display:none}
     .faq-grid{grid-template-columns:1fr}
-    .seamless-body{grid-template-columns:1fr}
-    .s-tabs{border-right:none;border-bottom:1px solid var(--border)}
-    .acct-band-inner{grid-template-columns:1fr;gap:24px}
+    .footer-grid{grid-template-columns:1fr 1fr}
+    .cs-svc-card-inner{grid-template-columns:1fr}
+    .cs-svc-card-aside{border-left:none;border-top:1px solid var(--border)}
+    .cs-compare-wrap{grid-template-columns:1fr}
+    .cs-compare-vs{display:none}
   }
   @media(max-width:768px){
+    .pb-left,.pb-right{display:none}
+    .pb-center{text-align:center}
     .nav{display:none}
     .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);z-index:400;padding:10px 0;box-shadow:0 8px 24px rgba(0,0,0,0.1)}
     .hamburger{display:flex}
     .hdr-phone-wrap,.fifa{display:none}
-    .booking-strip-inner{flex-direction:column;align-items:stretch}
-    .booking-form-row{flex-direction:column}
-    .bf-input{min-width:unset;width:100%}
-    .btn-checkprice{width:100%;height:46px}
-    .why-cards{grid-template-columns:1fr 1fr}
-    .fleet-grid{grid-template-columns:1fr}
-    .rev-spotlight{padding:28px 24px 28px}
-    .reviews-top-row{flex-direction:column;align-items:flex-start}
-    .related-grid{grid-template-columns:1fr 1fr}
+    .cs-benefits-grid{grid-template-columns:repeat(2,1fr)}
+    .cs-fleet-grid{grid-template-columns:repeat(2,1fr)}
+    .cs-nbhd-grid{grid-template-columns:repeat(2,1fr)}
+    .cs-airports-grid{grid-template-columns:repeat(2,1fr)}
+    .cs-stat-cards{grid-template-columns:1fr 1fr}
   }
   @media(max-width:580px){
-    .related-grid{grid-template-columns:1fr}
-    .why-cards{grid-template-columns:1fr}
+    .cs-benefits-grid,.cs-fleet-grid{grid-template-columns:1fr}
+    .cs-airports-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr}
-    .compare-us,.compare-them{padding:28px 22px}
-    .stats-inner{grid-template-columns:1fr 1fr}
-    .acct-band-ctas{flex-direction:column}
+    .sf-row,.cs-field-row{grid-template-columns:1fr}
   }
-
-  /* ── CITY PAGE EXTRAS (used in generated city pages) ─────────── */
-  .cs-nbhd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:20px}
-  .cs-nbhd-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;transition:border-color 0.15s,box-shadow 0.15s;text-decoration:none;display:block}
-  .cs-nbhd-card:hover{border-color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.1)}
-  .cs-nbhd-name{font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--dark)}
-  .cs-nbhd-type{font-family:var(--font-sans);font-size:11px;color:var(--text-light);margin-top:3px}
-  .cs-interlink{background:var(--off-white);padding:56px 0;border-top:1px solid var(--border)}
-  .cs-interlink-eyebrow{text-align:center;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.22em;color:var(--blue);margin-bottom:28px}
-  .cs-interlink-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .cs-interlink-panel{background:var(--white);border-radius:14px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow)}
-  .cs-interlink-panel-bar{height:3px;background:linear-gradient(90deg,var(--blue),rgba(20,183,244,0.3))}
-  .cs-interlink-panel-body{padding:26px 28px}
-  .cs-interlink-panel-label{font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:16px}
-  .cs-interlink-link{display:flex;align-items:center;gap:9px;font-family:var(--font-sans);font-size:13px;color:var(--text);font-weight:500;padding:9px 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color 0.15s,gap 0.15s}
-  .cs-interlink-link:last-child{border-bottom:none;padding-bottom:4px}
-  .cs-interlink-link:hover{color:var(--blue);gap:13px}
-  .cs-interlink-link-arrow{color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
-  @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
 <!-- PROMO BAR -->
 <div class="promo-bar">
-  <strong>Corporate Accounts Welcome &mdash; Monthly Invoicing Available.</strong>&nbsp; Set up your account today &nbsp;&mdash;&nbsp; <a href="tel:+18001234567">Call 1-800-XXX-XXXX</a>
+  <div class="promo-inner">
+    <div class="pb-left">
+      <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>4.9 Google Rating</span>
+      <span class="pb-sep">&middot;</span>
+      <span>500+ Reviews</span>
+      <span class="pb-sep">&middot;</span>
+      <span>&#127809; Canadian Owned &amp; Operated</span>
+    </div>
+    <div class="pb-center">Toronto&rsquo;s #1 Limo &amp; Chauffeur Service &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-right">
+      <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
+      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
+      <a href="booking.html" class="pb-pill">Book Online</a>
+    </div>
+  </div>
 </div>
 
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='block'">
-      <span style="display:none">LIMO<span>4ALL</span></span>
-    </a>
+    <a href="index.html" class="logo">LIMO<span>4ALL</span></a>
     <nav class="nav" id="main-nav">
       <a href="index.html">Home</a>
-      <a href="AirportHUB.html">Airport</a>
-      <a href="CorporateHUB.html" class="active">Corporate</a>
-      <a href="WeddingHUB.html">Wedding</a>
-      <a href="EventsHUB.html">Events</a>
-      <a href="HourlyHUB.html">Hourly</a>
-      <a href="ToursHUB.html">Tours</a>
+      <a href="airport.html">Airport</a>
+      <a href="corporate.html" class="active">Corporate</a>
+      <a href="wedding.html">Wedding</a>
+      <a href="events.html">Events</a>
+      <a href="hourly.html">Hourly</a>
+      <a href="tours.html">Tours</a>
       <a href="fleet.html">Fleet</a>
       <a href="locations.html">Locations</a>
       <a href="contact.html">Contact</a>
@@ -542,624 +502,694 @@
     <div class="hdr-right">
       <a href="fifa-world-cup-2026.html" class="fifa">&#9917; FIFA 2026</a>
       <div class="hdr-phone-wrap">
-        <span class="hdr-phone-label">Reservations</span>
-        <a href="tel:+18001234567" class="hdr-phone">1-800-XXX-XXXX</a>
+        <span class="hdr-phone-label">Call / Text</span>
+        <a href="tel:+14164513106" class="hdr-phone">416 451 3106</a>
+        <span style="font-size:10px;color:var(--text-light);display:block;margin-top:1px">Text: 647 313 1786 (faster)</span>
       </div>
       <a href="booking.html" class="btn-book">Book Online</a>
-      <a href="corporate-account.html" class="btn-quote-sm">Open Account</a>
+      <a href="quote.html" class="btn-quote-sm">Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <!-- TICKER -->
+<!-- ZONE: ticker-items -->
 <div class="ticker-wrap">
   <div class="ticker-track">
     <span>Corporate Car Service Hamilton</span>
-    <span>Monthly Billing Available</span>
-    <span>Executive Sedans &bull; SUVs &bull; Sprinters</span>
-    <span>Dedicated Account Manager</span>
-    <span>Same-Day Corporate Bookings</span>
-    <span>Confidential &amp; Professional Chauffeurs</span>
-    <span>24/7 Corporate Dispatch</span>
+    <span>Executive Airport Transfers</span>
+    <span>Corporate Account Billing Available</span>
+    <span>Flat Rate &mdash; No Surge Pricing</span>
+    <span>24/7 Live Dispatch</span>
+    <span>Uniformed Professional Chauffeurs</span>
+    <span>Monthly Invoicing for Businesses</span>
+    <span>Multi-Vehicle Corporate Events</span>
     <span>Corporate Car Service Hamilton</span>
-    <span>Monthly Billing Available</span>
-    <span>Executive Sedans &bull; SUVs &bull; Sprinters</span>
-    <span>Dedicated Account Manager</span>
-    <span>Same-Day Corporate Bookings</span>
-    <span>Confidential &amp; Professional Chauffeurs</span>
-    <span>24/7 Corporate Dispatch</span>
+    <span>Executive Airport Transfers</span>
+    <span>Corporate Account Billing Available</span>
+    <span>Flat Rate &mdash; No Surge Pricing</span>
+    <span>24/7 Live Dispatch</span>
+    <span>Uniformed Professional Chauffeurs</span>
+    <span>Monthly Invoicing for Businesses</span>
+    <span>Multi-Vehicle Corporate Events</span>
   </div>
 </div>
+<!-- /ZONE: ticker-items -->
+
+<!-- BREADCRUMB -->
+<!-- ZONE: breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <div class="bc-inner">
+      <div class="bc-left">
+        <a href="index.html">Home</a>
+        <span class="bc-sep">&#8250;</span>
+        <a href="corporate.html">Corporate Car Service</a>
+        <span class="bc-sep">&#8250;</span>
+        <span class="bc-current">Hamilton</span>
+      </div>
+      <div class="bc-center">
+        <span>Hamilton&rsquo;s #1 Corporate Car Service</span>
+        <span class="bc-center-sep">&#9679;</span>
+        <span>Serving Ontario Since 2003</span>
+        <span class="bc-center-sep">&#9679;</span>
+        <span>Corporate Accounts Available</span>
+        <span class="bc-center-sep">&#9679;</span>
+        <span>Monthly Invoicing Available</span>
+      </div>
+      <div class="bc-right">
+        <span class="bc-right-item">&#9733; 4.9 Google Rating</span>
+        <span class="bc-right-item">Flat Rate &mdash; No Surge</span>
+        <span class="bc-right-item">24/7 Live Dispatch</span>
+        <a href="tel:+14164513106" class="bc-phone">&#9990;&nbsp; 416 451 3106</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- /ZONE: breadcrumb -->
 
 <!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-content">
-      <div class="hero-breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="sep">&rsaquo;</span>
-        <span>Corporate Car Service</span>
-      </div>
-      <div class="hero-tags">
-        <span>Executive Sedan</span>
-        <span>Luxury SUV</span>
-        <span>Corporate Sprinter</span>
-        <span>Monthly Accounts</span>
-      </div>
-      <h1>Corporate Car Service<br><strong>Hamilton &amp; Hamilton</strong></h1>
-      <p class="hero-sub">Reliable, confidential, and punctual executive ground transportation for businesses in Hamilton and Hamilton. From single-ride bookings to full corporate accounts with consolidated monthly invoicing.</p>
-      <div class="hero-trust">
-        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span>4.9 Rating</span>
-        <span class="sep">&middot;</span>
-        <span>500+ Corporate Clients</span>
-        <span class="sep">&middot;</span>
-        <span>Licensed &amp; Insured</span>
-        <span class="sep">&middot;</span>
-        <span>24/7 Dispatch</span>
-      </div>
-      <div class="hero-ctas">
-        <a href="booking.html" class="btn-primary">Book a Ride</a>
-        <a href="corporate-account.html" class="btn-outline-dark">Open Corporate Account</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-img-wrap">
-        <img src="./images/service-corporate.png" alt="Executive corporate car service Toronto">
-        <div class="hero-acct-badge">Corporate Accounts Available</div>
-        <div class="hero-img-badge">
-          <div class="badge-icon">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="badge-text">
-            <strong>Monthly Invoicing</strong>
-            <span>Consolidated billing &mdash; net 30 terms</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING STRIP -->
-<div class="booking-strip">
+<!-- ZONE: hero -->
+<section class="cs-hero">
   <div class="wrap">
-    <div class="booking-strip-inner">
-      <div class="booking-tabs">
-        <span class="bt active">Hourly</span>
-        <span class="bt">Point-to-Point</span>
-        <span class="bt">Multi-Stop</span>
-        <span class="bt">Account</span>
-      </div>
-      <div class="booking-form-row">
-        <input class="bf-input" type="text" placeholder="Pickup address or office">
-        <input class="bf-input" type="text" placeholder="Destination or &ldquo;As Directed&rdquo;">
-        <input class="bf-input" type="date">
-        <input class="bf-input" type="time">
-        <select class="bf-input">
-          <option value="">Passengers</option>
-          <option>1 passenger</option>
-          <option>2 passengers</option>
-          <option>3 passengers</option>
-          <option>4 passengers</option>
-          <option>5&ndash;6 passengers</option>
-          <option>7+ passengers</option>
-        </select>
-        <button class="btn-checkprice">Get Quote</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- CITY INTRO -->
-<section style="background:var(--off-white);padding:56px 0;border-top:1px solid var(--border)">
-  <div class="wrap">
-    <span class="sec-label">Hamilton Corporate Car Service</span>
-    <h2 class="sec-h2">Executive Ground Transportation in <em>Hamilton</em></h2>
-    <div style="max-width:780px;margin:24px 0 0">
-      <p style="font-family:var(--font-sans);font-size:14.5px;color:var(--text-light);line-height:1.75;font-weight:300;margin-bottom:16px">Hamilton is undergoing one of the most significant economic transformations of any city in Ontario, evolving into a diverse business hub anchored by a world-class healthcare and life sciences sector, a growing technology community, major post-secondary institutions, and a thriving professional economy that is attracting corporate investment from across the province.</p>
-      <p style="font-family:var(--font-sans);font-size:14.5px;color:var(--text-light);line-height:1.75;font-weight:300;margin-bottom:16px">Limo4All Transportation provides premium corporate limousine and car service throughout Hamilton, serving executives, professional teams, and corporate clients who require reliable, discreet, and polished ground transportation in and around the city. Whether your business is based in Downtown Hamilton, Westdale, Stoney Creek, or Dundas, our professional chauffeurs arrive prepared, manage every aspect of the journey, and ensure that every engagement begins and ends with the professionalism Hamilton&#39;s growing business community deserves.</p>
-      <p style="font-family:var(--font-sans);font-size:14.5px;color:var(--text-light);line-height:1.75;font-weight:300;margin-bottom:16px">Hamilton&#39;s dual airport access, with Hamilton International Airport nearby and Toronto Pearson International Airport within reach via the QEW and Highway 403, gives its business community significant travel flexibility. Limo4All Transportation serves both airports seamlessly.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE -->
-<section class="why-section">
-  <div class="wrap">
-    <div class="why-heading">
-      <span class="wh-pre">Why Hamilton Businesses Choose Limo4All</span>
-      <h2><em>Corporate Transportation</em></h2>
-    </div>
-    <div class="why-interactive">
-      <!-- LEFT: clickable tab list -->
-      <div class="why-tabs-col" id="whyTabs">
-        <div class="why-tab-item active" data-panel="0">
-          <span class="why-tab-num">01</span>
-          <div class="why-tab-info">
-            <h4>Dedicated Account Management</h4>
-            <p>A named manager, a direct line, and a scheduling portal — all yours from day one.</p>
-          </div>
-        </div>
-        <div class="why-tab-item" data-panel="1">
-          <span class="why-tab-num">02</span>
-          <div class="why-tab-info">
-            <h4>Consolidated Monthly Invoicing</h4>
-            <p>All rides in one clean invoice. Net-30 terms, itemized, with cost-code tagging.</p>
-          </div>
-        </div>
-        <div class="why-tab-item" data-panel="2">
-          <span class="why-tab-num">03</span>
-          <div class="why-tab-info">
-            <h4>Vetted, Confidential Chauffeurs</h4>
-            <p>Background-checked, trained, professional — with NDAs available on request.</p>
-          </div>
-        </div>
-        <div class="why-tab-item" data-panel="3">
-          <span class="why-tab-num">04</span>
-          <div class="why-tab-info">
-            <h4>On-Time. Every Time.</h4>
-            <p>98.7% on-time rate. Drivers arrive 15 min early. Dispatch is alerted if anything shifts.</p>
-          </div>
-        </div>
-      </div>
-      <!-- RIGHT: detail panels -->
-      <div class="why-panels-col" id="whyPanels">
-        <div class="why-panel-item active" data-panel="0">
-          <span class="why-panel-bg">01</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-          </div>
-          <h3>Dedicated Account Management</h3>
-          <p>Your business is assigned a named account manager from day one — not a help desk ticket, a real person who knows your preferences, your executives, and your schedule. Reach them by phone, email, or the portal. No hold music, no queues, no chatbots.</p>
-          <div class="why-panel-proof"><span class="proof-dot"></span>Accounts activated within 2 business hours</div>
-        </div>
-        <div class="why-panel-item" data-panel="1">
-          <span class="why-panel-bg">02</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          </div>
-          <h3>Consolidated Monthly Invoicing</h3>
-          <p>Every ride your team takes goes on a single month-end invoice. Each line shows passenger name, date, route, vehicle, and your custom cost code. Net-30 payment terms, delivered by e-invoice. Your accounting team will stop asking questions.</p>
-          <div class="why-panel-proof"><span class="proof-dot"></span>Net-30 terms &mdash; EFT, cheque, or card accepted</div>
-        </div>
-        <div class="why-panel-item" data-panel="2">
-          <span class="why-panel-bg">03</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Vetted, Confidential Chauffeurs</h3>
-          <p>Every driver completes a criminal background check, clean driving abstract review, and a client-confidentiality briefing before their first ride. For accounts handling sensitive matters — legal, financial, or executive — signed NDAs are available at no extra charge.</p>
-          <div class="why-panel-proof"><span class="proof-dot"></span>NDAs available for all sensitive accounts</div>
-        </div>
-        <div class="why-panel-item" data-panel="3">
-          <span class="why-panel-bg">04</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>On-Time. Every Time.</h3>
-          <p>Our corporate on-time arrival rate is 98.7%. Drivers arrive 15 minutes before every scheduled pickup. If traffic or an unforeseen delay affects an ETA, your dispatcher is proactively alerted and calls you — you never find out at the curb.</p>
-          <div class="why-panel-proof"><span class="proof-dot"></span>98.7% on-time rate across corporate accounts</div>
-        </div>
-      </div>
-    </div>
-    <div class="sec-cta-row">
-      <a href="corporate-account.html" class="btn-sec-more">Open a Corporate Account &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ACCOUNT CTA BAND -->
-<div class="acct-band">
-  <div class="wrap">
-    <div class="acct-band-inner">
+    <div class="cs-hero-grid">
       <div>
-        <h3>Ready to Open a Corporate Account?</h3>
-        <p>Set up takes less than 10 minutes. Choose between pay-per-ride invoicing or prepaid account credits. No minimum monthly spend required. Cancel or pause your account at any time.</p>
-      </div>
-      <div class="acct-band-ctas">
-        <a href="corporate-account.html" class="btn-white">Open an Account &rarr;</a>
-        <a href="tel:+18001234567" class="btn-ghost-white">Call to Discuss</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- HOW IT WORKS -->
-<section class="seamless" id="how-it-works">
-  <div class="wrap">
-    <div class="seamless-head">
-      <span class="sec-label">How It Works</span>
-      <h2 class="sec-h2">From First Booking to <em>Monthly Invoice</em></h2>
-    </div>
-    <div class="seamless-body">
-      <div class="s-tabs" id="sTabs">
-        <div class="s-tab active" data-panel="0">
-          <div class="s-num">1</div>
-          <div class="s-tab-text">
-            <h4>Set Up Your Account</h4>
-            <p>Complete a short form online or call us. Your account is activated within 2 hours with full portal access.</p>
-          </div>
+        <span class="cs-eyebrow"><span class="cs-eyebrow-dot"></span> Hamilton Corporate Car Service</span>
+        <h1 class="cs-h1">Corporate Car Service<strong>in Hamilton</strong></h1>
+        <p class="cs-sub">Reliable, confidential, and punctual executive ground transportation for businesses in Hamilton and Hamilton. Corporate accounts, monthly billing, and 24/7 availability.</p>
+        <div class="cs-pills">
+          <span class="cs-pill">Flat Rate &mdash; No Surge</span>
+          <span class="cs-pill">Corporate Accounts</span>
+          <span class="cs-pill">Monthly Invoicing</span>
+          <span class="cs-pill">24/7 Dispatch</span>
         </div>
-        <div class="s-tab" data-panel="1">
-          <div class="s-num">2</div>
-          <div class="s-tab-text">
-            <h4>Submit Bookings Your Way</h4>
-            <p>Book via portal, app, phone, or email. Coordinators can schedule on behalf of any passenger.</p>
-          </div>
-        </div>
-        <div class="s-tab" data-panel="2">
-          <div class="s-num">3</div>
-          <div class="s-tab-text">
-            <h4>We Handle the Logistics</h4>
-            <p>Flight tracking, on-time arrivals, live updates to your team. Your passengers just show up.</p>
-          </div>
-        </div>
-        <div class="s-tab" data-panel="3">
-          <div class="s-num">4</div>
-          <div class="s-tab-text">
-            <h4>One Invoice. Month End.</h4>
-            <p>Itemized report with trip details, cost codes, and totals. Net-30 terms, e-invoice via email.</p>
-          </div>
+        <div class="cs-hero-ctas">
+          <a href="booking.html" class="btn-primary">Book Corporate Car Service</a>
+          <a href="tel:+14164513106" class="btn-outline-light">&#9990;&nbsp; Call 416 451 3106</a>
         </div>
       </div>
-      <div class="s-panels" id="sPanels">
-        <div class="s-panel active" data-panel="0">
-          <span class="s-panel-bg-num">1</span>
-          <span class="s-panel-tag">Step 1 &mdash; Account Setup</span>
-          <div class="s-panel-icon">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h5>Ready in Under 10 Minutes</h5>
-          <p>Fill in our short online form or call the corporate team. Set your billing type, authorized bookers, preferred vehicles, and default pickup locations from the start.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Choose pay-per-ride invoicing or prepaid account credits</li>
-            <li class="s-panel-bullet">Add unlimited authorized bookers with role-based spending limits</li>
-            <li class="s-panel-bullet">Full portal access activated same day, every time</li>
-          </ul>
-          <a href="corporate-account.html" class="s-panel-link">Open Your Account &rarr;</a>
+      <div class="cs-book-card">
+        <div class="cs-book-title">Get a Corporate Quote</div>
+        <div class="cs-book-sub">Corporate rates &mdash; monthly billing available</div>
+        <div class="cs-field-wrap">
+          <svg class="cs-field-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><path d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+          <input class="cs-field" type="text" placeholder="Pickup Address or Airport">
         </div>
-        <div class="s-panel" data-panel="1">
-          <span class="s-panel-bg-num">2</span>
-          <span class="s-panel-tag">Step 2 &mdash; Book a Ride</span>
-          <div class="s-panel-icon">
-            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h5>Any Booker. Any Channel.</h5>
-          <p>Travel coordinators, executive assistants, or passengers themselves can submit rides — by portal, app, email, or phone. No app download required for one-time bookings.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Minimum 2 hours notice for sedan and SUV bookings</li>
-            <li class="s-panel-bullet">Set standing orders for recurring weekly or daily pickups</li>
-            <li class="s-panel-bullet">Coordinators can book on behalf of any registered passenger</li>
-          </ul>
-          <a href="booking.html" class="s-panel-link">Book a Ride Now &rarr;</a>
+        <div class="cs-field-wrap">
+          <svg class="cs-field-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><path d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+          <input class="cs-field" type="text" placeholder="Drop-off Address or Airport">
         </div>
-        <div class="s-panel" data-panel="2">
-          <span class="s-panel-bg-num">3</span>
-          <span class="s-panel-tag">Step 3 &mdash; We Deliver</span>
-          <div class="s-panel-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="cs-field-row">
+          <div class="cs-field-wrap" style="margin-bottom:0">
+            <svg class="cs-field-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <input class="cs-field" type="text" placeholder="Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
           </div>
-          <h5>Punctual, Professional, Discreet</h5>
-          <p>Your chauffeur arrives 15 minutes before pickup, in professional attire, with the vehicle pre-inspected and climate-controlled. For airport rides, flight tracking is fully automatic.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Real-time ETAs sent to any nominated contact number</li>
-            <li class="s-panel-bullet">Live flight tracking on every airport transfer — no calls needed</li>
-            <li class="s-panel-bullet">Luggage handled as standard — no surcharge, ever</li>
-          </ul>
-          <a href="AirportHUB.html" class="s-panel-link">Airport Transfer Details &rarr;</a>
+          <div class="cs-field-wrap" style="margin-bottom:0">
+            <svg class="cs-field-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <input class="cs-field" type="text" placeholder="Time" onfocus="this.type='time'" onblur="if(!this.value)this.type='text'">
+          </div>
         </div>
-        <div class="s-panel" data-panel="3">
-          <span class="s-panel-bg-num">4</span>
-          <span class="s-panel-tag">Step 4 &mdash; Invoice</span>
-          <div class="s-panel-icon">
-            <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-          </div>
-          <h5>One Invoice. Month End. Done.</h5>
-          <p>A single e-invoice arrives on the 1st covering every trip from the previous month. Each line shows passenger, date, route, vehicle type, and your custom cost code — exactly what accounting needs.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Net-30 terms — EFT, cheque, or credit card accepted</li>
-            <li class="s-panel-bullet">Volume discounts apply automatically above 20 rides/month</li>
-            <li class="s-panel-bullet">Export to CSV or PDF for expense reporting integration</li>
-          </ul>
-          <a href="corporate-account.html" class="s-panel-link">See Billing Details &rarr;</a>
+        <button class="cs-btn-submit" style="margin-top:12px">Get Corporate Quote &rarr;</button>
+        <div class="cs-book-trust">
+          <span>Flat Rate</span>
+          <span>Corp. Accounts</span>
+          <span>24/7 Support</span>
         </div>
       </div>
-    </div>
-    <div class="sec-cta-row">
-      <a href="booking.html" class="btn-sec-more">Book Your First Corporate Ride &rarr;</a>
     </div>
   </div>
 </section>
+<!-- /ZONE: hero -->
 
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat-block">
-      <span class="stat-num">500<sup style="font-size:1.5rem">+</sup></span>
-      <span class="stat-label">Corporate Clients in Ontario</span>
-    </div>
-    <div class="stat-block">
-      <span class="stat-num">98<sup style="font-size:1.5rem">%</sup></span>
-      <span class="stat-label">On-Time Arrival Rate</span>
-    </div>
-    <div class="stat-block">
-      <span class="stat-num">4.9</span>
-      <span class="stat-label">Average Client Rating</span>
-    </div>
-    <div class="stat-block">
-      <span class="stat-num">24<sub style="font-size:1.3rem">/7</sub></span>
-      <span class="stat-label">Corporate Dispatch Line</span>
+<!-- INTRO -->
+<!-- ZONE: intro-content -->
+<section class="cs-intro">
+  <div class="wrap">
+    <div class="cs-intro-grid">
+      <div>
+        <span class="section-eyebrow">Best Hamilton Corporate Car Service</span>
+        <h2 class="section-h2">Limo4All Transportation:<strong>Executive Corporate Car Service in Hamilton</strong></h2>
+        <hr class="section-rule">
+        <div class="cs-intro-body">
+          <p>Hamilton is undergoing one of the most significant economic transformations of any city in Ontario, evolving into a diverse business hub anchored by a world-class healthcare and life sciences sector, a growing technology community, major post-secondary institutions, and a thriving professional economy that is attracting corporate investment from across the province.</p>
+          <p>Limo4All Transportation provides premium corporate limousine and car service throughout Hamilton, serving executives, professional teams, and corporate clients who require reliable, discreet, and polished ground transportation in and around the city. Whether your business is based in Downtown Hamilton, Westdale, Stoney Creek, or Dundas, our professional chauffeurs arrive prepared, manage every aspect of the journey, and ensure that every engagement begins and ends with the professionalism Hamilton&#39;s growing business community deserves.</p>
+          <p>Hamilton&#39;s dual airport access, with Hamilton International Airport nearby and Toronto Pearson International Airport within reach via the QEW and Highway 403, gives its business community significant travel flexibility. Limo4All Transportation serves both airports seamlessly.</p>
+        </div>
+      </div>
+      <div class="cs-intro-right">
+        <div class="cs-stat-cards">
+          <div class="cs-stat-card">
+            <div class="cs-stat-num">20+</div>
+            <div class="cs-stat-label">Years serving Ontario businesses</div>
+          </div>
+          <div class="cs-stat-card">
+            <div class="cs-stat-num">500+</div>
+            <div class="cs-stat-label">Five-star Google &amp; Yelp reviews</div>
+          </div>
+          <div class="cs-stat-card">
+            <div class="cs-stat-num">99.8%</div>
+            <div class="cs-stat-label">On-time arrival rate</div>
+          </div>
+          <div class="cs-stat-card">
+            <div class="cs-stat-num">24/7</div>
+            <div class="cs-stat-label">Live dispatch, always a real person</div>
+          </div>
+        </div>
+        <span class="sub-label">Hamilton Corporate Services</span>
+        <div class="cs-airport-tags">
+          <span class="cs-airport-tag"><span class="cs-airport-tag-code">Exec</span> Executive Transfers</span>
+          <span class="cs-airport-tag"><span class="cs-airport-tag-code">Corp</span> Corporate Accounts</span>
+          <span class="cs-airport-tag"><span class="cs-airport-tag-code">Event</span> Events &amp; Conferences</span>
+          <span class="cs-airport-tag"><span class="cs-airport-tag-code">Hrly</span> Hourly As-Directed</span>
+        </div>
+        <div class="cs-includes-box">
+          <span class="sub-label">Every Corporate Booking Includes</span>
+          <ul class="cs-includes-list">
+            <li>Professional uniformed chauffeur</li>
+            <li>Flat-rate pricing locked at booking</li>
+            <li>Flight tracking for airport transfers</li>
+            <li>Corporate account invoicing available</li>
+            <li>Full luggage loading and unloading assistance</li>
+            <li>24/7 live dispatch &mdash; always a real person on the line</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<!-- /ZONE: intro-content -->
 
-<!-- TRUST LOGOS -->
-<div class="trust-logos">
-  <div class="trust-logos-inner">
-    <span class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>GTAA Certified</span>
-    <span class="trust-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Insured</span>
-    <span class="trust-badge"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Background Checked</span>
-    <span class="trust-badge"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Itemized Invoicing</span>
-    <span class="trust-badge"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>$5M Liability Coverage</span>
+<!-- SERVICES CARDS -->
+<!-- ZONE: services-tabs -->
+<section class="cs-services">
+  <div class="wrap">
+    <div class="cs-services-head">
+      <span class="section-eyebrow">Our Hamilton Corporate Car Services</span>
+      <h2 class="section-h2" style="text-align:center">What We Offer<strong>for Your Business</strong></h2>
+      <p style="text-align:center;font-size:14px;color:var(--text-light);font-weight:300;max-width:560px;margin:16px auto 0;line-height:1.8">Every service includes flat-rate pricing, corporate account billing, and a professional uniformed chauffeur.</p>
+    </div>
+    <div class="cs-svc-cards">
+
+      <!-- Card 1: Airport -->
+      <div class="cs-svc-card" id="svc-0">
+        <div class="cs-svc-card-inner">
+          <div class="cs-svc-card-body">
+            <span class="cs-svc-service-tag">Hamilton Coverage</span>
+            <h3 class="cs-svc-card-title">Corporate Car Service Near Me</h3>
+            <p class="cs-svc-card-text">Hamilton business professionals searching for a dependable corporate car service will find Limo4All Transportation to be the most professional and consistent choice in the region. We offer door-to-door executive transportation with hourly and flat-rate pricing, a fleet of executive-class vehicles, and chauffeurs who understand Hamilton&#39;s geography, its key business corridors, and the routes connecting the city to its major airport gateways.</p>
+            <p class="cs-svc-card-text">Our operations team manages real-time traffic routing, schedule coordination for multi-stop executive itineraries, and meet-and-greet logistics for arriving clients and delegates across all Hamilton locations.</p>
+            <a href="booking.html" class="cs-svc-card-cta">Book Corporate Car Service &rarr;</a>
+            <div class="cs-svc-card-bottom-strip">
+              <span class="cs-svc-card-bottom-item">Flat Rate Locked</span>
+              <span class="cs-svc-card-bottom-item">Corp. Accounts</span>
+              <span class="cs-svc-card-bottom-item">Monthly Billing</span>
+              <span class="cs-svc-card-bottom-item">Discreet Service</span>
+            </div>
+          </div>
+          <div class="cs-svc-card-aside">
+            <span class="sub-label">Hamilton Business Districts We Serve</span>
+            <ul class="cs-svc-card-bullets">
+                            <li class="cs-svc-card-bullet">Downtown Hamilton</li>
+              <li class="cs-svc-card-bullet">Westdale</li>
+              <li class="cs-svc-card-bullet">Stoney Creek</li>
+              <li class="cs-svc-card-bullet">Dundas</li>
+              <li class="cs-svc-card-bullet">Ancaster</li>
+              <li class="cs-svc-card-bullet">Corporate accounts with monthly invoicing</li>
+              <li class="cs-svc-card-bullet">Flat rates &mdash; no surge pricing</li>
+            </ul>
+            <div class="cs-svc-aside-callouts">
+              <div class="cs-svc-aside-callout">
+                <span class="cs-svc-callout-num">Corp.</span>
+                <span class="cs-svc-callout-label">Account billing &amp; monthly invoicing</span>
+              </div>
+              <div class="cs-svc-aside-callout">
+                <span class="cs-svc-callout-num">$75</span>
+                <span class="cs-svc-callout-label">Starting rate from Hamilton</span>
+              </div>
+            </div>
+            <div class="cs-svc-aside-foot">
+              <div class="cs-svc-aside-trust">
+                <span>Flat Rate</span><span>Corp. Accounts</span><span>24/7 Dispatch</span><span>Discreet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Personal Travel -->
+      <div class="cs-svc-card" id="svc-1">
+        <div class="cs-svc-card-inner">
+          <div class="cs-svc-card-body">
+            <span class="cs-svc-service-tag">Executive Transfers</span>
+            <h3 class="cs-svc-card-title">Executive Airport Transfers</h3>
+            <p class="cs-svc-card-text">Hamilton executives and professionals travel frequently through both Hamilton International Airport and Toronto Pearson International Airport, and Limo4All Transportation provides professional executive transfer service to both. We manage every aspect of the journey, from precisely timed pickups at any Hamilton address to formal meet-and-greet arrivals for incoming clients and VIP guests.</p>
+            <p class="cs-svc-card-text">For executives using Hamilton International Airport, the advantage is speed and simplicity. For those using Toronto Pearson for a wider range of flights, we manage the QEW and Highway 403 corridor timing with real-time traffic data to ensure every departure and arrival is handled without stress or delay. Both airport services are managed to the same uncompromising standard.</p>
+            <a href="booking.html" class="cs-svc-card-cta">Book Executive Transfer &rarr;</a>
+            <div class="cs-svc-card-bottom-strip">
+              <span class="cs-svc-card-bottom-item">Flight Tracked</span>
+              <span class="cs-svc-card-bottom-item">Meet &amp; Greet</span>
+              <span class="cs-svc-card-bottom-item">60 Min Free Wait</span>
+              <span class="cs-svc-card-bottom-item">Wi-Fi Equipped</span>
+            </div>
+          </div>
+          <div class="cs-svc-card-aside">
+            <span class="sub-label">Airports We Serve</span>
+            <ul class="cs-svc-card-bullets">
+              <li class="cs-svc-card-bullet">Executive departures and arrivals at Hamilton International Airport</li>
+              <li class="cs-svc-card-bullet">Executive transfers to and from Toronto Pearson International Airport</li>
+              <li class="cs-svc-card-bullet">VIP client and partner airport pickups from Hamilton</li>
+              <li class="cs-svc-card-bullet">Multi-passenger corporate group travel coordination</li>
+              <li class="cs-svc-card-bullet">Same-day return executive trip management</li>
+            </ul>
+            <div class="cs-svc-aside-callouts">
+              <div class="cs-svc-aside-callout">
+                <span class="cs-svc-callout-num">60 min</span>
+                <span class="cs-svc-callout-label">Free wait on international arrivals</span>
+              </div>
+              <div class="cs-svc-aside-callout">
+                <span class="cs-svc-callout-num">24/7</span>
+                <span class="cs-svc-callout-label">Available any time, any day</span>
+              </div>
+            </div>
+            <div class="cs-svc-aside-foot">
+              <div class="cs-svc-aside-trust">
+                <span>Flight Tracked</span><span>Meet &amp; Greet</span><span>60 Min Wait</span><span>Wi-Fi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Business Travel -->
+      <div class="cs-svc-card" id="svc-2">
+        <div class="cs-svc-card-inner">
+          <div class="cs-svc-card-body">
+            <span class="cs-svc-service-tag">Events &amp; Conferences</span>
+            <h3 class="cs-svc-card-title">Corporate Events &amp; Conferences</h3>
+            <p class="cs-svc-card-text">Hamilton&#39;s growing conference and events infrastructure, combined with its McMaster University research corridors and expanding innovation district, has made the city an increasingly active host for corporate summits, healthcare industry conferences, technology showcases, and client entertainment functions. Limo4All Transportation provides professional event ground transportation that moves executives, delegates, and guests with precision throughout every event.</p>
+            <p class="cs-svc-card-text">We work with corporate event coordinators to build arrival and departure logistics, manage multi-vehicle fleets for larger events, and ensure that every attendee moves efficiently between hotels, venues, and corporate facilities throughout the event program.</p>
+            <a href="booking.html" class="cs-svc-card-cta">Book Event Transportation &rarr;</a>
+            <div class="cs-svc-card-bottom-strip">
+              <span class="cs-svc-card-bottom-item">Multi-Vehicle</span>
+              <span class="cs-svc-card-bottom-item">VIP Service</span>
+              <span class="cs-svc-card-bottom-item">Event Logistics</span>
+              <span class="cs-svc-card-bottom-item">Sprinter Vans</span>
+            </div>
+          </div>
+          <div class="cs-svc-card-aside">
+            <span class="sub-label">We Handle</span>
+            <ul class="cs-svc-card-bullets">
+              <li class="cs-svc-card-bullet">Healthcare and life sciences conference transportation</li>
+              <li class="cs-svc-card-bullet">Corporate summit and business forum ground transportation</li>
+              <li class="cs-svc-card-bullet">University research and innovation event logistics</li>
+              <li class="cs-svc-card-bullet">VIP guest, speaker, and executive delegate transfers</li>
+              <li class="cs-svc-card-bullet">Multi-day corporate event ground transportation management</li>
+            </ul>
+            <div class="cs-svc-aside-callouts">
+              <div class="cs-svc-aside-callout">
+                <span class="cs-svc-callout-num">Multi</span>
+                <span class="cs-svc-callout-label">Multi-vehicle deployments available</span>
+              </div>
+              <div class="cs-svc-aside-callout">
+                <span class="cs-svc-callout-num">VIP</span>
+                <span class="cs-svc-callout-label">Dedicated event coordinator on request</span>
+              </div>
+            </div>
+            <div class="cs-svc-aside-foot">
+              <div class="cs-svc-aside-trust">
+                <span>Multi-Vehicle</span><span>Sprinter Vans</span><span>Event Logistics</span><span>VIP Service</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
+</section>
+<!-- /ZONE: services-tabs -->
+
+<!-- BENEFITS -->
+<!-- ZONE: benefits -->
+<section class="cs-benefits">
+  <div class="wrap">
+    <div class="cs-benefits-head">
+      <span class="section-eyebrow">Hamilton Corporate Car Service Benefits</span>
+      <h2 class="section-h2" style="text-align:center">The Advantages of<strong>Corporate Car Service in Hamilton</strong></h2>
+    </div>
+    <div class="cs-benefits-grid">
+      <div class="cs-benefit-card">
+        <span class="cs-benefit-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <div class="cs-benefit-title">Flat Rate Pricing</div>
+        <div class="cs-benefit-body">Lock in your fare at booking — no surge pricing during peak hours or bad weather. The price you see is exactly what you pay, every time.</div>
+      </div>
+      <div class="cs-benefit-card">
+        <span class="cs-benefit-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+        <div class="cs-benefit-title">Door-to-Door Service</div>
+        <div class="cs-benefit-body">We come to your door, handle your bags, and drop you off exactly where you need to be. No parking, no shuttles, no last-minute stress.</div>
+      </div>
+      <div class="cs-benefit-card">
+        <span class="cs-benefit-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <div class="cs-benefit-title">Safety First</div>
+        <div class="cs-benefit-body">Every vehicle is fully licensed, insured, and regularly inspected. All chauffeurs undergo professional training and thorough background checks.</div>
+      </div>
+      <div class="cs-benefit-card">
+        <span class="cs-benefit-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <div class="cs-benefit-title">On-Time Guarantee</div>
+        <div class="cs-benefit-body">We monitor live flight data and adjust your pickup automatically — early, delayed, or on-time. Your chauffeur is always ready when you land.</div>
+      </div>
+      <div class="cs-benefit-card">
+        <span class="cs-benefit-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+        <div class="cs-benefit-title">24/7 Availability</div>
+        <div class="cs-benefit-body">Early morning departures, late-night arrivals, and last-minute bookings are never a problem. Our dispatch team is live and ready, any hour of any day.</div>
+      </div>
+    </div>
+    <div class="section-cta-row">
+      <a href="booking.html" class="btn-primary">Book Corporate Car Service</a>
+    </div>
+  </div>
+</section>
+<!-- /ZONE: benefits -->
 
 <!-- FLEET -->
-<section class="fleet" id="vehicles">
+<!-- ZONE: fleet -->
+<section class="cs-fleet">
   <div class="wrap">
-    <span class="sec-label">Corporate Fleet</span>
-    <h2 class="sec-h2">Vehicles for Every <em>Business Need</em></h2>
-    <p class="sec-sub">Every vehicle is pre-inspected before every trip. All include bottled water, phone chargers, climate control, and a professional uniformed chauffeur.</p>
-    <div class="fleet-filters">
-      <span class="ff active">All Vehicles</span>
-      <span class="ff">Sedan</span>
-      <span class="ff">SUV</span>
-      <span class="ff">Sprinter</span>
+    <div class="cs-fleet-head">
+      <span class="cs-fleet-pre">Choose Your Vehicle</span>
+      <h2 class="cs-fleet-h2">Our Luxury Fleet<strong>for Every Journey</strong></h2>
     </div>
-    <div class="fleet-grid">
-      <div class="fleet-card">
-        <div class="fleet-img">
-          <img src="./images/fleet-sedan.png" alt="Executive Sedan">
-          <span class="fleet-badge">Most Booked</span>
+    <div class="cs-fleet-grid">
+      <div class="cs-fleet-card">
+        <div class="cs-fleet-img"><img src="./images/fleet-sedan.png" alt="Executive Sedan - Lincoln Continental"></div>
+        <span class="cs-fleet-type">Executive Sedan</span>
+        <div class="cs-fleet-name">Luxury Sedan</div>
+        <div class="cs-fleet-model">Lincoln Continental &middot; Mercedes E-Class</div>
+        <div class="cs-fleet-specs">
+          <span class="cs-fleet-spec">Up to 3 Passengers</span>
+          <span class="cs-fleet-spec">2&ndash;3 Bags</span>
         </div>
-        <div class="fleet-body">
-          <h3>Executive Sedan</h3>
-          <span class="fleet-model">Lincoln Continental / Mercedes E-Class</span>
-          <div class="fleet-specs">
-            <span class="fleet-spec">Up to 3 passengers</span>
-            <span class="fleet-spec">3 bags</span>
-            <span class="fleet-spec">Wi-Fi</span>
-            <span class="fleet-spec">Charging ports</span>
-          </div>
-          <p>The standard for executive point-to-point transfers. Quiet, spacious, and private. Ideal for solo executives, pairs, and anyone who needs to work en route to a meeting or the airport.</p>
-          <div class="fleet-foot">
-            <span class="fleet-price">$75<span> /hourly from</span></span>
-            <a href="booking.html" class="btn-fleet-book">Book</a>
-          </div>
+        <div class="cs-fleet-features">
+          <div class="cs-fleet-feature">Ideal for solo or couple travel</div>
+          <div class="cs-fleet-feature">Leather interior, climate control</div>
+          <div class="cs-fleet-feature">Wi-Fi &amp; charging ports</div>
+          <div class="cs-fleet-feature">Complimentary water &amp; newspapers</div>
         </div>
+        <a href="booking.html" class="cs-fleet-btn">Book Sedan</a>
       </div>
-      <div class="fleet-card">
-        <div class="fleet-img">
-          <img src="./images/fleet-suv.png" alt="Luxury SUV">
-          <span class="fleet-badge">Group Favourite</span>
+      <div class="cs-fleet-card">
+        <div class="cs-fleet-img"><img src="./images/fleet-suv.png" alt="Executive SUV - Cadillac Escalade"></div>
+        <span class="cs-fleet-type">Executive SUV</span>
+        <div class="cs-fleet-name">Full-Size SUV</div>
+        <div class="cs-fleet-model">Cadillac Escalade &middot; Lincoln Navigator</div>
+        <div class="cs-fleet-specs">
+          <span class="cs-fleet-spec">Up to 6 Passengers</span>
+          <span class="cs-fleet-spec">4&ndash;6 Bags</span>
         </div>
-        <div class="fleet-body">
-          <h3>Luxury SUV</h3>
-          <span class="fleet-model">Cadillac Escalade / GMC Yukon</span>
-          <div class="fleet-specs">
-            <span class="fleet-spec">Up to 6 passengers</span>
-            <span class="fleet-spec">5 bags</span>
-            <span class="fleet-spec">AWD</span>
-            <span class="fleet-spec">Tinted windows</span>
-          </div>
-          <p>Preferred for small executive groups, client pickups, and VIP arrivals. The commanding presence of an Escalade makes the right impression whether heading to Bay Street or Pearson Airport.</p>
-          <div class="fleet-foot">
-            <span class="fleet-price">$95<span> /hourly from</span></span>
-            <a href="booking.html" class="btn-fleet-book">Book</a>
-          </div>
+        <div class="cs-fleet-features">
+          <div class="cs-fleet-feature">Most popular for family &amp; group travel</div>
+          <div class="cs-fleet-feature">Extra luggage capacity</div>
+          <div class="cs-fleet-feature">Premium audio &amp; entertainment</div>
+          <div class="cs-fleet-feature">Child seat available on request</div>
         </div>
+        <a href="booking.html" class="cs-fleet-btn">Book SUV</a>
       </div>
-      <div class="fleet-card">
-        <div class="fleet-img">
-          <img src="./images/fleet-sprinter.png" alt="Executive Sprinter">
+      <div class="cs-fleet-card">
+        <div class="cs-fleet-img"><img src="./images/fleet-sedan.png" alt="Stretch Limousine" style="filter:brightness(0.75) contrast(1.1)"></div>
+        <span class="cs-fleet-type">Stretch Limousine</span>
+        <div class="cs-fleet-name">Stretch Limo</div>
+        <div class="cs-fleet-model">Lincoln Town Car Limousine</div>
+        <div class="cs-fleet-specs">
+          <span class="cs-fleet-spec">Up to 10 Passengers</span>
+          <span class="cs-fleet-spec">Multiple Bags</span>
         </div>
-        <div class="fleet-body">
-          <h3>Executive Sprinter</h3>
-          <span class="fleet-model">Mercedes Sprinter Van</span>
-          <div class="fleet-specs">
-            <span class="fleet-spec">Up to 14 passengers</span>
-            <span class="fleet-spec">Large luggage bay</span>
-            <span class="fleet-spec">Conference layout</span>
-          </div>
-          <p>Built for team travel — offsite meetings, conference shuttles, client events, and group airport transfers. Available in standard and conference layout with rear-facing seats and tray tables.</p>
-          <div class="fleet-foot">
-            <span class="fleet-price">$120<span> /base rate</span></span>
-            <a href="booking.html" class="btn-fleet-book">Book</a>
-          </div>
+        <div class="cs-fleet-features">
+          <div class="cs-fleet-feature">Weddings, galas &amp; special occasions</div>
+          <div class="cs-fleet-feature">Privacy partition &amp; bar setup</div>
+          <div class="cs-fleet-feature">Premium sound system</div>
+          <div class="cs-fleet-feature">Red carpet arrival experience</div>
         </div>
+        <a href="booking.html" class="cs-fleet-btn">Book Limo</a>
+      </div>
+      <div class="cs-fleet-card">
+        <div class="cs-fleet-img"><img src="./images/fleet-sprinter.png" alt="Mercedes Sprinter Van"></div>
+        <span class="cs-fleet-type">Group Transport</span>
+        <div class="cs-fleet-name">Sprinter Van</div>
+        <div class="cs-fleet-model">Mercedes-Benz Sprinter</div>
+        <div class="cs-fleet-specs">
+          <span class="cs-fleet-spec">Up to 14 Passengers</span>
+          <span class="cs-fleet-spec">Large Cargo</span>
+        </div>
+        <div class="cs-fleet-features">
+          <div class="cs-fleet-feature">Corporate teams &amp; group transfers</div>
+          <div class="cs-fleet-feature">Conference-style seating available</div>
+          <div class="cs-fleet-feature">Ample luggage &amp; equipment storage</div>
+          <div class="cs-fleet-feature">Ideal for trade shows &amp; events</div>
+        </div>
+        <a href="booking.html" class="cs-fleet-btn">Book Sprinter</a>
       </div>
     </div>
-    <div class="sec-cta-row">
-      <a href="fleet.html" class="btn-sec-more">View Full Fleet &rarr;</a>
+    <div class="cs-fleet-cta">
+      <a href="fleet.html" class="btn-primary">View Full Fleet Overview</a>
+      <p>All vehicles are fully licensed, insured, and maintained to the highest standards</p>
     </div>
   </div>
 </section>
+<!-- /ZONE: fleet -->
 
-<!-- COMPARISON -->
-<section class="compare" id="why-limo4all">
+<!-- WHY LIMO4ALL -->
+<!-- ZONE: why-section -->
+<section class="cs-why">
   <div class="wrap">
-    <span class="sec-label center" style="display:block;text-align:center">The Limo4All Difference</span>
-    <h2 class="sec-h2 center">Limo4All Corporate <em>vs.</em> Uber for Business</h2>
-    <div class="compare-wrap">
-      <div class="compare-us">
-        <h3>&#10003; &nbsp;Limo4All Corporate</h3>
-        <img src="./images/fleet-sedan.png" alt="Limo4All corporate sedan" class="compare-img">
-        <ul class="compare-list">
-          <li>Dedicated account manager with a direct phone line</li>
-          <li>Monthly consolidated invoicing — net-30 payment terms</li>
-          <li>Licensed, uniformed, background-checked chauffeurs</li>
-          <li>Fixed hourly rates — no surge pricing ever</li>
-          <li>Same-day and advance bookings accepted by phone</li>
-          <li>Real-time flight tracking for airport pickups</li>
-          <li>Confidentiality and NDA available on request</li>
-          <li>Pre-approved credit limits and cost-code tagging</li>
+    <div class="cs-why-grid">
+      <div>
+        <span class="cs-why-pre">Best Corporate Car Service in Hamilton</span>
+        <h2 class="cs-why-h2">Why Limo4All Transportation<strong>For Corporate Travel</strong></h2>
+        <hr class="cs-why-rule">
+        <p class="cs-why-body">Hamilton&#39;s corporate community chooses Limo4All Transportation because we deliver the consistency and professionalism that business travel in a transforming city demands. We are invested in Hamilton&#39;s growth and committed to providing ground transportation that helps its professional community project the right image at every engagement.</p>
+        <p class="cs-why-body">Do not leave your corporate travel to chance. Limo4All Transportation is available around the clock to provide executive ground transportation throughout Hamilton and Hamilton.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px">
+          <a href="booking.html" class="cs-why-cta">Book Corporate Service</a>
+          <a href="about.html" class="btn-quote-sm" style="padding:13px 24px">Learn About Us</a>
+        </div>
+      </div>
+      <div class="cs-why-list">
+        <div class="cs-why-item">
+          <div class="cs-why-item-text"><strong>Deep Hamilton Market Familiarity</strong>Deep familiarity with Hamilton&rsquo;s business districts, commercial corridors, and routes connecting to Toronto Pearson and surrounding airports.</div>
+        </div>
+        <div class="cs-why-item">
+          <div class="cs-why-item-text"><strong>A Luxury Fleet for Every Group</strong>A luxury fleet including executive sedans, SUVs, and Mercedes Sprinter vans, maintained to the highest standards for corporate comfort and reliability.</div>
+        </div>
+        <div class="cs-why-item">
+          <div class="cs-why-item-text"><strong>Corporate Accounts &amp; Monthly Billing</strong>Simplified corporate accounts with consolidated monthly invoicing and net-30 terms. Expensing made effortless for your team.</div>
+        </div>
+        <div class="cs-why-item">
+          <div class="cs-why-item-text"><strong>Professional Background-Checked Chauffeurs</strong>Every chauffeur completes a criminal background check, driving abstract review, and confidentiality training before their first corporate booking.</div>
+        </div>
+        <div class="cs-why-item">
+          <div class="cs-why-item-text"><strong>Easy Online Booking, Transparent Pricing</strong>Easy online booking with instant confirmation and transparent flat-rate pricing. No surge charges, no surprises &mdash; ever.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /ZONE: why-section -->
+
+<!-- LIMO4ALL DIFFERENCE (Compare) -->
+<section class="cs-compare">
+  <div class="wrap">
+    <div class="cs-compare-head">
+      <span class="section-eyebrow">The Limo4All Difference</span>
+      <h2 class="section-h2" style="text-align:center">Limo4All <strong>Vs.</strong> Rideshare &amp; Taxis</h2>
+      <p style="text-align:center;font-size:14px;color:var(--text-light);font-weight:300;max-width:520px;margin:14px auto 0;line-height:1.8">See why Hamilton businesses trust Limo4All over rideshare apps for every executive transfer.</p>
+    </div>
+    <div class="cs-compare-wrap">
+      <div class="cs-compare-us">
+        <h3>&#10003; &nbsp;Limo4All</h3>
+        <img src="./images/fleet-suv.png" alt="Limo4All executive SUV" class="cs-compare-img">
+        <ul class="cs-compare-list">
+          <li>Flat rate locked at booking &mdash; no surge pricing ever</li>
+          <li>Real-time flight tracking and automatic delay adjustment</li>
+          <li>Meet and greet inside the terminal or lobby</li>
+          <li>60 minutes complimentary wait time for arrivals</li>
+          <li>Luggage loading and unloading always included</li>
+          <li>Licensed, insured, background-checked professional chauffeur</li>
+          <li>24/7 live local dispatch &mdash; real people, not bots</li>
+          <li>No cancellation fee with 24 hours notice</li>
         </ul>
       </div>
-      <div class="compare-vs">
-        <div class="vs-badge">VS</div>
-      </div>
-      <div class="compare-them">
-        <h3>&#10005; &nbsp;Uber for Business</h3>
-        <img src="./images/fleet-suv.png" alt="Rideshare comparison" class="compare-img" style="filter:grayscale(60%)">
-        <ul class="compare-list">
-          <li>No account manager — all support is app-based</li>
-          <li>Per-ride credit card billing — no consolidated invoicing</li>
-          <li>Gig drivers — no formal vetting or presentation standard</li>
-          <li>Surge pricing during peak hours and events</li>
-          <li>App-only bookings — no phone scheduling option</li>
-          <li>No flight tracking — driver may leave if delayed</li>
-          <li>No confidentiality guarantee for sensitive rides</li>
-          <li>Limited reporting and no custom cost-code options</li>
+      <div class="cs-compare-vs"><div class="cs-vs-badge">VS</div></div>
+      <div class="cs-compare-them">
+        <h3>&#10005; &nbsp;Rideshare / Taxi</h3>
+        <img src="./images/rideshare-uber.jpg" alt="Rideshare app comparison" class="cs-compare-img" style="filter:grayscale(50%) brightness(0.85)">
+        <ul class="cs-compare-list">
+          <li>Surge pricing &mdash; rates spike at rush hours and events</li>
+          <li>No flight tracking &mdash; driver won&rsquo;t wait for delays</li>
+          <li>Curbside pickup only, often causing confusion and stress</li>
+          <li>Only 5 minutes free wait time before cancellation</li>
+          <li>No luggage assistance provided by driver</li>
+          <li>Gig economy driver &mdash; no formal vetting required</li>
+          <li>App-only or call centre support &mdash; no live local agent</li>
+          <li>Cancellation fees apply in most scenarios</li>
         </ul>
       </div>
     </div>
-    <div class="compare-ctas">
-      <a href="corporate-account.html" class="btn-outline-dark">Open Corporate Account</a>
-      <a href="booking.html" class="btn-primary">Book a Ride Now</a>
+    <div class="cs-compare-ctas">
+      <a href="quote.html" class="btn-outline-dark">Get a Quote</a>
+      <a href="booking.html" class="btn-primary">Book Online</a>
     </div>
   </div>
 </section>
 
-<!-- USE CASES -->
-<section class="usecases" id="use-cases">
+<!-- FIFA BANNER -->
+<section class="cs-fifa-banner">
   <div class="wrap">
-    <span class="sec-label">Corporate Use Cases</span>
-    <h2 class="sec-h2">We Handle Every <em>Business Scenario</em></h2>
-    <p class="sec-sub" style="margin-bottom:44px">From a solo executive to a group of 30, Limo4All covers every corporate transportation scenario with the same professional standard.</p>
-    <div class="why-interactive" id="useWrap">
-      <!-- LEFT: clickable tab list -->
-      <div class="why-tabs-col" id="useTabs">
-        <div class="why-tab-item active" data-panel="0">
-          <span class="why-tab-num">01</span>
-          <div class="why-tab-info">
-            <h4>Executive Meetings &amp; Day Trips</h4>
-            <p>Hourly as-directed &mdash; Sedan or SUV. Multi-stop, all day, single booking.</p>
-          </div>
-        </div>
-        <div class="why-tab-item" data-panel="1">
-          <span class="why-tab-num">02</span>
-          <div class="why-tab-info">
-            <h4>Airport Transfers for Executives</h4>
-            <p>YYZ &bull; YTZ &bull; YHM &bull; BUF &mdash; flight tracked, meet &amp; greet inside.</p>
-          </div>
-        </div>
-        <div class="why-tab-item" data-panel="2">
-          <span class="why-tab-num">03</span>
-          <div class="why-tab-info">
-            <h4>Client Entertainment &amp; VIP</h4>
-            <p>Dinners, shows, sporting events &mdash; make the right impression from door to door.</p>
-          </div>
-        </div>
-        <div class="why-tab-item" data-panel="3">
-          <span class="why-tab-num">04</span>
-          <div class="why-tab-info">
-            <h4>Conference &amp; Team Shuttles</h4>
-            <p>Groups of 4&ndash;30 via Sprinter fleet &mdash; one schedule, one billing line.</p>
-          </div>
-        </div>
-      </div>
-      <!-- RIGHT: detail panels -->
-      <div class="why-panels-col" id="usePanels">
-        <div class="why-panel-item active" data-panel="0">
-          <span class="why-panel-bg">01</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
-          </div>
-          <h3>Executive Meetings &amp; Day Trips</h3>
-          <p>Book a chauffeur by the hour for a full day of meetings across the city. Stop at multiple locations, wait between appointments, and return to the office — all on a single booking. Your executive works the entire time while we handle the driving, parking, and timing.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Multi-stop itineraries handled as one booking — no separate charges</li>
-            <li class="s-panel-bullet">Driver waits between meetings at no extra hourly cost</li>
-            <li class="s-panel-bullet">Real-time rerouting if your schedule changes mid-day</li>
-          </ul>
-          <a href="HourlyHUB.html" class="s-panel-link">See Hourly Service &rarr;</a>
-        </div>
-        <div class="why-panel-item" data-panel="1">
-          <span class="why-panel-bg">02</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Airport Transfers for Executives</h3>
-          <p>Flight-tracked pickups and drop-offs for your executives and visiting clients at all GTA airports. Meet-and-greet inside the terminal, personalized name board, baggage assistance, and 60 minutes complimentary wait — all invoiced directly to your account.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Live flight data adjusts your driver automatically on delays</li>
-            <li class="s-panel-bullet">Chauffeur meets inside the arrivals hall — no curbside confusion</li>
-            <li class="s-panel-bullet">YYZ, YTZ, YHM, and BUF cross-border service available</li>
-          </ul>
-          <a href="AirportHUB.html" class="s-panel-link">See Airport Service &rarr;</a>
-        </div>
-        <div class="why-panel-item" data-panel="2">
-          <span class="why-panel-bg">03</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h3>Client Entertainment &amp; VIP</h3>
-          <p>Impress clients the moment they step into the vehicle. Pre-stocked with refreshments, climate set to preference, and a professional chauffeur who knows when to talk and when to give space. Perfect for Scotiabank Arena, Michelin-star dinners, and Bay Street events.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Custom refreshments and preferences noted per passenger</li>
-            <li class="s-panel-bullet">Tinted windows and privacy available on request</li>
-            <li class="s-panel-bullet">Driver briefed on client name, etiquette, and destination flow</li>
-          </ul>
-          <a href="EventsHUB.html" class="s-panel-link">See Events Service &rarr;</a>
-        </div>
-        <div class="why-panel-item" data-panel="3">
-          <span class="why-panel-bg">04</span>
-          <div class="why-panel-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3>Conference &amp; Team Shuttles</h3>
-          <p>Coordinate transport for an entire team to an offsite, conference, or corporate retreat. Our Sprinter vans handle groups up to 14 in one vehicle, or we deploy multiple vehicles on a synchronized schedule — with a single line item on your monthly invoice.</p>
-          <ul class="s-panel-bullets">
-            <li class="s-panel-bullet">Up to 14 passengers per Sprinter — conference layout available</li>
-            <li class="s-panel-bullet">Multi-vehicle fleet deployments coordinated by one dispatcher</li>
-            <li class="s-panel-bullet">All trips consolidated into one invoice line — no per-vehicle billing</li>
-          </ul>
-          <a href="booking.html" class="s-panel-link">Get a Group Quote &rarr;</a>
-        </div>
-      </div>
-    </div>
-    <div class="sec-cta-row">
-      <a href="booking.html" class="btn-sec-more">Get a Custom Quote &rarr;</a>
+    <div class="cs-fifa-inner">
+      <span class="cs-fifa-eyebrow">&#9917;&nbsp; FIFA World Cup 2026 &mdash; Official Transportation</span>
+      <h2 class="cs-fifa-heading">Book your World Cup transfers now &mdash;<br>before availability fills up.</h2>
+      <a href="fifa-world-cup-2026.html" class="cs-fifa-btn">Reserve My FIFA Transfer &rarr;</a>
     </div>
   </div>
 </section>
 
-
-<!-- CITY SERVICE AREAS -->
-<section style="background:var(--off-white);padding:56px 0;border-top:1px solid var(--border)">
+<!-- SERVICE AREAS -->
+<!-- ZONE: service-areas -->
+<section class="cs-areas">
   <div class="wrap">
-    <span class="sec-label">Hamilton Coverage</span>
-    <h2 class="sec-h2">Corporate Car Service Across <em>Hamilton</em></h2>
-    <p class="sec-sub" style="margin-bottom:28px">We serve all major business districts and commercial areas in Hamilton with door-to-door executive transportation.</p>
+    <div class="cs-areas-head">
+      <span class="section-eyebrow">Hamilton Corporate Coverage</span>
+      <h2 class="section-h2" style="text-align:center">Hamilton Corporate Car Service<strong>Coverage Areas</strong></h2>
+    </div>
+    <p style="text-align:center;font-size:14px;color:var(--text-light);font-weight:300;max-width:620px;margin:0 auto 32px;line-height:1.8">Limo4All Transportation serves all major business districts and commercial areas throughout Hamilton and Hamilton. No matter where your office or hotel is located, we provide door-to-door executive transportation.</p>
+    <span class="sub-label">Hamilton Business Districts &amp; Nearby Areas</span>
     <div class="cs-nbhd-grid">
-      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton Downtown</div><div class="cs-nbhd-type">Hamilton</div></div>
-      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton Business District</div><div class="cs-nbhd-type">Hamilton</div></div>
-      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton Central</div><div class="cs-nbhd-type">Hamilton</div></div>
-      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton North</div><div class="cs-nbhd-type">Hamilton</div></div>
-      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton East</div><div class="cs-nbhd-type">Hamilton</div></div>
-      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton West</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Downtown Hamilton</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Westdale</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Stoney Creek</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Dundas</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Ancaster</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">McMaster University and Innovation District</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Waterdown</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Binbrook</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Mountain Business Park</div><div class="cs-nbhd-type">Hamilton</div></div>
+      <div class="cs-nbhd-card"><div class="cs-nbhd-name">Hamilton International Airport Corridor</div><div class="cs-nbhd-type">Hamilton</div></div>
+    </div>
+    <p style="font-size:13px;color:var(--text-light);margin:14px 0 0;font-weight:500">Don&rsquo;t see your area listed? We likely serve it &mdash; <a href="tel:+14164513106" style="color:var(--blue)">call or text us</a> to confirm.</p>
+    <span class="sub-label" style="margin-top:32px;display:block">Corporate Services Available in Hamilton</span>
+    <div class="cs-airports-grid">
+      <div class="cs-airport-card">
+        <div class="cs-airport-iata">Exec</div>
+        <div class="cs-airport-full">Executive Airport Transfers</div>
+        <div class="cs-airport-note">YYZ, YTZ, YHM &amp; BUF &middot; Flight tracked &middot; Meet &amp; greet</div>
+      </div>
+      <div class="cs-airport-card">
+        <div class="cs-airport-iata">Corp</div>
+        <div class="cs-airport-full">Corporate Accounts</div>
+        <div class="cs-airport-note">Monthly invoicing &middot; Net-30 terms &middot; No minimum spend</div>
+      </div>
+      <div class="cs-airport-card">
+        <div class="cs-airport-iata">Event</div>
+        <div class="cs-airport-full">Events &amp; Conferences</div>
+        <div class="cs-airport-note">Multi-vehicle &middot; VIP transfers &middot; Delegate shuttles</div>
+      </div>
+      <div class="cs-airport-card">
+        <div class="cs-airport-iata">Hrly</div>
+        <div class="cs-airport-full">Hourly As-Directed</div>
+        <div class="cs-airport-note">Full-day bookings &middot; Road shows &middot; Client entertainment</div>
+      </div>
     </div>
   </div>
 </section>
+<!-- /ZONE: service-areas -->
+
+<!-- SPEAK / CONTACT -->
+<!-- ZONE: speak-section -->
+<section class="speak" id="contact-us">
+  <span class="speak-deco" aria-hidden="true">24/7</span>
+  <div class="wrap">
+    <div class="speak-grid">
+      <div>
+        <span class="speak-pre">Contact Us for Hamilton Corporate Car Service</span>
+        <h2 class="speak-h2">Book Hamilton Corporate<strong>Car Service</strong></h2>
+        <hr class="speak-rule">
+        <p class="speak-sub">Booking is quick and easy. Set up a corporate account or book individual rides online &mdash; our team is ready to handle your travel program. Toronto&rsquo;s most trusted airport limo service is ready when you are &mdash; day or night, 365 days a year.</p>
+        <div class="speak-contacts">
+          <a href="tel:+14164513106" class="speak-contact">
+            <div class="speak-ct-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 10.7a19.79 19.79 0 01-3.07-8.67A2 2 0 012.77 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="speak-ct-label">Call Us &mdash; 24/7</div>
+              <div class="speak-ct-value">416 451 3106</div>
+              <div class="speak-ct-note">Live local dispatch &middot; Always answered</div>
+            </div>
+          </a>
+          <a href="sms:+16473131786" class="speak-contact">
+            <div class="speak-ct-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <div class="speak-ct-label">Text Us &mdash; <em style="color:var(--blue);font-style:normal">Faster Response</em></div>
+              <div class="speak-ct-value">647 313 1786</div>
+              <div class="speak-ct-note">SMS preferred &middot; Usually replies within minutes</div>
+            </div>
+          </a>
+          <a href="mailto:info@limo4all.ca" class="speak-contact">
+            <div class="speak-ct-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="speak-ct-label">Email Us</div>
+              <div class="speak-ct-value">info@limo4all.ca</div>
+              <div class="speak-ct-note">Response within 1 hour during business hours</div>
+            </div>
+          </a>
+        </div>
+        <div class="speak-trust-row">
+          <div class="speak-trust-item">
+            <span class="speak-trust-num">&#9733; 4.9</span>
+            <span class="speak-trust-lbl">Google Rating</span>
+          </div>
+          <div class="speak-trust-item">
+            <span class="speak-trust-num">500+</span>
+            <span class="speak-trust-lbl">Five-Star Reviews</span>
+          </div>
+          <div class="speak-trust-item">
+            <span class="speak-trust-num">20+</span>
+            <span class="speak-trust-lbl">Years Serving GTA</span>
+          </div>
+        </div>
+      </div>
+      <div class="speak-form-wrap">
+        <div class="speak-form-title">Send a Message</div>
+        <p class="speak-form-sub">Questions about your airport transfer? We&rsquo;ll reply within the hour.</p>
+        <div class="sf-row">
+          <input class="sf-field" type="text" placeholder="Your Name" required>
+          <input class="sf-field" type="tel" placeholder="Phone Number">
+        </div>
+        <input class="sf-field" type="email" placeholder="Email Address" style="width:100%;margin-bottom:10px">
+        <textarea class="sf-textarea" placeholder="Tell us about your corporate travel needs — company name, booking frequency, account billing..."></textarea>
+        <div class="sf-btns">
+          <button type="submit" class="btn-speak-submit">Send Enquiry</button>
+          <a href="tel:+14164513106" class="btn-speak-call">&#9990;&nbsp; Call Now</a>
+          <a href="sms:+16473131786" class="btn-speak-call" style="background:var(--off-white);color:var(--dark);border-color:var(--border)">&#128172;&nbsp; Text (Faster)</a>
+        </div>
+        <div class="sf-note">Corporate rates confirmed instantly &middot; Account billing available &middot; 24/7 dispatch</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /ZONE: speak-section -->
 
 <!-- FAQ -->
-<section class="faq" id="faq">
+<!-- ZONE: faq -->
+<section class="cs-faq">
   <div class="wrap">
-    <span class="sec-label center" style="display:block;text-align:center">Hamilton Corporate FAQ</span>
-    <h2 class="sec-h2 center">Hamilton Corporate Car Service <em>FAQs</em></h2>
+    <div class="cs-faq-head">
+      <span class="section-eyebrow">Hamilton Corporate FAQ</span>
+      <h2 class="section-h2" style="text-align:center">Hamilton Corporate Car Service <em>FAQs</em></h2>
+    </div>
     <div class="faq-grid">
       <div class="faq-item">
         <div class="faq-q">What corporate transportation services does Limo4All Transportation provide in Hamilton?<svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
@@ -1203,236 +1233,14 @@
       </div>
     </div>
     <div class="faq-cta">
-      <a href="contact.html" class="btn-faq-more">Have More Questions? Contact Us &rarr;</a>
+      <a href="faq.html" class="btn-faq-more">View All FAQs &rarr;</a>
     </div>
   </div>
 </section>
-
-<!-- REVIEWS SLIDER -->
-<section class="reviews">
-
-  <!-- ① Dark trust signals bar -->
-  <div class="rev-trust-bar">
-    <div class="rev-trust-inner">
-      <!-- Google aggregate pill -->
-      <div class="g-agg-pill">
-        <svg class="g-agg-logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-        <span class="g-agg-score">4.9</span>
-        <div class="g-agg-meta">
-          <strong>Google Rating</strong>
-          <span class="g-stars-sm">★★★★★</span>
-          <em>500+ verified reviews</em>
-        </div>
-      </div>
-      <!-- trust item 1 -->
-      <div class="rev-trust-item">
-        <div class="rev-trust-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="rev-trust-text">
-          <strong>Licensed &amp; Insured</strong>
-          <span>CVOR Certified Fleet</span>
-        </div>
-      </div>
-      <!-- trust item 2 -->
-      <div class="rev-trust-item">
-        <div class="rev-trust-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        </div>
-        <div class="rev-trust-text">
-          <strong>Background Checked</strong>
-          <span>Every Driver Vetted</span>
-        </div>
-      </div>
-      <!-- trust item 3 -->
-      <div class="rev-trust-item">
-        <div class="rev-trust-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="rev-trust-text">
-          <strong>99.2% On Time</strong>
-          <span>Punctuality Rate</span>
-        </div>
-      </div>
-      <!-- trust item 4 -->
-      <div class="rev-trust-item">
-        <div class="rev-trust-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        </div>
-        <div class="rev-trust-text">
-          <strong>Corporate Accounts</strong>
-          <span>Monthly Invoicing</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ② Main reviews content -->
-  <div class="reviews-body">
-    <div class="wrap">
-
-      <!-- heading row -->
-      <div class="reviews-top-row">
-        <div>
-          <span class="sec-label">Verified Reviews</span>
-          <h2 class="sec-h2">What Corporate Clients <em>Say</em></h2>
-        </div>
-        <div class="rev-rating-badge">
-          <svg width="26" height="26" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-          <span class="rb-score">4.9</span>
-          <div class="rb-right">
-            <strong>Google Rating</strong>
-            <span class="rb-stars">★★★★★</span>
-            <em>500+ verified reviews</em>
-          </div>
-        </div>
-      </div>
-
-      <!-- spotlight card -->
-      <div class="rev-spotlight">
-        <div class="rev-quote-wrap">
-          <p class="rev-quote" id="revQuote"></p>
-          <div class="rev-meta">
-            <div class="rev-author-left">
-              <div class="rev-avatar-lg" id="revAvatar"></div>
-              <div>
-                <div class="rev-author-name" id="revName"></div>
-                <div class="rev-author-role" id="revRole"></div>
-              </div>
-            </div>
-            <div class="rev-meta-right">
-              <span class="rev-stars-lg">★★★★★</span>
-              <span class="rev-verified-lg"><span class="rev-vdot"></span>Verified &middot; Google</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- spotlight nav: dots + arrows -->
-      <div class="rev-spotlight-nav">
-        <div class="rev-progress-dots" id="revDots"></div>
-        <button class="rev-arrow-btn" id="revPrev" aria-label="Previous review"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-        <button class="rev-arrow-btn" id="revNext" aria-label="Next review"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
-      </div>
-
-      <!-- bottom aggregate strip -->
-      <div class="reviews-aggregate">
-        <div class="rev-agg-item">
-          <span class="rev-agg-num">4.9</span>
-          <span class="rev-agg-label">Avg Rating</span>
-        </div>
-        <div class="rev-agg-divider"></div>
-        <div class="rev-agg-item">
-          <span class="rev-agg-num">500+</span>
-          <span class="rev-agg-label">Google Reviews</span>
-        </div>
-        <div class="rev-agg-divider"></div>
-        <div class="rev-agg-item">
-          <span class="rev-agg-num">99.2%</span>
-          <span class="rev-agg-label">On-Time Rate</span>
-        </div>
-        <div class="rev-agg-divider"></div>
-        <div class="rev-agg-item">
-          <span class="rev-agg-num">8 yrs</span>
-          <span class="rev-agg-label">In Business</span>
-        </div>
-        <a href="#" class="rev-google-link">
-          <svg width="13" height="13" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-          View All on Google
-        </a>
-        <a href="corporate-account.html" class="rev-agg-cta">
-          Open a Corporate Account &rarr;
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SPEAK WITH US -->
-<section class="speak" id="contact-us">
-  <div class="wrap">
-    <div class="speak-grid">
-      <div>
-        <span class="speak-pre">We&rsquo;re Here For You</span>
-        <h2 class="speak-h2">Book Hamilton Corporate <strong>Car Service</strong></h2>
-        <p class="speak-sub">Questions about Hamilton corporate accounts, executive airport transfers from Hamilton, or multi-vehicle bookings &mdash; our team is available around the clock.</p>
-        <div class="speak-channels">
-          <a href="tel:+18001234567" class="speak-channel">
-            <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-            <div><div class="speak-ch-label">Call Us 24/7</div><div class="speak-ch-value">1-800-XXX-XXXX</div><div class="speak-ch-note">Available 24 hours &middot; 7 days a week</div></div>
-          </a>
-          <a href="sms:+18001234567" class="speak-channel">
-            <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <div><div class="speak-ch-label">Text Us</div><div class="speak-ch-value">SMS &mdash; 1-800-XXX-XXXX</div><div class="speak-ch-note">Fast response &middot; Day or night</div></div>
-          </a>
-          <a href="mailto:info@limo4all.ca" class="speak-channel">
-            <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-            <div><div class="speak-ch-label">Email Us</div><div class="speak-ch-value">info@limo4all.ca</div><div class="speak-ch-note">Response within 1 hour</div></div>
-          </a>
-        </div>
-      </div>
-      <div class="speak-form-card">
-        <h4>Send Us a Message</h4>
-        <div class="sf-row">
-          <input class="sf-field" type="text" placeholder="Your Name" required>
-          <input class="sf-field" type="tel" placeholder="Phone Number">
-        </div>
-        <input class="sf-field" type="email" placeholder="Email Address" required style="width:100%;margin-bottom:0">
-        <textarea class="sf-textarea" placeholder="Tell us about your corporate travel needs &mdash; account setup, group bookings, billing..."></textarea>
-        <div class="sf-btns">
-          <button type="submit" class="btn-speak-submit">Send Enquiry</button>
-          <a href="tel:+18001234567" class="btn-speak-call">Call Now</a>
-        </div>
-        <div class="sf-note">Flat rate confirmed instantly &middot; No credit card to quote &middot; 24/7 dispatch</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RELATED SERVICES -->
-<section class="related">
-  <div class="wrap">
-    <span class="sec-label">More From Limo4All</span>
-    <h2 class="sec-h2">Explore More <em>Services</em></h2>
-    <div class="related-grid">
-      <a href="AirportHUB.html" class="rel-card">
-        <div class="rel-img"><img src="./images/service-airport.png" alt="Airport Limo"></div>
-        <div class="rel-body">
-          <h4>Airport Limo</h4>
-          <p>Flat-rate transfers to YYZ, YTZ, YHM and BUF. Flight tracking and meet &amp; greet included.</p>
-          <span class="rel-arrow">Learn More &rarr;</span>
-        </div>
-      </a>
-      <a href="EventsHUB.html" class="rel-card">
-        <div class="rel-img"><img src="./images/service-events.png" alt="Events & Concerts"></div>
-        <div class="rel-body">
-          <h4>Events &amp; Concerts</h4>
-          <p>FIFA 2026, Scotiabank Arena, Rogers Centre and all major GTA venues. Group pricing available.</p>
-          <span class="rel-arrow">Learn More &rarr;</span>
-        </div>
-      </a>
-      <a href="WeddingHUB.html" class="rel-card">
-        <div class="rel-img"><img src="./images/service-wedding.png" alt="Wedding Limo"></div>
-        <div class="rel-body">
-          <h4>Wedding Limo</h4>
-          <p>Stretch limos, executive sedans, and luxury SUVs for the full wedding party. Day-of coordination included.</p>
-          <span class="rel-arrow">Learn More &rarr;</span>
-        </div>
-      </a>
-      <a href="ToursHUB.html" class="rel-card">
-        <div class="rel-img"><img src="./images/service-tours.png" alt="Niagara Tours"></div>
-        <div class="rel-body">
-          <h4>Niagara &amp; GTA Tours</h4>
-          <p>Private wine tours, Niagara Falls day trips, and luxury city-to-city transfers for groups.</p>
-          <span class="rel-arrow">Learn More &rarr;</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+<!-- /ZONE: faq -->
 
 <!-- INTERNAL LINKS -->
+<!-- ZONE: internal-links -->
 <section class="cs-interlink">
   <div class="wrap">
     <p class="cs-interlink-eyebrow">Explore More</p>
@@ -1454,17 +1262,15 @@
           <span class="cs-interlink-panel-label">Other Limo Services in Hamilton</span>
           <a href="hamilton-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Airport Limo Hamilton</a>
           <a href="hamilton-wedding-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Wedding Limo Hamilton</a>
-          <a href="hamilton-prom-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Prom Limo Hamilton</a>
           <a href="hamilton-events-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Events &amp; Concert Limo Hamilton</a>
           <a href="hamilton-hourly-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Hourly Limo Hamilton</a>
-          <a href="hamilton-niagara-tours.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Niagara Falls Tours Hamilton</a>
-          <a href="hamilton-sprinter-van.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Sprinter Van Service Hamilton</a>
-          <a href="hamilton-city-transfers.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>City-to-City Transfers Hamilton</a>
+          <a href="hamilton-prom-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">→</span>Prom Limo Hamilton</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+<!-- /ZONE: internal-links -->
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -1472,38 +1278,42 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by hundreds of GTA businesses and thousands of passengers.</p>
-        <a href="tel:+18001234567" class="footer-phone">1-800-XXX-XXXX</a>
-        <span class="footer-email">corporate@limo4all.com</span>
+        <p>Premium Ground Transportation Across Ontario. Canadian-owned and operated. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
+        <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="AirportHUB.html">Airport Limo</a>
-        <a href="CorporateHUB.html">Corporate Car Service</a>
-        <a href="WeddingHUB.html">Wedding Limo</a>
-        <a href="EventsHUB.html">Events &amp; Concerts</a>
-        <a href="HourlyHUB.html">Hourly Charter</a>
-        <a href="ToursHUB.html">Niagara Tours</a>
-      </div>
-      <div class="footer-col">
-        <h4>Corporate</h4>
-        <a href="corporate-account.html">Open an Account</a>
-        <a href="corporate-account.html">Account Portal</a>
-        <a href="fleet.html">Fleet Overview</a>
-        <a href="contact.html">Corporate Contact</a>
-        <a href="fifa-world-cup-2026.html">FIFA 2026</a>
-        <a href="locations.html">All Locations</a>
+        <a href="corporate.html">Corporate Car Service</a>
+        <a href="corporate.html">Corporate Car Service</a>
+        <a href="wedding.html">Wedding Limo</a>
+        <a href="events.html">Events &amp; Concerts</a>
+        <a href="hourly.html">Hourly Charter</a>
+        <a href="tours.html">Niagara Tours</a>
+        <a href="sprinter.html">Sprinter Van Groups</a>
+        <a href="transfers.html">City-to-City Transfers</a>
       </div>
       <div class="footer-col">
         <h4>Locations</h4>
-        <a href="locations.html">Toronto</a>
-        <a href="locations.html">Mississauga</a>
-        <a href="locations.html">Vaughan</a>
-        <a href="locations.html">Oakville</a>
-        <a href="locations.html">Markham</a>
-        <a href="locations.html">Richmond Hill</a>
-        <a href="locations.html">Hamilton</a>
-        <a href="locations.html">Niagara Falls</a>
+        <a href="locations/toronto.html">Toronto</a>
+        <a href="locations/mississauga.html">Mississauga</a>
+        <a href="locations/vaughan.html">Vaughan</a>
+        <a href="locations/markham.html">Markham</a>
+        <a href="locations/oakville.html">Oakville</a>
+        <a href="locations/richmond-hill.html">Richmond Hill</a>
+        <a href="locations/hamilton.html">Hamilton</a>
+        <a href="locations/niagara.html">Niagara Falls</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="booking.html">Book Online</a>
+        <a href="quote.html">Get a Quote</a>
+        <a href="fleet.html">Fleet Overview</a>
+        <a href="locations.html">All Locations</a>
+        <a href="fifa-world-cup-2026.html">FIFA 2026</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="faq.html">FAQs</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1513,182 +1323,65 @@
   </div>
 </footer>
 
+<!-- FLOATING CTA -->
+<!-- ZONE: float-cta-text -->
+<div class="float-cta" id="floatCta">
+  <button class="float-cta-close" id="floatCtaClose" aria-label="Close">
+    <svg viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg>
+  </button>
+  <div class="float-cta-badge">&#9733; 4.9 Rating</div>
+  <div class="float-cta-title">Book Hamilton Corporate Car Service</div>
+  <div class="float-cta-sub">Flat rate &middot; Corp. accounts &middot; 24/7 dispatch &middot; Professional</div>
+  <div class="float-cta-row">
+    <a href="booking.html" class="btn-float-book">Book Online</a>
+    <a href="tel:+14164513106" class="btn-float-quote">&#9990;&nbsp; Call Now</a>
+  </div>
+  <div class="float-cta-trust">
+    <span>Flat Rate</span>
+    <span>Flight Tracked</span>
+    <span>24/7</span>
+  </div>
+</div>
+<!-- /ZONE: float-cta-text -->
+
 <script>
-  // Auto-advance tabber — shared utility
-  function makeAutoTabber(tabSel, panelSel, wrapSel, interval) {
-    var tabs = document.querySelectorAll(tabSel);
-    var panels = document.querySelectorAll(panelSel);
-    var wrap = document.querySelector(wrapSel);
-    if (!tabs.length || !panels.length) return;
-    var current = 0;
-    var timer = null;
-    var userPaused = false;
+  // ── HAMBURGER ──────────────────────────────────────────────────────
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('open');
+  });
 
-    function activate(idx) {
-      tabs.forEach(function(t) { t.classList.remove('active'); });
-      panels.forEach(function(p) { p.classList.remove('active'); });
-      tabs[idx].classList.add('active');
-      if (panels[idx]) panels[idx].classList.add('active');
-      current = idx;
-    }
-
-    function next() {
-      activate((current + 1) % tabs.length);
-    }
-
-    function startAuto() {
-      clearInterval(timer);
-      timer = setInterval(next, interval || 3500);
-    }
-
-    function stopAuto() {
-      clearInterval(timer);
-    }
-
-    function fireRipple(el, e) {
-      var r = el.getBoundingClientRect();
-      var rx = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%';
-      var ry = ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
-      el.style.setProperty('--rx', rx);
-      el.style.setProperty('--ry', ry);
-      el.classList.remove('ripple');
-      void el.offsetWidth; // reflow
-      el.classList.add('ripple');
-      setTimeout(function() { el.classList.remove('ripple'); }, 420);
-    }
-
-    tabs.forEach(function(tab, i) {
-      tab.addEventListener('click', function(e) {
-        fireRipple(tab, e);
-        activate(i);
-        userPaused = true;
-        stopAuto();
-        clearTimeout(tab._resumeTimer);
-        tab._resumeTimer = setTimeout(function() { userPaused = false; startAuto(); }, 8000);
-      });
-    });
-
-    if (wrap) {
-      wrap.addEventListener('mouseenter', function() { stopAuto(); });
-      wrap.addEventListener('mouseleave', function() { if (!userPaused) startAuto(); });
-    }
-
-    activate(0);
-    startAuto();
-  }
-
-  makeAutoTabber('#whyTabs .why-tab-item', '#whyPanels .why-panel-item', '.why-interactive', 3500);
-  makeAutoTabber('#sTabs .s-tab', '#sPanels .s-panel', '.seamless-body', 3500);
-  makeAutoTabber('#useTabs .why-tab-item', '#usePanels .why-panel-item', '#useWrap', 3500);
-
-  // FAQ Accordion
+  // ── FAQ ACCORDION ──────────────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(function(q) {
     q.addEventListener('click', function() {
-      var item = q.parentElement;
+      var item = q.closest('.faq-item');
       var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i) {
+      document.querySelectorAll('.faq-item.open').forEach(function(i) {
         i.classList.remove('open');
-        var a = i.querySelector('.faq-a');
-        if (a) a.style.display = 'none';
       });
       if (!isOpen) {
         item.classList.add('open');
-        var ans = item.querySelector('.faq-a');
-        if (ans) ans.style.display = 'block';
       }
     });
   });
 
-  // Booking tabs
-  document.querySelectorAll('.booking-tabs .bt').forEach(function(tab) {
-    tab.addEventListener('click', function() {
-      document.querySelectorAll('.booking-tabs .bt').forEach(function(t) { t.classList.remove('active'); });
-      tab.classList.add('active');
-    });
-  });
-
-  // Fleet filters
-  document.querySelectorAll('.ff').forEach(function(f) {
-    f.addEventListener('click', function() {
-      document.querySelectorAll('.ff').forEach(function(x) { x.classList.remove('active'); });
-      f.classList.add('active');
-    });
-  });
-
-  // Hamburger
-  var ham = document.getElementById('hamburger');
-  var nav = document.getElementById('main-nav');
-  if (ham && nav) {
-    ham.addEventListener('click', function() { nav.classList.toggle('open'); });
-  }
-
-  // Reviews Spotlight
+  // ── FLOATING CTA ───────────────────────────────────────────────────
   (function() {
-    var reviews = [
-      { initials:'AW', bg:'linear-gradient(135deg,#14b7f4,#0a8fc0)', name:'Angela W.', role:'Travel Coordinator \u00b7 Financial Services, Vaughan', quote:'\u201cWe\u2019ve been using Limo4All for our executive airport pickups for two years. The monthly invoicing is seamless and our CFO loves having one clean expense line. Drivers are always professional and on time.\u201d' },
-      { initials:'ML', bg:'linear-gradient(135deg,#6366f1,#4338ca)', name:'Michael L.', role:'Managing Partner \u00b7 Law Firm, Bay Street', quote:'\u201cI use Limo4All every time a client flies in from New York. The meet-and-greet is impeccable \u2014 they\u2019re standing there with a sign before I even know the plane landed. It sets the right tone immediately.\u201d' },
-      { initials:'ST', bg:'linear-gradient(135deg,#10b981,#059669)', name:'Sarah T.', role:'Executive Assistant \u00b7 Tech Company, Markham', quote:'\u201cWe chartered three Sprinters for our annual offsite and the coordination was flawless. All vehicles arrived together, drivers were briefed on the schedule, and they waited the entire day without complaint.\u201d' },
-      { initials:'DK', bg:'linear-gradient(135deg,#f59e0b,#d97706)', name:'David K.', role:'Regional VP \u00b7 Real Estate, Mississauga', quote:'\u201cI book my own rides through the portal and expense them. Takes about 90 seconds. Receipts come to my email automatically. I\u2019ve stopped using Uber entirely for business travel.\u201d' },
-      { initials:'RM', bg:'linear-gradient(135deg,#ec4899,#be185d)', name:'Rachel M.', role:'Chief of Staff \u00b7 Investment Office, Toronto', quote:'\u201cOur CEO travels frequently and confidentiality is paramount. Limo4All offered an NDA without us even asking. That kind of proactive professionalism is rare and keeps us loyal year after year.\u201d' },
-      { initials:'JB', bg:'linear-gradient(135deg,#8b5cf6,#6d28d9)', name:'James B.', role:'Operations Director \u00b7 Manufacturing, Brampton', quote:'\u201cCalled at 11pm for a 5am pickup for our CEO. Not only did they accommodate it, the driver showed up 20 minutes early. That\u2019s the kind of reliability we need and they always deliver.\u201d' }
-    ];
-    var current = 0;
-    var timer;
-    var spotlight = document.querySelector('.rev-spotlight');
-    var quoteEl = document.getElementById('revQuote');
-    var avatarEl = document.getElementById('revAvatar');
-    var nameEl = document.getElementById('revName');
-    var roleEl = document.getElementById('revRole');
-    var dotsWrap = document.getElementById('revDots');
-
-    // build progress dots
-    reviews.forEach(function(_, i) {
-      var d = document.createElement('button');
-      d.className = 'rev-progress-dot' + (i === 0 ? ' active' : '');
-      d.addEventListener('click', function() { userNav(i); });
-      dotsWrap.appendChild(d);
+    var cta = document.getElementById('floatCta');
+    var closeBtn = document.getElementById('floatCtaClose');
+    var dismissed = false;
+    var shown = false;
+    function maybeShow() {
+      if (dismissed || shown) return;
+      if ((window.scrollY || window.pageYOffset) > 400) {
+        cta.classList.add('visible');
+        shown = true;
+      }
+    }
+    window.addEventListener('scroll', maybeShow, { passive: true });
+    closeBtn.addEventListener('click', function() {
+      dismissed = true;
+      cta.classList.remove('visible');
     });
-
-    function updateDots(idx) {
-      dotsWrap.querySelectorAll('.rev-progress-dot').forEach(function(d, i) {
-        d.classList.toggle('active', i === idx);
-      });
-    }
-
-    function update(r) {
-      quoteEl.textContent = r.quote;
-      avatarEl.style.background = r.bg;
-      avatarEl.textContent = r.initials;
-      nameEl.textContent = r.name;
-      roleEl.textContent = r.role;
-    }
-
-    function show(idx) {
-      spotlight.classList.add('fading');
-      setTimeout(function() {
-        update(reviews[idx]);
-        spotlight.classList.remove('fading');
-      }, 220);
-      updateDots(idx);
-      current = idx;
-    }
-
-    function startAuto() {
-      clearInterval(timer);
-      timer = setInterval(function() { show((current + 1) % reviews.length); }, 5000);
-    }
-
-    function userNav(idx) {
-      show(idx);
-      clearInterval(timer);
-      setTimeout(startAuto, 9000);
-    }
-
-    document.getElementById('revPrev').addEventListener('click', function() { userNav((current - 1 + reviews.length) % reviews.length); });
-    document.getElementById('revNext').addEventListener('click', function() { userNav((current + 1) % reviews.length); });
-
-    update(reviews[0]);
-    startAuto();
   })();
 </script>
 </body>

@@ -54,8 +54,8 @@
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
 
   /* ── PROMO BAR ──────────────────────────────────────────────────── */
-  .promo-bar{background:var(--dark);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
-  .promo-bar a{color:var(--blue);text-decoration:underline}
+  .promo-bar{background:var(--blue);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
+  .promo-bar a{color:#fff;text-decoration:underline}
 
   /* ── HEADER ─────────────────────────────────────────────────────── */
   .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
@@ -243,29 +243,35 @@
   .trust-badge svg{width:20px;height:20px;fill:none;stroke:rgba(255,255,255,0.3);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
   /* ── FLEET ──────────────────────────────────────────────────────── */
-  .fleet{background:var(--gray);padding:80px 0}
-  .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px}
-  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:var(--white);border:1px solid var(--border);color:var(--text-light);cursor:pointer;transition:all 0.15s}
+  .fleet{background:#0d0e12;padding:80px 0;position:relative;overflow:hidden}
+  .fleet::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 100% 0%,rgba(20,183,244,0.09) 0%,transparent 55%);pointer-events:none}
+  .fleet>.wrap{position:relative;z-index:1}
+  .fleet .sec-label{color:var(--blue)}
+  .fleet .sec-h2{color:#fff}
+  .fleet .sec-h2 em{color:var(--blue)}
+  .fleet .sec-sub{color:rgba(255,255,255,0.4)}
+  .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px;position:relative;z-index:1}
+  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.15s}
   .ff.active,.ff:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
-  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .fleet-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.25s;display:flex;flex-direction:column}
-  .fleet-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
+  .fleet-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column}
+  .fleet-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(20,183,244,0.3);transform:translateY(-4px)}
   .fleet-img{height:200px;overflow:hidden;position:relative}
-  .fleet-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease}
+  .fleet-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;filter:brightness(0.88)}
   .fleet-card:hover .fleet-img img{transform:scale(1.05)}
   .fleet-badge{position:absolute;top:12px;left:12px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:4px 12px;border-radius:50px}
   .fleet-body{padding:22px 24px;flex:1;display:flex;flex-direction:column}
-  .fleet-body h3{font-family:var(--font-serif);font-size:1.25rem;font-style:italic;font-weight:400;color:var(--dark);margin-bottom:4px}
+  .fleet-body h3{font-family:var(--font-serif);font-size:1.25rem;font-style:italic;font-weight:400;color:#fff;margin-bottom:4px}
   .fleet-model{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--blue);margin-bottom:12px;display:block}
   .fleet-specs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-  .fleet-spec{font-family:var(--font-sans);font-size:11.5px;color:var(--text-light);display:flex;align-items:center;gap:5px;font-weight:500}
+  .fleet-spec{font-family:var(--font-sans);font-size:11.5px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:5px;font-weight:500}
   .fleet-spec::before{content:'';width:5px;height:5px;background:var(--blue);border-radius:50%;display:inline-block;flex-shrink:0}
-  .fleet-body p{font-size:13px;color:var(--text-light);line-height:1.65;margin-bottom:18px;font-weight:300;flex:1}
-  .fleet-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px}
-  .fleet-price{font-family:var(--font-serif);font-size:1.6rem;font-style:italic;color:var(--blue)}
-  .fleet-price span{font-family:var(--font-sans);font-size:11px;color:var(--text-light);font-style:normal;font-weight:400}
-  .btn-fleet-book{background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:9px 20px;border-radius:50px;border-bottom:2px solid var(--blue-dark);transition:background 0.15s}
-  .btn-fleet-book:hover{background:var(--blue-hover)}
+  .fleet-body p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.65;margin-bottom:18px;font-weight:300;flex:1}
+  .fleet-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.09);padding-top:14px}
+  .fleet-price{font-family:var(--font-serif);font-size:1.6rem;font-style:italic;color:#fff}
+  .fleet-price span{font-family:var(--font-sans);font-size:11px;color:rgba(255,255,255,0.35);font-style:normal;font-weight:400}
+  .btn-fleet-book{background:transparent;color:rgba(255,255,255,0.7);font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:9px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);transition:all 0.15s}
+  .btn-fleet-book:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
 
   /* ── COMPARISON ─────────────────────────────────────────────────── */
   .compare{background:var(--white);padding:80px 0}
@@ -982,7 +988,7 @@
     <div class="compare-wrap">
       <div class="compare-us">
         <h3>&#10003; &nbsp;Limo4All Corporate</h3>
-        <img src="./images/fleet-sedan.png" alt="Limo4All corporate sedan" class="compare-img">
+        <img src="./images/fleet-suv.png" alt="Limo4All corporate SUV" class="compare-img">
         <ul class="compare-list">
           <li>Dedicated account manager with a direct phone line</li>
           <li>Monthly consolidated invoicing — net-30 payment terms</li>
@@ -999,7 +1005,7 @@
       </div>
       <div class="compare-them">
         <h3>&#10005; &nbsp;Uber for Business</h3>
-        <img src="./images/fleet-suv.png" alt="Rideshare comparison" class="compare-img" style="filter:grayscale(60%)">
+        <img src="./images/fleet-sedan.png" alt="Rideshare comparison" class="compare-img" style="filter:grayscale(70%)">
         <ul class="compare-list">
           <li>No account manager — all support is app-based</li>
           <li>Per-ride credit card billing — no consolidated invoicing</li>

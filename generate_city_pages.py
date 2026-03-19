@@ -249,16 +249,13 @@ def build_nearby_links_html(slug):
     return "\n".join(links)
 
 def build_other_services_html(city_name, slug):
-    """Build other services in the same city links."""
+    """Build other services in the same city links (5 links to match nearby cities count)."""
     services = [
+        ("corporate-limo", "Corporate Car Service"),
         ("wedding-limo", "Wedding Limo"),
-        ("corporate-limo", "Corporate Limo"),
-        ("prom-limo", "Prom Limo"),
         ("events-limo", "Events & Concert Limo"),
         ("hourly-limo", "Hourly Limo"),
-        ("niagara-tours", "Niagara Falls Tours"),
-        ("sprinter-van", "Sprinter Van Service"),
-        ("city-transfers", "City-to-City Transfers"),
+        ("prom-limo", "Prom Limo"),
     ]
     links = []
     for svc_slug, svc_name in services:
@@ -387,8 +384,8 @@ def generate_page(template, slug, city_name, region, md):
         f'<title>Airport Limo &amp; Transfers {city_name_esc} | Flat Rate | Limo4All</title>'
     )
     page = page.replace(
-        'content="Toronto\'s #1 airport limo service. Professional chauffeurs, flat rates, 24/7 availability. Serving YYZ, YTZ, YHM and BUF airports across the GTA. Book online or call 1-800-XXX-XXXX."',
-        f'content="{city_name_esc}\'s #1 airport limo service. Professional chauffeurs, flat rates, 24/7 availability. Serving YYZ, YTZ, YHM and BUF airports from {city_name_esc} and the GTA. Book online or call 1-800-XXX-XXXX."'
+        'content="Toronto\'s #1 airport limo service. Professional chauffeurs, flat rates, 24/7 availability. Serving YYZ, YTZ, YHM and BUF airports across the GTA. Book online or call 416-451-3106."',
+        f'content="{city_name_esc}\'s #1 airport limo service. Professional chauffeurs, flat rates, 24/7 availability. Serving YYZ, YTZ, YHM and BUF airports from {city_name_esc} and the GTA. Book online or call 416-451-3106."'
     )
     page = page.replace(
         'href="https://www.limo4all.ca/toronto-airport-limo.html"',
@@ -628,14 +625,11 @@ def generate_page(template, slug, city_name, region, md):
           <a href="hamilton-airport-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Hamilton Airport Limo</a>'''
     page = page.replace(toronto_nearby, nearby_links)
 
-    toronto_services = '''          <a href="toronto-wedding-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Wedding Limo Toronto</a>
-          <a href="toronto-corporate-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Corporate Limo Toronto</a>
-          <a href="toronto-prom-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Prom Limo Toronto</a>
+    toronto_services = '''          <a href="toronto-corporate-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Corporate Car Service Toronto</a>
+          <a href="toronto-wedding-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Wedding Limo Toronto</a>
           <a href="toronto-events-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Events &amp; Concert Limo Toronto</a>
           <a href="toronto-hourly-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Hourly Limo Toronto</a>
-          <a href="toronto-niagara-tours.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Niagara Falls Tours from Toronto</a>
-          <a href="toronto-sprinter-van.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Sprinter Van Service Toronto</a>
-          <a href="toronto-city-transfers.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>City-to-City Transfers Toronto</a>'''
+          <a href="toronto-prom-limo.html" class="cs-interlink-link"><span class="cs-interlink-link-arrow">\u2192</span>Prom Limo Toronto</a>'''
     page = page.replace(toronto_services, other_services)
 
     # Update interlink panel label for services
