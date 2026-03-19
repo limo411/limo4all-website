@@ -468,6 +468,41 @@
   .rel-body p{font-size:12px;color:var(--text-light);line-height:1.55;margin-bottom:10px}
   .rel-arrow{font-family:var(--font-sans);font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.1em}
 
+  /* ── SPEAK WITH US ──────────────────────────────────────────────── */
+  .speak{background:var(--dark);padding:80px 0;position:relative;overflow:hidden}
+  .speak::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 0% 50%,rgba(20,183,244,0.12) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 100% 50%,rgba(20,183,244,0.07) 0%,transparent 60%);pointer-events:none}
+  .speak-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;position:relative;z-index:1}
+  .speak-pre{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:var(--blue);display:block;margin-bottom:10px}
+  .speak-h2{font-family:var(--font-serif);font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:400;font-style:italic;color:#fff;line-height:1.15;margin-bottom:12px}
+  .speak-h2 strong{font-style:normal;color:var(--blue)}
+  .speak-sub{font-family:var(--font-sans);font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;font-weight:300;max-width:440px;margin-bottom:32px}
+  .speak-channels{display:flex;flex-direction:column;gap:12px}
+  .speak-channel{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px 20px;transition:all 0.2s;text-decoration:none;color:inherit}
+  .speak-channel:hover{background:rgba(20,183,244,0.1);border-color:rgba(20,183,244,0.3);transform:translateY(-2px)}
+  .speak-ch-icon{width:44px;height:44px;border-radius:12px;background:rgba(20,183,244,0.12);border:1px solid rgba(20,183,244,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
+  .speak-channel:hover .speak-ch-icon{background:var(--blue)}
+  .speak-ch-icon svg{width:20px;height:20px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s}
+  .speak-channel:hover .speak-ch-icon svg{stroke:#fff}
+  .speak-ch-label{font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.4);margin-bottom:3px}
+  .speak-ch-value{font-family:var(--font-sans);font-size:15px;font-weight:700;color:#fff;line-height:1.2}
+  .speak-ch-note{font-family:var(--font-sans);font-size:10.5px;color:rgba(255,255,255,0.3);margin-top:2px;font-weight:300}
+  .speak-form-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:36px 32px}
+  .speak-form-card h4{font-family:var(--font-serif);font-size:1.35rem;font-style:italic;color:#fff;margin-bottom:20px;line-height:1.25}
+  .sf-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+  .sf-field{width:100%;height:46px;padding:0 16px;font-family:var(--font-sans);font-size:13px;color:var(--dark);background:#fff;border:1.5px solid var(--border);border-radius:10px;outline:none;transition:border-color 0.2s,box-shadow 0.2s}
+  .sf-field:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,183,244,0.1)}
+  .sf-field::placeholder{color:#bbb}
+  .sf-textarea{width:100%;min-height:100px;padding:14px 16px;font-family:var(--font-sans);font-size:13px;color:var(--dark);background:#fff;border:1.5px solid var(--border);border-radius:10px;outline:none;resize:vertical;transition:border-color 0.2s,box-shadow 0.2s;margin:10px 0;display:block}
+  .sf-textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,183,244,0.1)}
+  .sf-textarea::placeholder{color:#bbb}
+  .sf-btns{display:flex;gap:10px;margin-top:10px}
+  .btn-speak-submit{flex:1;height:48px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;border:none;border-radius:50px;border-bottom:3px solid var(--blue-dark);cursor:pointer;transition:background 0.15s}
+  .btn-speak-submit:hover{background:var(--blue-hover)}
+  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.7);font-family:var(--font-sans);font-size:13px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.2);text-decoration:none;transition:all 0.15s;white-space:nowrap}
+  .btn-speak-call:hover{border-color:var(--blue);color:var(--blue)}
+  .sf-note{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.25);text-align:center;margin-top:12px;line-height:1.5}
+  @media(max-width:1024px){.speak-grid{grid-template-columns:1fr;gap:40px}}
+
   /* ── FOOTER ─────────────────────────────────────────────────────── */
   .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
@@ -1476,6 +1511,47 @@
         </a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- SPEAK WITH US -->
+<section class="speak" id="contact-us">
+  <div class="wrap">
+    <div class="speak-grid">
+      <div>
+        <span class="speak-pre">We&rsquo;re Here For You</span>
+        <h2 class="speak-h2">Need to Speak With Us About <strong>Your Airport Transfer?</strong></h2>
+        <p class="speak-sub">Questions about your flight, pickup location, wait time, or group rates &mdash; our GTA dispatch team handles airport transfers 24 hours a day.</p>
+        <div class="speak-channels">
+          <a href="tel:+18001234567" class="speak-channel">
+            <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="speak-ch-label">Call Us 24/7</div><div class="speak-ch-value">1-800-XXX-XXXX</div><div class="speak-ch-note">Available 24 hours &middot; 7 days a week</div></div>
+          </a>
+          <a href="sms:+18001234567" class="speak-channel">
+            <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+            <div><div class="speak-ch-label">Text Us</div><div class="speak-ch-value">SMS &mdash; 1-800-XXX-XXXX</div><div class="speak-ch-note">Fast response &middot; Day or night</div></div>
+          </a>
+          <a href="mailto:info@limo4all.ca" class="speak-channel">
+            <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="speak-ch-label">Email Us</div><div class="speak-ch-value">info@limo4all.ca</div><div class="speak-ch-note">Response within 1 hour</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="speak-form-card">
+        <h4>Send Us a Message</h4>
+        <div class="sf-row">
+          <input class="sf-field" type="text" placeholder="Your Name" required>
+          <input class="sf-field" type="tel" placeholder="Phone Number">
+        </div>
+        <input class="sf-field" type="email" placeholder="Email Address" required style="width:100%;margin-bottom:0">
+        <textarea class="sf-textarea" placeholder="Tell us about your transfer &mdash; flight number, date, pickup location..."></textarea>
+        <div class="sf-btns">
+          <button type="submit" class="btn-speak-submit">Send Enquiry</button>
+          <a href="tel:+18001234567" class="btn-speak-call">Call Now</a>
+        </div>
+        <div class="sf-note">Flat rate confirmed instantly &middot; No credit card to quote &middot; 24/7 dispatch</div>
+      </div>
     </div>
   </div>
 </section>
