@@ -49,8 +49,17 @@
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
 
   /* ── PROMO BAR ──────────────────────────────────────────────────── */
-  .promo-bar{background:var(--blue);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
-  .promo-bar a{color:#fff;text-decoration:underline}
+  .promo-bar{background:var(--blue);color:#fff;padding:7px 0;font-family:var(--font-sans)}
+  .promo-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
+  .pb-stars{letter-spacing:1.5px;font-size:10.5px}
+  .pb-sep{opacity:0.4;font-size:11px}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1}
+  .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .pb-right a{color:#fff;opacity:0.95}
+  .pb-right a:hover{opacity:1;text-decoration:underline}
+  .pb-pill{background:rgba(255,255,255,0.2);border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
+  @media(max-width:768px){.pb-left{display:none}.pb-center{text-align:left}}
 
   /* ── HEADER ─────────────────────────────────────────────────────── */
   .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
@@ -609,7 +618,22 @@
 </head>
 <body>
 <div class="promo-bar">
-  <strong>Flat-Rate Limo Service &mdash; No Surge Pricing Ever.</strong>&nbsp; Toronto from $75 &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>
+  <div class="promo-inner">
+    <div class="pb-left">
+      <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>4.9 Rating</span>
+      <span class="pb-sep">&middot;</span>
+      <span>500+ Reviews</span>
+      <span class="pb-sep">&middot;</span>
+      <span>&#127809; Canadian Owned</span>
+    </div>
+    <div class="pb-center">Serving All of Ontario &mdash; Toronto, GTA &amp; Beyond</div>
+    <div class="pb-right">
+      <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
+      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
+      <a href="booking.html" class="pb-pill">Book Online</a>
+    </div>
+  </div>
 </div>
 <header class="header">
   <div class="header-inner">
@@ -623,11 +647,10 @@
       <a href="CorporateHUB.html">Corporate</a>
       <a href="WeddingHUB.html">Wedding</a>
       <a href="events.html">Events</a>
-      <a href="hourly.html">Hourly</a>
+      <a href="car-service.html">Car Service</a>
       <a href="tours.html">Tours</a>
       <a href="sprinter.html">Sprinter</a>
-      <a href="transfers.html">Transfers</a>
-      <a href="fleet.html">Fleet</a>
+            <a href="fleet.html">Fleet</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="hdr-right">

@@ -54,8 +54,17 @@
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
 
   /* ── PROMO BAR ──────────────────────────────────────────────────── */
-  .promo-bar{background:var(--blue);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
-  .promo-bar a{color:#fff;text-decoration:underline}
+  .promo-bar{background:var(--blue);color:#fff;padding:7px 0;font-family:var(--font-sans)}
+  .promo-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
+  .pb-stars{letter-spacing:1.5px;font-size:10.5px}
+  .pb-sep{opacity:0.4;font-size:11px}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1}
+  .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .pb-right a{color:#fff;opacity:0.95}
+  .pb-right a:hover{opacity:1;text-decoration:underline}
+  .pb-pill{background:rgba(255,255,255,0.2);border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
+  @media(max-width:768px){.pb-left{display:none}.pb-center{text-align:left}}
 
   /* ── HEADER ─────────────────────────────────────────────────────── */
   .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
@@ -64,7 +73,8 @@
   .logo span{color:var(--blue)}
   .logo img{max-height:44px;width:auto}
   .nav{display:flex;align-items:center;gap:2px}
-  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:8px 11px;border-radius:6px;transition:all 0.15s}
+  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:6px 8px;border-radius:6px;transition:all 0.15s}
+  @media(max-width:1200px){.hdr-phone-wrap{display:none}}
   .nav a:hover,.nav a.active{color:var(--blue);background:var(--blue-bg)}
   .hdr-right{display:flex;align-items:center;gap:12px}
   .hdr-phone-wrap{text-align:right}
@@ -638,7 +648,22 @@
 
 <!-- PROMO BAR -->
 <div class="promo-bar">
-  <strong>VIP Events &amp; Concert Limo &mdash; Flat Rates, No Surge on Event Nights.</strong>&nbsp; Groups welcome &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>
+  <div class="promo-inner">
+    <div class="pb-left">
+      <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>4.9 Rating</span>
+      <span class="pb-sep">&middot;</span>
+      <span>500+ Reviews</span>
+      <span class="pb-sep">&middot;</span>
+      <span>&#127809; Canadian Owned</span>
+    </div>
+    <div class="pb-center">VIP Events &amp; Concert Limo &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-right">
+      <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
+      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
+      <a href="booking.html" class="pb-pill">Book Online</a>
+    </div>
+  </div>
 </div>
 
 <!-- HEADER -->
@@ -654,10 +679,9 @@
       <a href="CorporateHUB.html">Corporate</a>
       <a href="WeddingHUB.html">Wedding</a>
       <a href="events.html" class="active">Events</a>
-      <a href="hourly.html">Hourly</a>
+      <a href="car-service.html">Car Service</a>
       <a href="tours.html">Tours</a>
       <a href="sprinter.html">Sprinter</a>
-      <a href="transfers.html">Transfers</a>
       <a href="fleet.html">Fleet</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -958,6 +982,122 @@
   </div>
 </section>
 
+<!-- SERVICES COMBINED - EVENTS -->
+<section class="airports" id="services">
+  <div class="wrap">
+    <span class="sec-label">Event &amp; Concert Limo Services</span>
+    <h2 class="sec-h2">The Right Ride <em>for Every Occasion</em></h2>
+    <p class="sec-sub">From concerts and sports games to galas and bachelorette parties &mdash; flat rates, no surge pricing, group packages available.</p>
+    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
+      <div class="airport-card" style="cursor:auto">
+        <div class="airport-card-head">
+          <div class="airport-iata-wrap">
+            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+          </div>
+          <div class="airport-head-info">
+            <div class="airport-name">Concert &amp; Festival Transport</div>
+            <div class="airport-location">Scotiabank Arena &bull; Rogers Centre &bull; Budweiser Stage</div>
+          </div>
+        </div>
+        <div class="airport-card-body">
+          <div class="airport-features"><span class="airport-feat">Pre-Show Pickup &amp; Post-Show Return</span><span class="airport-feat">Group Packages: 2&ndash;14 pax</span><span class="airport-feat">Flat Rate &mdash; No Surge Ever</span></div>
+          <div class="airport-pricing">
+            <span class="airport-from">Flat</span>
+            <span class="airport-price-val">Rate<em> locked at booking</em></span>
+            <a href="booking.html" class="airport-arrow">Book Concert Limo &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="airport-card" style="cursor:auto">
+        <div class="airport-card-head">
+          <div class="airport-iata-wrap">
+            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 21 12 17 16 21"/><path d="M17 4H7L5 8v4a7 7 0 0 0 14 0V8L17 4z"/><path d="M5 10H3a2 2 0 0 0 0 4h2"/><path d="M19 10h2a2 2 0 0 1 0 4h-2"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          </div>
+          <div class="airport-head-info">
+            <div class="airport-name">Sports Games &amp; Events</div>
+            <div class="airport-location">Maple Leafs &bull; Raptors &bull; Blue Jays &bull; TFC</div>
+          </div>
+        </div>
+        <div class="airport-card-body">
+          <div class="airport-features"><span class="airport-feat">Game Day Group Packages</span><span class="airport-feat">Out-of-Town Game Transport</span><span class="airport-feat">Post-Game Return Included</span></div>
+          <div class="airport-pricing">
+            <span class="airport-from">From</span>
+            <span class="airport-price-val">$75<em> per trip</em></span>
+            <a href="booking.html" class="airport-arrow">Book Sports Limo &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="airport-card" style="cursor:auto">
+        <div class="airport-card-head">
+          <div class="airport-iata-wrap">
+            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          </div>
+          <div class="airport-head-info">
+            <div class="airport-name">Galas, Nightlife &amp; VIP</div>
+            <div class="airport-location">TIFF &bull; Black-Tie Galas &bull; Bachelorette Parties</div>
+          </div>
+        </div>
+        <div class="airport-card-body">
+          <div class="airport-features"><span class="airport-feat">Stretch Limo &amp; Luxury SUV Options</span><span class="airport-feat">Bachelor &amp; Bachelorette Packages</span><span class="airport-feat">VIP Arrival Service</span></div>
+          <div class="airport-pricing">
+            <span class="airport-from">Custom</span>
+            <span class="airport-price-val">VIP<em> package</em></span>
+            <a href="booking.html" class="airport-arrow">Book VIP Transport &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Popular Occasions</span>
+    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">Every Night Out <em>Deserves a Great Ride</em></h3>
+    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">Flat rates locked at booking &mdash; no surge pricing on sold-out nights, playoff games, or New Year&rsquo;s Eve. Ever.</p>
+    <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="scenario-card">
+        <div class="scenario-cat">Concerts &amp; Music</div>
+        <h4 class="scenario-h4">Scotiabank Arena &amp; Budweiser Stage</h4>
+        <p class="scenario-p">Front-door pickup and guaranteed post-show return. Your driver monitors the show and is at the exit before the crowd floods out. No surge on sold-out nights &mdash; rate confirmed at booking.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Sports</div>
+        <h4 class="scenario-h4">Maple Leafs, Raptors &amp; Blue Jays</h4>
+        <p class="scenario-p">Game-day group packages for 2 to 14 passengers. Pre-game pickup at your hotel or home, post-game return included. Corporate suite clients and season ticket holders book recurring game packages.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Black Tie &amp; Galas</div>
+        <h4 class="scenario-h4">TIFF, Award Shows &amp; Charity Galas</h4>
+        <p class="scenario-p">Make your entrance matter. Stretch limousines and luxury SUVs for film festival screenings, charity galas, and black-tie awards nights. Uniformed chauffeur, curbside white-glove arrival.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Celebrations</div>
+        <h4 class="scenario-h4">Bachelor &amp; Bachelorette Parties</h4>
+        <p class="scenario-p">Stretch limos and Sprinter vans for the full crew. We plan the pickup route across venues, wait between stops, and get everyone home safely. Add champagne and customize your night.</p>
+      </div>
+    </div>
+    <div id="events-more" style="display:none">
+      <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr);margin-top:20px">
+        <div class="scenario-card">
+          <div class="scenario-cat">Nightlife</div>
+          <h4 class="scenario-h4">Restaurant to Club &amp; Bar Crawls</h4>
+          <p class="scenario-p">As-directed evening transport for groups. Your chauffeur drives between restaurants, rooftop bars, and clubs &mdash; no parking, no designated driver needed, no one gets split up taking separate cabs.</p>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-cat">Out of Town</div>
+          <h4 class="scenario-h4">Niagara Falls Casino &amp; More</h4>
+          <p class="scenario-p">Casino Niagara, Great Wolf Lodge, Hamilton Place &mdash; we serve all Ontario event venues. Out-of-town group packages available with coordinated pickup, event attendance, and return transport.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById('events-more');m.style.display=m.style.display==='none'?'block':'none';this.textContent=m.style.display==='none'?'See More ↓':'Show Less ↑'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See More &#8595;</button>
+      <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Get an Event Quote &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SERVICES ZONE -->
+
 <!-- SEAMLESS TRAVEL EXPERIENCE -->
 <section class="seamless" id="services">
   <div class="wrap">
@@ -1236,120 +1376,6 @@
   </div>
 </section>
 
-<!-- SERVICES OVERVIEW - EVENTS -->
-<section class="airports" id="services">
-  <div class="wrap">
-    <span class="sec-label">Event &amp; Concert Limo Services</span>
-    <h2 class="sec-h2">The Right Ride <em>for Every Occasion</em></h2>
-    <p class="sec-sub">From concerts and sports games to galas and bachelorette parties &mdash; flat rates, no surge pricing, group packages available.</p>
-    <div class="airport-cards">
-      <div class="airport-card" style="cursor:auto">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Concert &amp; Festival Transport</div>
-            <div class="airport-location">Scotiabank Arena &bull; Rogers Centre &bull; Budweiser Stage</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features"><span class="airport-feat">Pre-Show Pickup &amp; Post-Show Return</span><span class="airport-feat">Group Packages: 2&ndash;14 pax</span><span class="airport-feat">Flat Rate &mdash; No Surge Ever</span></div>
-          <div class="airport-pricing">
-            <span class="airport-from">Flat</span>
-            <span class="airport-price-val">Rate<em> locked at booking</em></span>
-            <a href="booking.html" class="airport-arrow">Book Concert Limo &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="airport-card" style="cursor:auto">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 21 12 17 16 21"/><path d="M17 4H7L5 8v4a7 7 0 0 0 14 0V8L17 4z"/><path d="M5 10H3a2 2 0 0 0 0 4h2"/><path d="M19 10h2a2 2 0 0 1 0 4h-2"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Sports Games &amp; Events</div>
-            <div class="airport-location">Maple Leafs &bull; Raptors &bull; Blue Jays &bull; TFC</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features"><span class="airport-feat">Game Day Group Packages</span><span class="airport-feat">Out-of-Town Game Transport</span><span class="airport-feat">Post-Game Return Included</span></div>
-          <div class="airport-pricing">
-            <span class="airport-from">From</span>
-            <span class="airport-price-val">$75<em> per trip</em></span>
-            <a href="booking.html" class="airport-arrow">Book Sports Limo &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="airport-card" style="cursor:auto">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Galas, Nightlife &amp; VIP</div>
-            <div class="airport-location">TIFF &bull; Black-Tie Galas &bull; Bachelorette Parties</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features"><span class="airport-feat">Stretch Limo &amp; Luxury SUV Options</span><span class="airport-feat">Bachelor &amp; Bachelorette Packages</span><span class="airport-feat">VIP Arrival Service</span></div>
-          <div class="airport-pricing">
-            <span class="airport-from">Custom</span>
-            <span class="airport-price-val">VIP<em> package</em></span>
-            <a href="booking.html" class="airport-arrow">Book VIP Transport &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EVENTS OCCASIONS SECTION -->
-<section class="scenario-section">
-  <div class="wrap">
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Occasions</span>
-    <h2 class="sec-h2" style="text-align:center">Every Night Out <em>Deserves a Great Ride</em></h2>
-    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">Flat rates locked at booking &mdash; no surge pricing on sold-out nights, playoff games, or New Year&rsquo;s Eve. Ever.</p>
-    <div class="scenario-grid">
-      <div class="scenario-card">
-        <div class="scenario-cat">Concerts &amp; Music</div>
-        <h4 class="scenario-h4">Scotiabank Arena &amp; Budweiser Stage</h4>
-        <p class="scenario-p">Front-door pickup and guaranteed post-show return. Your driver monitors the show and is at the exit before the crowd floods out. No surge on sold-out nights &mdash; rate confirmed at booking.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Sports</div>
-        <h4 class="scenario-h4">Maple Leafs, Raptors &amp; Blue Jays</h4>
-        <p class="scenario-p">Game-day group packages for 2 to 14 passengers. Pre-game pickup at your hotel or home, post-game return included. Corporate suite clients and season ticket holders book recurring game packages.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Black Tie &amp; Galas</div>
-        <h4 class="scenario-h4">TIFF, Award Shows &amp; Charity Galas</h4>
-        <p class="scenario-p">Make your entrance matter. Stretch limousines and luxury SUVs for film festival screenings, charity galas, and black-tie awards nights. Uniformed chauffeur, curbside white-glove arrival.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Celebrations</div>
-        <h4 class="scenario-h4">Bachelor &amp; Bachelorette Parties</h4>
-        <p class="scenario-p">Stretch limos and Sprinter vans for the full crew. We plan the pickup route across venues, wait between stops, and get everyone home safely. Add champagne and customize your night.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Nightlife</div>
-        <h4 class="scenario-h4">Restaurant to Club &amp; Bar Crawls</h4>
-        <p class="scenario-p">As-directed evening transport for groups. Your chauffeur drives between restaurants, rooftop bars, and clubs &mdash; no parking, no designated driver needed, no one gets split up taking separate cabs.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Out of Town</div>
-        <h4 class="scenario-h4">Niagara Falls Casino &amp; More</h4>
-        <p class="scenario-p">Casino Niagara, Great Wolf Lodge, Hamilton Place &mdash; we serve all Ontario event venues. Out-of-town group packages available with coordinated pickup, event attendance, and return transport.</p>
-      </div>
-    </div>
-    <div class="scenario-cta">
-      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Get an Event Quote &rarr;</a>
-    </div>
-  </div>
-</section>
-
-
-
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="wrap">
@@ -1579,7 +1605,7 @@
         <a href="CorporateHUB.html">Corporate Car Service</a>
         <a href="WeddingHUB.html">Wedding Limo</a>
         <a href="events.html" class="active">Events &amp; Concerts</a>
-        <a href="hourly.html">Hourly Charter</a>
+        <a href="car-service.html">Hourly Charter</a>
         <a href="tours.html">Niagara Tours</a>
       </div>
       <div class="footer-col">

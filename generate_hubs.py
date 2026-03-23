@@ -97,9 +97,9 @@ def make_hub(
     page = r(page, '"name":"Airport Limo Toronto"', f'"name":"{schema_name}"')
     page = r(page, '"serviceType":"Airport Limousine Transfer"', f'"serviceType":"{schema_type}"')
 
-    # ── Promo bar ────────────────────────────────────────────────
+    # ── Promo bar (replace pb-center text only) ────────────────────
     page = r(page,
-        '<strong>Flat-Rate Airport Transfers &mdash; No Surge Pricing Ever.</strong>&nbsp; Toronto from $75 &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>',
+        'Ontario&rsquo;s #1 Airport Limo &mdash; Flat Rates, No Surge Pricing',
         promo_bar_content)
 
     # ── Ticker ───────────────────────────────────────────────────
@@ -315,15 +315,17 @@ def make_hub(
         '<li>Only 5 minutes free wait time</li>',
         '<li>Minimal wait time &mdash; extra charges after 5 minutes</li>')
 
-    # ── Airports section → services section ──────────────────────
-    # Replace from <!-- AIRPORTS SERVED --> to <!-- FAQ -->
+    # ── Remove airports section ────────────────────────────────────
     airports_pattern = re.compile(
         r'<!-- AIRPORTS SERVED -->.*?(?=<!-- FAQ -->)',
         re.DOTALL)
-    if airports_pattern.search(page):
-        page = airports_pattern.sub(services_section_html + '\n\n', page, count=1)
+    page = airports_pattern.sub('', page, count=1)
+
+    # ── Insert services section BEFORE seamless section ────────────
+    if '<!-- SERVICES ZONE -->' in page:
+        page = page.replace('<!-- SERVICES ZONE -->', services_section_html + '\n\n<!-- SERVICES ZONE -->', 1)
     else:
-        print("  WARN: could not find <!-- AIRPORTS SERVED --> section")
+        print("  WARN: could not find <!-- SERVICES ZONE -->")
 
     # ── FAQ ───────────────────────────────────────────────────────
     page = r(page, 'Airport Limo FAQ', faq_label)
@@ -378,13 +380,13 @@ def make_hub(
 # ═══════════════════════════════════════════════════════════════
 print("\nGenerating wedding.html...")
 
-wedding_services = f'''<!-- SERVICES OVERVIEW - WEDDING -->
+wedding_services = f'''<!-- SERVICES COMBINED - WEDDING -->
 <section class="airports" id="services">
   <div class="wrap">
     <span class="sec-label">Wedding Transportation Services</span>
     <h2 class="sec-h2">Everything You Need <em>for Your Perfect Day</em></h2>
     <p class="sec-sub">From the bridal limo to the guest shuttle, Limo4All handles every wedding transport detail with elegance and precision.</p>
-    <div class="airport-cards">
+    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
 {svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
           "Bridal Limo &amp; Getaway Car",
           "Stretch Lincoln Town Car &bull; Luxury SUV &bull; Complimentary Champagne",
@@ -401,25 +403,20 @@ wedding_services = f'''<!-- SERVICES OVERVIEW - WEDDING -->
           ["Airport Pickups for Out-of-Town Guests", "Custom Schedule", "Flat Hourly Rate"],
           "Flat", "Hourly<em> rate</em>", "Book Guest Shuttle")}
     </div>
-  </div>
-</section>
-
-<!-- WEDDING MOMENTS SECTION -->
-<section class="scenario-section">
-  <div class="wrap">
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Every Wedding Moment Covered</span>
-    <h2 class="sec-h2" style="text-align:center">From Getting Ready <em>to the Grand Getaway</em></h2>
-    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">We coordinate every vehicle, every pickup, every timing milestone &mdash; so you can focus entirely on your day.</p>
-    <div class="scenario-grid">
+    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Every Wedding Moment Covered</span>
+    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">From Getting Ready <em>to the Grand Getaway</em></h3>
+    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">We coordinate every vehicle, every pickup, every timing milestone &mdash; so you focus entirely on your day.</p>
+    <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="scenario-card">
         <div class="scenario-cat">Bride &amp; Groom</div>
         <h4 class="scenario-h4">Exclusive Bridal Vehicle</h4>
-        <p class="scenario-p">A stretch limousine or luxury SUV dedicated entirely to the couple &mdash; from the getting-ready location to the ceremony, reception, and late-night hotel getaway. Complimentary champagne and red carpet service included.</p>
+        <p class="scenario-p">A stretch limousine or luxury SUV dedicated entirely to the couple &mdash; from the getting-ready location to the ceremony, reception, and late-night hotel getaway. Complimentary champagne and red carpet included.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-cat">Bridal Party</div>
         <h4 class="scenario-h4">Multi-Vehicle Coordination</h4>
-        <p class="scenario-p">Three to eight matching vehicles for the bridal party, all coordinated from a single contact. Every vehicle departs on schedule so the whole party arrives together &mdash; looking perfect, stress-free.</p>
+        <p class="scenario-p">Three to eight matching vehicles for the bridal party, coordinated from a single contact. Every vehicle departs on schedule so the whole party arrives together &mdash; looking perfect, stress-free.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-cat">Wedding Guests</div>
@@ -431,19 +428,24 @@ wedding_services = f'''<!-- SERVICES OVERVIEW - WEDDING -->
         <h4 class="scenario-h4">Photo Stop Coordination</h4>
         <p class="scenario-p">Your chauffeur knows Toronto&rsquo;s best photography locations &mdash; Distillery District, Scarborough Bluffs, High Park, the waterfront. Custom stops built into your timeline. Not one minute wasted.</p>
       </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Out-of-Town Guests</div>
-        <h4 class="scenario-h4">Airport &amp; Hotel Pickup</h4>
-        <p class="scenario-p">We collect your out-of-town guests from Pearson or Billy Bishop and deliver them to your venue on time. They arrive relaxed &mdash; not scrambling for transit or confused about directions after a long flight.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">End of the Night</div>
-        <h4 class="scenario-h4">Late-Night Grand Exit</h4>
-        <p class="scenario-p">When the last dance ends, a pristine vehicle and uniformed chauffeur are waiting. The happy couple whisked away in style. Getaway car service can be booked standalone or as part of a full-day wedding package.</p>
+    </div>
+    <div id="wedding-more" style="display:none">
+      <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr);margin-top:20px">
+        <div class="scenario-card">
+          <div class="scenario-cat">Out-of-Town Guests</div>
+          <h4 class="scenario-h4">Airport &amp; Hotel Pickup</h4>
+          <p class="scenario-p">We collect your out-of-town guests from Pearson or Billy Bishop and deliver them to your venue on time. They arrive relaxed &mdash; not scrambling for transit after a long flight.</p>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-cat">End of the Night</div>
+          <h4 class="scenario-h4">Late-Night Grand Exit</h4>
+          <p class="scenario-p">When the last dance ends, a pristine vehicle and uniformed chauffeur are waiting. The happy couple whisked away in style. Standalone or as part of a full-day wedding package.</p>
+        </div>
       </div>
     </div>
-    <div class="scenario-cta">
-      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Plan Your Wedding Transport &rarr;</a>
+    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById(\'wedding-more\');m.style.display=m.style.display===\'none\'?\'block\':\'none\';this.textContent=m.style.display===\'none\'?\'See All Scenarios \u2193\':\'Show Less \u2191\'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See All Scenarios &#8595;</button>
+      <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Plan Your Wedding Transport &rarr;</a>
     </div>
   </div>
 </section>
@@ -456,7 +458,7 @@ make_hub(
     meta_desc="Luxury wedding limo service across Ontario. Stretch limousines, SUVs, and Sprinters for bridal parties, guests, and getaway cars. Complimentary champagne. Book online.",
     schema_name="Wedding Limo Service Ontario",
     schema_type="Wedding Limousine Service",
-    promo_bar_content='<strong>Ontario&rsquo;s Premier Wedding Limo Service &mdash; Stretch Limos, SUVs &amp; Sprinters.</strong>&nbsp; Complimentary champagne &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>',
+    promo_bar_content='Ontario&rsquo;s Premier Wedding Limo &mdash; Stretch Limos, SUVs &amp; Sprinters',
     ticker_items=["Wedding Limo Toronto", "Stretch Limousine Rentals", "Bridal Party Transport", "Red Carpet Arrival", "Complimentary Champagne", "White Glove Chauffeur Service", "Wedding Guest Shuttle", "Getaway Car Service"],
     breadcrumb_label="Wedding Limo",
     hero_pills=["Stretch Limousines", "Bridal Packages", "Complimentary Champagne", "Red Carpet Service"],
@@ -537,13 +539,13 @@ make_hub(
 # ═══════════════════════════════════════════════════════════════
 print("\nGenerating events.html...")
 
-events_services = f'''<!-- SERVICES OVERVIEW - EVENTS -->
+events_services = f'''<!-- SERVICES COMBINED - EVENTS -->
 <section class="airports" id="services">
   <div class="wrap">
     <span class="sec-label">Event &amp; Concert Limo Services</span>
     <h2 class="sec-h2">The Right Ride <em>for Every Occasion</em></h2>
     <p class="sec-sub">From concerts and sports games to galas and bachelorette parties &mdash; flat rates, no surge pricing, group packages available.</p>
-    <div class="airport-cards">
+    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
 {svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
           "Concert &amp; Festival Transport",
           "Scotiabank Arena &bull; Rogers Centre &bull; Budweiser Stage",
@@ -560,16 +562,11 @@ events_services = f'''<!-- SERVICES OVERVIEW - EVENTS -->
           ["Stretch Limo &amp; Luxury SUV Options", "Bachelor &amp; Bachelorette Packages", "VIP Arrival Service"],
           "Custom", "VIP<em> package</em>", "Book VIP Transport")}
     </div>
-  </div>
-</section>
-
-<!-- EVENTS OCCASIONS SECTION -->
-<section class="scenario-section">
-  <div class="wrap">
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Occasions</span>
-    <h2 class="sec-h2" style="text-align:center">Every Night Out <em>Deserves a Great Ride</em></h2>
-    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">Flat rates locked at booking &mdash; no surge pricing on sold-out nights, playoff games, or New Year&rsquo;s Eve. Ever.</p>
-    <div class="scenario-grid">
+    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Popular Occasions</span>
+    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">Every Night Out <em>Deserves a Great Ride</em></h3>
+    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">Flat rates locked at booking &mdash; no surge pricing on sold-out nights, playoff games, or New Year&rsquo;s Eve. Ever.</p>
+    <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="scenario-card">
         <div class="scenario-cat">Concerts &amp; Music</div>
         <h4 class="scenario-h4">Scotiabank Arena &amp; Budweiser Stage</h4>
@@ -590,19 +587,24 @@ events_services = f'''<!-- SERVICES OVERVIEW - EVENTS -->
         <h4 class="scenario-h4">Bachelor &amp; Bachelorette Parties</h4>
         <p class="scenario-p">Stretch limos and Sprinter vans for the full crew. We plan the pickup route across venues, wait between stops, and get everyone home safely. Add champagne and customize your night.</p>
       </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Nightlife</div>
-        <h4 class="scenario-h4">Restaurant to Club &amp; Bar Crawls</h4>
-        <p class="scenario-p">As-directed evening transport for groups. Your chauffeur drives between restaurants, rooftop bars, and clubs &mdash; no parking, no designated driver needed, no one gets split up taking separate cabs.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Out of Town</div>
-        <h4 class="scenario-h4">Niagara Falls Casino &amp; More</h4>
-        <p class="scenario-p">Casino Niagara, Great Wolf Lodge, Hamilton Place &mdash; we serve all Ontario event venues. Out-of-town group packages available with coordinated pickup, event attendance, and return transport.</p>
+    </div>
+    <div id="events-more" style="display:none">
+      <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr);margin-top:20px">
+        <div class="scenario-card">
+          <div class="scenario-cat">Nightlife</div>
+          <h4 class="scenario-h4">Restaurant to Club &amp; Bar Crawls</h4>
+          <p class="scenario-p">As-directed evening transport for groups. Your chauffeur drives between restaurants, rooftop bars, and clubs &mdash; no parking, no designated driver needed, no one gets split up taking separate cabs.</p>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-cat">Out of Town</div>
+          <h4 class="scenario-h4">Niagara Falls Casino &amp; More</h4>
+          <p class="scenario-p">Casino Niagara, Great Wolf Lodge, Hamilton Place &mdash; we serve all Ontario event venues. Out-of-town group packages available with coordinated pickup, event attendance, and return transport.</p>
+        </div>
       </div>
     </div>
-    <div class="scenario-cta">
-      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Get an Event Quote &rarr;</a>
+    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById(\'events-more\');m.style.display=m.style.display===\'none\'?\'block\':\'none\';this.textContent=m.style.display===\'none\'?\'See More \u2193\':\'Show Less \u2191\'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See More &#8595;</button>
+      <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Get an Event Quote &rarr;</a>
     </div>
   </div>
 </section>
@@ -615,7 +617,7 @@ make_hub(
     meta_desc="VIP limo and group transportation for concerts, sports games, galas, and events across Toronto and Ontario. Flat rates, no surge pricing. Book online.",
     schema_name="Events & Concert Limo Toronto",
     schema_type="Event Transportation Service",
-    promo_bar_content='<strong>VIP Events &amp; Concert Limo &mdash; Flat Rates, No Surge on Event Nights.</strong>&nbsp; Groups welcome &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>',
+    promo_bar_content='VIP Events &amp; Concert Limo &mdash; Flat Rates, No Surge Pricing',
     ticker_items=["Events &amp; Concert Limo", "Scotiabank Arena &amp; Rogers Centre", "Sports Game Transportation", "Group Packages Available", "Flat Rate &mdash; No Surge Pricing", "TIFF &amp; Gala Transportation", "Bachelorette &amp; Bachelor Parties", "Safe Ride Home After the Show"],
     breadcrumb_label="Events Limo",
     hero_pills=["Concert &amp; Event Rides", "Group Packages", "Flat Rate No Surge", "Post-Show Pickup"],
@@ -692,15 +694,15 @@ make_hub(
 # ═══════════════════════════════════════════════════════════════
 # HOURLY HUB
 # ═══════════════════════════════════════════════════════════════
-print("\nGenerating hourly.html...")
+print("\nGenerating car-service.html...")
 
-hourly_services = f'''<!-- SERVICES OVERVIEW - HOURLY -->
+hourly_services = f'''<!-- SERVICES COMBINED - HOURLY -->
 <section class="airports" id="services">
   <div class="wrap">
     <span class="sec-label">Hourly Charter Services</span>
     <h2 class="sec-h2">A Vehicle &amp; Chauffeur <em>Ready for Anything</em></h2>
     <p class="sec-sub">Business meetings, personal errands, sightseeing, or all of the above. Hourly charter puts you in control of your schedule with a flat hourly rate and no hidden fees.</p>
-    <div class="airport-cards">
+    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
 {svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>',
           "Business &amp; Corporate Charter",
           "Full-day &amp; half-day executive charter &bull; Multiple meetings",
@@ -717,16 +719,11 @@ hourly_services = f'''<!-- SERVICES OVERVIEW - HOURLY -->
           ["Distillery, CN Tower &amp; Waterfront", "Niagara Falls Day Trip Option", "Flexible Itinerary"],
           "Custom", "Itinerary<em> built for you</em>", "Book City Tour")}
     </div>
-  </div>
-</section>
-
-<!-- HOURLY USE CASES SECTION -->
-<section class="scenario-section">
-  <div class="wrap">
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Uses</span>
-    <h2 class="sec-h2" style="text-align:center">Your Chauffeur, <em>Your Schedule</em></h2>
-    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">One flat hourly rate &mdash; no meter running at stops, no per-kilometer charges, no surprises at the end. Just a professional driver at your disposal.</p>
-    <div class="scenario-grid">
+    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Popular Uses</span>
+    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">Your Chauffeur, <em>Your Schedule</em></h3>
+    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">One flat hourly rate &mdash; no meter running at stops, no per-kilometer charges, no surprises at the end. Just a professional driver at your disposal.</p>
+    <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="scenario-card">
         <div class="scenario-cat">Executive Business</div>
         <h4 class="scenario-h4">Multi-Meeting Road Shows</h4>
@@ -747,19 +744,24 @@ hourly_services = f'''<!-- SERVICES OVERVIEW - HOURLY -->
         <h4 class="scenario-h4">Connecting Flight Layovers</h4>
         <p class="scenario-p">Long layover at Pearson? Book an hourly charter to leave the airport, have a proper meal, and return refreshed. Covers hotels, downtown, and the 400-series highway belt. Flight monitoring included.</p>
       </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Personal</div>
-        <h4 class="scenario-h4">Errands &amp; Daily Service</h4>
-        <p class="scenario-p">Regular weekly bookings for personal errands, grocery runs, dry cleaning pickups, and appointments. Dedicated clients book the same driver weekly for a consistent, trusted service relationship.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Day Trips</div>
-        <h4 class="scenario-h4">Niagara Falls &amp; Ontario Escapes</h4>
-        <p class="scenario-p">A 6&ndash;8 hour charter covers a full Niagara day trip with casino, falls, and NOTL wine stops. Or choose your own Ontario destination: Stratford, Muskoka, or Prince Edward County. Your pace, your itinerary.</p>
+    </div>
+    <div id="hourly-more" style="display:none">
+      <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr);margin-top:20px">
+        <div class="scenario-card">
+          <div class="scenario-cat">Personal</div>
+          <h4 class="scenario-h4">Errands &amp; Daily Service</h4>
+          <p class="scenario-p">Regular weekly bookings for personal errands, grocery runs, dry cleaning pickups, and appointments. Dedicated clients book the same driver weekly for a consistent, trusted service relationship.</p>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-cat">Day Trips</div>
+          <h4 class="scenario-h4">Niagara Falls &amp; Ontario Escapes</h4>
+          <p class="scenario-p">A 6&ndash;8 hour charter covers a full Niagara day trip with casino, falls, and NOTL wine stops. Or choose your own Ontario destination: Stratford, Muskoka, or Prince Edward County. Your pace, your itinerary.</p>
+        </div>
       </div>
     </div>
-    <div class="scenario-cta">
-      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Get an Hourly Quote &rarr;</a>
+    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById(\'hourly-more\');m.style.display=m.style.display===\'none\'?\'block\':\'none\';this.textContent=m.style.display===\'none\'?\'See More \u2193\':\'Show Less \u2191\'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See More &#8595;</button>
+      <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Get an Hourly Quote &rarr;</a>
     </div>
   </div>
 </section>
@@ -767,12 +769,12 @@ hourly_services = f'''<!-- SERVICES OVERVIEW - HOURLY -->
 '''
 
 make_hub(
-    "hourly.html", "hourly.html",
+    "car-service.html", "car-service.html",
     title="Hourly Limo Charter &amp; As-Directed Service | Limo4All",
     meta_desc="Hourly limo and chauffeur service across Ontario. As-directed bookings for business, shopping, tours, and personal use. Flat hourly rates, 2-hour minimum. Book online.",
     schema_name="Hourly Limo Charter Ontario",
     schema_type="Hourly Limousine Charter",
-    promo_bar_content='<strong>Hourly Limo Charter &mdash; As-Directed Service Across Ontario.</strong>&nbsp; Flat hourly rates &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>',
+    promo_bar_content='Hourly Limo Charter &mdash; As-Directed Chauffeur Service Across Ontario',
     ticker_items=["Hourly Limo Charter", "As-Directed Chauffeur Service", "Business Day Use", "Shopping &amp; Errands", "City Tours &amp; Sightseeing", "Corporate Road Shows", "Flat Hourly Rate", "2-Hour Minimum"],
     breadcrumb_label="Hourly Charter",
     hero_pills=["Flat Hourly Rates", "As-Directed", "Multiple Stops", "2-Hour Minimum"],
@@ -851,13 +853,13 @@ make_hub(
 # ═══════════════════════════════════════════════════════════════
 print("\nGenerating tours.html...")
 
-tours_services = f'''<!-- SERVICES OVERVIEW - TOURS -->
+tours_services = f'''<!-- SERVICES COMBINED - TOURS -->
 <section class="airports" id="services">
   <div class="wrap">
     <span class="sec-label">Private Ontario Tours</span>
     <h2 class="sec-h2">Explore Ontario <em>in Luxury &amp; Comfort</em></h2>
     <p class="sec-sub">Private chauffeured day trips to Niagara Falls, wine country, Muskoka, and beyond &mdash; your itinerary, your pace, zero group rush.</p>
-    <div class="airport-cards">
+    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
 {svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 22 12 2 21 22"/><polyline points="7.5 15 12 7 16.5 15"/></svg>',
           "Niagara Falls Day Trip",
           "Private door-to-door &bull; Full day at the falls",
@@ -874,16 +876,11 @@ tours_services = f'''<!-- SERVICES OVERVIEW - TOURS -->
           ["Blue Mountains &amp; Collingwood", "Stratford Festival Transport", "Any Ontario Destination"],
           "Custom", "Day trip<em> pricing</em>", "Book Custom Tour")}
     </div>
-  </div>
-</section>
-
-<!-- TOURS DESTINATIONS SECTION -->
-<section class="scenario-section">
-  <div class="wrap">
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Destinations</span>
-    <h2 class="sec-h2" style="text-align:center">Ontario&rsquo;s Best <em>in One Perfect Day</em></h2>
-    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">All tours are fully private, door-to-door from your GTA home or hotel. No group schedules, no minimum party size, no rushing past the best moments.</p>
-    <div class="scenario-grid">
+    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Popular Destinations</span>
+    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">Ontario&rsquo;s Best <em>in One Perfect Day</em></h3>
+    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">All tours are fully private, door-to-door from your GTA home or hotel. No group schedules, no minimum party size, no rushing past the best moments.</p>
+    <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="scenario-card">
         <div class="scenario-cat">Most Popular</div>
         <h4 class="scenario-h4">Niagara Falls Day Trip</h4>
@@ -904,19 +901,24 @@ tours_services = f'''<!-- SERVICES OVERVIEW - TOURS -->
         <h4 class="scenario-h4">Stratford Festival Transport</h4>
         <p class="scenario-p">Private door-to-door transport for matinee and evening Stratford Festival performances. Arrive with time to explore the town, dine before the show, and return relaxed &mdash; no highway driving after an evening performance.</p>
       </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Adventure</div>
-        <h4 class="scenario-h4">Blue Mountains &amp; Collingwood</h4>
-        <p class="scenario-p">Ski season or summer hiking &mdash; the Blue Mountains are 90 minutes from Toronto. Drop off at the village, ski hills, or trail heads, then pick up at whatever time works. Great for groups of 4&ndash;8.</p>
-      </div>
-      <div class="scenario-card">
-        <div class="scenario-cat">Wine &amp; Farms</div>
-        <h4 class="scenario-h4">Prince Edward County</h4>
-        <p class="scenario-p">Ontario&rsquo;s emerging wine region: Closson Chase, Hinterland, Karlo Estates, and the picturesque Sandbanks Provincial Park. A 2.5-hour drive from Toronto that feels like a different world entirely.</p>
+    </div>
+    <div id="tours-more" style="display:none">
+      <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr);margin-top:20px">
+        <div class="scenario-card">
+          <div class="scenario-cat">Adventure</div>
+          <h4 class="scenario-h4">Blue Mountains &amp; Collingwood</h4>
+          <p class="scenario-p">Ski season or summer hiking &mdash; the Blue Mountains are 90 minutes from Toronto. Drop off at the village, ski hills, or trail heads, then pick up at whatever time works. Great for groups of 4&ndash;8.</p>
+        </div>
+        <div class="scenario-card">
+          <div class="scenario-cat">Wine &amp; Farms</div>
+          <h4 class="scenario-h4">Prince Edward County</h4>
+          <p class="scenario-p">Ontario&rsquo;s emerging wine region: Closson Chase, Hinterland, Karlo Estates, and the picturesque Sandbanks Provincial Park. A 2.5-hour drive from Toronto that feels like a different world entirely.</p>
+        </div>
       </div>
     </div>
-    <div class="scenario-cta">
-      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Plan Your Ontario Tour &rarr;</a>
+    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById(\'tours-more\');m.style.display=m.style.display===\'none\'?\'block\':\'none\';this.textContent=m.style.display===\'none\'?\'See More \u2193\':\'Show Less \u2191\'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See More &#8595;</button>
+      <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Plan Your Ontario Tour &rarr;</a>
     </div>
   </div>
 </section>
@@ -929,7 +931,7 @@ make_hub(
     meta_desc="Private chauffeured tours to Niagara Falls, wine country, Muskoka, and across Ontario. Fully custom itineraries, luxury vehicles, door-to-door service. Book online.",
     schema_name="Niagara Falls & Ontario Private Tours",
     schema_type="Tour Operator",
-    promo_bar_content='<strong>Private Niagara Falls &amp; Ontario Tours &mdash; Luxury Vehicles, Your Itinerary.</strong>&nbsp; Door-to-door &nbsp;&mdash;&nbsp; <a href="tel:+14164513106">Call 416 451 3106</a>',
+    promo_bar_content='Private Niagara Falls &amp; Ontario Tours &mdash; Luxury Vehicles, Your Itinerary',
     ticker_items=["Niagara Falls Day Trips", "Wine Country &amp; NOTL Tours", "Muskoka Lake Country", "Private Ontario Tours", "Stratford Festival Transport", "Casino Niagara &amp; Fallsview", "Custom Itinerary Built Around You", "Door-to-Door from the GTA"],
     breadcrumb_label="Ontario Tours",
     hero_pills=["Niagara Falls Day Trips", "Wine Country Tours", "Custom Ontario Tours", "Private Group Tours"],
