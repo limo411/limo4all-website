@@ -93,7 +93,7 @@
   .ticker-wrap{background:var(--dark);overflow:hidden;padding:8px 0}
   .ticker-track{display:flex;width:max-content;animation:ticker 40s linear infinite}
   .ticker-wrap:hover .ticker-track{animation-play-state:paused}
-  .ticker-track span{color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
+  .ticker-track span{color:var(--blue);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
   .ticker-track span::after{content:'·';color:var(--blue);margin-left:28px}
   @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -198,7 +198,7 @@
   .acct-band{background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 100%);padding:52px 0}
   .acct-band-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
   .acct-band h3{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;color:#fff;margin-bottom:8px}
-  .acct-band p{font-family:var(--font-sans);font-size:13.5px;color:rgba(255,255,255,0.55);line-height:1.6;font-weight:300;max-width:560px}
+  .acct-band p{font-family:var(--font-sans);font-size:13.5px;color:var(--blue);line-height:1.6;font-weight:300;max-width:560px}
   .acct-band-ctas{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
   .btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--dark);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:13px 28px;border-radius:50px;transition:all 0.15s;white-space:nowrap}
   .btn-white:hover{background:var(--blue);color:#fff}
@@ -261,7 +261,7 @@
   .fleet .sec-h2 em{color:var(--blue)}
   .fleet .sec-sub{color:rgba(255,255,255,0.4)}
   .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px;position:relative;z-index:1}
-  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.15s}
+  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--blue);cursor:pointer;transition:all 0.15s}
   .ff.active,.ff:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
   .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
   .fleet-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column}
@@ -446,7 +446,7 @@
   @media(max-width:1024px){.speak-grid{grid-template-columns:1fr;gap:40px}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
-  .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
   .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
   .footer-brand h3 span{color:var(--blue)}
@@ -559,7 +559,7 @@
       <span class="pb-sep">&middot;</span>
       <span>20+ Years Serving GTA</span>
     </div>
-    <div class="pb-center">Toronto&rsquo;s #1 Limo &amp; Chauffeur Service &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-center">Executive Corporate Car Service Across the GTA &mdash; Professional, Discreet, On-Time</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
@@ -1363,7 +1363,7 @@
 <!-- CITY COVERAGE -->
 <section class="city-coverage" id="service-areas">
   <div class="wrap">
-    <span class="sec-label">Service Areas</span>
+    <span class="sec-label">Areas We Serve</span>
     <h2 class="sec-h2">Corporate Car Service <em>Near You</em></h2>
     <p class="sec-sub">Professional corporate limo and car service throughout the GTA and Southern Ontario. Select your city for local pricing and availability.</p>
     <div class="city-grid">

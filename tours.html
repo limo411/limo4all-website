@@ -93,7 +93,7 @@
   .ticker-wrap{background:var(--dark);overflow:hidden;padding:8px 0}
   .ticker-track{display:flex;width:max-content;animation:ticker 40s linear infinite}
   .ticker-wrap:hover .ticker-track{animation-play-state:paused}
-  .ticker-track span{color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
+  .ticker-track span{color:var(--blue);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
   .ticker-track span::after{content:'·';color:var(--blue);margin-left:28px}
   @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -249,7 +249,7 @@
   .fleet .sec-h2 em{color:var(--blue)}
   .fleet .sec-sub{color:rgba(255,255,255,0.4)}
   .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px;position:relative;z-index:1}
-  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.15s}
+  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--blue);cursor:pointer;transition:all 0.15s}
   .ff.active,.ff:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
   .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
   .fleet-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column}
@@ -404,7 +404,7 @@
   .fifa-heading strong{font-style:normal;font-weight:700;color:#fff;display:block}
   .fifa-heading em{color:#00c853;font-style:italic}
   .fifa-date-row{display:flex;align-items:center;gap:14px;margin-bottom:44px;flex-wrap:wrap}
-  .fifa-date{font-family:var(--font-sans);font-size:13px;font-weight:600;color:rgba(255,255,255,0.55);letter-spacing:0.04em}
+  .fifa-date{font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--blue);letter-spacing:0.04em}
   .fifa-date-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.25)}
   /* feature columns */
   .fifa-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;margin-bottom:40px}
@@ -548,7 +548,7 @@
   @media(max-width:1024px){.speak-grid{grid-template-columns:1fr;gap:40px}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
-  .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
   .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
   .footer-brand h3 span{color:var(--blue)}
@@ -674,7 +674,7 @@
       <span class="pb-sep">&middot;</span>
       <span>20+ Years Serving GTA</span>
     </div>
-    <div class="pb-center">Toronto&rsquo;s #1 Limo &amp; Chauffeur Service &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-center">Niagara Falls &amp; Wine Country Tours from Toronto &mdash; Book a Custom Day Trip</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
@@ -1522,26 +1522,26 @@
 <!-- CITY COVERAGE -->
 <section class="city-coverage" id="service-areas">
   <div class="wrap">
-    <span class="sec-label">Service Areas</span>
+    <span class="sec-label">Areas We Serve</span>
     <h2 class="sec-h2">Tour Service <em>Across Ontario</em></h2>
     <p class="sec-sub">Niagara Falls, wine country, and custom day tours departing from anywhere in Ontario. Contact us to plan your itinerary.</p>
     <div class="city-grid">
-      <a href="contact.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Markham</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>King City</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>London</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Milton</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
-      <a href="contact.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Markham</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>King City</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>London</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Milton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">View Details &rsaquo;</span></a>
     </div>
   </div>
 </section>

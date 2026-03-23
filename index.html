@@ -320,16 +320,11 @@
   .areas::before{content:'';position:absolute;bottom:-80px;right:-60px;width:440px;height:440px;background:radial-gradient(circle,rgba(20,183,244,0.06) 0%,transparent 70%);pointer-events:none}
   .areas .wrap{position:relative;z-index:1}
   .areas-head{text-align:center;margin-bottom:52px}
-  .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .area-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px 22px 18px;display:flex;flex-direction:column;gap:4px;transition:all 0.22s;text-decoration:none;color:inherit;position:relative;overflow:hidden}
-  .area-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 0.28s ease}
-  .area-card:hover{border-color:rgba(20,183,244,0.28);box-shadow:0 8px 28px rgba(20,183,244,0.1);transform:translateY(-3px)}
-  .area-card:hover::before{transform:scaleX(1)}
-  .area-name{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);transition:color 0.2s;line-height:1.2}
-  .area-card:hover .area-name{color:var(--blue)}
-  .area-region{font-family:var(--font-sans);font-size:10.5px;color:var(--text-light);font-weight:500;text-transform:uppercase;letter-spacing:0.07em}
-  .area-arr{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.09em;color:var(--blue);margin-top:10px;opacity:0;transition:opacity 0.2s,transform 0.2s}
-  .area-card:hover .area-arr{opacity:1;transform:translateX(3px)}
+  .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:flex;flex-direction:column;justify-content:space-between;min-height:72px;color:inherit;text-decoration:none}
+  .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:auto}
 
   /* ── FAQ ────────────────────────────────────────────────────────── */
   .faq{background:var(--white);padding:90px 0}
@@ -358,7 +353,7 @@
   .fifa-heading strong{font-style:normal;font-weight:700;color:#fff;display:block}
   .fifa-heading em{color:#00c853;font-style:italic}
   .fifa-date-row{display:flex;align-items:center;gap:14px;margin-bottom:44px;flex-wrap:wrap}
-  .fifa-date{font-family:var(--font-sans);font-size:13px;font-weight:600;color:rgba(255,255,255,0.55);letter-spacing:0.04em}
+  .fifa-date{font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--blue);letter-spacing:0.04em}
   .fifa-date-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.25)}
   .fifa-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;margin-bottom:40px}
   .fifa-feat{background:#04090f;padding:28px 28px 26px;position:relative}
@@ -430,7 +425,7 @@
   .rev-google-link:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 6px 20px rgba(20,183,244,0.15);transform:translateY(-1px)}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
-  .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
   .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
   .footer-brand h3 span{color:var(--blue)}
@@ -499,7 +494,7 @@
   .sf-btns{display:flex;gap:10px;margin-top:4px}
   .btn-speak-submit{flex:1;height:48px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;border:none;border-radius:50px;border-bottom:3px solid var(--blue-dark);cursor:pointer;transition:background 0.15s}
   .btn-speak-submit:hover{background:var(--blue-hover)}
-  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:12.5px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.14);text-decoration:none;transition:all 0.15s;white-space:nowrap}
+  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:var(--blue);font-family:var(--font-sans);font-size:12.5px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.14);text-decoration:none;transition:all 0.15s;white-space:nowrap}
   .btn-speak-call:hover{border-color:var(--blue);color:var(--blue)}
   .sf-note{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.18);text-align:center;margin-top:14px;line-height:1.6}
 
@@ -507,7 +502,7 @@
   @media(max-width:1024px){
     .speak-grid{grid-template-columns:1fr;gap:48px}
     .speak-deco{display:none}
-    .areas-grid{grid-template-columns:repeat(2,1fr)}
+    .city-grid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:1024px){
     .hero-grid{grid-template-columns:1fr;gap:40px}
@@ -524,7 +519,7 @@
     .fleet-grid{grid-template-columns:repeat(2,1fr)}
     .compare-wrap{grid-template-columns:1fr;border-radius:var(--radius)}
     .compare-vs{display:none}
-    .areas-grid{grid-template-columns:repeat(2,1fr)}
+    .city-grid{grid-template-columns:repeat(2,1fr)}
     .footer-grid{grid-template-columns:1fr 1fr}
     .faq-grid{grid-template-columns:1fr}
     .rev-spotlight{padding:40px 36px 36px}
@@ -544,12 +539,12 @@
     .hdr-phone-wrap,.fifa{display:none}
     .services-grid{grid-template-columns:repeat(2,1fr)}
     .fleet-grid{grid-template-columns:1fr}
-    .areas-grid{grid-template-columns:repeat(2,1fr)}
+    .city-grid{grid-template-columns:repeat(2,1fr)}
     .rev-spotlight{padding:28px 24px 28px}
   }
   @media(max-width:580px){
     .services-grid{grid-template-columns:1fr}
-    .areas-grid{grid-template-columns:repeat(2,1fr)}
+    .city-grid{grid-template-columns:repeat(2,1fr)}
     .footer-grid{grid-template-columns:1fr}
     .compare-us,.compare-them{padding:28px 22px}
     .stats-inner{grid-template-columns:1fr 1fr}
@@ -1494,84 +1489,27 @@
 <section class="areas" id="locations">
   <div class="wrap">
     <div class="areas-head">
-      <span class="sec-label center" style="display:block;text-align:center">Coverage Area</span>
+      <span class="sec-label center" style="display:block;text-align:center">Areas We Serve</span>
       <h2 class="sec-h2 center">We Serve All of <em>Toronto &amp; the GTA</em></h2>
-      <p class="sec-sub center" style="max-width:560px;margin:0 auto">Professional chauffeur service across every city in the Greater Toronto Area &mdash; and beyond.</p>
+      <p class="sec-sub center" style="max-width:560px;margin:0 auto">Professional chauffeur service across every city in the Greater Toronto Area &mdash; and beyond. Select your city for local pricing.</p>
     </div>
-    <div class="areas-grid">
-
-      <a href="toronto-airport-limo.html" class="area-card">
-        <div class="area-name">Toronto</div>
-        <div class="area-region">City Core &amp; Downtown</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="mississauga-airport-limo.html" class="area-card">
-        <div class="area-name">Mississauga</div>
-        <div class="area-region">Peel Region &mdash; Pearson YYZ</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="brampton-airport-limo.html" class="area-card">
-        <div class="area-name">Brampton</div>
-        <div class="area-region">Peel Region</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="vaughan-airport-limo.html" class="area-card">
-        <div class="area-name">Vaughan</div>
-        <div class="area-region">York Region &mdash; North GTA</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="markham-airport-limo.html" class="area-card">
-        <div class="area-name">Markham</div>
-        <div class="area-region">York Region &mdash; East GTA</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="richmond-hill-airport-limo.html" class="area-card">
-        <div class="area-name">Richmond Hill</div>
-        <div class="area-region">York Region</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="oakville-airport-limo.html" class="area-card">
-        <div class="area-name">Oakville</div>
-        <div class="area-region">Halton Region &mdash; Southwest</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="hamilton-airport-limo.html" class="area-card">
-        <div class="area-name">Hamilton</div>
-        <div class="area-region">YHM &mdash; Hamilton Airport</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="niagara-falls-airport-limo.html" class="area-card">
-        <div class="area-name">Niagara Falls</div>
-        <div class="area-region">Niagara Region</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="north-york-airport-limo.html" class="area-card">
-        <div class="area-name">North York</div>
-        <div class="area-region">Toronto North</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="scarborough-airport-limo.html" class="area-card">
-        <div class="area-name">Scarborough</div>
-        <div class="area-region">Toronto East</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
-      <a href="etobicoke-airport-limo.html" class="area-card">
-        <div class="area-name">Etobicoke</div>
-        <div class="area-region">Toronto West &mdash; Near Pearson</div>
-        <span class="area-arr">Book Transfer &rsaquo;</span>
-      </a>
-
+    <div class="city-grid">
+      <a href="toronto-airport-limo.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="mississauga-airport-limo.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="vaughan-airport-limo.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="markham-airport-limo.html" class="city-card"><h3>Markham</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="oakville-airport-limo.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="richmond-hill-airport-limo.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="hamilton-airport-limo.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="niagara-falls-airport-limo.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="brampton-airport-limo.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="aurora-airport-limo.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="burlington-airport-limo.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="king-city-airport-limo.html" class="city-card"><h3>King City</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="london-airport-limo.html" class="city-card"><h3>London</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="milton-airport-limo.html" class="city-card"><h3>Milton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="guelph-airport-limo.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="waterloo-kitchener-airport-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">View Details &rsaquo;</span></a>
     </div>
     <div class="sec-cta-row">
       <a href="locations.html" class="btn-sec-more">View All Service Areas &rarr;</a>
