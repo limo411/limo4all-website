@@ -527,17 +527,23 @@
   .cs-interlink-link:hover{color:var(--blue);gap:13px}
   .cs-interlink-link-arrow{color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
   @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
-    /* ── SITEMAP ────────────────────────────────────────────────────── */
-  .sitemap-section{background:var(--off-white);border-top:1px solid var(--border);padding:56px 0 48px}
-  .sitemap-top{margin-bottom:36px}
-  .sitemap-top .sec-label{display:block;margin-bottom:8px}
-  .sitemap-top h2{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--dark);font-weight:400}
-  .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .sitemap-col h4{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--blue);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-  .sitemap-col a{display:block;font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);padding:3px 0;transition:color 0.15s}
-  .sitemap-col a:hover{color:var(--blue)}
-  @media(max-width:900px){.sitemap-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:580px){.sitemap-grid{grid-template-columns:1fr}}
+
+  /* ── CITY GRID ─────────────────────────────────────────────────── */
+  .city-coverage{background:var(--off-white);padding:72px 0;border-top:1px solid var(--border)}
+  .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+  .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:block;color:inherit;text-decoration:none}
+  .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px}
+  .city-card p{font-size:12px;color:var(--text-light);line-height:1.5;margin-bottom:10px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
+  .city-pills-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .city-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s}
+  .city-pill:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.12)}
+  .city-pill::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+  @media(max-width:1024px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:768px){.city-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.city-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -547,16 +553,15 @@
   <div class="promo-inner">
     <div class="pb-left">
       <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span>4.9 Rating</span>
+      <span>4.9 Google Rating</span>
       <span class="pb-sep">&middot;</span>
       <span>500+ Reviews</span>
       <span class="pb-sep">&middot;</span>
-      <span>&#127809; Canadian Owned</span>
+      <span>20+ Years Serving GTA</span>
     </div>
     <div class="pb-center">Ontario&rsquo;s #1 Corporate Car Service &mdash; Executive Chauffeurs, Flat Rates</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
-      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
     </div>
   </div>
@@ -1358,6 +1363,33 @@
   </div>
 </section>
 
+<!-- CITY COVERAGE -->
+<section class="city-coverage" id="service-areas">
+  <div class="wrap">
+    <span class="sec-label">Service Areas</span>
+    <h2 class="sec-h2">Corporate Car Service <em>Near You</em></h2>
+    <p class="sec-sub">Professional corporate limo and car service throughout the GTA and Southern Ontario. Select your city for local availability, business districts, and pricing.</p>
+    <div class="city-grid">
+      <a href="toronto-corporate-limo.html" class="city-card"><h3>Toronto</h3><p>Financial District, Bay St, King West, Midtown</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="mississauga-corporate-limo.html" class="city-card"><h3>Mississauga</h3><p>Airport Corporate Centre, City Centre, Meadowvale</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="vaughan-corporate-limo.html" class="city-card"><h3>Vaughan</h3><p>Vaughan Corporate Centre, Weston Road, Hwy 400</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="markham-corporate-limo.html" class="city-card"><h3>Markham</h3><p>Enterprise Blvd, Warden, McCowan Tech Park</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="oakville-corporate-limo.html" class="city-card"><h3>Oakville</h3><p>Winston Churchill, Ford Drive Business Park</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="richmond-hill-corporate-limo.html" class="city-card"><h3>Richmond Hill</h3><p>Hwy 7 Corridor, Yonge St, East Beaver Creek</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="hamilton-corporate-limo.html" class="city-card"><h3>Hamilton</h3><p>Downtown Core, McMaster, Ancaster Business</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="niagara-falls-corporate-limo.html" class="city-card"><h3>Niagara Falls</h3><p>Fallsview, Tourism District, St. Catharines</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="brampton-corporate-limo.html" class="city-card"><h3>Brampton</h3><p>Airport Rd Corridor, Queen St, Steeles</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="aurora-corporate-limo.html" class="city-card"><h3>Aurora</h3><p>Industrial Pkwy, St. John&apos;s, Aurora-Wellington</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="burlington-corporate-limo.html" class="city-card"><h3>Burlington</h3><p>Appleby Line, QEW Corridor, Brant St</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="king-city-corporate-limo.html" class="city-card"><h3>King City</h3><p>King Rd, Keele, Nobleton Business Area</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="london-corporate-limo.html" class="city-card"><h3>London</h3><p>Downtown, Western University, Masonville</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="milton-corporate-limo.html" class="city-card"><h3>Milton</h3><p>Commercial Corridor, Main St, Steeles</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="guelph-corporate-limo.html" class="city-card"><h3>Guelph</h3><p>Gordon St, Hwy 6, Innovation District</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="waterloo-kitchener-corporate-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><p>Tech Triangle, Innovation Mile, King St</p><span class="city-arrow">View Details &rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- SPEAK WITH US -->
 <section class="speak" id="contact-us">
   <div class="wrap">
@@ -1441,76 +1473,6 @@
   </div>
 </section>
 
-<!-- SITEMAP -->
-<section class="sitemap-section">
-  <div class="wrap">
-    <div class="sitemap-top">
-      <span class="sec-label">Site Directory</span>
-      <h2>Everything <em>at a Glance</em></h2>
-    </div>
-    <div class="sitemap-grid">
-      <div class="sitemap-col">
-        <h4>Services</h4>
-        <a href="AirportHUB.html">Airport Limo</a>
-        <a href="CorporateHUB.html">Corporate Limo</a>
-        <a href="WeddingHUB.html">Wedding Limo</a>
-        <a href="events.html">Events &amp; Concerts</a>
-        <a href="car-service.html">Chauffeur Service</a>
-        <a href="tours.html">Tours &amp; Day Trips</a>
-        <a href="sprinter.html">Sprinter Van Groups</a>
-        <a href="transfers.html">City-to-City Transfers</a>
-      </div>
-      <div class="sitemap-col">
-        <h4>Airport Limo Cities</h4>
-        <a href="toronto-airport-limo.html">Toronto</a>
-        <a href="mississauga-airport-limo.html">Mississauga</a>
-        <a href="vaughan-airport-limo.html">Vaughan</a>
-        <a href="markham-airport-limo.html">Markham</a>
-        <a href="oakville-airport-limo.html">Oakville</a>
-        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
-        <a href="brampton-airport-limo.html">Brampton</a>
-        <a href="hamilton-airport-limo.html">Hamilton</a>
-        <a href="burlington-airport-limo.html">Burlington</a>
-        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
-        <a href="london-airport-limo.html">London</a>
-        <a href="guelph-airport-limo.html">Guelph</a>
-        <a href="aurora-airport-limo.html">Aurora</a>
-        <a href="king-city-airport-limo.html">King City</a>
-        <a href="milton-airport-limo.html">Milton</a>
-        <a href="waterloo-kitchener-airport-limo.html">Waterloo-Kitchener</a>
-      </div>
-      <div class="sitemap-col">
-        <h4>Corporate Limo Cities</h4>
-        <a href="toronto-corporate-limo.html">Toronto</a>
-        <a href="mississauga-corporate-limo.html">Mississauga</a>
-        <a href="vaughan-corporate-limo.html">Vaughan</a>
-        <a href="markham-corporate-limo.html">Markham</a>
-        <a href="oakville-corporate-limo.html">Oakville</a>
-        <a href="richmond-hill-corporate-limo.html">Richmond Hill</a>
-        <a href="brampton-corporate-limo.html">Brampton</a>
-        <a href="hamilton-corporate-limo.html">Hamilton</a>
-        <a href="burlington-corporate-limo.html">Burlington</a>
-        <a href="niagara-falls-corporate-limo.html">Niagara Falls</a>
-        <a href="london-corporate-limo.html">London</a>
-        <a href="guelph-corporate-limo.html">Guelph</a>
-        <a href="aurora-corporate-limo.html">Aurora</a>
-        <a href="king-city-corporate-limo.html">King City</a>
-        <a href="milton-corporate-limo.html">Milton</a>
-        <a href="waterloo-kitchener-corporate-limo.html">Waterloo-Kitchener</a>
-      </div>
-      <div class="sitemap-col">
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="fleet.html">Our Fleet</a>
-        <a href="sprinter.html">Sprinter Vans</a>
-        <a href="booking.html">Book Online</a>
-        <a href="contact.html">Get a Quote</a>
-        <a href="faq.html">FAQs</a>
-        <a href="locations.html">All Locations</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -1518,42 +1480,40 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by hundreds of GTA businesses and thousands of passengers.</p>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
         <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
-        <span class="footer-email">corporate@limo4all.com</span>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <a href="AirportHUB.html">Airport Limo</a>
         <a href="CorporateHUB.html">Corporate Car Service</a>
         <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="car-service.html">Personal Chauffeur</a>
         <a href="events.html">Events &amp; Concerts</a>
-        <a href="car-service.html">Chauffeur Charter</a>
         <a href="tours.html">Niagara Tours</a>
       </div>
       <div class="footer-col">
-        <h4>Corporate</h4>
-        <a href="contact.html">Open an Account</a>
-        <a href="contact.html">Account Portal</a>
-        <a href="fleet.html">Fleet Overview</a>
-        <a href="contact.html">Corporate Contact</a>
-        <a href="locations.html">All Locations</a>
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
       </div>
       <div class="footer-col">
-        <h4>Corporate Limo</h4>
-        <a href="toronto-corporate-limo.html">Toronto</a>
-        <a href="mississauga-corporate-limo.html">Mississauga</a>
-        <a href="vaughan-corporate-limo.html">Vaughan</a>
-        <a href="oakville-corporate-limo.html">Oakville</a>
-        <a href="markham-corporate-limo.html">Markham</a>
-        <a href="richmond-hill-corporate-limo.html">Richmond Hill</a>
-        <a href="hamilton-corporate-limo.html">Hamilton</a>
-        <a href="niagara-falls-corporate-limo.html">Niagara Falls</a>
+        <h4>Company</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Limo4All</a>
+        <a href="faq.html">FAQ</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
-      <span>Corporate Car Service Toronto, Mississauga, Vaughan and all of Ontario.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
     </div>
   </div>
 </footer>

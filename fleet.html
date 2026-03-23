@@ -614,17 +614,6 @@
   .route-card p{font-size:12.5px;color:var(--text-light);line-height:1.6}
   @media(max-width:1024px){.loc-grid{grid-template-columns:repeat(2,1fr)}.route-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr;gap:40px}}
   @media(max-width:580px){.loc-grid{grid-template-columns:1fr}.route-grid{grid-template-columns:1fr}}
-    /* ── SITEMAP ────────────────────────────────────────────────────── */
-  .sitemap-section{background:var(--off-white);border-top:1px solid var(--border);padding:56px 0 48px}
-  .sitemap-top{margin-bottom:36px}
-  .sitemap-top .sec-label{display:block;margin-bottom:8px}
-  .sitemap-top h2{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--dark);font-weight:400}
-  .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .sitemap-col h4{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--blue);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-  .sitemap-col a{display:block;font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);padding:3px 0;transition:color 0.15s}
-  .sitemap-col a:hover{color:var(--blue)}
-  @media(max-width:900px){.sitemap-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:580px){.sitemap-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -632,16 +621,15 @@
   <div class="promo-inner">
     <div class="pb-left">
       <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span>4.9 Rating</span>
+      <span>4.9 Google Rating</span>
       <span class="pb-sep">&middot;</span>
       <span>500+ Reviews</span>
       <span class="pb-sep">&middot;</span>
-      <span>&#127809; Canadian Owned</span>
+      <span>20+ Years Serving GTA</span>
     </div>
     <div class="pb-center">Our Premium Fleet &mdash; Sedans, SUVs, Sprinters &amp; Stretch Limos</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
-      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
     </div>
   </div>
@@ -660,6 +648,7 @@
       <a href="events.html">Events</a>
       <a href="car-service.html">Chauffeur</a>
       <a href="tours.html">Tours</a>
+      <a href="sprinter.html">Sprinter</a>
       <a href="fleet.html" class="active">Fleet</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -700,15 +689,12 @@
   </div>
 </section>
 
-<!-- FLEET GRID -->
-<section class="fleet">
+<!-- FLEET — SEDAN -->
+<section class="fleet" id="sedan">
   <div class="wrap">
-    <span class="sec-label">Our Vehicles</span>
-    <h2 class="sec-h2">Choose Your <em>Perfect Ride</em></h2>
-    <p class="sec-sub">Every vehicle is immaculately maintained, GPS-tracked, and driven by a professional chauffeur.</p>
-    <div class="fleet-grid" style="margin-top:40px">
-
-      <!-- Sedan -->
+    <span class="sec-label">Executive Comfort</span>
+    <h2 class="sec-h2">The Executive <em>Sedan</em></h2>
+    <div class="fleet-grid" style="margin-top:32px;grid-template-columns:1fr 1fr">
       <div class="fleet-card">
         <div class="fleet-img">
           <img src="images/fleet-sedan.png" alt="Executive Sedan" onerror="this.style.background='#1c1c20'">
@@ -716,22 +702,76 @@
         </div>
         <div class="fleet-body">
           <h3>Executive Sedan</h3>
-          <span class="fleet-model">Lincoln Continental / Mercedes E-Class</span>
+          <span class="fleet-model">Lincoln Continental / Mercedes E-Class &mdash; Late Model</span>
           <div class="fleet-specs">
-            <span class="fleet-spec">3 Passengers</span>
+            <span class="fleet-spec">Up to 3 Passengers</span>
             <span class="fleet-spec">3 Bags</span>
             <span class="fleet-spec">Climate Control</span>
-            <span class="fleet-spec">WiFi</span>
+            <span class="fleet-spec">Complimentary WiFi</span>
+            <span class="fleet-spec">USB Charging</span>
+            <span class="fleet-spec">Bottled Water</span>
           </div>
-          <p>Perfect for solo travellers or couples. Leather seats, tinted windows, complimentary water, and a professional chauffeur.</p>
+          <p>The classic choice for solo professionals and couples. Premium leather seating, tinted privacy glass, and a professionally dressed chauffeur ready for any occasion.</p>
           <div class="fleet-foot">
             <div class="fleet-price">$75 <span>from / airport run</span></div>
             <a href="booking.html" class="btn-fleet-book">Book Now</a>
           </div>
         </div>
       </div>
+      <div style="padding:36px 0 36px 20px">
+        <span class="sec-label">Perfect For</span>
+        <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:#fff;margin-bottom:24px">Business &amp; <em>Leisure Travel</em></h3>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#9992;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Airport Pickups &amp; Drop-offs</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Flat rate to YYZ, YTZ and all GTA airports. Flight tracked, no surprises.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#128188;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Corporate Meetings &amp; Client Runs</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Professional presentation, on-time guaranteed. Perfect for first impressions.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#127862;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Date Nights &amp; Anniversaries</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Arrive in style. Complimentary water and a quiet, comfortable ride.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#128718;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Hourly Chauffeur Service</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Book by the hour for multiple stops, city touring, or as-directed service.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- SUV -->
+<!-- FLEET — SUV -->
+<section class="fleet" id="suv" style="background:#111316">
+  <div class="wrap">
+    <span class="sec-label">Premium Space</span>
+    <h2 class="sec-h2">The Luxury <em>SUV</em></h2>
+    <div class="fleet-grid" style="margin-top:32px;grid-template-columns:1fr 1fr">
+      <div style="padding:36px 20px 36px 0">
+        <span class="sec-label">Perfect For</span>
+        <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:#fff;margin-bottom:24px">Family &amp; <em>Group Travel</em></h3>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#128106;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Family Airport Transfers</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Room for the whole family plus luggage. No cramming, no stress.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#127970;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Executive Corporate Groups</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Move your leadership team together in commanding, premium style.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#128141;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Wedding VIP Transport</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Bridal party, parents, or VIP guests arriving in luxury SUV style.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#127966;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Tours &amp; Day Trips</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Niagara Falls, wine country, or custom itineraries for small groups.</div></div>
+          </div>
+        </div>
+      </div>
       <div class="fleet-card">
         <div class="fleet-img">
           <img src="images/fleet-suv.png" alt="Luxury SUV" onerror="this.style.background='#1c1c20'">
@@ -739,44 +779,77 @@
         </div>
         <div class="fleet-body">
           <h3>Luxury SUV</h3>
-          <span class="fleet-model">Cadillac Escalade / Lincoln Navigator</span>
+          <span class="fleet-model">Cadillac Escalade / Lincoln Navigator &mdash; Late Model</span>
           <div class="fleet-specs">
-            <span class="fleet-spec">6 Passengers</span>
+            <span class="fleet-spec">Up to 6 Passengers</span>
             <span class="fleet-spec">6 Bags</span>
             <span class="fleet-spec">Premium Sound</span>
+            <span class="fleet-spec">Panoramic Roof</span>
             <span class="fleet-spec">WiFi</span>
+            <span class="fleet-spec">USB Charging</span>
           </div>
-          <p>Ideal for families, corporate groups, or anyone who wants extra space and commanding road presence.</p>
+          <p>Commanding presence, spacious interior, and supreme comfort. Ideal for families, corporate groups, or anyone who wants extra space and luxury road presence.</p>
           <div class="fleet-foot">
             <div class="fleet-price">$95 <span>from / airport run</span></div>
             <a href="booking.html" class="btn-fleet-book">Book Now</a>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Sprinter -->
+<!-- FLEET — SPRINTER -->
+<section class="fleet" id="sprinter">
+  <div class="wrap">
+    <span class="sec-label">Group Transport</span>
+    <h2 class="sec-h2">Mercedes-Benz <em>Sprinter Van</em></h2>
+    <div class="fleet-grid" style="margin-top:32px;grid-template-columns:1fr 1fr">
       <div class="fleet-card">
         <div class="fleet-img">
           <img src="images/fleet-sprinter.png" alt="Mercedes Sprinter Van" onerror="this.style.background='#1c1c20'">
-          <span class="fleet-badge">Large Groups</span>
+          <span class="fleet-badge">Up to 14 Passengers</span>
         </div>
         <div class="fleet-body">
           <h3>Mercedes Sprinter Van</h3>
-          <span class="fleet-model">Mercedes-Benz Sprinter 2500</span>
+          <span class="fleet-model">Mercedes-Benz Sprinter 2500 &mdash; Late Model</span>
           <div class="fleet-specs">
             <span class="fleet-spec">14 Passengers</span>
-            <span class="fleet-spec">Large Cargo</span>
-            <span class="fleet-spec">USB Charging</span>
-            <span class="fleet-spec">WiFi</span>
+            <span class="fleet-spec">Large Luggage Bay</span>
+            <span class="fleet-spec">WiFi Onboard</span>
+            <span class="fleet-spec">USB at Every Seat</span>
+            <span class="fleet-spec">Climate Control</span>
+            <span class="fleet-spec">Tinted Windows</span>
           </div>
-          <p>The ultimate group transport solution for weddings, corporate events, airport shuttles, and Niagara tours.</p>
+          <p>Premium leather seating, panoramic windows, ample headroom, and a separate luggage bay. Your group travels together in comfort and arrives together in style.</p>
           <div class="fleet-foot">
             <div class="fleet-price">$150 <span>from / airport run</span></div>
-            <a href="booking.html" class="btn-fleet-book">Book Now</a>
+            <a href="sprinter.html" class="btn-fleet-book">Learn More</a>
           </div>
         </div>
       </div>
-
+      <div style="padding:36px 0 36px 20px">
+        <span class="sec-label">Perfect For</span>
+        <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:#fff;margin-bottom:24px">Every Group <em>Occasion</em></h3>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#9992;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Airport Group Shuttles</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">One vehicle for the whole team. Flat airport rate, flight tracking, meet &amp; greet.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#128141;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Wedding Party Transport</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Move the entire bridal party together. Ribbons and decorations available.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#127970;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Corporate Off-Sites &amp; Events</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Team building trips, conferences, and executive group transport.</div></div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px">
+            <div style="font-size:1.4rem;flex-shrink:0">&#127966;</div>
+            <div><div style="font-weight:700;color:#fff;margin-bottom:3px">Niagara Falls &amp; Wine Tours</div><div style="font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.6">Day tours from the GTA — Falls, wineries, Niagara-on-the-Lake.</div></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -922,45 +995,40 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Licensed, insured, Canadian-owned and operated.</p>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
         <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
-        <span class="footer-email">info@limo4all.ca</span>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <a href="AirportHUB.html">Airport Limo</a>
         <a href="CorporateHUB.html">Corporate Car Service</a>
         <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="car-service.html">Personal Chauffeur</a>
         <a href="events.html">Events &amp; Concerts</a>
-        <a href="car-service.html">Chauffeur Charter</a>
         <a href="tours.html">Niagara Tours</a>
-        <a href="sprinter.html">Sprinter Van Groups</a>
-        <a href="transfers.html">City-to-City Transfers</a>
       </div>
       <div class="footer-col">
-        <h4>Locations</h4>
-        <a href="toronto-airport-limo.html">Toronto</a>
-        <a href="mississauga-airport-limo.html">Mississauga</a>
-        <a href="vaughan-airport-limo.html">Vaughan</a>
-        <a href="markham-airport-limo.html">Markham</a>
-        <a href="oakville-airport-limo.html">Oakville</a>
-        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
-        <a href="hamilton-airport-limo.html">Hamilton</a>
-        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="booking.html">Book Online</a>
-        <a href="contact.html">Get a Quote</a>
-        <a href="fleet.html">Fleet Overview</a>
+        <h4>Company</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Limo4All</a>
         <a href="faq.html">FAQ</a>
-        <a href="about.html">About Us</a>
-        <a href="locations.html">All Locations</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Limo4All. All Rights Reserved. Canadian-owned and operated.</span>
-      <span>Serving Toronto, Mississauga, Vaughan and all of Ontario.</span>
+      <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
     </div>
   </div>
 </footer>

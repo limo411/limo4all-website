@@ -642,22 +642,12 @@
   .float-cta-trust{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;flex-wrap:wrap}
   .float-cta-trust span{font-family:var(--font-sans);font-size:9.5px;color:var(--text-light);display:flex;align-items:center;gap:4px}
   .float-cta-trust span::before{content:'✓';color:var(--blue);font-size:9px;font-weight:700}
-    /* ── SITEMAP ────────────────────────────────────────────────────── */
-  .sitemap-section{background:var(--off-white);border-top:1px solid var(--border);padding:56px 0 48px}
-  .sitemap-top{margin-bottom:36px}
-  .sitemap-top .sec-label{display:block;margin-bottom:8px}
-  .sitemap-top h2{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--dark);font-weight:400}
-  .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .sitemap-col h4{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--blue);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-  .sitemap-col a{display:block;font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);padding:3px 0;transition:color 0.15s}
-  .sitemap-col a:hover{color:var(--blue)}
-  @media(max-width:900px){.sitemap-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:580px){.sitemap-grid{grid-template-columns:1fr}}
 
   /* ── AIRPORT SLIDER ─────────────────────────────────────────────── */
-  .apt-slider-wrap{position:relative;margin-top:48px;overflow:hidden}
-  .apt-slider-track{display:flex;gap:20px;transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94);will-change:transform;padding:4px 2px 20px}
-  .apt-slide{flex:0 0 calc(33.333% - 14px);background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;position:relative;min-width:0}
+  .apt-slider-wrap{position:relative;margin-top:48px}
+  .apt-slider-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px}
+  .apt-slider-track::-webkit-scrollbar{display:none}
+  .apt-slide{flex:0 0 calc((100% - 40px)/3);min-width:280px;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;position:relative;scroll-snap-align:start}
   .apt-slide::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
   .apt-slide:hover{border-color:var(--blue);box-shadow:0 12px 40px rgba(20,183,244,0.14);transform:translateY(-4px)}
   .apt-slide:hover::before{transform:scaleX(1)}
@@ -674,16 +664,32 @@
   .apt-slide-foot{margin-top:auto;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
   .apt-slide-price{font-family:var(--font-serif);font-size:1.6rem;font-style:italic;color:var(--blue);line-height:1}
   .apt-slide-price em{font-family:var(--font-sans);font-size:10.5px;font-style:normal;color:var(--text-light);font-weight:400;margin-left:2px}
-  .apt-slide-arrow{font-family:var(--font-sans);font-size:11.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.06em;transition:gap 0.15s}
-  .apt-nav-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:28px}
-  .apt-btn{width:42px;height:42px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:var(--text);transition:all 0.2s;flex-shrink:0;line-height:1}
+  .apt-slide-arrow{font-family:var(--font-sans);font-size:11.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.06em}
+  .apt-nav-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px}
+  .apt-btn{width:42px;height:42px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;color:var(--text);transition:all 0.2s;flex-shrink:0;line-height:1}
   .apt-btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-  .apt-btn:disabled{opacity:0.35;cursor:default}
   .apt-dots{display:flex;gap:7px;align-items:center}
-  .apt-dot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.2s}
-  .apt-dot.active{background:var(--blue);transform:scale(1.2)}
-  @media(max-width:1024px){.apt-slide{flex:0 0 calc(50% - 10px)}}
+  .apt-dot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.2s;border:none;padding:0}
+  .apt-dot.active{background:var(--blue);transform:scale(1.3)}
+  @media(max-width:1024px){.apt-slide{flex:0 0 calc((100% - 20px)/2)}}
   @media(max-width:640px){.apt-slide{flex:0 0 calc(100% - 4px)}}
+
+
+  /* ── CITY GRID ─────────────────────────────────────────────────── */
+  .city-coverage{background:var(--off-white);padding:72px 0;border-top:1px solid var(--border)}
+  .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+  .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:block;color:inherit;text-decoration:none}
+  .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px}
+  .city-card p{font-size:12px;color:var(--text-light);line-height:1.5;margin-bottom:10px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
+  .city-pills-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .city-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s}
+  .city-pill:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.12)}
+  .city-pill::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+  @media(max-width:1024px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:768px){.city-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.city-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -694,16 +700,15 @@
   <div class="promo-inner">
     <div class="pb-left">
       <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <span>4.9 Rating</span>
+      <span>4.9 Google Rating</span>
       <span class="pb-sep">&middot;</span>
       <span>500+ Reviews</span>
       <span class="pb-sep">&middot;</span>
-      <span>&#127809; Canadian Owned</span>
+      <span>20+ Years Serving GTA</span>
     </div>
     <div class="pb-center">Ontario&rsquo;s #1 Airport Limo &mdash; Flat Rates, No Surge Pricing</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
-      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
     </div>
   </div>
@@ -1306,13 +1311,13 @@
 <!-- AIRPORTS SERVED -->
 <section class="airports" id="coverage">
   <div class="wrap">
-    <span class="sec-label">GTA &amp; Beyond</span>
-    <h2 class="sec-h2">Airport Transfer <em>Routes</em></h2>
-    <p class="sec-sub">Flat-rate limo service to every major airport &mdash; wherever you are in the GTA. Every transfer includes real-time flight tracking, inside terminal meet &amp; greet, and 60-minute complimentary wait.</p>
+    <span class="sec-label">All Airports Covered</span>
+    <h2 class="sec-h2">Airports We <em>Service</em></h2>
+    <p class="sec-sub">Flat-rate limo service to every major airport in Ontario and beyond &mdash; with real-time flight tracking, inside terminal meet &amp; greet, and 60-minute complimentary wait on every arrival.</p>
   </div>
 
   <!-- Slider -->
-  <div class="wrap" style="overflow:visible;position:relative">
+  <div class="wrap" style="overflow:hidden;position:relative">
     <div class="apt-slider-wrap">
       <div class="apt-slider-track" id="aptTrack">
 
@@ -1731,6 +1736,33 @@
   </div>
 </section>
 
+<!-- CITY COVERAGE -->
+<section class="city-coverage" id="service-areas">
+  <div class="wrap">
+    <span class="sec-label">Service Areas</span>
+    <h2 class="sec-h2">Airport Limo Service <em>Near You</em></h2>
+    <p class="sec-sub">Flat-rate airport limo service from your city to Toronto Pearson (YYZ), Billy Bishop (YTZ) and all Ontario airports. Click your city for local pricing and details.</p>
+    <div class="city-grid">
+      <a href="toronto-airport-limo.html" class="city-card"><h3>Toronto</h3><p>Downtown, Etobicoke, North York, Scarborough</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="mississauga-airport-limo.html" class="city-card"><h3>Mississauga</h3><p>Square One, Port Credit, Streetsville</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="vaughan-airport-limo.html" class="city-card"><h3>Vaughan</h3><p>Woodbridge, Maple, Kleinburg, Thornhill</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="markham-airport-limo.html" class="city-card"><h3>Markham</h3><p>Unionville, Cornell, Milliken, Stouffville</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="oakville-airport-limo.html" class="city-card"><h3>Oakville</h3><p>Old Oakville, Glen Abbey, Bronte</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="richmond-hill-airport-limo.html" class="city-card"><h3>Richmond Hill</h3><p>Oak Ridges, Jefferson, Bayview Hill</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="hamilton-airport-limo.html" class="city-card"><h3>Hamilton</h3><p>Downtown, Ancaster, Stoney Creek, Dundas</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="niagara-falls-airport-limo.html" class="city-card"><h3>Niagara Falls</h3><p>Tourist District, Old Town, St. Catharines</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="brampton-airport-limo.html" class="city-card"><h3>Brampton</h3><p>Downtown, Bramalea, Heart Lake, Springdale</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="aurora-airport-limo.html" class="city-card"><h3>Aurora</h3><p>Aurora Village, Bayview, Leslie, Industrial</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="burlington-airport-limo.html" class="city-card"><h3>Burlington</h3><p>Downtown, Alton, Aldershot, Millcroft</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="king-city-airport-limo.html" class="city-card"><h3>King City</h3><p>King City Village, Schomberg, Nobleton</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="london-airport-limo.html" class="city-card"><h3>London</h3><p>Downtown, Old North, Byron, Hyde Park</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="milton-airport-limo.html" class="city-card"><h3>Milton</h3><p>Bronte Meadows, Hawthorne Village, Scott</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="guelph-airport-limo.html" class="city-card"><h3>Guelph</h3><p>Downtown, Kortright Hills, Stone Road</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="waterloo-kitchener-airport-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><p>Uptown Waterloo, Kitchener Downtown, Elmira</p><span class="city-arrow">View Details &rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- SPEAK WITH US -->
 <section class="speak" id="contact-us">
   <div class="wrap">
@@ -1814,76 +1846,6 @@
   </div>
 </section>
 
-<!-- SITEMAP -->
-<section class="sitemap-section">
-  <div class="wrap">
-    <div class="sitemap-top">
-      <span class="sec-label">Site Directory</span>
-      <h2>Everything <em>at a Glance</em></h2>
-    </div>
-    <div class="sitemap-grid">
-      <div class="sitemap-col">
-        <h4>Services</h4>
-        <a href="AirportHUB.html">Airport Limo</a>
-        <a href="CorporateHUB.html">Corporate Limo</a>
-        <a href="WeddingHUB.html">Wedding Limo</a>
-        <a href="events.html">Events &amp; Concerts</a>
-        <a href="car-service.html">Chauffeur Service</a>
-        <a href="tours.html">Tours &amp; Day Trips</a>
-        <a href="sprinter.html">Sprinter Van Groups</a>
-        <a href="transfers.html">City-to-City Transfers</a>
-      </div>
-      <div class="sitemap-col">
-        <h4>Airport Limo Cities</h4>
-        <a href="toronto-airport-limo.html">Toronto</a>
-        <a href="mississauga-airport-limo.html">Mississauga</a>
-        <a href="vaughan-airport-limo.html">Vaughan</a>
-        <a href="markham-airport-limo.html">Markham</a>
-        <a href="oakville-airport-limo.html">Oakville</a>
-        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
-        <a href="brampton-airport-limo.html">Brampton</a>
-        <a href="hamilton-airport-limo.html">Hamilton</a>
-        <a href="burlington-airport-limo.html">Burlington</a>
-        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
-        <a href="london-airport-limo.html">London</a>
-        <a href="guelph-airport-limo.html">Guelph</a>
-        <a href="aurora-airport-limo.html">Aurora</a>
-        <a href="king-city-airport-limo.html">King City</a>
-        <a href="milton-airport-limo.html">Milton</a>
-        <a href="waterloo-kitchener-airport-limo.html">Waterloo-Kitchener</a>
-      </div>
-      <div class="sitemap-col">
-        <h4>Corporate Limo Cities</h4>
-        <a href="toronto-corporate-limo.html">Toronto</a>
-        <a href="mississauga-corporate-limo.html">Mississauga</a>
-        <a href="vaughan-corporate-limo.html">Vaughan</a>
-        <a href="markham-corporate-limo.html">Markham</a>
-        <a href="oakville-corporate-limo.html">Oakville</a>
-        <a href="richmond-hill-corporate-limo.html">Richmond Hill</a>
-        <a href="brampton-corporate-limo.html">Brampton</a>
-        <a href="hamilton-corporate-limo.html">Hamilton</a>
-        <a href="burlington-corporate-limo.html">Burlington</a>
-        <a href="niagara-falls-corporate-limo.html">Niagara Falls</a>
-        <a href="london-corporate-limo.html">London</a>
-        <a href="guelph-corporate-limo.html">Guelph</a>
-        <a href="aurora-corporate-limo.html">Aurora</a>
-        <a href="king-city-corporate-limo.html">King City</a>
-        <a href="milton-corporate-limo.html">Milton</a>
-        <a href="waterloo-kitchener-corporate-limo.html">Waterloo-Kitchener</a>
-      </div>
-      <div class="sitemap-col">
-        <h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="fleet.html">Our Fleet</a>
-        <a href="sprinter.html">Sprinter Vans</a>
-        <a href="booking.html">Book Online</a>
-        <a href="contact.html">Get a Quote</a>
-        <a href="faq.html">FAQs</a>
-        <a href="locations.html">All Locations</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -1891,42 +1853,40 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers.</p>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
         <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
-        <span class="footer-email">info@limo4all.com</span>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <a href="AirportHUB.html">Airport Limo</a>
         <a href="CorporateHUB.html">Corporate Car Service</a>
         <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="car-service.html">Personal Chauffeur</a>
         <a href="events.html">Events &amp; Concerts</a>
-        <a href="car-service.html">Hourly Charter</a>
         <a href="tours.html">Niagara Tours</a>
       </div>
       <div class="footer-col">
-        <h4>Airport Limo</h4>
-        <a href="toronto-airport-limo.html">Toronto</a>
-        <a href="mississauga-airport-limo.html">Mississauga</a>
-        <a href="vaughan-airport-limo.html">Vaughan</a>
-        <a href="oakville-airport-limo.html">Oakville</a>
-        <a href="markham-airport-limo.html">Markham</a>
-        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
-        <a href="hamilton-airport-limo.html">Hamilton</a>
-        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="booking.html">Book Online</a>
-        <a href="contact.html">Get a Quote</a>
-        <a href="fleet.html">Fleet Overview</a>
+        <h4>Company</h4>
         <a href="contact.html">Contact Us</a>
-        <a href="locations.html">All Locations</a>
+        <a href="about.html">About Limo4All</a>
+        <a href="faq.html">FAQ</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
-      <span>Serving Toronto, Mississauga, Vaughan and all of Ontario.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
     </div>
   </div>
 </footer>
@@ -2134,59 +2094,65 @@
 
     var slides = track.querySelectorAll('.apt-slide');
     var total = slides.length;
-    var current = 0;
 
     function getVisible() {
-      var w = track.parentElement.offsetWidth;
+      var w = track.offsetWidth;
       if (w <= 640) return 1;
       if (w <= 1024) return 2;
       return 3;
     }
 
-    function maxIndex() { return Math.max(0, total - getVisible()); }
+    function getSlideWidth() {
+      return slides[0] ? slides[0].offsetWidth + 20 : 0;
+    }
+
+    function currentIndex() {
+      var sw = getSlideWidth();
+      return sw > 0 ? Math.round(track.scrollLeft / sw) : 0;
+    }
 
     function buildDots() {
       dotsWrap.innerHTML = '';
-      var pages = maxIndex() + 1;
+      var pages = Math.max(1, total - getVisible() + 1);
       for (var i = 0; i < pages; i++) {
-        var d = document.createElement('div');
-        d.className = 'apt-dot' + (i === current ? ' active' : '');
+        var d = document.createElement('button');
+        d.className = 'apt-dot';
         d.setAttribute('data-i', i);
-        d.onclick = function() { go(parseInt(this.getAttribute('data-i'))); };
+        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        d.onclick = function() {
+          track.scrollTo({ left: parseInt(this.getAttribute('data-i')) * getSlideWidth(), behavior: 'smooth' });
+        };
         dotsWrap.appendChild(d);
       }
+      updateDots();
     }
 
-    function go(idx) {
-      current = Math.max(0, Math.min(idx, maxIndex()));
-      var visible = getVisible();
-      var slideW = slides[0] ? slides[0].offsetWidth : 0;
-      var gap = 20;
-      track.style.transform = 'translateX(-' + (current * (slideW + gap)) + 'px)';
-      prevBtn.disabled = current === 0;
-      nextBtn.disabled = current >= maxIndex();
+    function updateDots() {
+      var idx = currentIndex();
       dotsWrap.querySelectorAll('.apt-dot').forEach(function(d, i) {
-        d.classList.toggle('active', i === current);
+        d.classList.toggle('active', i === idx);
       });
+      prevBtn.disabled = track.scrollLeft <= 2;
+      nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.offsetWidth - 2;
     }
 
-    prevBtn.onclick = function() { go(current - 1); };
-    nextBtn.onclick = function() { go(current + 1); };
+    prevBtn.onclick = function() {
+      track.scrollBy({ left: -getSlideWidth(), behavior: 'smooth' });
+    };
+    nextBtn.onclick = function() {
+      track.scrollBy({ left: getSlideWidth(), behavior: 'smooth' });
+    };
+
+    var scrollTimer;
+    track.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updateDots, 80);
+    }, { passive: true });
 
     buildDots();
-    go(0);
+    updateDots();
 
-    window.addEventListener('resize', function() { buildDots(); go(Math.min(current, maxIndex())); });
-
-    // Touch/drag support
-    var startX = 0, dragging = false;
-    track.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; dragging = true; }, {passive:true});
-    track.addEventListener('touchend', function(e){
-      if (!dragging) return;
-      var dx = e.changedTouches[0].clientX - startX;
-      if (Math.abs(dx) > 40) go(dx < 0 ? current + 1 : current - 1);
-      dragging = false;
-    }, {passive:true});
+    window.addEventListener('resize', function() { buildDots(); });
   })();
 
 </script>
