@@ -59,7 +59,7 @@
   .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
   .pb-stars{letter-spacing:1.5px;font-size:10.5px}
   .pb-sep{opacity:0.4;font-size:11px}
-  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1;white-space:nowrap}
   .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
   .pb-right a{color:#fff;opacity:0.95}
   .pb-right a:hover{opacity:1;text-decoration:underline}
@@ -527,7 +527,18 @@
   .cs-interlink-link:hover{color:var(--blue);gap:13px}
   .cs-interlink-link-arrow{color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
   @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
-  </style>
+    /* ── SITEMAP ────────────────────────────────────────────────────── */
+  .sitemap-section{background:var(--off-white);border-top:1px solid var(--border);padding:56px 0 48px}
+  .sitemap-top{margin-bottom:36px}
+  .sitemap-top .sec-label{display:block;margin-bottom:8px}
+  .sitemap-top h2{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--dark);font-weight:400}
+  .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .sitemap-col h4{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--blue);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .sitemap-col a{display:block;font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);padding:3px 0;transition:color 0.15s}
+  .sitemap-col a:hover{color:var(--blue)}
+  @media(max-width:900px){.sitemap-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:580px){.sitemap-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -564,7 +575,7 @@
       <a href="CorporateHUB.html" class="active">Corporate</a>
       <a href="WeddingHUB.html">Wedding</a>
       <a href="events.html">Events</a>
-      <a href="car-service.html">Car Service</a>
+      <a href="car-service.html">Chauffeur</a>
       <a href="tours.html">Tours</a>
       <a href="sprinter.html">Sprinter</a>
       <a href="fleet.html">Fleet</a>
@@ -1101,7 +1112,7 @@
             <li class="s-panel-bullet">Driver waits between meetings at no extra hourly cost</li>
             <li class="s-panel-bullet">Real-time rerouting if your schedule changes mid-day</li>
           </ul>
-          <a href="hourly.html" class="s-panel-link">See Hourly Service &rarr;</a>
+          <a href="car-service.html" class="s-panel-link">See Hourly Service &rarr;</a>
         </div>
         <div class="why-panel-item" data-panel="1">
           <span class="why-panel-bg">02</span>
@@ -1430,6 +1441,77 @@
   </div>
 </section>
 
+<!-- SITEMAP -->
+<section class="sitemap-section">
+  <div class="wrap">
+    <div class="sitemap-top">
+      <span class="sec-label">Site Directory</span>
+      <h2>Everything <em>at a Glance</em></h2>
+    </div>
+    <div class="sitemap-grid">
+      <div class="sitemap-col">
+        <h4>Services</h4>
+        <a href="AirportHUB.html">Airport Limo</a>
+        <a href="CorporateHUB.html">Corporate Limo</a>
+        <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="events.html">Events &amp; Concerts</a>
+        <a href="car-service.html">Chauffeur Service</a>
+        <a href="tours.html">Tours &amp; Day Trips</a>
+        <a href="sprinter.html">Sprinter Van Groups</a>
+        <a href="transfers.html">City-to-City Transfers</a>
+      </div>
+      <div class="sitemap-col">
+        <h4>Airport Limo Cities</h4>
+        <a href="toronto-airport-limo.html">Toronto</a>
+        <a href="mississauga-airport-limo.html">Mississauga</a>
+        <a href="vaughan-airport-limo.html">Vaughan</a>
+        <a href="markham-airport-limo.html">Markham</a>
+        <a href="oakville-airport-limo.html">Oakville</a>
+        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
+        <a href="brampton-airport-limo.html">Brampton</a>
+        <a href="hamilton-airport-limo.html">Hamilton</a>
+        <a href="burlington-airport-limo.html">Burlington</a>
+        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
+        <a href="london-airport-limo.html">London</a>
+        <a href="guelph-airport-limo.html">Guelph</a>
+        <a href="aurora-airport-limo.html">Aurora</a>
+        <a href="king-city-airport-limo.html">King City</a>
+        <a href="milton-airport-limo.html">Milton</a>
+        <a href="waterloo-kitchener-airport-limo.html">Waterloo-Kitchener</a>
+      </div>
+      <div class="sitemap-col">
+        <h4>Corporate Limo Cities</h4>
+        <a href="toronto-corporate-limo.html">Toronto</a>
+        <a href="mississauga-corporate-limo.html">Mississauga</a>
+        <a href="vaughan-corporate-limo.html">Vaughan</a>
+        <a href="markham-corporate-limo.html">Markham</a>
+        <a href="oakville-corporate-limo.html">Oakville</a>
+        <a href="richmond-hill-corporate-limo.html">Richmond Hill</a>
+        <a href="brampton-corporate-limo.html">Brampton</a>
+        <a href="hamilton-corporate-limo.html">Hamilton</a>
+        <a href="burlington-corporate-limo.html">Burlington</a>
+        <a href="niagara-falls-corporate-limo.html">Niagara Falls</a>
+        <a href="london-corporate-limo.html">London</a>
+        <a href="guelph-corporate-limo.html">Guelph</a>
+        <a href="aurora-corporate-limo.html">Aurora</a>
+        <a href="king-city-corporate-limo.html">King City</a>
+        <a href="milton-corporate-limo.html">Milton</a>
+        <a href="waterloo-kitchener-corporate-limo.html">Waterloo-Kitchener</a>
+      </div>
+      <div class="sitemap-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="fleet.html">Our Fleet</a>
+        <a href="sprinter.html">Sprinter Vans</a>
+        <a href="booking.html">Book Online</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="faq.html">FAQs</a>
+        <a href="locations.html">All Locations</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap">
@@ -1446,7 +1528,7 @@
         <a href="CorporateHUB.html">Corporate Car Service</a>
         <a href="WeddingHUB.html">Wedding Limo</a>
         <a href="events.html">Events &amp; Concerts</a>
-        <a href="hourly.html">Hourly Charter</a>
+        <a href="car-service.html">Chauffeur Charter</a>
         <a href="tours.html">Niagara Tours</a>
       </div>
       <div class="footer-col">

@@ -384,39 +384,18 @@ wedding_services = f'''<!-- SERVICES COMBINED - WEDDING -->
 <section class="airports" id="services">
   <div class="wrap">
     <span class="sec-label">Wedding Transportation Services</span>
-    <h2 class="sec-h2">Everything You Need <em>for Your Perfect Day</em></h2>
-    <p class="sec-sub">From the bridal limo to the guest shuttle, Limo4All handles every wedding transport detail with elegance and precision.</p>
-    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
-{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
-          "Bridal Limo &amp; Getaway Car",
-          "Stretch Lincoln Town Car &bull; Luxury SUV &bull; Complimentary Champagne",
-          ["Red Carpet Service", "Photo Stop Coordination", "Decorated Vehicle Available"],
-          "Included", "Champagne<em> &amp; Red Carpet</em>", "Book Bridal Limo")}
-{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
-          "Bridal Party Transport",
-          "Multi-vehicle coordination &bull; SUVs &amp; Sprinters &bull; Full party covered",
-          ["Church, Venue &amp; Hotel Pickups", "Coordinated Timing", "Formally Dressed Chauffeurs"],
-          "From", "$95<em> per vehicle</em>", "Book Party Transport")}
-{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>',
-          "Wedding Guest Shuttle",
-          "Mercedes Sprinter &bull; Up to 14 guests &bull; Hotel-to-venue loops",
-          ["Airport Pickups for Out-of-Town Guests", "Custom Schedule", "Flat Hourly Rate"],
-          "Flat", "Hourly<em> rate</em>", "Book Guest Shuttle")}
-    </div>
-    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Every Wedding Moment Covered</span>
-    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">From Getting Ready <em>to the Grand Getaway</em></h3>
-    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">We coordinate every vehicle, every pickup, every timing milestone &mdash; so you focus entirely on your day.</p>
+    <h2 class="sec-h2">Every Wedding Moment <em>Perfectly Covered</em></h2>
+    <p class="sec-sub" style="max-width:580px;margin-bottom:40px">From the bridal limo to the grand exit &mdash; every vehicle, every pickup, every timing milestone coordinated with elegance and precision so you focus entirely on your day.</p>
     <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="scenario-card">
         <div class="scenario-cat">Bride &amp; Groom</div>
-        <h4 class="scenario-h4">Exclusive Bridal Vehicle</h4>
+        <h4 class="scenario-h4">Bridal Limo &amp; Getaway Car</h4>
         <p class="scenario-p">A stretch limousine or luxury SUV dedicated entirely to the couple &mdash; from the getting-ready location to the ceremony, reception, and late-night hotel getaway. Complimentary champagne and red carpet included.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-cat">Bridal Party</div>
         <h4 class="scenario-h4">Multi-Vehicle Coordination</h4>
-        <p class="scenario-p">Three to eight matching vehicles for the bridal party, coordinated from a single contact. Every vehicle departs on schedule so the whole party arrives together &mdash; looking perfect, stress-free.</p>
+        <p class="scenario-p">Three to eight matching vehicles for the bridal party, coordinated from a single contact. Church, venue, and hotel pickups &mdash; every vehicle departs on schedule so the whole party arrives together, looking perfect.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-cat">Wedding Guests</div>
@@ -443,14 +422,15 @@ wedding_services = f'''<!-- SERVICES COMBINED - WEDDING -->
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
-      <button onclick="var m=document.getElementById(\'wedding-more\');m.style.display=m.style.display===\'none\'?\'block\':\'none\';this.textContent=m.style.display===\'none\'?\'See All Scenarios \u2193\':\'Show Less \u2191\'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See All Scenarios &#8595;</button>
+    <div style="text-align:center;margin-top:32px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById(\'wedding-more\');m.style.display=m.style.display===\'none\'?\'block\':\'none\';this.textContent=m.style.display===\'none\'?\'See All Services \u2193\':\'Show Less \u2191\'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See All Services &#8595;</button>
       <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Plan Your Wedding Transport &rarr;</a>
     </div>
   </div>
 </section>
 
 '''
+
 
 make_hub(
     "WeddingHUB.html", "WeddingHUB.html",

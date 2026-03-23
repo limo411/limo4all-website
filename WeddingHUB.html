@@ -59,7 +59,7 @@
   .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
   .pb-stars{letter-spacing:1.5px;font-size:10.5px}
   .pb-sep{opacity:0.4;font-size:11px}
-  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1;white-space:nowrap}
   .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
   .pb-right a{color:#fff;opacity:0.95}
   .pb-right a:hover{opacity:1;text-decoration:underline}
@@ -642,7 +642,18 @@
   .float-cta-trust{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;flex-wrap:wrap}
   .float-cta-trust span{font-family:var(--font-sans);font-size:9.5px;color:var(--text-light);display:flex;align-items:center;gap:4px}
   .float-cta-trust span::before{content:'✓';color:var(--blue);font-size:9px;font-weight:700}
-  </style>
+    /* ── SITEMAP ────────────────────────────────────────────────────── */
+  .sitemap-section{background:var(--off-white);border-top:1px solid var(--border);padding:56px 0 48px}
+  .sitemap-top{margin-bottom:36px}
+  .sitemap-top .sec-label{display:block;margin-bottom:8px}
+  .sitemap-top h2{font-family:var(--font-serif);font-size:1.5rem;font-style:italic;color:var(--dark);font-weight:400}
+  .sitemap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .sitemap-col h4{font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--blue);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .sitemap-col a{display:block;font-family:var(--font-sans);font-size:12.5px;color:var(--text-light);padding:3px 0;transition:color 0.15s}
+  .sitemap-col a:hover{color:var(--blue)}
+  @media(max-width:900px){.sitemap-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:580px){.sitemap-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -679,7 +690,7 @@
       <a href="CorporateHUB.html">Corporate</a>
       <a href="WeddingHUB.html" class="active">Wedding</a>
       <a href="events.html">Events</a>
-      <a href="car-service.html">Car Service</a>
+      <a href="car-service.html">Chauffeur</a>
       <a href="tours.html">Tours</a>
       <a href="sprinter.html">Sprinter</a>
       <a href="fleet.html">Fleet</a>
@@ -986,81 +997,18 @@
 <section class="airports" id="services">
   <div class="wrap">
     <span class="sec-label">Wedding Transportation Services</span>
-    <h2 class="sec-h2">Everything You Need <em>for Your Perfect Day</em></h2>
-    <p class="sec-sub">From the bridal limo to the guest shuttle, Limo4All handles every wedding transport detail with elegance and precision.</p>
-    <div class="airport-cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
-      <div class="airport-card" style="cursor:auto">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Bridal Limo &amp; Getaway Car</div>
-            <div class="airport-location">Stretch Lincoln Town Car &bull; Luxury SUV &bull; Complimentary Champagne</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features"><span class="airport-feat">Red Carpet Service</span><span class="airport-feat">Photo Stop Coordination</span><span class="airport-feat">Decorated Vehicle Available</span></div>
-          <div class="airport-pricing">
-            <span class="airport-from">Included</span>
-            <span class="airport-price-val">Champagne<em> &amp; Red Carpet</em></span>
-            <a href="booking.html" class="airport-arrow">Book Bridal Limo &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="airport-card" style="cursor:auto">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Bridal Party Transport</div>
-            <div class="airport-location">Multi-vehicle coordination &bull; SUVs &amp; Sprinters &bull; Full party covered</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features"><span class="airport-feat">Church, Venue &amp; Hotel Pickups</span><span class="airport-feat">Coordinated Timing</span><span class="airport-feat">Formally Dressed Chauffeurs</span></div>
-          <div class="airport-pricing">
-            <span class="airport-from">From</span>
-            <span class="airport-price-val">$95<em> per vehicle</em></span>
-            <a href="booking.html" class="airport-arrow">Book Party Transport &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="airport-card" style="cursor:auto">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Wedding Guest Shuttle</div>
-            <div class="airport-location">Mercedes Sprinter &bull; Up to 14 guests &bull; Hotel-to-venue loops</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features"><span class="airport-feat">Airport Pickups for Out-of-Town Guests</span><span class="airport-feat">Custom Schedule</span><span class="airport-feat">Flat Hourly Rate</span></div>
-          <div class="airport-pricing">
-            <span class="airport-from">Flat</span>
-            <span class="airport-price-val">Hourly<em> rate</em></span>
-            <a href="booking.html" class="airport-arrow">Book Guest Shuttle &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="border-top:1px solid var(--border);margin:44px 0 36px"></div>
-    <span class="sec-label" style="display:block;text-align:center;margin-bottom:10px">Every Wedding Moment Covered</span>
-    <h3 style="font-family:var(--font-serif);font-size:1.55rem;font-style:italic;color:var(--dark);text-align:center;margin-bottom:10px">From Getting Ready <em>to the Grand Getaway</em></h3>
-    <p style="font-family:var(--font-sans);font-size:14px;color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 32px">We coordinate every vehicle, every pickup, every timing milestone &mdash; so you focus entirely on your day.</p>
+    <h2 class="sec-h2">Every Wedding Moment <em>Perfectly Covered</em></h2>
+    <p class="sec-sub" style="max-width:580px;margin-bottom:40px">From the bridal limo to the grand exit &mdash; every vehicle, every pickup, every timing milestone coordinated with elegance and precision so you focus entirely on your day.</p>
     <div class="scenario-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="scenario-card">
         <div class="scenario-cat">Bride &amp; Groom</div>
-        <h4 class="scenario-h4">Exclusive Bridal Vehicle</h4>
+        <h4 class="scenario-h4">Bridal Limo &amp; Getaway Car</h4>
         <p class="scenario-p">A stretch limousine or luxury SUV dedicated entirely to the couple &mdash; from the getting-ready location to the ceremony, reception, and late-night hotel getaway. Complimentary champagne and red carpet included.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-cat">Bridal Party</div>
         <h4 class="scenario-h4">Multi-Vehicle Coordination</h4>
-        <p class="scenario-p">Three to eight matching vehicles for the bridal party, coordinated from a single contact. Every vehicle departs on schedule so the whole party arrives together &mdash; looking perfect, stress-free.</p>
+        <p class="scenario-p">Three to eight matching vehicles for the bridal party, coordinated from a single contact. Church, venue, and hotel pickups &mdash; every vehicle departs on schedule so the whole party arrives together, looking perfect.</p>
       </div>
       <div class="scenario-card">
         <div class="scenario-cat">Wedding Guests</div>
@@ -1087,8 +1035,8 @@
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
-      <button onclick="var m=document.getElementById('wedding-more');m.style.display=m.style.display==='none'?'block':'none';this.textContent=m.style.display==='none'?'See All Scenarios ↓':'Show Less ↑'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See All Scenarios &#8595;</button>
+    <div style="text-align:center;margin-top:32px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <button onclick="var m=document.getElementById('wedding-more');m.style.display=m.style.display==='none'?'block':'none';this.textContent=m.style.display==='none'?'See All Services ↓':'Show Less ↑'" style="background:none;border:1px solid var(--border);border-radius:50px;padding:10px 24px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.2s">See All Services &#8595;</button>
       <a href="contact.html" class="btn-primary" style="padding:11px 32px;font-size:13px">Plan Your Wedding Transport &rarr;</a>
     </div>
   </div>
@@ -1593,6 +1541,77 @@
           <span class="rel-arrow">Learn More &rarr;</span>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- SITEMAP -->
+<section class="sitemap-section">
+  <div class="wrap">
+    <div class="sitemap-top">
+      <span class="sec-label">Site Directory</span>
+      <h2>Everything <em>at a Glance</em></h2>
+    </div>
+    <div class="sitemap-grid">
+      <div class="sitemap-col">
+        <h4>Services</h4>
+        <a href="AirportHUB.html">Airport Limo</a>
+        <a href="CorporateHUB.html">Corporate Limo</a>
+        <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="events.html">Events &amp; Concerts</a>
+        <a href="car-service.html">Chauffeur Service</a>
+        <a href="tours.html">Tours &amp; Day Trips</a>
+        <a href="sprinter.html">Sprinter Van Groups</a>
+        <a href="transfers.html">City-to-City Transfers</a>
+      </div>
+      <div class="sitemap-col">
+        <h4>Airport Limo Cities</h4>
+        <a href="toronto-airport-limo.html">Toronto</a>
+        <a href="mississauga-airport-limo.html">Mississauga</a>
+        <a href="vaughan-airport-limo.html">Vaughan</a>
+        <a href="markham-airport-limo.html">Markham</a>
+        <a href="oakville-airport-limo.html">Oakville</a>
+        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
+        <a href="brampton-airport-limo.html">Brampton</a>
+        <a href="hamilton-airport-limo.html">Hamilton</a>
+        <a href="burlington-airport-limo.html">Burlington</a>
+        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
+        <a href="london-airport-limo.html">London</a>
+        <a href="guelph-airport-limo.html">Guelph</a>
+        <a href="aurora-airport-limo.html">Aurora</a>
+        <a href="king-city-airport-limo.html">King City</a>
+        <a href="milton-airport-limo.html">Milton</a>
+        <a href="waterloo-kitchener-airport-limo.html">Waterloo-Kitchener</a>
+      </div>
+      <div class="sitemap-col">
+        <h4>Corporate Limo Cities</h4>
+        <a href="toronto-corporate-limo.html">Toronto</a>
+        <a href="mississauga-corporate-limo.html">Mississauga</a>
+        <a href="vaughan-corporate-limo.html">Vaughan</a>
+        <a href="markham-corporate-limo.html">Markham</a>
+        <a href="oakville-corporate-limo.html">Oakville</a>
+        <a href="richmond-hill-corporate-limo.html">Richmond Hill</a>
+        <a href="brampton-corporate-limo.html">Brampton</a>
+        <a href="hamilton-corporate-limo.html">Hamilton</a>
+        <a href="burlington-corporate-limo.html">Burlington</a>
+        <a href="niagara-falls-corporate-limo.html">Niagara Falls</a>
+        <a href="london-corporate-limo.html">London</a>
+        <a href="guelph-corporate-limo.html">Guelph</a>
+        <a href="aurora-corporate-limo.html">Aurora</a>
+        <a href="king-city-corporate-limo.html">King City</a>
+        <a href="milton-corporate-limo.html">Milton</a>
+        <a href="waterloo-kitchener-corporate-limo.html">Waterloo-Kitchener</a>
+      </div>
+      <div class="sitemap-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="fleet.html">Our Fleet</a>
+        <a href="sprinter.html">Sprinter Vans</a>
+        <a href="booking.html">Book Online</a>
+        <a href="contact.html">Get a Quote</a>
+        <a href="faq.html">FAQs</a>
+        <a href="locations.html">All Locations</a>
+      </div>
     </div>
   </div>
 </section>
