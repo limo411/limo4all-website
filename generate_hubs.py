@@ -404,6 +404,50 @@ wedding_services = f'''<!-- SERVICES OVERVIEW - WEDDING -->
   </div>
 </section>
 
+<!-- WEDDING MOMENTS SECTION -->
+<section class="scenario-section">
+  <div class="wrap">
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Every Wedding Moment Covered</span>
+    <h2 class="sec-h2" style="text-align:center">From Getting Ready <em>to the Grand Getaway</em></h2>
+    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">We coordinate every vehicle, every pickup, every timing milestone &mdash; so you can focus entirely on your day.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-cat">Bride &amp; Groom</div>
+        <h4 class="scenario-h4">Exclusive Bridal Vehicle</h4>
+        <p class="scenario-p">A stretch limousine or luxury SUV dedicated entirely to the couple &mdash; from the getting-ready location to the ceremony, reception, and late-night hotel getaway. Complimentary champagne and red carpet service included.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Bridal Party</div>
+        <h4 class="scenario-h4">Multi-Vehicle Coordination</h4>
+        <p class="scenario-p">Three to eight matching vehicles for the bridal party, all coordinated from a single contact. Every vehicle departs on schedule so the whole party arrives together &mdash; looking perfect, stress-free.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Wedding Guests</div>
+        <h4 class="scenario-h4">Guest Shuttle Service</h4>
+        <p class="scenario-p">Mercedes Sprinter vans looping between hotels and the venue throughout the evening. Up to 14 guests per run &mdash; nobody drives, nobody worries, everyone gets home safely after the celebration.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Photography</div>
+        <h4 class="scenario-h4">Photo Stop Coordination</h4>
+        <p class="scenario-p">Your chauffeur knows Toronto&rsquo;s best photography locations &mdash; Distillery District, Scarborough Bluffs, High Park, the waterfront. Custom stops built into your timeline. Not one minute wasted.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Out-of-Town Guests</div>
+        <h4 class="scenario-h4">Airport &amp; Hotel Pickup</h4>
+        <p class="scenario-p">We collect your out-of-town guests from Pearson or Billy Bishop and deliver them to your venue on time. They arrive relaxed &mdash; not scrambling for transit or confused about directions after a long flight.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">End of the Night</div>
+        <h4 class="scenario-h4">Late-Night Grand Exit</h4>
+        <p class="scenario-p">When the last dance ends, a pristine vehicle and uniformed chauffeur are waiting. The happy couple whisked away in style. Getaway car service can be booked standalone or as part of a full-day wedding package.</p>
+      </div>
+    </div>
+    <div class="scenario-cta">
+      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Plan Your Wedding Transport &rarr;</a>
+    </div>
+  </div>
+</section>
+
 '''
 
 make_hub(
@@ -515,6 +559,50 @@ events_services = f'''<!-- SERVICES OVERVIEW - EVENTS -->
           "TIFF &bull; Black-Tie Galas &bull; Bachelorette Parties",
           ["Stretch Limo &amp; Luxury SUV Options", "Bachelor &amp; Bachelorette Packages", "VIP Arrival Service"],
           "Custom", "VIP<em> package</em>", "Book VIP Transport")}
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS OCCASIONS SECTION -->
+<section class="scenario-section">
+  <div class="wrap">
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Occasions</span>
+    <h2 class="sec-h2" style="text-align:center">Every Night Out <em>Deserves a Great Ride</em></h2>
+    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">Flat rates locked at booking &mdash; no surge pricing on sold-out nights, playoff games, or New Year&rsquo;s Eve. Ever.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-cat">Concerts &amp; Music</div>
+        <h4 class="scenario-h4">Scotiabank Arena &amp; Budweiser Stage</h4>
+        <p class="scenario-p">Front-door pickup and guaranteed post-show return. Your driver monitors the show and is at the exit before the crowd floods out. No surge on sold-out nights &mdash; rate confirmed at booking.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Sports</div>
+        <h4 class="scenario-h4">Maple Leafs, Raptors &amp; Blue Jays</h4>
+        <p class="scenario-p">Game-day group packages for 2 to 14 passengers. Pre-game pickup at your hotel or home, post-game return included. Corporate suite clients and season ticket holders book recurring game packages.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Black Tie &amp; Galas</div>
+        <h4 class="scenario-h4">TIFF, Award Shows &amp; Charity Galas</h4>
+        <p class="scenario-p">Make your entrance matter. Stretch limousines and luxury SUVs for film festival screenings, charity galas, and black-tie awards nights. Uniformed chauffeur, curbside white-glove arrival.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Celebrations</div>
+        <h4 class="scenario-h4">Bachelor &amp; Bachelorette Parties</h4>
+        <p class="scenario-p">Stretch limos and Sprinter vans for the full crew. We plan the pickup route across venues, wait between stops, and get everyone home safely. Add champagne and customize your night.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Nightlife</div>
+        <h4 class="scenario-h4">Restaurant to Club &amp; Bar Crawls</h4>
+        <p class="scenario-p">As-directed evening transport for groups. Your chauffeur drives between restaurants, rooftop bars, and clubs &mdash; no parking, no designated driver needed, no one gets split up taking separate cabs.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Out of Town</div>
+        <h4 class="scenario-h4">Niagara Falls Casino &amp; More</h4>
+        <p class="scenario-p">Casino Niagara, Great Wolf Lodge, Hamilton Place &mdash; we serve all Ontario event venues. Out-of-town group packages available with coordinated pickup, event attendance, and return transport.</p>
+      </div>
+    </div>
+    <div class="scenario-cta">
+      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Get an Event Quote &rarr;</a>
     </div>
   </div>
 </section>
@@ -632,6 +720,50 @@ hourly_services = f'''<!-- SERVICES OVERVIEW - HOURLY -->
   </div>
 </section>
 
+<!-- HOURLY USE CASES SECTION -->
+<section class="scenario-section">
+  <div class="wrap">
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Uses</span>
+    <h2 class="sec-h2" style="text-align:center">Your Chauffeur, <em>Your Schedule</em></h2>
+    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">One flat hourly rate &mdash; no meter running at stops, no per-kilometer charges, no surprises at the end. Just a professional driver at your disposal.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-cat">Executive Business</div>
+        <h4 class="scenario-h4">Multi-Meeting Road Shows</h4>
+        <p class="scenario-p">Full-day executive charter covering 3 to 8 meetings across the GTA. Your driver handles navigation, parking, and timing while you focus on the meeting ahead. Corporate account billing with monthly invoicing available.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Shopping</div>
+        <h4 class="scenario-h4">Yorkdale &amp; Luxury Retail Runs</h4>
+        <p class="scenario-p">Your chauffeur drives, parks, and waits through every boutique and department store. Parcels loaded into the vehicle between stops. No transit, no parking tickets, no carrying bags across a garage.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Medical</div>
+        <h4 class="scenario-h4">Hospital &amp; Clinic Appointments</h4>
+        <p class="scenario-p">Patient-focused service for hospital visits, specialist appointments, and treatments. Our chauffeurs assist with mobility needs, wait the full duration of any appointment, and ensure a comfortable, unhurried return home.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Airport Connections</div>
+        <h4 class="scenario-h4">Connecting Flight Layovers</h4>
+        <p class="scenario-p">Long layover at Pearson? Book an hourly charter to leave the airport, have a proper meal, and return refreshed. Covers hotels, downtown, and the 400-series highway belt. Flight monitoring included.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Personal</div>
+        <h4 class="scenario-h4">Errands &amp; Daily Service</h4>
+        <p class="scenario-p">Regular weekly bookings for personal errands, grocery runs, dry cleaning pickups, and appointments. Dedicated clients book the same driver weekly for a consistent, trusted service relationship.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Day Trips</div>
+        <h4 class="scenario-h4">Niagara Falls &amp; Ontario Escapes</h4>
+        <p class="scenario-p">A 6&ndash;8 hour charter covers a full Niagara day trip with casino, falls, and NOTL wine stops. Or choose your own Ontario destination: Stratford, Muskoka, or Prince Edward County. Your pace, your itinerary.</p>
+      </div>
+    </div>
+    <div class="scenario-cta">
+      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Get an Hourly Quote &rarr;</a>
+    </div>
+  </div>
+</section>
+
 '''
 
 make_hub(
@@ -741,6 +873,50 @@ tours_services = f'''<!-- SERVICES OVERVIEW - TOURS -->
           "Muskoka &bull; Stratford &bull; Prince Edward County",
           ["Blue Mountains &amp; Collingwood", "Stratford Festival Transport", "Any Ontario Destination"],
           "Custom", "Day trip<em> pricing</em>", "Book Custom Tour")}
+    </div>
+  </div>
+</section>
+
+<!-- TOURS DESTINATIONS SECTION -->
+<section class="scenario-section">
+  <div class="wrap">
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Destinations</span>
+    <h2 class="sec-h2" style="text-align:center">Ontario&rsquo;s Best <em>in One Perfect Day</em></h2>
+    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">All tours are fully private, door-to-door from your GTA home or hotel. No group schedules, no minimum party size, no rushing past the best moments.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-cat">Most Popular</div>
+        <h4 class="scenario-h4">Niagara Falls Day Trip</h4>
+        <p class="scenario-p">90 minutes each way from Toronto. Fallsview, Clifton Hill, Journey Behind the Falls, Maid of the Mist, and Casino Niagara &mdash; all at your own pace. Typical full day is 7&ndash;9 hours. From $350 door-to-door.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Wine Lovers</div>
+        <h4 class="scenario-h4">Niagara-on-the-Lake Wine Tour</h4>
+        <p class="scenario-p">Three to five winery visits including Inniskillin, Peller Estates, Trius, and Wayne Gretzky Estates. Your designated driver stays sober so you can taste freely. Old Town NOTL stroll included.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Lake Country</div>
+        <h4 class="scenario-h4">Muskoka Lakes Day Trip</h4>
+        <p class="scenario-p">Bracebridge, Gravenhurst, Port Carling &mdash; the Ontario cottage country experience without owning a cottage. Lake views, boat tours, artisan shops, and a waterfront lunch. Approx. 2 hours from Toronto.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Arts &amp; Culture</div>
+        <h4 class="scenario-h4">Stratford Festival Transport</h4>
+        <p class="scenario-p">Private door-to-door transport for matinee and evening Stratford Festival performances. Arrive with time to explore the town, dine before the show, and return relaxed &mdash; no highway driving after an evening performance.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Adventure</div>
+        <h4 class="scenario-h4">Blue Mountains &amp; Collingwood</h4>
+        <p class="scenario-p">Ski season or summer hiking &mdash; the Blue Mountains are 90 minutes from Toronto. Drop off at the village, ski hills, or trail heads, then pick up at whatever time works. Great for groups of 4&ndash;8.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Wine &amp; Farms</div>
+        <h4 class="scenario-h4">Prince Edward County</h4>
+        <p class="scenario-p">Ontario&rsquo;s emerging wine region: Closson Chase, Hinterland, Karlo Estates, and the picturesque Sandbanks Provincial Park. A 2.5-hour drive from Toronto that feels like a different world entirely.</p>
+      </div>
+    </div>
+    <div class="scenario-cta">
+      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Plan Your Ontario Tour &rarr;</a>
     </div>
   </div>
 </section>

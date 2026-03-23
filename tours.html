@@ -289,6 +289,28 @@
   .airport-card:hover .airport-card-photo img{transform:scale(1.06)}
   .airport-card-photo-badge{position:absolute;bottom:8px;left:14px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:3px 10px;border-radius:50px}
 
+  /* -- SCENARIO / INFO CARDS (used in hub pages) ----------------- */
+  .scenario-section{background:var(--off-white);padding:64px 0 56px;border-top:1px solid rgba(0,0,0,0.07)}
+  .scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  .scenario-card{background:#fff;border-radius:16px;padding:28px 24px;border:1px solid rgba(0,0,0,0.07);border-top:3px solid var(--blue)}
+  .scenario-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:10px;font-family:var(--font-sans)}
+  .scenario-h4{font-family:var(--font-serif);font-size:1.1rem;margin:0 0 10px;color:var(--dark)}
+  .scenario-p{font-size:.875rem;color:var(--dark);opacity:.72;line-height:1.65;margin:0}
+  .scenario-cta{text-align:center;margin-top:40px}
+  @media(max-width:900px){.scenario-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:580px){.scenario-grid{grid-template-columns:1fr}}
+
+  /* -- INTERLINK PANEL (redesigned city page internal links) ----- */
+  .cs-interlink{background:var(--off-white);padding:56px 0;border-top:1px solid rgba(0,0,0,0.07)}
+  .cs-interlink-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+  .cs-interlink-panel{background:#fff;border-radius:16px;padding:28px 24px;border:1px solid rgba(0,0,0,0.07);border-top:3px solid var(--blue)}
+  .cs-interlink-panel-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin:0 0 16px;font-family:var(--font-sans)}
+  .cs-interlink-link{display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.06);color:var(--dark);text-decoration:none;font-size:.9rem;font-weight:500;transition:color 0.2s,padding-left 0.2s}
+  .cs-interlink-link:last-child{border-bottom:none}
+  .cs-interlink-link:hover{color:var(--blue);padding-left:6px}
+  .cs-interlink-link::before{content:'\2192';margin-right:10px;color:var(--blue);font-weight:700;flex-shrink:0}
+  @media(max-width:640px){.cs-interlink-inner{grid-template-columns:1fr}}
+
   .airport-card{background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative}
   .airport-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
   .airport-card:hover{border-color:var(--blue);box-shadow:0 12px 48px rgba(20,183,244,0.14);transform:translateY(-4px)}
@@ -1282,6 +1304,50 @@
   </div>
 </section>
 
+<!-- TOURS DESTINATIONS SECTION -->
+<section class="scenario-section">
+  <div class="wrap">
+    <span class="sec-label" style="display:block;text-align:center;margin-bottom:12px">Popular Destinations</span>
+    <h2 class="sec-h2" style="text-align:center">Ontario&rsquo;s Best <em>in One Perfect Day</em></h2>
+    <p class="sec-sub" style="text-align:center;max-width:620px;margin:0 auto">All tours are fully private, door-to-door from your GTA home or hotel. No group schedules, no minimum party size, no rushing past the best moments.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-cat">Most Popular</div>
+        <h4 class="scenario-h4">Niagara Falls Day Trip</h4>
+        <p class="scenario-p">90 minutes each way from Toronto. Fallsview, Clifton Hill, Journey Behind the Falls, Maid of the Mist, and Casino Niagara &mdash; all at your own pace. Typical full day is 7&ndash;9 hours. From $350 door-to-door.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Wine Lovers</div>
+        <h4 class="scenario-h4">Niagara-on-the-Lake Wine Tour</h4>
+        <p class="scenario-p">Three to five winery visits including Inniskillin, Peller Estates, Trius, and Wayne Gretzky Estates. Your designated driver stays sober so you can taste freely. Old Town NOTL stroll included.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Lake Country</div>
+        <h4 class="scenario-h4">Muskoka Lakes Day Trip</h4>
+        <p class="scenario-p">Bracebridge, Gravenhurst, Port Carling &mdash; the Ontario cottage country experience without owning a cottage. Lake views, boat tours, artisan shops, and a waterfront lunch. Approx. 2 hours from Toronto.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Arts &amp; Culture</div>
+        <h4 class="scenario-h4">Stratford Festival Transport</h4>
+        <p class="scenario-p">Private door-to-door transport for matinee and evening Stratford Festival performances. Arrive with time to explore the town, dine before the show, and return relaxed &mdash; no highway driving after an evening performance.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Adventure</div>
+        <h4 class="scenario-h4">Blue Mountains &amp; Collingwood</h4>
+        <p class="scenario-p">Ski season or summer hiking &mdash; the Blue Mountains are 90 minutes from Toronto. Drop off at the village, ski hills, or trail heads, then pick up at whatever time works. Great for groups of 4&ndash;8.</p>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-cat">Wine &amp; Farms</div>
+        <h4 class="scenario-h4">Prince Edward County</h4>
+        <p class="scenario-p">Ontario&rsquo;s emerging wine region: Closson Chase, Hinterland, Karlo Estates, and the picturesque Sandbanks Provincial Park. A 2.5-hour drive from Toronto that feels like a different world entirely.</p>
+      </div>
+    </div>
+    <div class="scenario-cta">
+      <a href="contact.html" class="btn-primary" style="display:inline-block;padding:15px 40px;background:var(--blue);color:#fff;border-radius:50px;font-weight:700;font-size:.95rem;text-decoration:none;font-family:var(--font-sans)">Plan Your Ontario Tour &rarr;</a>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- FAQ -->
@@ -1517,15 +1583,15 @@
         <a href="tours.html" class="active">Niagara Tours</a>
       </div>
       <div class="footer-col">
-        <h4>Locations</h4>
-        <a href="locations.html">Toronto</a>
-        <a href="locations.html">Mississauga</a>
-        <a href="locations.html">Vaughan</a>
-        <a href="locations.html">Oakville</a>
-        <a href="locations.html">Markham</a>
-        <a href="locations.html">Richmond Hill</a>
-        <a href="locations.html">Hamilton</a>
-        <a href="locations.html">Niagara Falls</a>
+        <h4>Airport Limo</h4>
+        <a href="toronto-airport-limo.html">Toronto</a>
+        <a href="mississauga-airport-limo.html">Mississauga</a>
+        <a href="vaughan-airport-limo.html">Vaughan</a>
+        <a href="oakville-airport-limo.html">Oakville</a>
+        <a href="markham-airport-limo.html">Markham</a>
+        <a href="richmond-hill-airport-limo.html">Richmond Hill</a>
+        <a href="hamilton-airport-limo.html">Hamilton</a>
+        <a href="niagara-falls-airport-limo.html">Niagara Falls</a>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>

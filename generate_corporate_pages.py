@@ -333,8 +333,8 @@ def generate_page(template, slug, city_name, region, md):
     )
 
     # ── NAV active ─────────────────────────────────────────────────────
-    page = page.replace('<a href="airport.html" class="active">Airport</a>', '<a href="airport.html">Airport</a>')
-    page = page.replace('<a href="corporate.html">Corporate</a>', '<a href="corporate.html" class="active">Corporate</a>')
+    page = page.replace('<a href="AirportHUB.html" class="active">Airport</a>', '<a href="AirportHUB.html">Airport</a>')
+    page = page.replace('<a href="CorporateHUB.html">Corporate</a>', '<a href="CorporateHUB.html" class="active">Corporate</a>')
 
     # ── TICKER ─────────────────────────────────────────────────────────
     ticker_toronto = (
