@@ -23,50 +23,25 @@ def r(page, old, new):
     return page
 
 # ─────────────────────────────────────────────────────────────
-# 1. airport.html  →  copy AirportHUB.html with phone fixes
-# ─────────────────────────────────────────────────────────────
-print("Copying AirportHUB.html → airport.html")
-airport_hub = read("AirportHUB.html")
-airport_hub = airport_hub.replace("1-800-XXX-XXXX", "416 451 3106")
-airport_hub = airport_hub.replace("tel:+18001234567", "tel:+14164513106")
-airport_hub = airport_hub.replace("sms:+18001234567", "sms:+16473131786")
-# Fix broken closing tag
-airport_hub = airport_hub.replace("<\strong>", "</strong>")
-# Set Airport nav active
-airport_hub = r(airport_hub, 'href="airport.html"', 'href="airport.html" class="active"')
-write("airport.html", airport_hub)
-
-# ─────────────────────────────────────────────────────────────
-# 2. corporate.html  →  copy CorporateHUB.html with phone fixes
-# ─────────────────────────────────────────────────────────────
-print("Copying CorporateHUB.html → corporate.html")
-corp_hub = read("CorporateHUB.html")
-corp_hub = corp_hub.replace("1-800-XXX-XXXX", "416 451 3106")
-corp_hub = corp_hub.replace("tel:+18001234567", "tel:+14164513106")
-corp_hub = corp_hub.replace("sms:+18001234567", "sms:+16473131786")
-write("corporate.html", corp_hub)
-
-# ─────────────────────────────────────────────────────────────
 # Base for new hubs
 # ─────────────────────────────────────────────────────────────
 base = read("AirportHUB.html")
 base = base.replace("1-800-XXX-XXXX", "416 451 3106")
 base = base.replace("tel:+18001234567", "tel:+14164513106")
 base = base.replace("sms:+18001234567", "sms:+16473131786")
-base = base.replace("<\strong>", "</strong>")
+base = base.replace("<" + "\\strong>", "</strong>")
 
 # ─────────────────────────────────────────────────────────────
 # Helper: build service cards HTML using airport-card CSS
 # ─────────────────────────────────────────────────────────────
-def svc_card(icon, title, subtitle, features, price_label, price_val, link_text):
+def svc_card(icon_svg, title, subtitle, features, price_label, price_val, link_text):
     feats_html = "".join(
         f'<span class="airport-feat">{f}</span>' for f in features
     )
     return f'''      <div class="airport-card" style="cursor:auto">
         <div class="airport-card-head">
           <div class="airport-iata-wrap">
-            <span class="airport-iata" style="font-size:2.2rem;line-height:1.1">{icon}</span>
-            <span class="airport-iata-sub" style="margin-top:4px">{title[:12]}</span>
+            <div style="width:52px;height:52px;display:flex;align-items:center;justify-content:center">{icon_svg}</div>
           </div>
           <div class="airport-head-info">
             <div class="airport-name">{title}</div>
@@ -109,7 +84,7 @@ def make_hub(
     page = base
 
     # ── Nav active ──────────────────────────────────────────────
-    page = page.replace('href="airport.html" class="active"', 'href="airport.html"')
+    page = page.replace('href="AirportHUB.html" class="active"', 'href="AirportHUB.html"')
     page = r(page, f'href="{active_nav}"', f'href="{active_nav}" class="active"')
 
     # ── Title / meta / schema ───────────────────────────────────
@@ -161,7 +136,8 @@ def make_hub(
         hero_sub)
 
     # ── Hero booking card ─────────────────────────────────────────
-    page = r(page, 'Book Your Airport Transfer', hbc_title)
+    page = r(page, '<p class="hbc-title">Book Your Airport Transfer</p>',
+             f'<p class="hbc-title">{hbc_title}</p>')
     old_select = ('          <option value="">Select Airport</option>\n'
                   '          <option>Toronto Pearson \u2014 YYZ</option>\n'
                   '          <option>Billy Bishop \u2014 YTZ</option>\n'
@@ -185,11 +161,11 @@ def make_hub(
 
     # ── Why tabs (5 items) ───────────────────────────────────────
     airport_why_tabs = [
-        ("Real-Time Flight Tracking", "Auto-adjusts for delays &mdash; no calls needed from you."),
-        ("Flat Rate. Locked at Booking.", "No surge pricing &mdash; ever. Price confirmed instantly."),
-        ("Meet &amp; Greet Inside Terminal", "Name board inside arrivals &mdash; 60 min complimentary wait."),
-        ("24/7 Live Local Support", "Real people answer at 2am &mdash; no chatbots."),
-        ("Vetted, Professional Chauffeurs", "Background checked, licensed, and trained &mdash; not gig workers."),
+        ("Real-Time Flight Tracking", "Auto-adjusts for delays \u2014 no calls needed from you."),
+        ("Flat Rate. Locked at Booking.", "No surge pricing \u2014 ever. Price confirmed instantly."),
+        ("Meet &amp; Greet Inside Terminal", "Name board inside arrivals \u2014 60 min complimentary wait."),
+        ("24/7 Live Local Support", "Real people answer at 2am \u2014 no chatbots."),
+        ("Vetted, Professional Chauffeurs", "Background checked, licensed, and trained \u2014 not gig workers."),
     ]
     for i, ((old_h4, old_p), (new_h4, new_p)) in enumerate(zip(airport_why_tabs, why_tabs)):
         page = r(page, f'<h4>{old_h4}</h4>', f'<h4>{new_h4}</h4>')
@@ -247,10 +223,102 @@ def make_hub(
         'Book online or call 416 451 3106. Provide your pickup address, airport, flight number, and passengers.',
         'Book online or call 416 451 3106. Provide your pickup location, service type, date, and passenger count.')
 
+    # ── Seamless step 2 — replace airport flight tracking content ─
+    page = r(page, '<h4>We Track Your Flight</h4>',
+             '<h4>Your Booking Is Confirmed</h4>')
+    page = r(page,
+        '<p>Live flight data adjusts your driver automatically. Delayed 3 hours? No call needed from you.</p>',
+        '<p>A confirmation email and SMS arrive instantly with all your booking details locked in.</p>')
+    page = r(page, '<span class="s-panel-tag">Step 2 &mdash; Track</span>',
+             '<span class="s-panel-tag">Step 2 &mdash; Confirm</span>')
+    page = r(page, '<h5>We Monitor Every Flight, Live</h5>',
+             '<h5>Booking Confirmed Instantly</h5>')
+    page = r(page,
+        "Our dispatch pulls real-time flight data. Delayed two hours? Your driver adjusts automatically \u2014 you don't need to call. You just land and walk out.",
+        'The moment you complete your booking, a full confirmation arrives by email and SMS. Your chauffeur is assigned, briefed on your itinerary, and ready.')
+    page = r(page,
+        '<li class="s-panel-bullet">Live ADS-B flight tracking system</li>',
+        '<li class="s-panel-bullet">Confirmation by email and SMS instantly</li>')
+    page = r(page,
+        '<li class="s-panel-bullet">Automatic driver adjustment \u2014 no calls needed</li>',
+        '<li class="s-panel-bullet">Chauffeur assigned and briefed</li>')
+    page = r(page,
+        '<li class="s-panel-bullet">Delay notification sent to your phone</li>',
+        '<li class="s-panel-bullet">All details locked \u2014 no changes to your rate</li>')
+    page = r(page,
+        '<a href="#services" class="s-panel-link">How It Works &rarr;</a>',
+        '<a href="booking.html" class="s-panel-link">Book Now &rarr;</a>')
+
+    # ── Seamless step 3 — replace terminal meet content ───────────
+    page = r(page, '<h4>Meet Inside the Terminal</h4>',
+             '<h4>Your Chauffeur Arrives Early</h4>')
+    page = r(page,
+        '<p>Your chauffeur waits inside arrivals with a name board \u2014 not outside at the curb chaos.</p>',
+        '<p>Your uniformed driver arrives at your location ahead of schedule \u2014 always punctual, always professional.</p>')
+    page = r(page, '<h5>Greeted Inside the Arrivals Hall</h5>',
+             '<h5>Your Chauffeur Arrives Before You</h5>')
+    page = r(page,
+        'Your uniformed chauffeur stands inside the terminal with a personalized name board. No curbside confusion, no searching. Just clear customs and you are on your way.',
+        'Your uniformed chauffeur arrives at the scheduled pickup location 5\u201310 minutes early. The vehicle is pre-inspected, climate-controlled, and ready for your journey.')
+    page = r(page,
+        '<li class="s-panel-bullet">Inside Terminal 1 &amp; Terminal 3 at YYZ</li>',
+        '<li class="s-panel-bullet">Arrives 5\u201310 minutes before your pickup time</li>')
+    page = r(page,
+        '<li class="s-panel-bullet">60 minutes complimentary wait \u2014 international</li>',
+        '<li class="s-panel-bullet">Full vehicle pre-inspection before every trip</li>')
+    page = r(page,
+        '<li class="s-panel-bullet">Name board with passenger name displayed</li>',
+        '<li class="s-panel-bullet">Direct contact with your driver on the day</li>')
+    page = r(page,
+        '<a href="#coverage" class="s-panel-link">View Airports &rarr;</a>',
+        '<a href="fleet.html" class="s-panel-link">View Our Fleet &rarr;</a>')
+
+    # ── Seamless step 4 — remove airport departure reference ──────
+    page = r(page,
+        '<li class="s-panel-bullet">15-min courtesy call before departure pickups</li>',
+        '<li class="s-panel-bullet">Courtesy confirmation call before your pickup</li>')
+
+    # ── Fleet description — remove Pearson/Billy Bishop ref ───────
+    page = r(page,
+        'The ideal choice for solo travellers and couples heading to Pearson or Billy Bishop. Spacious rear seating, premium leather, and a smooth ride through downtown traffic.',
+        'The ideal choice for solo travellers and couples. Spacious rear seating, premium leather, and a smooth ride to any destination across Toronto and the GTA.')
+
+    # ── FIFA section — remove from non-airport pages ──────────────
+    fifa_pattern = re.compile(
+        r'<!-- FIFA WORLD CUP 2026 -->.*?(?=<!-- REVIEWS SPOTLIGHT -->)',
+        re.DOTALL)
+    if fifa_pattern.search(page):
+        page = fifa_pattern.sub('', page, count=1)
+
+    # ── Fleet footer note — remove airport-specific text ─────────
+    page = r(page,
+        'All vehicles include flight tracking &middot; Meet &amp; greet &middot; Flat rate',
+        'All vehicles include professional chauffeur &middot; White-glove service &middot; Flat rate')
+
+    # ── Comparison section — replace airport-specific bullets ─────
+    page = r(page,
+        '<li>Real-time flight tracking and automatic adjustment</li>',
+        '<li>On-time guarantee &mdash; chauffeur arrives early</li>')
+    page = r(page,
+        '<li>Meet and greet inside the terminal, not curbside</li>',
+        '<li>Door-to-door white-glove service</li>')
+    page = r(page,
+        '<li>60 minutes complimentary wait time</li>',
+        '<li>Generous wait time included &mdash; no rush</li>')
+    page = r(page,
+        "<li>No flight tracking \u2014 driver won't wait for delays</li>",
+        '<li>No on-time guarantee &mdash; driver may not wait</li>')
+    page = r(page,
+        '<li>Curbside pickup only, often causing confusion</li>',
+        '<li>No door-to-door service &mdash; you find the car</li>')
+    page = r(page,
+        '<li>Only 5 minutes free wait time</li>',
+        '<li>Minimal wait time &mdash; extra charges after 5 minutes</li>')
+
     # ── Airports section → services section ──────────────────────
-    # Replace from <!-- AIRPORTS SERVED --> to <!-- REVIEWS SPOTLIGHT -->
+    # Replace from <!-- AIRPORTS SERVED --> to <!-- FAQ -->
     airports_pattern = re.compile(
-        r'<!-- AIRPORTS SERVED -->.*?(?=<!-- REVIEWS SPOTLIGHT -->)',
+        r'<!-- AIRPORTS SERVED -->.*?(?=<!-- FAQ -->)',
         re.DOTALL)
     if airports_pattern.search(page):
         page = airports_pattern.sub(services_section_html + '\n\n', page, count=1)
@@ -317,15 +385,18 @@ wedding_services = f'''<!-- SERVICES OVERVIEW - WEDDING -->
     <h2 class="sec-h2">Everything You Need <em>for Your Perfect Day</em></h2>
     <p class="sec-sub">From the bridal limo to the guest shuttle, Limo4All handles every wedding transport detail with elegance and precision.</p>
     <div class="airport-cards">
-{svc_card("&#128141;", "Bridal Limo &amp; Getaway Car",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+          "Bridal Limo &amp; Getaway Car",
           "Stretch Lincoln Town Car &bull; Luxury SUV &bull; Complimentary Champagne",
           ["Red Carpet Service", "Photo Stop Coordination", "Decorated Vehicle Available"],
           "Included", "Champagne<em> &amp; Red Carpet</em>", "Book Bridal Limo")}
-{svc_card("&#128145;", "Bridal Party Transport",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+          "Bridal Party Transport",
           "Multi-vehicle coordination &bull; SUVs &amp; Sprinters &bull; Full party covered",
           ["Church, Venue &amp; Hotel Pickups", "Coordinated Timing", "Formally Dressed Chauffeurs"],
           "From", "$95<em> per vehicle</em>", "Book Party Transport")}
-{svc_card("&#128147;", "Wedding Guest Shuttle",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>',
+          "Wedding Guest Shuttle",
           "Mercedes Sprinter &bull; Up to 14 guests &bull; Hotel-to-venue loops",
           ["Airport Pickups for Out-of-Town Guests", "Custom Schedule", "Flat Hourly Rate"],
           "Flat", "Hourly<em> rate</em>", "Book Guest Shuttle")}
@@ -336,7 +407,7 @@ wedding_services = f'''<!-- SERVICES OVERVIEW - WEDDING -->
 '''
 
 make_hub(
-    "wedding.html", "wedding.html",
+    "WeddingHUB.html", "WeddingHUB.html",
     title="Wedding Limo &amp; Chauffeur Service Ontario | Limo4All",
     meta_desc="Luxury wedding limo service across Ontario. Stretch limousines, SUVs, and Sprinters for bridal parties, guests, and getaway cars. Complimentary champagne. Book online.",
     schema_name="Wedding Limo Service Ontario",
@@ -429,15 +500,18 @@ events_services = f'''<!-- SERVICES OVERVIEW - EVENTS -->
     <h2 class="sec-h2">The Right Ride <em>for Every Occasion</em></h2>
     <p class="sec-sub">From concerts and sports games to galas and bachelorette parties &mdash; flat rates, no surge pricing, group packages available.</p>
     <div class="airport-cards">
-{svc_card("&#127926;", "Concert &amp; Festival Transport",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>',
+          "Concert &amp; Festival Transport",
           "Scotiabank Arena &bull; Rogers Centre &bull; Budweiser Stage",
           ["Pre-Show Pickup &amp; Post-Show Return", "Group Packages: 2&ndash;14 pax", "Flat Rate &mdash; No Surge Ever"],
           "Flat", "Rate<em> locked at booking</em>", "Book Concert Limo")}
-{svc_card("&#127944;", "Sports Games &amp; Events",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 21 12 17 16 21"/><path d="M17 4H7L5 8v4a7 7 0 0 0 14 0V8L17 4z"/><path d="M5 10H3a2 2 0 0 0 0 4h2"/><path d="M19 10h2a2 2 0 0 1 0 4h-2"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+          "Sports Games &amp; Events",
           "Maple Leafs &bull; Raptors &bull; Blue Jays &bull; TFC",
           ["Game Day Group Packages", "Out-of-Town Game Transport", "Post-Game Return Included"],
           "From", "$75<em> per trip</em>", "Book Sports Limo")}
-{svc_card("&#127881;", "Galas, Nightlife &amp; VIP",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+          "Galas, Nightlife &amp; VIP",
           "TIFF &bull; Black-Tie Galas &bull; Bachelorette Parties",
           ["Stretch Limo &amp; Luxury SUV Options", "Bachelor &amp; Bachelorette Packages", "VIP Arrival Service"],
           "Custom", "VIP<em> package</em>", "Book VIP Transport")}
@@ -539,15 +613,18 @@ hourly_services = f'''<!-- SERVICES OVERVIEW - HOURLY -->
     <h2 class="sec-h2">A Vehicle &amp; Chauffeur <em>Ready for Anything</em></h2>
     <p class="sec-sub">Business meetings, personal errands, sightseeing, or all of the above. Hourly charter puts you in control of your schedule with a flat hourly rate and no hidden fees.</p>
     <div class="airport-cards">
-{svc_card("&#128188;", "Business &amp; Corporate Charter",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>',
+          "Business &amp; Corporate Charter",
           "Full-day &amp; half-day executive charter &bull; Multiple meetings",
           ["Road Shows &amp; Investor Presentations", "Corporate Account Billing", "Wi-Fi Ready Vehicles"],
           "Flat", "Hourly<em> rate</em>", "Book Business Charter")}
-{svc_card("&#128715;", "Shopping, Errands &amp; Personal",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>',
+          "Shopping, Errands &amp; Personal",
           "As-directed &bull; Multiple stops &bull; Chauffeur waits at each",
           ["High-End Shopping &amp; Yorkdale Runs", "Medical Appointments", "No Limit on Stops"],
           "2-hr", "Minimum<em> booking</em>", "Book Hourly Charter")}
-{svc_card("&#127759;", "City Tours &amp; Sightseeing",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>',
+          "City Tours &amp; Sightseeing",
           "Toronto city tours &bull; Custom Ontario day trips",
           ["Distillery, CN Tower &amp; Waterfront", "Niagara Falls Day Trip Option", "Flexible Itinerary"],
           "Custom", "Itinerary<em> built for you</em>", "Book City Tour")}
@@ -649,15 +726,18 @@ tours_services = f'''<!-- SERVICES OVERVIEW - TOURS -->
     <h2 class="sec-h2">Explore Ontario <em>in Luxury &amp; Comfort</em></h2>
     <p class="sec-sub">Private chauffeured day trips to Niagara Falls, wine country, Muskoka, and beyond &mdash; your itinerary, your pace, zero group rush.</p>
     <div class="airport-cards">
-{svc_card("&#127980;", "Niagara Falls Day Trip",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 22 12 2 21 22"/><polyline points="7.5 15 12 7 16.5 15"/></svg>',
+          "Niagara Falls Day Trip",
           "Private door-to-door &bull; Full day at the falls",
           ["Clifton Hill &amp; Fallsview Area", "Casino Niagara &amp; Boat Tour Stops", "Flexible Timing &mdash; Your Pace"],
           "From", "$350<em> per trip</em>", "Book Niagara Trip")}
-{svc_card("&#127815;", "Wine Country &amp; NOTL Tour",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M7 2v5a5 5 0 0 0 10 0V2"/></svg>',
+          "Wine Country &amp; NOTL Tour",
           "Niagara-on-the-Lake &bull; 3&ndash;5 Winery Visits",
           ["Inniskillin, Peller &amp; Wayne Gretzky Estates", "Safe Designated Driver", "Shaw Festival &amp; Old Town Stops"],
           "Custom", "Itinerary<em> built for you</em>", "Book Wine Tour")}
-{svc_card("&#127758;", "Custom Ontario Tours",
+{svc_card('<svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>',
+          "Custom Ontario Tours",
           "Muskoka &bull; Stratford &bull; Prince Edward County",
           ["Blue Mountains &amp; Collingwood", "Stratford Festival Transport", "Any Ontario Destination"],
           "Custom", "Day trip<em> pricing</em>", "Book Custom Tour")}
