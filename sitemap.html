@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+  <title>Sitemap – All Pages | Limo4All</title>
+  <meta name="description" content="Complete sitemap of Limo4All – Toronto's premier limo and chauffeur service. Find all service pages, city pages, and general information pages.">
+  <style>
+  @font-face{font-family:'Euclid Circular B';font-weight:300;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Light.woff2') format('woff2')}
+  @font-face{font-family:'Euclid Circular B';font-weight:400;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Regular.woff2') format('woff2')}
+  @font-face{font-family:'Euclid Circular B';font-weight:500;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Medium.woff2') format('woff2')}
+  @font-face{font-family:'Euclid Circular B';font-weight:600;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-SemiBold.woff2') format('woff2')}
+  @font-face{font-family:'Euclid Circular B';font-weight:700;font-style:normal;font-display:swap;src:url('./fonts/Euclid-Circular-B-Bold.woff2') format('woff2')}
+  @font-face{font-family:'Libre Baskerville';font-weight:400;font-style:normal;font-display:swap;src:url('./fonts/LibreBaskerville-Regular.woff2') format('woff2')}
+  @font-face{font-family:'Libre Baskerville';font-weight:400;font-style:italic;font-display:swap;src:url('./fonts/LibreBaskerville-Italic.woff2') format('woff2')}
+  @font-face{font-family:'Libre Baskerville';font-weight:700;font-style:normal;font-display:swap;src:url('./fonts/LibreBaskerville-Bold.woff2') format('woff2')}
+  :root{
+    --blue:#14b7f4;--blue-dark:#0d9dd4;--blue-hover:#0aaae0;--blue-bg:#e6f7fd;
+    --dark:#1c1c20;--dark2:#2a2a2e;--white:#ffffff;--off-white:#f7f8fa;
+    --text:#22232a;--text-light:#5c6270;--border:#e3e5eb;
+    --font-serif:'Libre Baskerville',Georgia,serif;
+    --font-sans:'Euclid Circular B',system-ui,sans-serif;
+    --radius:1.25rem;--max-w:1170px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-sans);font-size:14px;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;height:auto;display:block}
+  ul{list-style:none}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
+
+  /* PROMO BAR */
+  .promo-bar{background:var(--blue);color:#fff;padding:7px 0;font-family:var(--font-sans)}
+  .promo-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
+  .pb-stars{letter-spacing:1.5px;font-size:10.5px}
+  .pb-sep{opacity:0.4;font-size:11px}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1;white-space:nowrap}
+  .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .pb-right a{color:#fff;opacity:0.95}
+  .pb-right a:hover{opacity:1;text-decoration:underline}
+  .pb-pill{background:rgba(255,255,255,0.2);border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
+  @media(max-width:768px){.pb-left{display:none}.pb-center{text-align:left}}
+
+  /* HEADER */
+  .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
+  .header-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;min-height:66px;gap:16px}
+  .logo{font-family:var(--font-sans);font-size:1.4rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--dark)}
+  .logo span{color:var(--blue)}
+  .logo img{max-height:44px;width:auto}
+  .nav{display:flex;align-items:center;gap:2px}
+  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:8px 11px;border-radius:6px;transition:all 0.15s}
+  .nav a:hover,.nav a.active{color:var(--blue);background:var(--blue-bg)}
+  .hdr-right{display:flex;align-items:center;gap:12px}
+  .hdr-phone-wrap{text-align:right}
+  .hdr-phone-label{font-family:var(--font-sans);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light)}
+  .hdr-phone{font-family:var(--font-sans);font-size:17px;font-weight:700;color:var(--dark);display:block;transition:color 0.15s}
+  .hdr-phone:hover{color:var(--blue)}
+  .btn-book{background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:9px 20px;border-radius:50px;border-bottom:3px solid var(--blue-dark);transition:background 0.15s;white-space:nowrap}
+  .btn-book:hover{background:var(--blue-hover)}
+  .btn-quote-sm{background:var(--white);color:var(--dark);font-family:var(--font-sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;padding:8px 18px;border-radius:50px;border:1px solid var(--border);transition:all 0.15s;white-space:nowrap}
+  .btn-quote-sm:hover{border-color:var(--blue);color:var(--blue)}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:all 0.2s}
+
+  /* PAGE HERO */
+  .page-hero{background:linear-gradient(135deg,#f4f8ff 0%,#e6f7fd 55%,#fff 100%);padding:56px 0 60px;border-bottom:1px solid var(--border)}
+  .page-hero-breadcrumb{font-family:var(--font-sans);font-size:12px;color:var(--text-light);margin-bottom:16px;display:flex;align-items:center;gap:6px}
+  .page-hero-breadcrumb a{color:var(--text-light);transition:color 0.15s}
+  .page-hero-breadcrumb a:hover{color:var(--blue)}
+  .page-hero-breadcrumb .sep{opacity:0.4}
+  .page-hero h1{font-family:var(--font-serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:400;font-style:italic;color:var(--dark);line-height:1.15;margin-bottom:12px}
+  .page-hero h1 strong{color:var(--blue);font-style:normal;font-weight:700;display:block}
+  .page-hero-sub{font-family:var(--font-sans);font-size:15px;color:var(--text-light);line-height:1.7;max-width:600px}
+
+  /* SITEMAP CONTENT */
+  .sitemap-body{padding:64px 0 80px;background:var(--white)}
+  .sitemap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .sitemap-group{background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+  .sitemap-group-head{background:var(--dark);padding:16px 22px;display:flex;align-items:center;gap:10px}
+  .sitemap-group-icon{width:32px;height:32px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .sitemap-group-icon svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .sitemap-group-title{font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#fff}
+  .sitemap-group-body{padding:8px 0}
+  .sitemap-link{display:flex;align-items:center;gap:10px;padding:9px 22px;color:var(--text);font-family:var(--font-sans);font-size:13px;font-weight:500;transition:all 0.15s;border-bottom:1px solid var(--border)}
+  .sitemap-link:last-child{border-bottom:none}
+  .sitemap-link:hover{background:var(--blue-bg);color:var(--blue);padding-left:28px}
+  .sitemap-link .arrow{color:var(--blue);font-size:12px;font-weight:700;margin-left:auto;opacity:0;transition:opacity 0.15s}
+  .sitemap-link:hover .arrow{opacity:1}
+  .sitemap-link .badge{font-family:var(--font-sans);font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:var(--blue-bg);color:var(--blue);padding:2px 7px;border-radius:50px;margin-left:4px}
+
+  /* City pages get smaller text / tighter rows */
+  .sitemap-city{padding:6px 22px;font-size:12.5px}
+  .sitemap-city:hover{padding-left:28px}
+
+  /* Wide group for city grids */
+  .sitemap-group.wide{grid-column:span 3}
+  .sitemap-cities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .sitemap-cities-grid .sitemap-city{border-right:1px solid var(--border)}
+  .sitemap-cities-grid .sitemap-city:nth-child(4n){border-right:none}
+
+  /* FOOTER */
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+  .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
+  .footer-brand h3 span{color:var(--blue)}
+  .footer-brand p{font-size:13px;line-height:1.7;color:rgba(255,255,255,0.4);margin-bottom:14px}
+  .footer-phone{font-family:var(--font-sans);font-size:17px;font-weight:700;color:#fff;display:block;margin-bottom:3px;transition:color 0.15s}
+  .footer-phone:hover{color:var(--blue)}
+  .footer-email{font-size:13px;color:rgba(255,255,255,0.35)}
+  .footer-col h4{font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--blue);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.07)}
+  .footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.45);padding:4px 0;transition:color 0.15s}
+  .footer-col a:hover{color:var(--blue)}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.25);flex-wrap:wrap;gap:8px}
+
+  @media(max-width:1024px){.sitemap-grid{grid-template-columns:repeat(2,1fr)}.sitemap-group.wide{grid-column:span 2}.sitemap-cities-grid{grid-template-columns:repeat(3,1fr)}.sitemap-cities-grid .sitemap-city:nth-child(4n){border-right:1px solid var(--border)}.sitemap-cities-grid .sitemap-city:nth-child(3n){border-right:none}.footer-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:768px){.nav{display:none}.nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--border);z-index:400;padding:10px 0;box-shadow:0 8px 24px rgba(0,0,0,0.1)}.hamburger{display:flex}.hdr-phone-wrap{display:none}.sitemap-grid{grid-template-columns:1fr}.sitemap-group.wide{grid-column:span 1}.sitemap-cities-grid{grid-template-columns:repeat(2,1fr)}.sitemap-cities-grid .sitemap-city:nth-child(3n){border-right:1px solid var(--border)}.sitemap-cities-grid .sitemap-city:nth-child(2n){border-right:none}.footer-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<!-- PROMO BAR -->
+<div class="promo-bar">
+  <div class="promo-inner">
+    <div class="pb-left">
+      <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>4.9 Google Rating</span>
+      <span class="pb-sep">&middot;</span>
+      <span>500+ Reviews</span>
+      <span class="pb-sep">&middot;</span>
+      <span>20+ Years Serving GTA</span>
+    </div>
+    <div class="pb-center">All Limo4All Services &amp; Pages &mdash; Toronto, GTA &amp; Ontario</div>
+    <div class="pb-right">
+      <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
+      <a href="booking.html" class="pb-pill">Book Online</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='inline'"><span style="display:none">LIMO<span>4ALL</span></span></a>
+    <nav class="nav" id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="AirportHUB.html">Airport</a>
+      <a href="CorporateHUB.html">Corporate</a>
+      <a href="WeddingHUB.html">Wedding</a>
+      <a href="events.html">Events</a>
+      <a href="car-service.html">Personal</a>
+      <a href="tours.html">Tours</a>
+      <a href="sprinter.html">Sprinter</a>
+      <a href="fleet.html">Fleet</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hdr-right">
+      <div class="hdr-phone-wrap">
+        <span class="hdr-phone-label">Reservations</span>
+        <a href="tel:+14164513106" class="hdr-phone">416 451 3106</a>
+      </div>
+      <a href="booking.html" class="btn-book">Book Online</a>
+      <a href="contact.html" class="btn-quote-sm">Get a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-breadcrumb">
+      <a href="index.html">Home</a><span class="sep">&rsaquo;</span><span>Sitemap</span>
+    </div>
+    <h1>Site <strong>Directory</strong></h1>
+    <p class="page-hero-sub">Every page on limo4all.ca, organized by category. Find service hubs, city-specific pages, fleet info, and general resources all in one place.</p>
+  </div>
+</section>
+
+<!-- SITEMAP BODY -->
+<section class="sitemap-body">
+  <div class="wrap">
+    <div class="sitemap-grid">
+
+      <!-- SERVICES / HUBS -->
+      <div class="sitemap-group">
+        <div class="sitemap-group-head">
+          <div class="sitemap-group-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="sitemap-group-title">Main &amp; Services</span>
+        </div>
+        <div class="sitemap-group-body">
+          <a href="index.html" class="sitemap-link">Home <span class="badge">Main</span><span class="arrow">→</span></a>
+          <a href="AirportHUB.html" class="sitemap-link">Airport Limo Hub<span class="arrow">→</span></a>
+          <a href="CorporateHUB.html" class="sitemap-link">Corporate Car Service Hub<span class="arrow">→</span></a>
+          <a href="WeddingHUB.html" class="sitemap-link">Wedding Limo Hub<span class="arrow">→</span></a>
+          <a href="events.html" class="sitemap-link">Events &amp; Concerts<span class="arrow">→</span></a>
+          <a href="car-service.html" class="sitemap-link">Chauffeur Service<span class="arrow">→</span></a>
+          <a href="tours.html" class="sitemap-link">Niagara &amp; Wine Tours<span class="arrow">→</span></a>
+          <a href="sprinter.html" class="sitemap-link">Mercedes Sprinter Van<span class="arrow">→</span></a>
+          <a href="transfers.html" class="sitemap-link">City-to-City Transfers<span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- FLEET & GENERAL -->
+      <div class="sitemap-group">
+        <div class="sitemap-group-head">
+          <div class="sitemap-group-icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <span class="sitemap-group-title">Fleet &amp; Info</span>
+        </div>
+        <div class="sitemap-group-body">
+          <a href="fleet.html" class="sitemap-link">Fleet Overview<span class="arrow">→</span></a>
+          <a href="about.html" class="sitemap-link">About Limo4All<span class="arrow">→</span></a>
+          <a href="faq.html" class="sitemap-link">FAQ<span class="arrow">→</span></a>
+          <a href="contact.html" class="sitemap-link">Contact Us<span class="arrow">→</span></a>
+          <a href="booking.html" class="sitemap-link">Book Online<span class="arrow">→</span></a>
+          <a href="locations.html" class="sitemap-link">All Locations<span class="arrow">→</span></a>
+          <a href="sitemap.html" class="sitemap-link active" style="color:var(--blue)">Sitemap <span class="badge">You are here</span><span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER for alignment -->
+      <div class="sitemap-group">
+        <div class="sitemap-group-head">
+          <div class="sitemap-group-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.21h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"/></svg>
+          </div>
+          <span class="sitemap-group-title">Contact &amp; Booking</span>
+        </div>
+        <div class="sitemap-group-body">
+          <a href="booking.html" class="sitemap-link">Online Booking Form<span class="arrow">→</span></a>
+          <a href="contact.html" class="sitemap-link">Get a Custom Quote<span class="arrow">→</span></a>
+          <a href="contact.html" class="sitemap-link">Contact &amp; Hours<span class="arrow">→</span></a>
+          <a href="tel:+14164513106" class="sitemap-link">Call: 416 451 3106<span class="arrow">→</span></a>
+          <a href="mailto:info@limo4all.ca" class="sitemap-link">Email: info@limo4all.ca<span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- AIRPORT LIMO CITIES — wide row -->
+      <div class="sitemap-group wide">
+        <div class="sitemap-group-head">
+          <div class="sitemap-group-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.21h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"/><path d="M17 1l4 4-4 4"/><path d="M21 5H9"/></svg>
+          </div>
+          <span class="sitemap-group-title">Airport Limo — City Pages (16 Cities)</span>
+        </div>
+        <div class="sitemap-group-body sitemap-cities-grid">
+          <a href="toronto-airport-limo.html" class="sitemap-link sitemap-city">Toronto Airport Limo<span class="arrow">→</span></a>
+          <a href="mississauga-airport-limo.html" class="sitemap-link sitemap-city">Mississauga Airport Limo<span class="arrow">→</span></a>
+          <a href="vaughan-airport-limo.html" class="sitemap-link sitemap-city">Vaughan Airport Limo<span class="arrow">→</span></a>
+          <a href="markham-airport-limo.html" class="sitemap-link sitemap-city">Markham Airport Limo<span class="arrow">→</span></a>
+          <a href="oakville-airport-limo.html" class="sitemap-link sitemap-city">Oakville Airport Limo<span class="arrow">→</span></a>
+          <a href="richmond-hill-airport-limo.html" class="sitemap-link sitemap-city">Richmond Hill Airport Limo<span class="arrow">→</span></a>
+          <a href="hamilton-airport-limo.html" class="sitemap-link sitemap-city">Hamilton Airport Limo<span class="arrow">→</span></a>
+          <a href="niagara-falls-airport-limo.html" class="sitemap-link sitemap-city">Niagara Falls Airport Limo<span class="arrow">→</span></a>
+          <a href="brampton-airport-limo.html" class="sitemap-link sitemap-city">Brampton Airport Limo<span class="arrow">→</span></a>
+          <a href="aurora-airport-limo.html" class="sitemap-link sitemap-city">Aurora Airport Limo<span class="arrow">→</span></a>
+          <a href="burlington-airport-limo.html" class="sitemap-link sitemap-city">Burlington Airport Limo<span class="arrow">→</span></a>
+          <a href="king-city-airport-limo.html" class="sitemap-link sitemap-city">King City Airport Limo<span class="arrow">→</span></a>
+          <a href="london-airport-limo.html" class="sitemap-link sitemap-city">London Airport Limo<span class="arrow">→</span></a>
+          <a href="milton-airport-limo.html" class="sitemap-link sitemap-city">Milton Airport Limo<span class="arrow">→</span></a>
+          <a href="guelph-airport-limo.html" class="sitemap-link sitemap-city">Guelph Airport Limo<span class="arrow">→</span></a>
+          <a href="waterloo-kitchener-airport-limo.html" class="sitemap-link sitemap-city">Waterloo-Kitchener Airport Limo<span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- CORPORATE LIMO CITIES — wide row -->
+      <div class="sitemap-group wide">
+        <div class="sitemap-group-head">
+          <div class="sitemap-group-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <span class="sitemap-group-title">Corporate Car Service — City Pages (16 Cities)</span>
+        </div>
+        <div class="sitemap-group-body sitemap-cities-grid">
+          <a href="toronto-corporate-limo.html" class="sitemap-link sitemap-city">Toronto Corporate Limo<span class="arrow">→</span></a>
+          <a href="mississauga-corporate-limo.html" class="sitemap-link sitemap-city">Mississauga Corporate Limo<span class="arrow">→</span></a>
+          <a href="vaughan-corporate-limo.html" class="sitemap-link sitemap-city">Vaughan Corporate Limo<span class="arrow">→</span></a>
+          <a href="markham-corporate-limo.html" class="sitemap-link sitemap-city">Markham Corporate Limo<span class="arrow">→</span></a>
+          <a href="oakville-corporate-limo.html" class="sitemap-link sitemap-city">Oakville Corporate Limo<span class="arrow">→</span></a>
+          <a href="richmond-hill-corporate-limo.html" class="sitemap-link sitemap-city">Richmond Hill Corporate Limo<span class="arrow">→</span></a>
+          <a href="hamilton-corporate-limo.html" class="sitemap-link sitemap-city">Hamilton Corporate Limo<span class="arrow">→</span></a>
+          <a href="niagara-falls-corporate-limo.html" class="sitemap-link sitemap-city">Niagara Falls Corporate Limo<span class="arrow">→</span></a>
+          <a href="brampton-corporate-limo.html" class="sitemap-link sitemap-city">Brampton Corporate Limo<span class="arrow">→</span></a>
+          <a href="aurora-corporate-limo.html" class="sitemap-link sitemap-city">Aurora Corporate Limo<span class="arrow">→</span></a>
+          <a href="burlington-corporate-limo.html" class="sitemap-link sitemap-city">Burlington Corporate Limo<span class="arrow">→</span></a>
+          <a href="king-city-corporate-limo.html" class="sitemap-link sitemap-city">King City Corporate Limo<span class="arrow">→</span></a>
+          <a href="london-corporate-limo.html" class="sitemap-link sitemap-city">London Corporate Limo<span class="arrow">→</span></a>
+          <a href="milton-corporate-limo.html" class="sitemap-link sitemap-city">Milton Corporate Limo<span class="arrow">→</span></a>
+          <a href="guelph-corporate-limo.html" class="sitemap-link sitemap-city">Guelph Corporate Limo<span class="arrow">→</span></a>
+          <a href="waterloo-kitchener-corporate-limo.html" class="sitemap-link sitemap-city">Waterloo-Kitchener Corporate Limo<span class="arrow">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>LIMO<span>4ALL</span></h3>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
+        <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="AirportHUB.html">Airport Limo</a>
+        <a href="CorporateHUB.html">Corporate Car Service</a>
+        <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="car-service.html">Personal Chauffeur</a>
+        <a href="events.html">Events &amp; Concerts</a>
+        <a href="tours.html">Niagara Tours</a>
+      </div>
+      <div class="footer-col">
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Limo4All</a>
+        <a href="faq.html">FAQ</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var ham = document.getElementById('hamburger');
+  var nav = document.getElementById('main-nav');
+  if (ham && nav) {
+    ham.addEventListener('click', function() { nav.classList.toggle('open'); });
+  }
+</script>
+</body>
+</html>

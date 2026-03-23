@@ -237,7 +237,7 @@
   .cs-fleet-name{font-family:var(--font-serif);font-size:1.3rem;font-style:italic;color:#fff;margin-bottom:6px;line-height:1.2}
   .cs-fleet-model{font-size:11.5px;color:rgba(255,255,255,0.35);margin-bottom:16px;font-weight:300}
   .cs-fleet-specs{display:flex;gap:14px;margin-bottom:18px;flex-wrap:wrap}
-  .cs-fleet-spec{font-size:11px;color:rgba(255,255,255,0.55);display:flex;align-items:center;gap:5px;font-weight:500}
+  .cs-fleet-spec{font-size:11px;color:var(--blue);display:flex;align-items:center;gap:5px;font-weight:500}
   .cs-fleet-spec::before{content:'·';color:var(--blue);font-size:14px;line-height:1}
   .cs-fleet-spec:first-child::before{display:none}
   .cs-fleet-features{display:flex;flex-direction:column;gap:7px;margin-bottom:22px}
@@ -327,7 +327,7 @@
   .sf-btns{display:flex;gap:10px;margin-top:4px}
   .btn-speak-submit{flex:1;height:48px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;border:none;border-radius:50px;border-bottom:3px solid var(--blue-dark);cursor:pointer;transition:background 0.15s}
   .btn-speak-submit:hover{background:var(--blue-hover)}
-  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:12.5px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.14);text-decoration:none;transition:all 0.15s;white-space:nowrap}
+  .btn-speak-call{display:flex;align-items:center;justify-content:center;background:transparent;color:var(--blue);font-family:var(--font-sans);font-size:12.5px;font-weight:600;padding:12px 20px;border-radius:50px;border:1px solid rgba(255,255,255,0.14);text-decoration:none;transition:all 0.15s;white-space:nowrap}
   .btn-speak-call:hover{border-color:var(--blue);color:var(--blue)}
   .sf-note{font-family:var(--font-sans);font-size:10px;color:rgba(255,255,255,0.18);text-align:center;margin-top:14px;line-height:1.6}
 
@@ -393,7 +393,7 @@
   @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
-  .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
   .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
   .footer-brand h3 span{color:var(--blue)}
@@ -459,7 +459,7 @@
     .footer-grid{grid-template-columns:1fr}
     .sf-row,.cs-field-row{grid-template-columns:1fr}
   }
-  </style>
+</style>
 </head>
 <body>
 
@@ -472,12 +472,11 @@
       <span class="pb-sep">&middot;</span>
       <span>500+ Reviews</span>
       <span class="pb-sep">&middot;</span>
-      <span>&#127809; Canadian Owned &amp; Operated</span>
+      <span>20+ Years Serving GTA</span>
     </div>
-    <div class="pb-center">Toronto&rsquo;s #1 Limo &amp; Chauffeur Service &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-center">Corporate Car Service in Waterloo Kitchener &mdash; Discreet, Punctual, Professional &mdash; Book Online</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
-      <a href="sms:+16473131786">&#128172;&nbsp; 647 313 1786</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
     </div>
   </div>
@@ -486,28 +485,26 @@
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">LIMO<span>4ALL</span></a>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='inline'"><span style="display:none">LIMO<span>4ALL</span></span></a>
     <nav class="nav" id="main-nav">
       <a href="index.html">Home</a>
-      <a href="airport.html">Airport</a>
-      <a href="corporate.html" class="active">Corporate</a>
-      <a href="wedding.html">Wedding</a>
+      <a href="AirportHUB.html">Airport</a>
+      <a href="CorporateHUB.html" class="active">Corporate</a>
+      <a href="WeddingHUB.html">Wedding</a>
       <a href="events.html">Events</a>
-      <a href="hourly.html">Hourly</a>
+      <a href="car-service.html">Personal</a>
       <a href="tours.html">Tours</a>
+      <a href="sprinter.html">Sprinter</a>
       <a href="fleet.html">Fleet</a>
-      <a href="locations.html">Locations</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="hdr-right">
-      <a href="fifa-world-cup-2026.html" class="fifa">&#9917; FIFA 2026</a>
       <div class="hdr-phone-wrap">
-        <span class="hdr-phone-label">Call / Text</span>
+        <span class="hdr-phone-label">Reservations</span>
         <a href="tel:+14164513106" class="hdr-phone">416 451 3106</a>
-        <span style="font-size:10px;color:var(--text-light);display:block;margin-top:1px">Text: 647 313 1786 (faster)</span>
       </div>
       <a href="booking.html" class="btn-book">Book Online</a>
-      <a href="quote.html" class="btn-quote-sm">Get a Quote</a>
+      <a href="contact.html" class="btn-quote-sm">Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -545,7 +542,7 @@
       <div class="bc-left">
         <a href="index.html">Home</a>
         <span class="bc-sep">&#8250;</span>
-        <a href="corporate.html">Corporate Car Service</a>
+        <a href="AirportHUB.html">Airport Limo</a>
         <span class="bc-sep">&#8250;</span>
         <span class="bc-current">Waterloo-Kitchener</span>
       </div>
@@ -789,7 +786,7 @@
             <h3 class="cs-svc-card-title">Corporate Events &amp; Conferences</h3>
             <p class="cs-svc-card-text">The Waterloo Region hosts a growing calendar of technology conferences, startup demo days, investor summits, corporate innovation events, and university research showcases throughout the year. These events draw executives and delegations from across Canada, the United States, and internationally, creating complex ground transportation requirements that demand experienced coordination.</p>
             <p class="cs-svc-card-text">Limo4All Transportation provides dedicated event transportation that ensures every participant moves between venues efficiently and professionally. We work with corporate event teams and executive coordinators to build arrival and departure logistics plans, manage multi-vehicle deployments, and ensure visiting delegations and VIP guests experience seamless ground transportation throughout the full event program.</p>
-            <a href="booking.html" class="cs-svc-card-cta">Book Event Transportation &rarr;</a>
+            <a href="CorporateHUB.html" class="cs-svc-card-cta">Learn About Corporate &rarr;</a>
             <div class="cs-svc-card-bottom-strip">
               <span class="cs-svc-card-bottom-item">Multi-Vehicle</span>
               <span class="cs-svc-card-bottom-item">VIP Service</span>
@@ -1036,7 +1033,7 @@
       </div>
     </div>
     <div class="cs-compare-ctas">
-      <a href="quote.html" class="btn-outline-dark">Get a Quote</a>
+      <a href="contact.html" class="btn-outline-dark">Get a Quote</a>
       <a href="booking.html" class="btn-primary">Book Online</a>
     </div>
   </div>
@@ -1048,7 +1045,6 @@
     <div class="cs-fifa-inner">
       <span class="cs-fifa-eyebrow">&#9917;&nbsp; FIFA World Cup 2026 &mdash; Official Transportation</span>
       <h2 class="cs-fifa-heading">Book your World Cup transfers now &mdash;<br>before availability fills up.</h2>
-      <a href="fifa-world-cup-2026.html" class="cs-fifa-btn">Reserve My FIFA Transfer &rarr;</a>
     </div>
   </div>
 </section>
@@ -1272,53 +1268,47 @@
 </section>
 <!-- /ZONE: internal-links -->
 
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Canadian-owned and operated. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
         <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
         <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="corporate.html">Corporate Car Service</a>
-        <a href="corporate.html">Corporate Car Service</a>
-        <a href="wedding.html">Wedding Limo</a>
+        <a href="AirportHUB.html">Airport Limo</a>
+        <a href="CorporateHUB.html">Corporate Car Service</a>
+        <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="car-service.html">Personal Chauffeur</a>
         <a href="events.html">Events &amp; Concerts</a>
-        <a href="hourly.html">Hourly Charter</a>
         <a href="tours.html">Niagara Tours</a>
-        <a href="sprinter.html">Sprinter Van Groups</a>
-        <a href="transfers.html">City-to-City Transfers</a>
       </div>
       <div class="footer-col">
-        <h4>Locations</h4>
-        <a href="locations/toronto.html">Toronto</a>
-        <a href="locations/mississauga.html">Mississauga</a>
-        <a href="locations/vaughan.html">Vaughan</a>
-        <a href="locations/markham.html">Markham</a>
-        <a href="locations/oakville.html">Oakville</a>
-        <a href="locations/richmond-hill.html">Richmond Hill</a>
-        <a href="locations/hamilton.html">Hamilton</a>
-        <a href="locations/niagara.html">Niagara Falls</a>
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="booking.html">Book Online</a>
-        <a href="quote.html">Get a Quote</a>
-        <a href="fleet.html">Fleet Overview</a>
-        <a href="locations.html">All Locations</a>
-        <a href="fifa-world-cup-2026.html">FIFA 2026</a>
-        <a href="about.html">About Us</a>
+        <h4>Company</h4>
         <a href="contact.html">Contact Us</a>
-        <a href="faq.html">FAQs</a>
+        <a href="about.html">About Limo4All</a>
+        <a href="faq.html">FAQ</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
-      <span>Corporate Car Service Waterloo-Kitchener, Waterloo Region and all of Ontario.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
     </div>
   </div>
 </footer>

@@ -7,7 +7,7 @@
   <meta name="description" content="Premium corporate car service across the GTA. Executive sedans, SUVs, and Sprinters for meetings, airport transfers, and client entertainment. Monthly billing available.">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"TaxiService","name":"Corporate Car Service Toronto","provider":{"@type":"LocalBusiness","name":"Limo4All","telephone":"1-800-XXX-XXXX","areaServed":"Greater Toronto Area"},"serviceType":"Corporate Chauffeur Service","priceRange":"$75-$380"}
+  {"@context":"https://schema.org","@type":"TaxiService","name":"Corporate Car Service Toronto","provider":{"@type":"LocalBusiness","name":"Limo4All","telephone":"416 451 3106","areaServed":"Greater Toronto Area"},"serviceType":"Corporate Chauffeur Service","priceRange":"$75-$380"}
   </script>
 
   <style>
@@ -54,8 +54,17 @@
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
 
   /* ── PROMO BAR ──────────────────────────────────────────────────── */
-  .promo-bar{background:var(--blue);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
-  .promo-bar a{color:#fff;text-decoration:underline}
+  .promo-bar{background:var(--blue);color:#fff;padding:7px 0;font-family:var(--font-sans)}
+  .promo-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
+  .pb-stars{letter-spacing:1.5px;font-size:10.5px}
+  .pb-sep{opacity:0.4;font-size:11px}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1;white-space:nowrap}
+  .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .pb-right a{color:#fff;opacity:0.95}
+  .pb-right a:hover{opacity:1;text-decoration:underline}
+  .pb-pill{background:rgba(255,255,255,0.2);border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
+  @media(max-width:768px){.pb-left{display:none}.pb-center{text-align:left}}
 
   /* ── HEADER ─────────────────────────────────────────────────────── */
   .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
@@ -64,7 +73,8 @@
   .logo span{color:var(--blue)}
   .logo img{max-height:44px;width:auto}
   .nav{display:flex;align-items:center;gap:2px}
-  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:8px 11px;border-radius:6px;transition:all 0.15s}
+  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:6px 8px;border-radius:6px;transition:all 0.15s}
+  @media(max-width:1200px){.hdr-phone-wrap{display:none}}
   .nav a:hover,.nav a.active{color:var(--blue);background:var(--blue-bg)}
   .hdr-right{display:flex;align-items:center;gap:12px}
   .hdr-phone-wrap{text-align:right}
@@ -83,7 +93,7 @@
   .ticker-wrap{background:var(--dark);overflow:hidden;padding:8px 0}
   .ticker-track{display:flex;width:max-content;animation:ticker 40s linear infinite}
   .ticker-wrap:hover .ticker-track{animation-play-state:paused}
-  .ticker-track span{color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
+  .ticker-track span{color:var(--blue);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
   .ticker-track span::after{content:'·';color:var(--blue);margin-left:28px}
   @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -188,7 +198,7 @@
   .acct-band{background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 100%);padding:52px 0}
   .acct-band-inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
   .acct-band h3{font-family:var(--font-serif);font-size:clamp(1.4rem,2.5vw,2rem);font-style:italic;color:#fff;margin-bottom:8px}
-  .acct-band p{font-family:var(--font-sans);font-size:13.5px;color:rgba(255,255,255,0.55);line-height:1.6;font-weight:300;max-width:560px}
+  .acct-band p{font-family:var(--font-sans);font-size:13.5px;color:var(--blue);line-height:1.6;font-weight:300;max-width:560px}
   .acct-band-ctas{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
   .btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--dark);font-family:var(--font-sans);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:13px 28px;border-radius:50px;transition:all 0.15s;white-space:nowrap}
   .btn-white:hover{background:var(--blue);color:#fff}
@@ -251,7 +261,7 @@
   .fleet .sec-h2 em{color:var(--blue)}
   .fleet .sec-sub{color:rgba(255,255,255,0.4)}
   .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px;position:relative;z-index:1}
-  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.15s}
+  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--blue);cursor:pointer;transition:all 0.15s}
   .ff.active,.ff:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
   .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
   .fleet-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column}
@@ -436,7 +446,7 @@
   @media(max-width:1024px){.speak-grid{grid-template-columns:1fr;gap:40px}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
-  .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
   .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
   .footer-brand h3 span{color:var(--blue)}
@@ -517,42 +527,69 @@
   .cs-interlink-link:hover{color:var(--blue);gap:13px}
   .cs-interlink-link-arrow{color:var(--blue);font-size:11px;font-weight:700;flex-shrink:0}
   @media(max-width:640px){.cs-interlink-grid{grid-template-columns:1fr}}
-  </style>
+
+  /* ── CITY GRID ─────────────────────────────────────────────────── */
+  .city-coverage{background:var(--off-white);padding:72px 0;border-top:1px solid var(--border)}
+  .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+  .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:block;color:inherit;text-decoration:none}
+  .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
+  .city-card{display:flex;flex-direction:column;justify-content:space-between;min-height:72px}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:auto}
+  .city-pills-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .city-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s}
+  .city-pill:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.12)}
+  .city-pill::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+  @media(max-width:1024px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:768px){.city-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.city-grid{grid-template-columns:1fr}}
+
+</style>
 </head>
 <body>
 
 <!-- PROMO BAR -->
 <div class="promo-bar">
-  <strong>Corporate Accounts Welcome &mdash; Monthly Invoicing Available.</strong>&nbsp; Set up your account today &nbsp;&mdash;&nbsp; <a href="tel:+18001234567">Call 1-800-XXX-XXXX</a>
+  <div class="promo-inner">
+    <div class="pb-left">
+      <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>4.9 Google Rating</span>
+      <span class="pb-sep">&middot;</span>
+      <span>500+ Reviews</span>
+      <span class="pb-sep">&middot;</span>
+      <span>20+ Years Serving GTA</span>
+    </div>
+    <div class="pb-center">Executive Corporate Car Service Across the GTA &mdash; Professional, Discreet, On-Time</div>
+    <div class="pb-right">
+      <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
+      <a href="booking.html" class="pb-pill">Book Online</a>
+    </div>
+  </div>
 </div>
 
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='block'">
-      <span style="display:none">LIMO<span>4ALL</span></span>
-    </a>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='inline'"><span style="display:none">LIMO<span>4ALL</span></span></a>
     <nav class="nav" id="main-nav">
       <a href="index.html">Home</a>
       <a href="AirportHUB.html">Airport</a>
       <a href="CorporateHUB.html" class="active">Corporate</a>
       <a href="WeddingHUB.html">Wedding</a>
-      <a href="EventsHUB.html">Events</a>
-      <a href="HourlyHUB.html">Hourly</a>
-      <a href="ToursHUB.html">Tours</a>
+      <a href="events.html">Events</a>
+      <a href="car-service.html">Personal</a>
+      <a href="tours.html">Tours</a>
+      <a href="sprinter.html">Sprinter</a>
       <a href="fleet.html">Fleet</a>
-      <a href="locations.html">Locations</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="hdr-right">
-      <a href="fifa-world-cup-2026.html" class="fifa">&#9917; FIFA 2026</a>
       <div class="hdr-phone-wrap">
         <span class="hdr-phone-label">Reservations</span>
-        <a href="tel:+18001234567" class="hdr-phone">1-800-XXX-XXXX</a>
+        <a href="tel:+14164513106" class="hdr-phone">416 451 3106</a>
       </div>
       <a href="booking.html" class="btn-book">Book Online</a>
-      <a href="corporate-account.html" class="btn-quote-sm">Open Account</a>
+      <a href="contact.html" class="btn-quote-sm">Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -607,7 +644,7 @@
       </div>
       <div class="hero-ctas">
         <a href="booking.html" class="btn-primary">Book a Ride</a>
-        <a href="corporate-account.html" class="btn-outline-dark">Open Corporate Account</a>
+        <a href="contact.html" class="btn-outline-dark">Open Corporate Account</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -738,7 +775,7 @@
       </div>
     </div>
     <div class="sec-cta-row">
-      <a href="corporate-account.html" class="btn-sec-more">Open a Corporate Account &rarr;</a>
+      <a href="contact.html" class="btn-sec-more">Open a Corporate Account &rarr;</a>
     </div>
   </div>
 </section>
@@ -752,8 +789,8 @@
         <p>Set up takes less than 10 minutes. Choose between pay-per-ride invoicing or prepaid account credits. No minimum monthly spend required. Cancel or pause your account at any time.</p>
       </div>
       <div class="acct-band-ctas">
-        <a href="corporate-account.html" class="btn-white">Open an Account &rarr;</a>
-        <a href="tel:+18001234567" class="btn-ghost-white">Call to Discuss</a>
+        <a href="contact.html" class="btn-white">Open an Account &rarr;</a>
+        <a href="tel:+14164513106" class="btn-ghost-white">Call to Discuss</a>
       </div>
     </div>
   </div>
@@ -811,7 +848,7 @@
             <li class="s-panel-bullet">Add unlimited authorized bookers with role-based spending limits</li>
             <li class="s-panel-bullet">Full portal access activated same day, every time</li>
           </ul>
-          <a href="corporate-account.html" class="s-panel-link">Open Your Account &rarr;</a>
+          <a href="contact.html" class="s-panel-link">Open Your Account &rarr;</a>
         </div>
         <div class="s-panel" data-panel="1">
           <span class="s-panel-bg-num">2</span>
@@ -856,7 +893,7 @@
             <li class="s-panel-bullet">Volume discounts apply automatically above 20 rides/month</li>
             <li class="s-panel-bullet">Export to CSV or PDF for expense reporting integration</li>
           </ul>
-          <a href="corporate-account.html" class="s-panel-link">See Billing Details &rarr;</a>
+          <a href="contact.html" class="s-panel-link">See Billing Details &rarr;</a>
         </div>
       </div>
     </div>
@@ -1019,7 +1056,7 @@
       </div>
     </div>
     <div class="compare-ctas">
-      <a href="corporate-account.html" class="btn-outline-dark">Open Corporate Account</a>
+      <a href="contact.html" class="btn-outline-dark">Open Corporate Account</a>
       <a href="booking.html" class="btn-primary">Book a Ride Now</a>
     </div>
   </div>
@@ -1077,7 +1114,7 @@
             <li class="s-panel-bullet">Driver waits between meetings at no extra hourly cost</li>
             <li class="s-panel-bullet">Real-time rerouting if your schedule changes mid-day</li>
           </ul>
-          <a href="HourlyHUB.html" class="s-panel-link">See Hourly Service &rarr;</a>
+          <a href="car-service.html" class="s-panel-link">See Hourly Service &rarr;</a>
         </div>
         <div class="why-panel-item" data-panel="1">
           <span class="why-panel-bg">02</span>
@@ -1105,7 +1142,7 @@
             <li class="s-panel-bullet">Tinted windows and privacy available on request</li>
             <li class="s-panel-bullet">Driver briefed on client name, etiquette, and destination flow</li>
           </ul>
-          <a href="EventsHUB.html" class="s-panel-link">See Events Service &rarr;</a>
+          <a href="events.html" class="s-panel-link">See Events Service &rarr;</a>
         </div>
         <div class="why-panel-item" data-panel="3">
           <span class="why-panel-bg">04</span>
@@ -1314,11 +1351,38 @@
           <svg width="13" height="13" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
           View All on Google
         </a>
-        <a href="corporate-account.html" class="rev-agg-cta">
+        <a href="contact.html" class="rev-agg-cta">
           Open a Corporate Account &rarr;
         </a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- CITY COVERAGE -->
+<section class="city-coverage" id="service-areas">
+  <div class="wrap">
+    <span class="sec-label">Areas We Serve</span>
+    <h2 class="sec-h2">Corporate Car Service <em>Near You</em></h2>
+    <p class="sec-sub">Professional corporate limo and car service throughout the GTA and Southern Ontario. Select your city for local pricing and availability.</p>
+    <div class="city-grid">
+      <a href="toronto-corporate-limo.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="mississauga-corporate-limo.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="vaughan-corporate-limo.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="markham-corporate-limo.html" class="city-card"><h3>Markham</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="oakville-corporate-limo.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="richmond-hill-corporate-limo.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="hamilton-corporate-limo.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="niagara-falls-corporate-limo.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="brampton-corporate-limo.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="aurora-corporate-limo.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="burlington-corporate-limo.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="king-city-corporate-limo.html" class="city-card"><h3>King City</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="london-corporate-limo.html" class="city-card"><h3>London</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="milton-corporate-limo.html" class="city-card"><h3>Milton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="guelph-corporate-limo.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="waterloo-kitchener-corporate-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">View Details &rsaquo;</span></a>
     </div>
   </div>
 </section>
@@ -1332,13 +1396,13 @@
         <h2 class="speak-h2">Need to Speak With Us About <strong>Corporate Travel?</strong></h2>
         <p class="speak-sub">Questions about corporate accounts, monthly billing, executive transfers, or multi-vehicle bookings &mdash; our team is available around the clock.</p>
         <div class="speak-channels">
-          <a href="tel:+18001234567" class="speak-channel">
+          <a href="tel:+14164513106" class="speak-channel">
             <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-            <div><div class="speak-ch-label">Call Us 24/7</div><div class="speak-ch-value">1-800-XXX-XXXX</div><div class="speak-ch-note">Available 24 hours &middot; 7 days a week</div></div>
+            <div><div class="speak-ch-label">Call Us 24/7</div><div class="speak-ch-value">416 451 3106</div><div class="speak-ch-note">Available 24 hours &middot; 7 days a week</div></div>
           </a>
-          <a href="sms:+18001234567" class="speak-channel">
+          <a href="sms:+16473131786" class="speak-channel">
             <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <div><div class="speak-ch-label">Text Us</div><div class="speak-ch-value">SMS &mdash; 1-800-XXX-XXXX</div><div class="speak-ch-note">Fast response &middot; Day or night</div></div>
+            <div><div class="speak-ch-label">Text Us</div><div class="speak-ch-value">SMS &mdash; 416 451 3106</div><div class="speak-ch-note">Fast response &middot; Day or night</div></div>
           </a>
           <a href="mailto:info@limo4all.ca" class="speak-channel">
             <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -1356,7 +1420,7 @@
         <textarea class="sf-textarea" placeholder="Tell us about your corporate travel needs &mdash; account setup, group bookings, billing..."></textarea>
         <div class="sf-btns">
           <button type="submit" class="btn-speak-submit">Send Enquiry</button>
-          <a href="tel:+18001234567" class="btn-speak-call">Call Now</a>
+          <a href="tel:+14164513106" class="btn-speak-call">Call Now</a>
         </div>
         <div class="sf-note">Flat rate confirmed instantly &middot; No credit card to quote &middot; 24/7 dispatch</div>
       </div>
@@ -1378,7 +1442,7 @@
           <span class="rel-arrow">Learn More &rarr;</span>
         </div>
       </a>
-      <a href="EventsHUB.html" class="rel-card">
+      <a href="events.html" class="rel-card">
         <div class="rel-img"><img src="./images/service-events.png" alt="Events & Concerts"></div>
         <div class="rel-body">
           <h4>Events &amp; Concerts</h4>
@@ -1394,7 +1458,7 @@
           <span class="rel-arrow">Learn More &rarr;</span>
         </div>
       </a>
-      <a href="ToursHUB.html" class="rel-card">
+      <a href="tours.html" class="rel-card">
         <div class="rel-img"><img src="./images/service-tours.png" alt="Niagara Tours"></div>
         <div class="rel-body">
           <h4>Niagara &amp; GTA Tours</h4>
@@ -1406,49 +1470,47 @@
   </div>
 </section>
 
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by hundreds of GTA businesses and thousands of passengers.</p>
-        <a href="tel:+18001234567" class="footer-phone">1-800-XXX-XXXX</a>
-        <span class="footer-email">corporate@limo4all.com</span>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
+        <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <a href="AirportHUB.html">Airport Limo</a>
         <a href="CorporateHUB.html">Corporate Car Service</a>
         <a href="WeddingHUB.html">Wedding Limo</a>
-        <a href="EventsHUB.html">Events &amp; Concerts</a>
-        <a href="HourlyHUB.html">Hourly Charter</a>
-        <a href="ToursHUB.html">Niagara Tours</a>
+        <a href="car-service.html">Personal Chauffeur</a>
+        <a href="events.html">Events &amp; Concerts</a>
+        <a href="tours.html">Niagara Tours</a>
       </div>
       <div class="footer-col">
-        <h4>Corporate</h4>
-        <a href="corporate-account.html">Open an Account</a>
-        <a href="corporate-account.html">Account Portal</a>
-        <a href="fleet.html">Fleet Overview</a>
-        <a href="contact.html">Corporate Contact</a>
-        <a href="fifa-world-cup-2026.html">FIFA 2026</a>
-        <a href="locations.html">All Locations</a>
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
       </div>
       <div class="footer-col">
-        <h4>Locations</h4>
-        <a href="locations.html">Toronto</a>
-        <a href="locations.html">Mississauga</a>
-        <a href="locations.html">Vaughan</a>
-        <a href="locations.html">Oakville</a>
-        <a href="locations.html">Markham</a>
-        <a href="locations.html">Richmond Hill</a>
-        <a href="locations.html">Hamilton</a>
-        <a href="locations.html">Niagara Falls</a>
+        <h4>Company</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Limo4All</a>
+        <a href="faq.html">FAQ</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
-      <span>Corporate Car Service Toronto, Mississauga, Vaughan and all of Ontario.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
     </div>
   </div>
 </footer>

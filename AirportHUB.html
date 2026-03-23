@@ -7,7 +7,7 @@
   <meta name="description" content="Professional airport limo service to Toronto Pearson (YYZ), Billy Bishop (YTZ) and all GTA airports. Flat rates, real-time flight tracking, meet-and-greet. Book online or call.">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"TaxiService","name":"Airport Limo Toronto","provider":{"@type":"LocalBusiness","name":"Limo4All","telephone":"1-800-XXX-XXXX","areaServed":"Greater Toronto Area"},"serviceType":"Airport Limousine Transfer","priceRange":"$75-$380"}
+  {"@context":"https://schema.org","@type":"TaxiService","name":"Airport Limo Toronto","provider":{"@type":"LocalBusiness","name":"Limo4All","telephone":"416 451 3106","areaServed":"Greater Toronto Area"},"serviceType":"Airport Limousine Transfer","priceRange":"$75-$380"}
   </script>
 
   <style>
@@ -54,8 +54,17 @@
   .wrap{max-width:var(--max-w);margin:0 auto;padding:0 28px}
 
   /* ── PROMO BAR ──────────────────────────────────────────────────── */
-  .promo-bar{background:var(--blue);color:#fff;text-align:center;padding:8px 16px;font-family:var(--font-sans);font-size:13px;font-weight:600;letter-spacing:0.02em}
-  .promo-bar a{color:#fff;text-decoration:underline}
+  .promo-bar{background:var(--blue);color:#fff;padding:7px 0;font-family:var(--font-sans)}
+  .promo-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .pb-left{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;opacity:0.92;white-space:nowrap;flex-shrink:0}
+  .pb-stars{letter-spacing:1.5px;font-size:10.5px}
+  .pb-sep{opacity:0.4;font-size:11px}
+  .pb-center{font-size:12.5px;font-weight:700;text-align:center;flex:1;white-space:nowrap}
+  .pb-right{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;white-space:nowrap;flex-shrink:0}
+  .pb-right a{color:#fff;opacity:0.95}
+  .pb-right a:hover{opacity:1;text-decoration:underline}
+  .pb-pill{background:rgba(255,255,255,0.2);border-radius:50px;padding:3px 10px;font-size:11px;font-weight:700}
+  @media(max-width:768px){.pb-left{display:none}.pb-center{text-align:left}}
 
   /* ── HEADER ─────────────────────────────────────────────────────── */
   .header{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300;box-shadow:0 2px 12px rgba(0,0,0,0.07)}
@@ -64,7 +73,8 @@
   .logo span{color:var(--blue)}
   .logo img{max-height:44px;width:auto}
   .nav{display:flex;align-items:center;gap:2px}
-  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:8px 11px;border-radius:6px;transition:all 0.15s}
+  .nav a{font-family:var(--font-sans);font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--text);padding:6px 8px;border-radius:6px;transition:all 0.15s}
+  @media(max-width:1200px){.hdr-phone-wrap{display:none}}
   .nav a:hover,.nav a.active{color:var(--blue);background:var(--blue-bg)}
   .hdr-right{display:flex;align-items:center;gap:12px}
   .hdr-phone-wrap{text-align:right}
@@ -83,7 +93,7 @@
   .ticker-wrap{background:var(--dark);overflow:hidden;padding:8px 0}
   .ticker-track{display:flex;width:max-content;animation:ticker 40s linear infinite}
   .ticker-wrap:hover .ticker-track{animation-play-state:paused}
-  .ticker-track span{color:rgba(255,255,255,0.55);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
+  .ticker-track span{color:var(--blue);font-family:var(--font-sans);font-size:11.5px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;white-space:nowrap;padding:0 28px}
   .ticker-track span::after{content:'·';color:var(--blue);margin-left:28px}
   @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -239,7 +249,7 @@
   .fleet .sec-h2 em{color:var(--blue)}
   .fleet .sec-sub{color:rgba(255,255,255,0.4)}
   .fleet-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:32px 0 40px;position:relative;z-index:1}
-  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.55);cursor:pointer;transition:all 0.15s}
+  .ff{padding:8px 20px;border-radius:50px;font-family:var(--font-sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--blue);cursor:pointer;transition:all 0.15s}
   .ff.active,.ff:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
   .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative;z-index:1}
   .fleet-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column}
@@ -283,6 +293,34 @@
   /* ── AIRPORTS SERVED ────────────────────────────────────────────── */
   .airports{background:var(--white);padding:90px 0}
   .airport-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:48px}
+  /* -- AIRPORT CARD PHOTO ---------------------------------------- */
+  .airport-card-photo{height:130px;overflow:hidden;position:relative;border-radius:18px 18px 0 0}
+  .airport-card-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(0.82);transition:transform 0.4s ease}
+  .airport-card:hover .airport-card-photo img{transform:scale(1.06)}
+  .airport-card-photo-badge{position:absolute;bottom:8px;left:14px;background:var(--blue);color:#fff;font-family:var(--font-sans);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;padding:3px 10px;border-radius:50px}
+
+  /* -- SCENARIO / INFO CARDS (used in hub pages) ----------------- */
+  .scenario-section{background:var(--off-white);padding:64px 0 56px;border-top:1px solid rgba(0,0,0,0.07)}
+  .scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+  .scenario-card{background:#fff;border-radius:16px;padding:28px 24px;border:1px solid rgba(0,0,0,0.07);border-top:3px solid var(--blue)}
+  .scenario-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:10px;font-family:var(--font-sans)}
+  .scenario-h4{font-family:var(--font-serif);font-size:1.1rem;margin:0 0 10px;color:var(--dark)}
+  .scenario-p{font-size:.875rem;color:var(--dark);opacity:.72;line-height:1.65;margin:0}
+  .scenario-cta{text-align:center;margin-top:40px}
+  @media(max-width:900px){.scenario-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:580px){.scenario-grid{grid-template-columns:1fr}}
+
+  /* -- INTERLINK PANEL (redesigned city page internal links) ----- */
+  .cs-interlink{background:var(--off-white);padding:56px 0;border-top:1px solid rgba(0,0,0,0.07)}
+  .cs-interlink-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+  .cs-interlink-panel{background:#fff;border-radius:16px;padding:28px 24px;border:1px solid rgba(0,0,0,0.07);border-top:3px solid var(--blue)}
+  .cs-interlink-panel-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin:0 0 16px;font-family:var(--font-sans)}
+  .cs-interlink-link{display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(0,0,0,0.06);color:var(--dark);text-decoration:none;font-size:.9rem;font-weight:500;transition:color 0.2s,padding-left 0.2s}
+  .cs-interlink-link:last-child{border-bottom:none}
+  .cs-interlink-link:hover{color:var(--blue);padding-left:6px}
+  .cs-interlink-link::before{content:'\2192';margin-right:10px;color:var(--blue);font-weight:700;flex-shrink:0}
+  @media(max-width:640px){.cs-interlink-inner{grid-template-columns:1fr}}
+
   .airport-card{background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative}
   .airport-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
   .airport-card:hover{border-color:var(--blue);box-shadow:0 12px 48px rgba(20,183,244,0.14);transform:translateY(-4px)}
@@ -366,7 +404,7 @@
   .fifa-heading strong{font-style:normal;font-weight:700;color:#fff;display:block}
   .fifa-heading em{color:#00c853;font-style:italic}
   .fifa-date-row{display:flex;align-items:center;gap:14px;margin-bottom:44px;flex-wrap:wrap}
-  .fifa-date{font-family:var(--font-sans);font-size:13px;font-weight:600;color:rgba(255,255,255,0.55);letter-spacing:0.04em}
+  .fifa-date{font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--blue);letter-spacing:0.04em}
   .fifa-date-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.25)}
   /* feature columns */
   .fifa-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;margin-bottom:40px}
@@ -510,7 +548,7 @@
   @media(max-width:1024px){.speak-grid{grid-template-columns:1fr;gap:40px}}
 
   /* ── FOOTER ─────────────────────────────────────────────────────── */
-  .footer{background:var(--dark2);color:rgba(255,255,255,0.55);padding:52px 0 22px}
+  .footer{background:var(--dark2);color:var(--blue);padding:52px 0 22px}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
   .footer-brand h3{font-family:var(--font-sans);font-size:1.3rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:10px}
   .footer-brand h3 span{color:var(--blue)}
@@ -564,6 +602,21 @@
     .related-grid{grid-template-columns:1fr 1fr}
     .rev-spotlight{padding:28px 24px 28px}
     .reviews-top-row{flex-direction:column;align-items:flex-start}
+    .hero-airports{flex-wrap:wrap;gap:6px}
+    .hero-airports span{font-size:11px;padding:5px 12px}
+    .hbc-top{flex-direction:column;gap:8px;align-items:flex-start}
+    .compare-wrap{flex-direction:column}
+    .compare-vs{display:none}
+    .hs-bar{flex-wrap:wrap;gap:0;justify-content:center}
+    .hs-block{width:50%;border-right:none;border-bottom:1px solid rgba(255,255,255,0.1)}
+    .float-cta{width:calc(100% - 32px);right:16px;bottom:16px}
+    .faq-grid{gap:8px}
+    .faq-q{font-size:14px;padding:16px 18px}
+    .ticker-wrap{display:none}
+    .promo-bar{font-size:11px;padding:8px 16px}
+    .s-tab{padding:12px 16px}
+    .s-num{width:28px;height:28px;font-size:11px}
+    .s-panel{padding:28px 24px}
   }
   @media(max-width:580px){
     .related-grid{grid-template-columns:1fr}
@@ -589,42 +642,101 @@
   .float-cta-trust{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;flex-wrap:wrap}
   .float-cta-trust span{font-family:var(--font-sans);font-size:9.5px;color:var(--text-light);display:flex;align-items:center;gap:4px}
   .float-cta-trust span::before{content:'✓';color:var(--blue);font-size:9px;font-weight:700}
-  </style>
+
+  /* ── AIRPORT SLIDER ─────────────────────────────────────────────── */
+  .apt-slider-wrap{position:relative;margin-top:48px}
+  .apt-slider-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:8px}
+  .apt-slider-track::-webkit-scrollbar{display:none}
+  .apt-slide{flex:0 0 calc((100% - 40px)/3);min-width:280px;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;position:relative;scroll-snap-align:start}
+  .apt-slide::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+  .apt-slide:hover{border-color:var(--blue);box-shadow:0 12px 40px rgba(20,183,244,0.14);transform:translateY(-4px)}
+  .apt-slide:hover::before{transform:scaleX(1)}
+  .apt-slide-img{height:200px;overflow:hidden;position:relative;flex-shrink:0}
+  .apt-slide-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.82);transition:transform 0.4s ease}
+  .apt-slide:hover .apt-slide-img img{transform:scale(1.06)}
+  .apt-slide-iata{position:absolute;top:12px;left:14px;background:var(--dark);color:#fff;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:50px}
+  .apt-slide-body{padding:22px 24px;flex:1;display:flex;flex-direction:column;gap:12px}
+  .apt-slide-name{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);line-height:1.3}
+  .apt-slide-loc{font-family:var(--font-sans);font-size:11.5px;color:var(--text-light);line-height:1.45}
+  .apt-slide-feats{display:flex;flex-wrap:wrap;gap:6px}
+  .apt-slide-feat{display:inline-flex;align-items:center;gap:5px;background:var(--blue-bg);color:var(--blue);font-family:var(--font-sans);font-size:10.5px;font-weight:600;padding:4px 10px;border-radius:50px;white-space:nowrap}
+  .apt-slide-feat svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .apt-slide-foot{margin-top:auto;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+  .apt-slide-price{font-family:var(--font-serif);font-size:1.6rem;font-style:italic;color:var(--blue);line-height:1}
+  .apt-slide-price em{font-family:var(--font-sans);font-size:10.5px;font-style:normal;color:var(--text-light);font-weight:400;margin-left:2px}
+  .apt-slide-arrow{font-family:var(--font-sans);font-size:11.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.06em}
+  .apt-nav-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px}
+  .apt-btn{width:42px;height:42px;border-radius:50%;background:var(--white);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;color:var(--text);transition:all 0.2s;flex-shrink:0;line-height:1}
+  .apt-btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+  .apt-dots{display:flex;gap:7px;align-items:center}
+  .apt-dot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;transition:all 0.2s;border:none;padding:0}
+  .apt-dot.active{background:var(--blue);transform:scale(1.3)}
+  @media(max-width:1024px){.apt-slide{flex:0 0 calc((100% - 20px)/2)}}
+  @media(max-width:640px){.apt-slide{flex:0 0 calc(100% - 4px)}}
+
+
+  /* ── CITY GRID ─────────────────────────────────────────────────── */
+  .city-coverage{background:var(--off-white);padding:72px 0;border-top:1px solid var(--border)}
+  .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+  .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:block;color:inherit;text-decoration:none}
+  .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
+  .city-card{display:flex;flex-direction:column;justify-content:space-between;min-height:72px}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:auto}
+  .city-pills-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .city-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s}
+  .city-pill:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.12)}
+  .city-pill::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+  @media(max-width:1024px){.city-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:768px){.city-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.city-grid{grid-template-columns:1fr}}
+
+</style>
 </head>
 <body>
 
 <!-- PROMO BAR -->
 <div class="promo-bar">
-  <strong>Flat-Rate Airport Transfers &mdash; No Surge Pricing Ever.</strong>&nbsp; Toronto from $75 &nbsp;&mdash;&nbsp; <a href="tel:+18001234567">Call 1-800-XXX-XXXX</a>
+  <div class="promo-inner">
+    <div class="pb-left">
+      <span class="pb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>4.9 Google Rating</span>
+      <span class="pb-sep">&middot;</span>
+      <span>500+ Reviews</span>
+      <span class="pb-sep">&middot;</span>
+      <span>20+ Years Serving GTA</span>
+    </div>
+    <div class="pb-center">Airport Limo to Pearson YYZ &amp; Billy Bishop YTZ &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-right">
+      <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
+      <a href="booking.html" class="pb-pill">Book Online</a>
+    </div>
+  </div>
 </div>
 
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='block'">
-      <span style="display:none">LIMO<span>4ALL</span></span>
-    </a>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='inline'"><span style="display:none">LIMO<span>4ALL</span></span></a>
     <nav class="nav" id="main-nav">
       <a href="index.html">Home</a>
-      <a href="airport.html" class="active">Airport</a>
-      <a href="corporate.html">Corporate</a>
-      <a href="wedding.html">Wedding</a>
+      <a href="AirportHUB.html" class="active">Airport</a>
+      <a href="CorporateHUB.html">Corporate</a>
+      <a href="WeddingHUB.html">Wedding</a>
       <a href="events.html">Events</a>
-      <a href="hourly.html">Hourly</a>
+      <a href="car-service.html">Personal</a>
       <a href="tours.html">Tours</a>
+      <a href="sprinter.html">Sprinter</a>
       <a href="fleet.html">Fleet</a>
-      <a href="locations.html">Locations</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="hdr-right">
-      <a href="fifa-world-cup-2026.html" class="fifa">&#9917; FIFA 2026</a>
       <div class="hdr-phone-wrap">
         <span class="hdr-phone-label">Reservations</span>
-        <a href="tel:+18001234567" class="hdr-phone">1-800-XXX-XXXX</a>
+        <a href="tel:+14164513106" class="hdr-phone">416 451 3106</a>
       </div>
       <a href="booking.html" class="btn-book">Book Online</a>
-      <a href="quote.html" class="btn-quote-sm">Get a Quote</a>
+      <a href="contact.html" class="btn-quote-sm">Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -913,6 +1025,8 @@
   </div>
 </section>
 
+<!-- SERVICES ZONE -->
+
 <!-- SEAMLESS TRAVEL EXPERIENCE -->
 <section class="seamless" id="services">
   <div class="wrap">
@@ -968,7 +1082,7 @@
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <h5>Reserve Your Ride in Minutes</h5>
-          <p>Book online or call 1-800-XXX-XXXX. Provide your pickup address, airport, flight number, and passengers. Your flat rate is confirmed immediately — it will not change.</p>
+          <p>Book online or call 416 451 3106. Provide your pickup address, airport, flight number, and passengers. Your flat rate is confirmed immediately — it will not change.</p>
           <ul class="s-panel-bullets">
             <li class="s-panel-bullet">Takes under 2 minutes to complete</li>
             <li class="s-panel-bullet">Rate locked instantly — no changes ever</li>
@@ -1039,7 +1153,7 @@
       </div>
     </div>
     <div class="sec-cta-row" style="margin-top:44px;text-align:center">
-      <a href="quote.html" class="btn-sec-more">Get a Free Quote &rarr;</a>
+      <a href="contact.html" class="btn-sec-more">Get a Free Quote &rarr;</a>
     </div>
   </div>
 </section>
@@ -1185,7 +1299,7 @@
       </div>
     </div>
     <div class="compare-ctas">
-      <a href="quote.html" class="btn-outline-dark">Get a Quote</a>
+      <a href="contact.html" class="btn-outline-dark">Get a Quote</a>
       <a href="booking.html" class="btn-primary">Book Online</a>
     </div>
   </div>
@@ -1194,122 +1308,220 @@
 <!-- AIRPORTS SERVED -->
 <section class="airports" id="coverage">
   <div class="wrap">
-    <span class="sec-label">GTA &amp; Beyond</span>
-    <h2 class="sec-h2">Airport Transfer <em>Routes</em></h2>
-    <p class="sec-sub">Flat-rate limo service to every major airport — wherever you are in the GTA. Every transfer includes real-time flight tracking, inside terminal meet &amp; greet, and 60-minute complimentary wait.</p>
-    <div class="airport-cards">
+    <span class="sec-label">All Airports Covered</span>
+    <h2 class="sec-h2">Airports We <em>Service</em></h2>
+    <p class="sec-sub">Flat-rate limo service to every major airport in Ontario and beyond &mdash; with real-time flight tracking, inside terminal meet &amp; greet, and 60-minute complimentary wait on every arrival.</p>
+  </div>
 
-      <a href="airport-pearson-yyz.html" class="airport-card">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <span class="airport-iata">YYZ</span>
-            <span class="airport-iata-sub">International</span>
+  <!-- Slider -->
+  <div class="wrap" style="overflow:hidden;position:relative">
+    <div class="apt-slider-wrap">
+      <div class="apt-slider-track" id="aptTrack">
+
+        <!-- YYZ -->
+        <a href="airport-pearson-yyz.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/pearsonairport.jpg" alt="Toronto Pearson International" loading="lazy">
+            <span class="apt-slide-iata">YYZ</span>
           </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Toronto Pearson International Airport</div>
-            <div class="airport-location">Mississauga, Ontario &mdash; Terminal 1 &amp; Terminal 3<br>Air Canada &bull; WestJet &bull; All Major Carriers</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features">
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Inside Meet &amp; Greet</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>60-Min Free Wait</span>
-          </div>
-          <div class="airport-pricing">
-            <div>
-              <span class="airport-from">Sedan from</span>
-              <span class="airport-price-val">$75<em>/flat rate</em></span>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Toronto Pearson International Airport</div>
+            <div class="apt-slide-loc">Mississauga, Ontario &mdash; Terminal 1 &amp; 3<br>Air Canada &bull; WestJet &bull; All Major Carriers</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Meet &amp; Greet</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>60-Min Wait</span>
             </div>
-            <span class="airport-arrow">View YYZ Transfers &rarr;</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="airport-billy-bishop-ytz.html" class="airport-card">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <span class="airport-iata">YTZ</span>
-            <span class="airport-iata-sub">City Airport</span>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Billy Bishop Toronto City Airport</div>
-            <div class="airport-location">Toronto Island, Ontario<br>Porter Airlines &bull; Air Canada Express</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features">
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Meet &amp; Greet</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>30-Min Free Wait</span>
-          </div>
-          <div class="airport-pricing">
-            <div>
-              <span class="airport-from">Sedan from</span>
-              <span class="airport-price-val">$65<em>/flat rate</em></span>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$75<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">View YYZ &rarr;</span>
             </div>
-            <span class="airport-arrow">View YTZ Transfers &rarr;</span>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a href="airport-hamilton-yhm.html" class="airport-card">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <span class="airport-iata">YHM</span>
-            <span class="airport-iata-sub">Regional</span>
+        <!-- YTZ -->
+        <a href="airport-billy-bishop-ytz.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/billibishop.jpg" alt="Billy Bishop Toronto City Airport" loading="lazy">
+            <span class="apt-slide-iata">YTZ</span>
           </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Hamilton John C. Munro Airport</div>
-            <div class="airport-location">Hamilton, Ontario<br>Cargo, Charter &amp; Seasonal Carriers</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features">
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Pickup</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
-          </div>
-          <div class="airport-pricing">
-            <div>
-              <span class="airport-from">Sedan from</span>
-              <span class="airport-price-val">$130<em>/flat rate</em></span>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Billy Bishop Toronto City Airport</div>
+            <div class="apt-slide-loc">Toronto Island, Ontario<br>Porter Airlines &bull; Air Canada Express</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Greet</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>30-Min Wait</span>
             </div>
-            <span class="airport-arrow">View YHM Transfers &rarr;</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="airport-buffalo-buf.html" class="airport-card">
-        <div class="airport-card-head">
-          <div class="airport-iata-wrap">
-            <span class="airport-iata">BUF</span>
-            <span class="airport-iata-sub">Cross-Border</span>
-          </div>
-          <div class="airport-head-info">
-            <div class="airport-name">Buffalo Niagara International Airport</div>
-            <div class="airport-location">Buffalo, New York &mdash; USA<br>Southwest &bull; American &bull; All U.S. Carriers</div>
-          </div>
-        </div>
-        <div class="airport-card-body">
-          <div class="airport-features">
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Border Crossing</span>
-            <span class="airport-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
-          </div>
-          <div class="airport-pricing">
-            <div>
-              <span class="airport-from">Sedan from</span>
-              <span class="airport-price-val">$220<em>/flat rate</em></span>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$65<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">View YTZ &rarr;</span>
             </div>
-            <span class="airport-arrow">View BUF Transfers &rarr;</span>
           </div>
-        </div>
-      </a>
+        </a>
 
+        <!-- YHM -->
+        <a href="airport-hamilton-yhm.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/hamiltionairport.jpg" alt="Hamilton International Airport" loading="lazy">
+            <span class="apt-slide-iata">YHM</span>
+          </div>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Hamilton John C. Munro Airport</div>
+            <div class="apt-slide-loc">Hamilton, Ontario<br>Cargo, Charter &amp; Seasonal Carriers</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Pickup</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
+            </div>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$130<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">View YHM &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- BUF -->
+        <a href="airport-buffalo-buf.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/buffaloniagra%20airport.jpg" alt="Buffalo Niagara International" loading="lazy">
+            <span class="apt-slide-iata">BUF</span>
+          </div>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Buffalo Niagara International Airport</div>
+            <div class="apt-slide-loc">Buffalo, New York &mdash; USA<br>Southwest &bull; American &bull; All U.S. Carriers</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Border Crossing</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
+            </div>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$220<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">View BUF &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- YXU -->
+        <a href="AirportHUB.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/londonontarioairport.jpg" alt="London International Airport" loading="lazy">
+            <span class="apt-slide-iata">YXU</span>
+          </div>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">London International Airport</div>
+            <div class="apt-slide-loc">London, Ontario<br>Air Canada, WestJet &amp; Charters</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Pickup</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
+            </div>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$175<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">Book YXU &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- YOW -->
+        <a href="AirportHUB.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/ottawaairport.jpg" alt="Ottawa Macdonald-Cartier International" loading="lazy">
+            <span class="apt-slide-iata">YOW</span>
+          </div>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Ottawa International Airport</div>
+            <div class="apt-slide-loc">Ottawa, Ontario<br>All Major Carriers &bull; Federal Hub</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Pickup</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
+            </div>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$420<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">Book YOW &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- YKF -->
+        <a href="AirportHUB.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/waterlooairport.jpg" alt="Waterloo International Airport" loading="lazy">
+            <span class="apt-slide-iata">YKF</span>
+          </div>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Waterloo International Airport</div>
+            <div class="apt-slide-loc">Kitchener-Waterloo, Ontario<br>CargoJet &bull; Seasonal &amp; Charter Flights</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Pickup</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
+            </div>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$130<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">Book YKF &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- YLS -->
+        <a href="AirportHUB.html" class="apt-slide">
+          <div class="apt-slide-img">
+            <img src="images/lakesimcoeairport.jpg" alt="Lake Simcoe Regional Airport" loading="lazy">
+            <span class="apt-slide-iata">YLS</span>
+          </div>
+          <div class="apt-slide-body">
+            <div class="apt-slide-name">Lake Simcoe Regional Airport</div>
+            <div class="apt-slide-loc">Barrie-Oro-Medonte, Ontario<br>Charter, Cargo &amp; Private Aviation</div>
+            <div class="apt-slide-feats">
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Flight Tracking</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Curbside Pickup</span>
+              <span class="apt-slide-feat"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Flat Rate</span>
+            </div>
+            <div class="apt-slide-foot">
+              <div>
+                <div style="font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-light);margin-bottom:2px">Sedan from</div>
+                <span class="apt-slide-price">$140<em>/flat rate</em></span>
+              </div>
+              <span class="apt-slide-arrow">Book YLS &rarr;</span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /apt-slider-track -->
+    </div><!-- /apt-slider-wrap -->
+
+    <!-- Nav controls -->
+    <div class="apt-nav-row">
+      <button class="apt-btn" id="aptPrev" aria-label="Previous">&#8249;</button>
+      <div class="apt-dots" id="aptDots"></div>
+      <button class="apt-btn" id="aptNext" aria-label="Next">&#8250;</button>
     </div>
-    <div class="sec-cta-row">
-      <a href="quote.html" class="btn-sec-more">Get a Custom Quote for Your City &rarr;</a>
+
+    <div style="text-align:center;margin-top:32px">
+      <a href="contact.html" class="btn-sec-more">Get a Custom Quote for Your City &rarr;</a>
     </div>
   </div>
 </section>
@@ -1429,7 +1641,7 @@
         &#9917;&nbsp; Book Your Match Day Transfer
         <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
-      <a href="quote.html" class="btn-fifa-ghost">Get a Group Quote</a>
+      <a href="contact.html" class="btn-fifa-ghost">Get a Group Quote</a>
     </div>
     <p class="fifa-note">Serving international fans, corporate delegations &amp; group bookings &middot; Sedan, SUV &amp; Sprinter available</p>
 
@@ -1521,6 +1733,33 @@
   </div>
 </section>
 
+<!-- CITY COVERAGE -->
+<section class="city-coverage" id="service-areas">
+  <div class="wrap">
+    <span class="sec-label">Areas We Serve</span>
+    <h2 class="sec-h2">Airport Limo Service <em>Near You</em></h2>
+    <p class="sec-sub">Flat-rate airport limo from your city to Toronto Pearson (YYZ), Billy Bishop (YTZ) and all Ontario airports. Select your city for local pricing.</p>
+    <div class="city-grid">
+      <a href="toronto-airport-limo.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="mississauga-airport-limo.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="vaughan-airport-limo.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="markham-airport-limo.html" class="city-card"><h3>Markham</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="oakville-airport-limo.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="richmond-hill-airport-limo.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="hamilton-airport-limo.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="niagara-falls-airport-limo.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="brampton-airport-limo.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="aurora-airport-limo.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="burlington-airport-limo.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="king-city-airport-limo.html" class="city-card"><h3>King City</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="london-airport-limo.html" class="city-card"><h3>London</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="milton-airport-limo.html" class="city-card"><h3>Milton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="guelph-airport-limo.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="waterloo-kitchener-airport-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- SPEAK WITH US -->
 <section class="speak" id="contact-us">
   <div class="wrap">
@@ -1530,13 +1769,13 @@
         <h2 class="speak-h2">Need to Speak With Us About <strong>Your Airport Transfer?</strong></h2>
         <p class="speak-sub">Questions about your flight, pickup location, wait time, or group rates &mdash; our GTA dispatch team handles airport transfers 24 hours a day.</p>
         <div class="speak-channels">
-          <a href="tel:+18001234567" class="speak-channel">
+          <a href="tel:+14164513106" class="speak-channel">
             <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.07 11.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-            <div><div class="speak-ch-label">Call Us 24/7</div><div class="speak-ch-value">1-800-XXX-XXXX</div><div class="speak-ch-note">Available 24 hours &middot; 7 days a week</div></div>
+            <div><div class="speak-ch-label">Call Us 24/7</div><div class="speak-ch-value">416 451 3106</div><div class="speak-ch-note">Available 24 hours &middot; 7 days a week</div></div>
           </a>
-          <a href="sms:+18001234567" class="speak-channel">
+          <a href="sms:+16473131786" class="speak-channel">
             <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-            <div><div class="speak-ch-label">Text Us</div><div class="speak-ch-value">SMS &mdash; 1-800-XXX-XXXX</div><div class="speak-ch-note">Fast response &middot; Day or night</div></div>
+            <div><div class="speak-ch-label">Text Us</div><div class="speak-ch-value">SMS &mdash; 416 451 3106</div><div class="speak-ch-note">Fast response &middot; Day or night</div></div>
           </a>
           <a href="mailto:info@limo4all.ca" class="speak-channel">
             <div class="speak-ch-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -1554,7 +1793,7 @@
         <textarea class="sf-textarea" placeholder="Tell us about your transfer &mdash; flight number, date, pickup location..."></textarea>
         <div class="sf-btns">
           <button type="submit" class="btn-speak-submit">Send Enquiry</button>
-          <a href="tel:+18001234567" class="btn-speak-call">Call Now</a>
+          <a href="tel:+14164513106" class="btn-speak-call">Call Now</a>
         </div>
         <div class="sf-note">Flat rate confirmed instantly &middot; No credit card to quote &middot; 24/7 dispatch</div>
       </div>
@@ -1568,7 +1807,7 @@
     <span class="sec-label">More From Limo4All</span>
     <h2 class="sec-h2">More <em>Services</em></h2>
     <div class="related-grid">
-      <a href="corporate.html" class="rel-card">
+      <a href="CorporateHUB.html" class="rel-card">
         <div class="rel-img"><img src="./images/service-corporate.png" alt="Corporate Limo"></div>
         <div class="rel-body">
           <h4>Corporate Limo</h4>
@@ -1576,7 +1815,7 @@
           <span class="rel-arrow">Learn More &rarr;</span>
         </div>
       </a>
-      <a href="wedding.html" class="rel-card">
+      <a href="WeddingHUB.html" class="rel-card">
         <div class="rel-img"><img src="./images/service-wedding.png" alt="Wedding Limo"></div>
         <div class="rel-body">
           <h4>Wedding Limo</h4>
@@ -1604,49 +1843,47 @@
   </div>
 </section>
 
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>LIMO<span>4ALL</span></h3>
-        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers.</p>
-        <a href="tel:+18001234567" class="footer-phone">1-800-XXX-XXXX</a>
-        <span class="footer-email">info@limo4all.com</span>
+        <p>Premium Ground Transportation Across Ontario. Licensed, insured and trusted by thousands of GTA passengers since 2003.</p>
+        <a href="tel:+14164513106" class="footer-phone">416 451 3106</a>
+        <span class="footer-email"><a href="mailto:info@limo4all.ca" style="color:rgba(255,255,255,0.35)">info@limo4all.ca</a></span>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="airport.html">Airport Limo</a>
-        <a href="corporate.html">Corporate Car Service</a>
-        <a href="wedding.html">Wedding Limo</a>
+        <a href="AirportHUB.html">Airport Limo</a>
+        <a href="CorporateHUB.html">Corporate Car Service</a>
+        <a href="WeddingHUB.html">Wedding Limo</a>
+        <a href="car-service.html">Personal Chauffeur</a>
         <a href="events.html">Events &amp; Concerts</a>
-        <a href="hourly.html">Hourly Charter</a>
         <a href="tours.html">Niagara Tours</a>
       </div>
       <div class="footer-col">
-        <h4>Locations</h4>
-        <a href="locations.html">Toronto</a>
-        <a href="locations.html">Mississauga</a>
-        <a href="locations.html">Vaughan</a>
-        <a href="locations.html">Oakville</a>
-        <a href="locations.html">Markham</a>
-        <a href="locations.html">Richmond Hill</a>
-        <a href="locations.html">Hamilton</a>
-        <a href="locations.html">Niagara Falls</a>
+        <h4>Vehicles</h4>
+        <a href="fleet.html#sedan">Executive Sedan</a>
+        <a href="fleet.html#suv">Luxury SUV</a>
+        <a href="sprinter.html">Mercedes Sprinter Van</a>
+        <a href="fleet.html">Full Fleet Overview</a>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="booking.html">Book Online</a>
-        <a href="quote.html">Get a Quote</a>
-        <a href="fleet.html">Fleet Overview</a>
+        <h4>Company</h4>
         <a href="contact.html">Contact Us</a>
-        <a href="fifa-world-cup-2026.html">FIFA 2026</a>
-        <a href="locations.html">All Locations</a>
+        <a href="about.html">About Limo4All</a>
+        <a href="faq.html">FAQ</a>
+        <a href="booking.html">Book Online</a>
+        <a href="privacy.html">Privacy Statement</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="sitemap.html">Sitemap</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 Limo4All. All Rights Reserved.</span>
-      <span>Serving Toronto, Mississauga, Vaughan and all of Ontario.</span>
+      <span>Serving Toronto, Mississauga, Vaughan, Oakville and all of Ontario.</span>
     </div>
   </div>
 </footer>
@@ -1843,6 +2080,78 @@
       if (scrolled > 0.55) show();
     }, {passive: true});
   })();
+
+  // ── AIRPORT SLIDER ───────────────────────────────────────────────
+  (function() {
+    var track = document.getElementById('aptTrack');
+    var prevBtn = document.getElementById('aptPrev');
+    var nextBtn = document.getElementById('aptNext');
+    var dotsWrap = document.getElementById('aptDots');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    var slides = track.querySelectorAll('.apt-slide');
+    var total = slides.length;
+
+    function getVisible() {
+      var w = track.offsetWidth;
+      if (w <= 640) return 1;
+      if (w <= 1024) return 2;
+      return 3;
+    }
+
+    function getSlideWidth() {
+      return slides[0] ? slides[0].offsetWidth + 20 : 0;
+    }
+
+    function currentIndex() {
+      var sw = getSlideWidth();
+      return sw > 0 ? Math.round(track.scrollLeft / sw) : 0;
+    }
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      var pages = Math.max(1, total - getVisible() + 1);
+      for (var i = 0; i < pages; i++) {
+        var d = document.createElement('button');
+        d.className = 'apt-dot';
+        d.setAttribute('data-i', i);
+        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        d.onclick = function() {
+          track.scrollTo({ left: parseInt(this.getAttribute('data-i')) * getSlideWidth(), behavior: 'smooth' });
+        };
+        dotsWrap.appendChild(d);
+      }
+      updateDots();
+    }
+
+    function updateDots() {
+      var idx = currentIndex();
+      dotsWrap.querySelectorAll('.apt-dot').forEach(function(d, i) {
+        d.classList.toggle('active', i === idx);
+      });
+      prevBtn.disabled = track.scrollLeft <= 2;
+      nextBtn.disabled = track.scrollLeft >= track.scrollWidth - track.offsetWidth - 2;
+    }
+
+    prevBtn.onclick = function() {
+      track.scrollBy({ left: -getSlideWidth(), behavior: 'smooth' });
+    };
+    nextBtn.onclick = function() {
+      track.scrollBy({ left: getSlideWidth(), behavior: 'smooth' });
+    };
+
+    var scrollTimer;
+    track.addEventListener('scroll', function() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updateDots, 80);
+    }, { passive: true });
+
+    buildDots();
+    updateDots();
+
+    window.addEventListener('resize', function() { buildDots(); });
+  })();
+
 </script>
 
 <!-- FLOATING BOOKING CTA -->
@@ -1858,7 +2167,7 @@
       Book Now
       <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
-    <a href="quote.html" class="btn-float-quote">Get Quote</a>
+    <a href="contact.html" class="btn-float-quote">Get Quote</a>
   </div>
   <div class="float-cta-trust">
     <span>Flat rate guaranteed</span>

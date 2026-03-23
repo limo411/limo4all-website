@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python add_airport_images.py)",
+      "Bash(python site_cleanup.py)"
+    ]
+  }
+}
