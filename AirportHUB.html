@@ -680,9 +680,9 @@
   .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
   .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:block;color:inherit;text-decoration:none}
   .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
-  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px}
-  .city-card p{font-size:12px;color:var(--text-light);line-height:1.5;margin-bottom:10px}
-  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
+  .city-card{display:flex;flex-direction:column;justify-content:space-between;min-height:72px}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:auto}
   .city-pills-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
   .city-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s}
   .city-pill:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.12)}
@@ -706,7 +706,7 @@
       <span class="pb-sep">&middot;</span>
       <span>20+ Years Serving GTA</span>
     </div>
-    <div class="pb-center">Ontario&rsquo;s #1 Airport Limo &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-center">Toronto&rsquo;s #1 Limo &amp; Chauffeur Service &mdash; Flat Rates, No Surge Pricing</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
@@ -717,10 +717,7 @@
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='block'">
-      <span style="display:none">LIMO<span>4ALL</span></span>
-    </a>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='inline'"><span style="display:none">LIMO<span>4ALL</span></span></a>
     <nav class="nav" id="main-nav">
       <a href="index.html">Home</a>
       <a href="AirportHUB.html" class="active">Airport</a>
@@ -1741,24 +1738,24 @@
   <div class="wrap">
     <span class="sec-label">Service Areas</span>
     <h2 class="sec-h2">Airport Limo Service <em>Near You</em></h2>
-    <p class="sec-sub">Flat-rate airport limo service from your city to Toronto Pearson (YYZ), Billy Bishop (YTZ) and all Ontario airports. Click your city for local pricing and details.</p>
+    <p class="sec-sub">Flat-rate airport limo from your city to Toronto Pearson (YYZ), Billy Bishop (YTZ) and all Ontario airports. Select your city for local pricing.</p>
     <div class="city-grid">
-      <a href="toronto-airport-limo.html" class="city-card"><h3>Toronto</h3><p>Downtown, Etobicoke, North York, Scarborough</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="mississauga-airport-limo.html" class="city-card"><h3>Mississauga</h3><p>Square One, Port Credit, Streetsville</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="vaughan-airport-limo.html" class="city-card"><h3>Vaughan</h3><p>Woodbridge, Maple, Kleinburg, Thornhill</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="markham-airport-limo.html" class="city-card"><h3>Markham</h3><p>Unionville, Cornell, Milliken, Stouffville</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="oakville-airport-limo.html" class="city-card"><h3>Oakville</h3><p>Old Oakville, Glen Abbey, Bronte</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="richmond-hill-airport-limo.html" class="city-card"><h3>Richmond Hill</h3><p>Oak Ridges, Jefferson, Bayview Hill</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="hamilton-airport-limo.html" class="city-card"><h3>Hamilton</h3><p>Downtown, Ancaster, Stoney Creek, Dundas</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="niagara-falls-airport-limo.html" class="city-card"><h3>Niagara Falls</h3><p>Tourist District, Old Town, St. Catharines</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="brampton-airport-limo.html" class="city-card"><h3>Brampton</h3><p>Downtown, Bramalea, Heart Lake, Springdale</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="aurora-airport-limo.html" class="city-card"><h3>Aurora</h3><p>Aurora Village, Bayview, Leslie, Industrial</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="burlington-airport-limo.html" class="city-card"><h3>Burlington</h3><p>Downtown, Alton, Aldershot, Millcroft</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="king-city-airport-limo.html" class="city-card"><h3>King City</h3><p>King City Village, Schomberg, Nobleton</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="london-airport-limo.html" class="city-card"><h3>London</h3><p>Downtown, Old North, Byron, Hyde Park</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="milton-airport-limo.html" class="city-card"><h3>Milton</h3><p>Bronte Meadows, Hawthorne Village, Scott</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="guelph-airport-limo.html" class="city-card"><h3>Guelph</h3><p>Downtown, Kortright Hills, Stone Road</p><span class="city-arrow">View Details &rsaquo;</span></a>
-      <a href="waterloo-kitchener-airport-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><p>Uptown Waterloo, Kitchener Downtown, Elmira</p><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="toronto-airport-limo.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="mississauga-airport-limo.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="vaughan-airport-limo.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="markham-airport-limo.html" class="city-card"><h3>Markham</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="oakville-airport-limo.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="richmond-hill-airport-limo.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="hamilton-airport-limo.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="niagara-falls-airport-limo.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="brampton-airport-limo.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="aurora-airport-limo.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="burlington-airport-limo.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="king-city-airport-limo.html" class="city-card"><h3>King City</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="london-airport-limo.html" class="city-card"><h3>London</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="milton-airport-limo.html" class="city-card"><h3>Milton</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="guelph-airport-limo.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">View Details &rsaquo;</span></a>
+      <a href="waterloo-kitchener-airport-limo.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">View Details &rsaquo;</span></a>
     </div>
   </div>
 </section>

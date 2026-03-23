@@ -648,9 +648,9 @@
   .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
   .city-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:22px 20px;transition:all 0.2s;display:block;color:inherit;text-decoration:none}
   .city-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(20,183,244,0.12);transform:translateY(-3px)}
-  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px}
-  .city-card p{font-size:12px;color:var(--text-light);line-height:1.5;margin-bottom:10px}
-  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em}
+  .city-card{display:flex;flex-direction:column;justify-content:space-between;min-height:72px}
+  .city-card h3{font-family:var(--font-sans);font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px}
+  .city-card .city-arrow{font-size:11px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:auto}
   .city-pills-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
   .city-pill{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:7px 16px;font-family:var(--font-sans);font-size:12.5px;font-weight:600;color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:all 0.2s}
   .city-pill:hover{border-color:var(--blue);color:var(--blue);box-shadow:0 4px 16px rgba(20,183,244,0.12)}
@@ -674,7 +674,7 @@
       <span class="pb-sep">&middot;</span>
       <span>20+ Years Serving GTA</span>
     </div>
-    <div class="pb-center">VIP Events &amp; Concert Limo &mdash; Flat Rates, No Surge Pricing</div>
+    <div class="pb-center">Toronto&rsquo;s #1 Limo &amp; Chauffeur Service &mdash; Flat Rates, No Surge Pricing</div>
     <div class="pb-right">
       <a href="tel:+14164513106">&#9990;&nbsp; 416 451 3106</a>
       <a href="booking.html" class="pb-pill">Book Online</a>
@@ -685,10 +685,7 @@
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo">
-      <img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='block'">
-      <span style="display:none">LIMO<span>4ALL</span></span>
-    </a>
+    <a href="index.html" class="logo"><img src="assets/logo.jpg" alt="Limo4All" onerror="this.style.display='none';this.nextSibling.style.display='inline'"><span style="display:none">LIMO<span>4ALL</span></span></a>
     <nav class="nav" id="main-nav">
       <a href="index.html">Home</a>
       <a href="AirportHUB.html">Airport</a>
@@ -1527,28 +1524,24 @@
   <div class="wrap">
     <span class="sec-label">Service Areas</span>
     <h2 class="sec-h2">Events Limo <em>Across the GTA</em></h2>
-    <p class="sec-sub">Serving the Greater Toronto Area and all of Southern Ontario. Call or book online for service from your city.</p>
-    <div class="city-pills-wrap">
-      <span class="city-pill">Toronto</span>
-      <span class="city-pill">Mississauga</span>
-      <span class="city-pill">Vaughan</span>
-      <span class="city-pill">Markham</span>
-      <span class="city-pill">Oakville</span>
-      <span class="city-pill">Richmond Hill</span>
-      <span class="city-pill">Hamilton</span>
-      <span class="city-pill">Niagara Falls</span>
-      <span class="city-pill">Brampton</span>
-      <span class="city-pill">Aurora</span>
-      <span class="city-pill">Burlington</span>
-      <span class="city-pill">King City</span>
-      <span class="city-pill">London</span>
-      <span class="city-pill">Milton</span>
-      <span class="city-pill">Guelph</span>
-      <span class="city-pill">Waterloo-Kitchener</span>
-      <span class="city-pill">Barrie</span>
-      <span class="city-pill">Cambridge</span>
-      <span class="city-pill">St. Catharines</span>
-      <span class="city-pill">Windsor</span>
+    <p class="sec-sub">Concert, sports, gala, and special event transport throughout Ontario. Call or request a quote for your date.</p>
+    <div class="city-grid">
+      <a href="contact.html" class="city-card"><h3>Toronto</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Mississauga</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Vaughan</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Markham</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Oakville</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Richmond Hill</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Hamilton</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Niagara Falls</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Brampton</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Aurora</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Burlington</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>King City</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>London</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Milton</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Guelph</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
+      <a href="contact.html" class="city-card"><h3>Waterloo-Kitchener</h3><span class="city-arrow">Get a Quote &rsaquo;</span></a>
     </div>
   </div>
 </section>
